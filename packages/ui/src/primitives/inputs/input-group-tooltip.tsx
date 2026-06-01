@@ -3,13 +3,13 @@ import {
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/components/ui/input-group"
+} from "./input-group"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { IconHelpCircle, IconInfoIcon } from "@tabler/icons-react"
+} from "@ui"
+import {IconHelpCircle as HelpCircle, IconInfoIcon as InfoIcon} from "@tabler/icons-react"
 
 export default function InputGroupTooltip() {
   return (

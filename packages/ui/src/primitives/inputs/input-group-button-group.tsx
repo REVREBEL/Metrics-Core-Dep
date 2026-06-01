@@ -1,12 +1,12 @@
-import { ButtonGroup, ButtonGroupText } from "@/components/ui/button-group"
+import { ButtonGroup, ButtonGroupText } from "@buttons"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/components/ui/input-group"
-import { Label } from "@/components/ui/label"
-import { Link02Icon } from "@hugeicons/core-free-icons"
-import { IconHugeiconsIcon } from "@tabler/icons-react"
+} from "./input-group"
+import { Label } from "@ui"
+import {Link02Icon} from "@hugeicons/core-free-icons"
+import { IconHugeiconsIcon as HugeiconsIcon } from "@hugeicons/core-free-icons"
 
 export default function InputGroupButtonGroup() {
   return (

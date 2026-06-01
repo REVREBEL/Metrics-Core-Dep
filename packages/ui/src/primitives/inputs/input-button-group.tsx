@@ -1,7 +1,7 @@
-import { Button } from "@/components/ui/button"
-import { ButtonGroup } from "@/components/ui/button-group"
-import { Field, FieldLabel } from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+import { Button } from "@buttons"
+import { ButtonGroup } from "@buttons"
+import { Field, FieldLabel } from "@auto-form"
+import { Input } from "./input"
 
 export function InputButtonGroup() {
   return (
