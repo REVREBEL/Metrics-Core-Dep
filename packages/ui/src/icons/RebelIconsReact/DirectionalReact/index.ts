@@ -1,28 +1,28 @@
-export { default as ArrowCircleDown } from "./ArrowCircleDown";
-export { default as ArrowCircleDownOutline } from "./ArrowCircleDownOutline";
-export { default as ArrowCircleLeft } from "./ArrowCircleLeft";
-export { default as ArrowCircleLeftOutline } from "./ArrowCircleLeftOutline";
-export { default as ArrowCircleOutlineDown } from "./ArrowCircleOutlineDown";
-export { default as ArrowCircleOutlineLeft } from "./ArrowCircleOutlineLeft";
-export { default as ArrowCircleOutlineRight } from "./ArrowCircleOutlineRight";
-export { default as ArrowCircleOutlineUp } from "./ArrowCircleOutlineUp";
-export { default as ArrowCircleRight } from "./ArrowCircleRight";
-export { default as ArrowCircleRightOutline } from "./ArrowCircleRightOutline";
-export { default as ArrowCircleUp } from "./ArrowCircleUp";
-export { default as ArrowCircleUpOutline } from "./ArrowCircleUpOutline";
-export { default as ArrowDown } from "./ArrowDown";
-export { default as ArrowLeft } from "./ArrowLeft";
-export { default as ArrowRight } from "./ArrowRight";
-export { default as ArrowUp } from "./ArrowUp";
-export { default as ArrowsCompress } from "./ArrowsCompress";
-export { default as ArrowsExpand } from "./ArrowsExpand";
-export { default as ArrowsIn } from "./ArrowsIn";
-export { default as ArrowsOut } from "./ArrowsOut";
-export { default as CircleCaretDown } from "./CircleCaretDown";
-export { default as CircleCaretDown1 } from "./CircleCaretDown1";
-export { default as CircleCaretLeft } from "./CircleCaretLeft";
-export { default as CircleCaretLeft1 } from "./CircleCaretLeft1";
-export { default as CircleCaretRight } from "./CircleCaretRight";
-export { default as CircleCaretRight1 } from "./CircleCaretRight1";
-export { default as CircleCaretUp } from "./CircleCaretUp";
-export { default as CircleCaretUp1 } from "./CircleCaretUp1";
+export * from "./ArrowCircleDown"
+export * from "./ArrowCircleDownOutline"
+export * from "./ArrowCircleLeft"
+export * from "./ArrowCircleLeftOutline"
+export * from "./ArrowCircleOutlineDown"
+export * from "./ArrowCircleOutlineLeft"
+export * from "./ArrowCircleOutlineRight"
+export * from "./ArrowCircleOutlineUp"
+export * from "./ArrowCircleRight"
+export * from "./ArrowCircleRightOutline"
+export * from "./ArrowCircleUp"
+export * from "./ArrowCircleUpOutline"
+export * from "./ArrowDown"
+export * from "./ArrowLeft"
+export * from "./ArrowRight"
+export * from "./ArrowsCompress"
+export * from "./ArrowsExpand"
+export * from "./ArrowsIn"
+export * from "./ArrowsOut"
+export * from "./ArrowUp"
+export * from "./CircleCaretDown"
+export * from "./CircleCaretDown1"
+export * from "./CircleCaretLeft"
+export * from "./CircleCaretLeft1"
+export * from "./CircleCaretRight"
+export * from "./CircleCaretRight1"
+export * from "./CircleCaretUp"
+export * from "./CircleCaretUp1"

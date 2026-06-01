@@ -1,14 +1,16 @@
 "use client";
 
 import * as React from "react";
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Info } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { MetricCardShell } from "./MetricCardShell";
+
+import { cn } from "@lib";
+import { MetricCardShell } from "./metric-card-shell";
 import type { MetricTheme } from "./metric-theme";
 
 export { MetricCardShell };
-export { MetricLayout, MetricLayoutGroup } from "./MetricLayout";
+export { MetricCardTabs } from "./metric-card-tabs";
+export type { MetricCardTabsOption, MetricCardTabsProps } from "./metric-card-tabs";
+export { MetricLayout, MetricLayoutGroup } from "./metric-layout";
 export type {
   MetricLayoutAlign,
   MetricLayoutProps,
@@ -16,7 +18,7 @@ export type {
   MetricLayoutVariant,
   MetricTrend,
   MetricLayoutGroupProps,
-} from "./MetricLayout";
+} from "./metric-layout";
 
 type MetricCardProps = React.ComponentProps<typeof MetricCardShell>;
 
@@ -72,46 +74,6 @@ export function MetricCardDescription({
   if (!content) return null;
 
   return <p className={cn("metric-card__description", className)}>{content}</p>;
-}
-
-type MetricCardTabsOption<TValue extends string = string> = {
-  label: React.ReactNode;
-  value: TValue;
-};
-
-type MetricCardTabsProps<TValue extends string = string> = {
-  tabs: MetricCardTabsOption<TValue>[];
-  value?: TValue;
-  defaultValue?: TValue;
-  onValueChange?: (value: TValue) => void;
-  className?: string;
-  listClassName?: string;
-};
-
-export function MetricCardTabs<TValue extends string = string>({
-  tabs,
-  value,
-  defaultValue,
-  onValueChange,
-  className,
-  listClassName,
-}: MetricCardTabsProps<TValue>) {
-  return (
-    <Tabs
-      value={value}
-      defaultValue={defaultValue}
-      className={cn("metric-card-tabs-root", className)}
-      onValueChange={(nextValue) => onValueChange?.(nextValue as TValue)}
-    >
-      <TabsList className={cn("metric-card-tabs", listClassName)}>
-        {tabs.map((tab) => (
-          <TabsTrigger key={tab.value} value={tab.value} className="metric-card-tab">
-            {tab.label}
-          </TabsTrigger>
-        ))}
-      </TabsList>
-    </Tabs>
-  );
 }
 
 type MetricInsightProps = {

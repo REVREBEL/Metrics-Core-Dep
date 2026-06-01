@@ -1,5 +1,5 @@
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+import { Field, FieldGroup, FieldLabel } from "@auto-form"
+import { Input } from "./input"
 
 export function InputGrid() {
   return (

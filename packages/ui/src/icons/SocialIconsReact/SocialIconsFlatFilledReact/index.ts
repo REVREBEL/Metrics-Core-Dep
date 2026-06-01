@@ -1,18 +1,18 @@
-export { default as BlogFlatFilled } from "./BlogFlatFilled";
-export { default as BookingFlatFilled } from "./BookingFlatFilled";
-export { default as EmailFlatFilled } from "./EmailFlatFilled";
-export { default as ExpediaFlatFilled } from "./ExpediaFlatFilled";
-export { default as FacebookFlatFilled } from "./FacebookFlatFilled";
-export { default as GenericFlatFilled } from "./GenericFlatFilled";
-export { default as GithubFlatFilled2 } from "./GithubFlatFilled2";
-export { default as InstagramFlatFilled } from "./InstagramFlatFilled";
-export { default as LinkedinFlatFilled } from "./LinkedinFlatFilled";
-export { default as PintrestFlatFilled } from "./PintrestFlatFilled";
-export { default as RssFlatFilled } from "./RssFlatFilled";
-export { default as SlackFlatFilled } from "./SlackFlatFilled";
-export { default as TelegramFlatFilled } from "./TelegramFlatFilled";
-export { default as TikTokFlatFilled } from "./TikTokFlatFilled";
-export { default as TripadvisorFlatFilled } from "./TripadvisorFlatFilled";
-export { default as XFlatFiilled } from "./XFlatFiilled";
-export { default as YelpFlatFilled } from "./YelpFlatFilled";
-export { default as YoutubeFlatFilled } from "./YoutubeFlatFilled";
+export * from "./BlogFlatFilled"
+export * from "./BookingFlatFilled"
+export * from "./EmailFlatFilled"
+export * from "./ExpediaFlatFilled"
+export * from "./FacebookFlatFilled"
+export * from "./GenericFlatFilled"
+export * from "./GithubFlatFilled2"
+export * from "./InstagramFlatFilled"
+export * from "./LinkedinFlatFilled"
+export * from "./PintrestFlatFilled"
+export * from "./RssFlatFilled"
+export * from "./SlackFlatFilled"
+export * from "./TelegramFlatFilled"
+export * from "./TikTokFlatFilled"
+export * from "./TripadvisorFlatFilled"
+export * from "./XFlatFiilled"
+export * from "./YelpFlatFilled"
+export * from "./YoutubeFlatFilled"

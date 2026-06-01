@@ -40,7 +40,13 @@
     "./types": "./src/types/index.ts",
     "./utils": "./src/utils/index.ts",
     "./components/*": "./src/components/*.tsx",
-    "./styles.css": "./src/styles.css"
+    "./styles.css": "./src/styles.css",
+    "./shared-ui/controls": "./src/components/_shared-ui/controls/index.ts",
+    "./metrics-layouts": "./src/components/metrics-layouts/index.ts",
+    "./metrics-core": "./src/components/metrics-core/index.ts",
+    "./metrics-sections": "./src/components/metrics-sections/index.ts",
+    "./metrics-charts": "./src/components/metrics-charts/index.ts",
+    "./metrics-tables": "./src/components/metrics-tables/index.ts"
   },
   "scripts": {
     "dev": "pnpm registry:build && next dev",
@@ -48,12 +54,15 @@
     "start": "next start",
     "lint": "biome check",
     "lint:fix": "biome check --write",
-    "registry:build": "pnpm dlx shadcn@latest build"
+    "registry:build": "pnpm dlx shadcn@latest build",
+    "barrels:generate": "node ./scripts/generate-barrels.mts --exports",
+    "barrels:check": "node ./scripts/generate-barrels.mts --check --exports",
+    "registry:validate": "node ./scripts/validate-registries.mts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
     "@tanstack/react-table": "^8.21.3",
-    "@vercel/analytics": "^1.6.1",
+    "@vercel/analytics": "^2.0.0",
     "@vercel/speed-insights": "^1.3.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
@@ -61,8 +70,8 @@
     "date-fns": "^4.1.0",
     "embla-carousel-react": "^8.6.0",
     "input-otp": "^1.4.2",
-    "lucide-react": "^0.506.0",
-    "next": "16.1.6",
+    "lucide-react": "^0.577.0",
+    "next": "16.2.6",
     "next-themes": "^0.4.6",
     "radix-ui": "^1.4.3",
     "react": "^19.2.4",
@@ -77,12 +86,12 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "2.4.16",
     "@tailwindcss/postcss": "^4.1.18",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/user-event": "^14.6.1",
-    "@types/jsdom": "^21.1.7",
+    "@types/jsdom": "^28.0.0",
     "@types/node": "^22.19.3",
     "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
@@ -93,5 +102,5 @@
     "tw-animate-css": "^1.4.0",
     "typescript": "5.4.5"
   },
-  "packageManager": "pnpm@10.28.2"
+  "packageManager": "pnpm@10.34.1"
 }

@@ -1,2 +1,2 @@
-export { default as DashboardDropdown } from "./dashboard-dropdown"
-export { default as YearMonthSelector } from "./year-month-selector"
+export * from "./dashboard-dropdown"
+export * from "./year-month-selector"

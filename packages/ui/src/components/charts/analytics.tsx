@@ -5,11 +5,11 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card'
-import { AnalyticsChart } from './analytics-chart'
+} from "@ui";
+import { Skeleton } from "@skeleton";
+import { useDuckDb } from "@hooks";
 import { useEffect, useState } from "react";
-import { useDuckDb } from "@/hooks/useDuckDb";
-import { Skeleton } from "@/components/ui/skeleton";
+import { AnalyticsChart } from "./analytics-chart";
 
 export function Analytics() {
   const { execute, isInitializing } = useDuckDb();
@@ -51,19 +51,26 @@ export function Analytics() {
         `);
 
         if (res && res.length > 0) {
-          setMetrics({ 
+          setMetrics({
             overview: res[0] as Record<string, string | number>,
             referrers: refs as { name: string; value: number }[],
-            devices: devices as { name: string; value: number }[]
+            devices: devices as { name: string; value: number }[],
           });
         }
-      } catch (err) { console.error("Failed to load GA4 metrics", err); }
+      } catch (err) {
+        console.error("Failed to load GA4 metrics", err);
+      }
     }
     fetchMetrics();
   }, [execute, isInitializing]);
 
   if (isInitializing || !metrics) {
-    return <div className="space-y-4"><Skeleton className="h-[400px] w-full" /><Skeleton className="h-[200px] w-full" /></div>;
+    return (
+      <div className="space-y-4">
+        <Skeleton className="h-[400px] w-full" />
+        <Skeleton className="h-[200px] w-full" />
+      </div>
+    );
   }
 
   const { overview, referrers, devices } = metrics;
@@ -77,116 +84,136 @@ export function Analytics() {
   const sessionsPct = ((curSessions - prevSessions) / prevSessions) * 100;
   const engagedPct = ((curEngaged - prevEngaged) / prevEngaged) * 100;
 
-  const curBounce = 1 - (curEngaged / (curSessions || 1));
-  const prevBounce = 1 - (prevEngaged / (prevSessions || 1));
+  const curBounce = 1 - curEngaged / (curSessions || 1);
+  const prevBounce = 1 - prevEngaged / (prevSessions || 1);
   const bouncePct = (curBounce - prevBounce) * 100; // in percentage points
 
   const durationDiff = curDuration - prevDuration;
 
   return (
-    <div className='space-y-4'>
+    <div className="space-y-4">
       <Card>
         <CardHeader>
           <CardTitle>Traffic Overview</CardTitle>
           <CardDescription>Weekly clicks and unique visitors</CardDescription>
         </CardHeader>
-        <CardContent className='px-6'>
+        <CardContent className="px-6">
           <AnalyticsChart />
         </CardContent>
       </Card>
-      <div className='grid gap-4 sm:grid-cols-2 lg:grid-cols-4'>
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <Card>
-          <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
-            <CardTitle className='text-sm font-medium'>Total Clicks</CardTitle>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="font-medium text-sm">Total Clicks</CardTitle>
             <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              className='h-4 w-4 text-muted-foreground'
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              className="h-4 w-4 text-muted-foreground"
             >
-              <path d='M3 3v18h18' />
-              <path d='M7 15l4-4 4 4 4-6' />
+              <path d="M3 3v18h18" />
+              <path d="M7 15l4-4 4 4 4-6" />
             </svg>
           </CardHeader>
           <CardContent>
-            <div className='text-2xl font-bold'>{curSessions.toLocaleString()}</div>
-            <p className='text-xs text-muted-foreground'>{sessionsPct > 0 ? '+' : ''}{sessionsPct.toFixed(1)}% vs last week</p>
+            <div className="font-bold text-2xl">
+              {curSessions.toLocaleString()}
+            </div>
+            <p className="text-muted-foreground text-xs">
+              {sessionsPct > 0 ? "+" : ""}
+              {sessionsPct.toFixed(1)}% vs last week
+            </p>
           </CardContent>
         </Card>
         <Card>
-          <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
-            <CardTitle className='text-sm font-medium'>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="font-medium text-sm">
               Unique Visitors
             </CardTitle>
             <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              className='h-4 w-4 text-muted-foreground'
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              className="h-4 w-4 text-muted-foreground"
             >
-              <circle cx='12' cy='7' r='4' />
-              <path d='M6 21v-2a6 6 0 0 1 12 0v2' />
+              <circle cx="12" cy="7" r="4" />
+              <path d="M6 21v-2a6 6 0 0 1 12 0v2" />
             </svg>
           </CardHeader>
           <CardContent>
-            <div className='text-2xl font-bold'>{curEngaged.toLocaleString()}</div>
-            <p className='text-xs text-muted-foreground'>{engagedPct > 0 ? '+' : ''}{engagedPct.toFixed(1)}% vs last week</p>
+            <div className="font-bold text-2xl">
+              {curEngaged.toLocaleString()}
+            </div>
+            <p className="text-muted-foreground text-xs">
+              {engagedPct > 0 ? "+" : ""}
+              {engagedPct.toFixed(1)}% vs last week
+            </p>
           </CardContent>
         </Card>
         <Card>
-          <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
-            <CardTitle className='text-sm font-medium'>Bounce Rate</CardTitle>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="font-medium text-sm">Bounce Rate</CardTitle>
             <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              className='h-4 w-4 text-muted-foreground'
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              className="h-4 w-4 text-muted-foreground"
             >
-              <path d='M3 12h6l3 6 3-6h6' />
+              <path d="M3 12h6l3 6 3-6h6" />
             </svg>
           </CardHeader>
           <CardContent>
-            <div className='text-2xl font-bold'>{(curBounce * 100).toFixed(1)}%</div>
-            <p className='text-xs text-muted-foreground'>{bouncePct > 0 ? '+' : ''}{bouncePct.toFixed(1)}% vs last week</p>
+            <div className="font-bold text-2xl">
+              {(curBounce * 100).toFixed(1)}%
+            </div>
+            <p className="text-muted-foreground text-xs">
+              {bouncePct > 0 ? "+" : ""}
+              {bouncePct.toFixed(1)}% vs last week
+            </p>
           </CardContent>
         </Card>
         <Card>
-          <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
-            <CardTitle className='text-sm font-medium'>Avg. Session</CardTitle>
+          <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
+            <CardTitle className="font-medium text-sm">Avg. Session</CardTitle>
             <svg
-              xmlns='http://www.w3.org/2000/svg'
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              className='h-4 w-4 text-muted-foreground'
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              className="h-4 w-4 text-muted-foreground"
             >
-              <circle cx='12' cy='12' r='10' />
-              <path d='M12 6v6l4 2' />
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 6v6l4 2" />
             </svg>
           </CardHeader>
           <CardContent>
-            <div className='text-2xl font-bold'>{Math.floor(curDuration / 60)}m {Math.floor(curDuration % 60)}s</div>
-            <p className='text-xs text-muted-foreground'>{durationDiff > 0 ? '+' : ''}{Math.floor(durationDiff)}s vs last week</p>
+            <div className="font-bold text-2xl">
+              {Math.floor(curDuration / 60)}m {Math.floor(curDuration % 60)}s
+            </div>
+            <p className="text-muted-foreground text-xs">
+              {durationDiff > 0 ? "+" : ""}
+              {Math.floor(durationDiff)}s vs last week
+            </p>
           </CardContent>
         </Card>
       </div>
-      <div className='grid grid-cols-1 gap-4 lg:grid-cols-7'>
-        <Card className='col-span-1 lg:col-span-4'>
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-7">
+        <Card className="col-span-1 lg:col-span-4">
           <CardHeader>
             <CardTitle>Referrers</CardTitle>
             <CardDescription>Top sources driving traffic</CardDescription>
@@ -194,12 +221,12 @@ export function Analytics() {
           <CardContent>
             <SimpleBarList
               items={referrers}
-              barClass='bg-primary'
+              barClass="bg-primary"
               valueFormatter={(n) => `${n}`}
             />
           </CardContent>
         </Card>
-        <Card className='col-span-1 lg:col-span-3'>
+        <Card className="col-span-1 lg:col-span-3">
           <CardHeader>
             <CardTitle>Devices</CardTitle>
             <CardDescription>How users access your app</CardDescription>
@@ -207,15 +234,14 @@ export function Analytics() {
           <CardContent>
             <SimpleBarList
               items={devices}
-              barClass='bg-muted-foreground'
+              barClass="bg-muted-foreground"
               valueFormatter={(n) => `${n}`}
             />
           </CardContent>
-
         </Card>
       </div>
     </div>
-  )
+  );
 }
 
 function SimpleBarList({
@@ -223,34 +249,34 @@ function SimpleBarList({
   valueFormatter,
   barClass,
 }: {
-  items: { name: string; value: number }[]
-  valueFormatter: (n: number) => string
-  barClass: string
+  items: { name: string; value: number }[];
+  valueFormatter: (n: number) => string;
+  barClass: string;
 }) {
-  const max = Math.max(...items.map((i) => i.value), 1)
+  const max = Math.max(...items.map((i) => i.value), 1);
   return (
-    <ul className='space-y-3'>
+    <ul className="space-y-3">
       {items.map((i) => {
-        const width = `${Math.round((i.value / max) * 100)}%`
+        const width = `${Math.round((i.value / max) * 100)}%`;
         return (
-          <li key={i.name} className='flex items-center justify-between gap-3'>
-            <div className='min-w-0 flex-1'>
-              <div className='mb-1 truncate text-xs text-muted-foreground'>
+          <li key={i.name} className="flex items-center justify-between gap-3">
+            <div className="min-w-0 flex-1">
+              <div className="mb-1 truncate text-muted-foreground text-xs">
                 {i.name}
               </div>
-              <div className='h-2.5 w-full rounded-full bg-muted'>
+              <div className="h-2.5 w-full rounded-full bg-muted">
                 <div
                   className={`h-2.5 rounded-full ${barClass}`}
                   style={{ width }}
                 />
               </div>
             </div>
-            <div className='ps-2 text-xs font-medium tabular-nums'>
+            <div className="ps-2 font-medium text-xs tabular-nums">
               {valueFormatter(i.value)}
             </div>
           </li>
-        )
+        );
       })}
     </ul>
-  )
+  );
 }

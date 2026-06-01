@@ -1,12 +1,12 @@
-export { default as BraveCircle } from "./BraveCircle";
-export { default as CometCircleV1 } from "./CometCircleV1";
-export { default as CometCircleV2 } from "./CometCircleV2";
-export { default as FirefoxMozillaCircle } from "./FirefoxMozillaCircle";
-export { default as GoogleChromeCircle } from "./GoogleChromeCircle";
-export { default as MicrosoftEdgeCircle } from "./MicrosoftEdgeCircle";
-export { default as OperaCircle } from "./OperaCircle";
-export { default as SafariCircle } from "./SafariCircle";
-export { default as TorCircle } from "./TorCircle";
-export { default as VivaldiCircle } from "./VivaldiCircle";
-export { default as ZenCircleV1 } from "./ZenCircleV1";
-export { default as ZenCircleV2 } from "./ZenCircleV2";
+export * from "./BraveCircle"
+export * from "./CometCircleV1"
+export * from "./CometCircleV2"
+export * from "./FirefoxMozillaCircle"
+export * from "./GoogleChromeCircle"
+export * from "./MicrosoftEdgeCircle"
+export * from "./OperaCircle"
+export * from "./SafariCircle"
+export * from "./TorCircle"
+export * from "./VivaldiCircle"
+export * from "./ZenCircleV1"
+export * from "./ZenCircleV2"

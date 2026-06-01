@@ -3,15 +3,15 @@ import {
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+} from "@auto-form"
+import { Input } from "./input"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/components/ui/input-group"
-import { Kbd, KbdGroup } from "@/components/ui/kbd"
-import { Spinner } from "@/components/ui/spinner"
+} from "./input-group"
+import { Kbd, KbdGroup } from "@ui"
+import { Spinner } from "@ui"
 import { IconCheckIcon, IconInfoIcon, IconSearchIcon, IconSparklesIcon } from "@tabler/icons-react"
 
 export function InputGroupWithKbd() {

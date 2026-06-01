@@ -1,35 +1,35 @@
-export { default as ArrowLong } from "./ArrowLong";
-export { default as Back } from "./Back";
-export { default as Backspace } from "./Backspace";
-export { default as Chevron } from "./Chevron";
-export { default as ChevronDown } from "./ChevronDown";
-export { default as ChevronLeft } from "./ChevronLeft";
-export { default as ChevronUp } from "./ChevronUp";
-export { default as CircledChevronDown } from "./CircledChevronDown";
-export { default as CircledChevronLeft } from "./CircledChevronLeft";
-export { default as CircledChevronRight } from "./CircledChevronRight";
-export { default as CircledLeft } from "./CircledLeft";
-export { default as CircledPlay } from "./CircledPlay";
-export { default as CircledRight2 } from "./CircledRight2";
-export { default as Clock } from "./Clock";
-export { default as Left } from "./Left";
-export { default as LongArrowDown } from "./LongArrowDown";
-export { default as LongArrowUp } from "./LongArrowUp";
-export { default as Play } from "./Play";
-export { default as Process } from "./Process";
-export { default as Repeat } from "./Repeat";
-export { default as Replay } from "./Replay";
-export { default as ReplyArrow } from "./ReplyArrow";
-export { default as ResizeDiagonal } from "./ResizeDiagonal";
-export { default as ResizeHorizontal } from "./ResizeHorizontal";
-export { default as ResizeVertical } from "./ResizeVertical";
-export { default as ResumeButton } from "./ResumeButton";
-export { default as Return } from "./Return";
-export { default as Right } from "./Right";
-export { default as Right3 } from "./Right3";
-export { default as Sort } from "./Sort";
-export { default as SortDown } from "./SortDown";
-export { default as SortUp } from "./SortUp";
-export { default as Split } from "./Split";
-export { default as Undo } from "./Undo";
-export { default as Up } from "./Up";
+export * from "./ArrowLong"
+export * from "./Back"
+export * from "./Backspace"
+export * from "./Chevron"
+export * from "./ChevronDown"
+export * from "./ChevronLeft"
+export * from "./ChevronUp"
+export * from "./CircledChevronDown"
+export * from "./CircledChevronLeft"
+export * from "./CircledChevronRight"
+export * from "./CircledLeft"
+export * from "./CircledPlay"
+export * from "./CircledRight2"
+export * from "./Clock"
+export * from "./Left"
+export * from "./LongArrowDown"
+export * from "./LongArrowUp"
+export * from "./Play"
+export * from "./Process"
+export * from "./Repeat"
+export * from "./Replay"
+export * from "./ReplyArrow"
+export * from "./ResizeDiagonal"
+export * from "./ResizeHorizontal"
+export * from "./ResizeVertical"
+export * from "./ResumeButton"
+export * from "./Return"
+export * from "./Right"
+export * from "./Right3"
+export * from "./Sort"
+export * from "./SortDown"
+export * from "./SortUp"
+export * from "./Split"
+export * from "./Undo"
+export * from "./Up"

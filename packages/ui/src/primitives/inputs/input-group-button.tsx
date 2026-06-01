@@ -1,16 +1,16 @@
 "use client"
 
 import * as React from "react"
-import { IconCheck, IconCopy, IconInfoCircle, IconStar } from "@tabler/icons-react"
+import {IconCheck, IconCopy, IconInfoCircle, IconStar} from "@tabler/icons-react"
 
-import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
+import { useCopyToClipboard } from "@hooks"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/components/ui/input-group"
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+} from "./input-group"
+import { Popover, PopoverContent, PopoverTrigger } from "@popovers"
 
 export default function InputGroupButtonExample() {
   const { copyToClipboard, isCopied } = useCopyToClipboard()
