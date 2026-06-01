@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 
 import { PLAYGROUND_REGISTRY } from "@/lib/registry";
+import metadataMap from "@/lib/registry.metadata.json";
 
 type RegistryEntry = {
   name?: string;
@@ -72,7 +73,16 @@ export default function CatalogPage() {
                   <pre className="mt-2 overflow-auto text-xs">{safeStringify(item.metadata)}</pre>
                 </details>
               ) : (
-                <p className="text-muted-foreground text-xs">No props metadata attached</p>
+                <details className="rounded-md border bg-background p-2">
+                  <summary className="cursor-pointer text-sm">Props metadata</summary>
+                  <pre className="mt-2 overflow-auto text-xs">
+                    {safeStringify(
+                      (metadataMap as Record<string, unknown>)[
+                        String(item.name ?? item.key).replace(/^widget_/, "").toLowerCase()
+                      ] ?? null
+                    )}
+                  </pre>
+                </details>
               )}
             </section>
           );
