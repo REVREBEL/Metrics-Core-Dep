@@ -4,3 +4,4 @@ export * from "./logo";
 export * from "./separator";
 export * from "./sheet";
 export * from "./tooltip";
+export * from "./card";
