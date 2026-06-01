@@ -82,7 +82,7 @@ function NumberFieldIncrement({
 			data-slot="number-field-increment"
 			{...props}
 		>
-			<PlusIcon />
+			<IconPlus />
 		</NumberFieldPrimitive.Increment>
 	);
 }
