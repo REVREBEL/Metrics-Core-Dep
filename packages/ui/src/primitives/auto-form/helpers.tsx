@@ -217,6 +217,10 @@ export function getSchemaDescription(schema: z.ZodType): string | undefined {
   if (registered?.description) {
     return registered.description;
   }
+  const fallbackDescription = (schema as any)._def?.description || (schema as any).description;
+  if (fallbackDescription) {
+    return fallbackDescription;
+  }
 
   // Fallback: check if description is on the schema itself
   const def = (schema as any)._zod?.def;
