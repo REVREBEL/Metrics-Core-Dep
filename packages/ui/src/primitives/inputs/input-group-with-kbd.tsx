@@ -12,7 +12,7 @@ import {
 } from "./input-group"
 import { Kbd, KbdGroup } from "@ui"
 import { Spinner } from "@ui"
-import {IconCheckIcon as CheckIcon, IconInfoIcon as InfoIcon, IconSearchIcon as SearchIcon, IconSparklesIcon as SparklesIcon} from "@tabler/icons-react"
+import { IconCheckIcon, IconInfoIcon, IconSearchIcon, IconSparklesIcon } from "@tabler/icons-react"
 
 export function InputGroupWithKbd() {
   return (
