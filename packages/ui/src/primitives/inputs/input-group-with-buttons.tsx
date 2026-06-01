@@ -1,13 +1,13 @@
-import { Button } from "@/components/ui/button"
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+import { Button } from "@buttons"
+import { Field, FieldGroup, FieldLabel } from "@auto-form"
+import { Input } from "./input-group"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/components/ui/input-group"
-import { IconCopyIcon, IconTrashIcon } from "@tabler/icons-react"
+} from "./input-group"
+import {IconCopyIcon as CopyIcon, IconTrashIcon as TrashIcon} from "@tabler/icons-react"
 
 export function InputGroupWithButtons() {
   return (

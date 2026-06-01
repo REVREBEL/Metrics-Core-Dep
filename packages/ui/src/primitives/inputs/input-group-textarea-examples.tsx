@@ -3,17 +3,17 @@ import {
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+} from "@auto-form"
+import { Input } from "./input-group"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupText,
   InputGroupTextarea,
-} from "@/components/ui/input-group"
-import { Textarea } from "@/components/ui/textarea"
-import { IconArrowUpIcon, IconCodeIcon, IconCopyIcon, IconInfoIcon, IconRefreshCwIcon, Icon } from "@tabler/icons-react"
+} from "./input-group"
+import { Textarea } from "@textarea"
+import {IconArrowUpIcon as ArrowUpIcon, IconCodeIcon as CodeIcon, IconCopyIcon as CopyIcon, IconInfoIcon as InfoIcon, IconRefreshCwIcon as RefreshCwIcon}  from "@tabler/icons-react"
 
 export function InputGroupTextareaExamples() {
   return (

@@ -5,15 +5,15 @@ import {
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/components/ui/field"
+} from "@auto-form"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
   InputGroupText,
-} from "@/components/ui/input-group"
-import { IconCopyIcon, IconEyeOffIcon, IconInfoIcon, IconMicIcon, IconRadioIcon, IconSearchIcon, IconStarIcon, Icon } from "@tabler/icons-react"
+} from "./input-group"
+import {IconCopyIcon as CopyIcon, IconEyeOffIcon as EyeOffIcon, IconInfoIcon as InfoIcon, IconMicIcon as MicIcon, IconRadioIcon as RadioIcon, IconSearchIcon as SearchIcon, IconStarIcon as StarIcon}  from "@tabler/icons-react"
 import { toast } from "sonner"
 
 export function InputGroupWithAddons() {

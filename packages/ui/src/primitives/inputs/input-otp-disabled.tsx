@@ -1,10 +1,10 @@
-import { Field, FieldLabel } from "@/components/ui/field"
+import { Field, FieldLabel } from "@auto-form"
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/components/ui/input-otp"
+} from "./input-otp"
 
 export function InputOTPDisabled() {
   return (

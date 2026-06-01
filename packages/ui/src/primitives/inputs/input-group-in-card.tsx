@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@buttons"
 import {
   Card,
   CardContent,
@@ -6,17 +6,17 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+} from "@ui"
+import { Field, FieldGroup, FieldLabel } from "@auto-form"
+import { Input } from "./input"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@/components/ui/input-group"
-import { IconExternalLinkIcon, IconMailIcon } from "@tabler/icons-react"
+} from "./input-group"
+import {IconExternalLinkIcon as ExternalLinkIcon, IconMailIcon as MailIcon} from "@tabler/icons-react"
 
 export function InputGroupInCard() {
   return (

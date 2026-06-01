@@ -2,9 +2,9 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/components/ui/input-group"
-import { Kbd } from "@/components/ui/kbd"
-import { IconSearchIcon } from "@tabler/icons-react"
+} from "./input-group"
+import { Kbd } from "@ui"
+import {IconSearchIcon as SearchIcon} from "@tabler/icons-react"
 
 export function InputGroupKbd() {
   return (

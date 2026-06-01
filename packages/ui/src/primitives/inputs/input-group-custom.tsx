@@ -4,7 +4,7 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
-} from "@/components/ui/input-group"
+} from "./input-group"
 import TextareaAutosize from "react-textarea-autosize"
 
 export default function InputGroupCustom() {

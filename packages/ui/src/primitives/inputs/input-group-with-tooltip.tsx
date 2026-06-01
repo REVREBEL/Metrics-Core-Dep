@@ -1,24 +1,24 @@
 "use client"
 
-import { ButtonGroup, ButtonGroupText } from "@/components/ui/button-group"
+import { ButtonGroup, ButtonGroupText } from "@buttons"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@dropdown"
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/components/ui/field"
+} from "@auto-form"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/components/ui/input-group"
+} from "./input-group"
 import {
   Popover,
   PopoverContent,
@@ -26,13 +26,14 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@popovers"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { IconChevronDownIcon, IconInfoIcon, IconStarIcon } from "@tabler/icons-react"
+} from "@ui"
+import {IconInfoIcon as InfoIcon, IconStarIcon as StarIcon} from "@tabler/icons-react"
+import {IconChevronDownIcon as ChevronDownIcon} from "@tabler/icons-react"
 import { toast } from "sonner"
 
 export function InputGroupWithTooltip({

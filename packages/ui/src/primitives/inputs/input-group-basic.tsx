@@ -1,6 +1,6 @@
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
-import { InputGroup, InputGroupInput } from "@/components/ui/input-group"
+import { Field, FieldGroup, FieldLabel } from "@auto-form"
+import { Input } from "./input-group"
+import { InputGroup, InputGroupInput } from "./input-group"
 
 export function InputGroupBasic() {
   return (

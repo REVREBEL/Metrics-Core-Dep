@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@buttons"
 import {
   Card,
   CardContent,
@@ -6,15 +6,15 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
-import { Field, FieldDescription, FieldLabel } from "@/components/ui/field"
+} from "@ui"
+import { Field, FieldDescription, FieldLabel } from "@auto-form"
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/components/ui/input-otp"
-import { IconRefreshCwIcon } from "@tabler/icons-react"
+} from "./input-otp"
+import {IconRefreshCwIcon as RefreshCwIcon} from "@tabler/icons-react"
 
 export function InputOTPForm() {
   return (
