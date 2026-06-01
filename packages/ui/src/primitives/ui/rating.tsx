@@ -29,7 +29,7 @@ const RATING_DEFAULTS = {
 	maxStars: 5,
 	size: 20,
 	variant: "default" as const,
-	icon: <StarIcon />,
+	icon: <IconStar />,
 } as const;
 
 // Types
