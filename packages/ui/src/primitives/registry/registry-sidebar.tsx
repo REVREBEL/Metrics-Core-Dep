@@ -65,7 +65,7 @@ export function RegistrySidebar() {
 
   const { setOpenMobile } = useSidebar();
 
-  const [searchTerm, setSearchTerm] = useState(");
+  const [searchTerm, setSearchTerm] = useState("");
   const [filteredUiItems, setFilteredUiItems] = useState(uiItems);
   const [filteredComponents, setFilteredComponents] = useState(componentItems);
   const [filteredBlocks, setFilteredBlocks] = useState(blockItems);
