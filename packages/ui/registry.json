@@ -1,1 +1,142 @@
-{"$schema":"https://ui.shadcn.com/schema/registry.json","name":"Metrics UI Registry","homepage":"https://metrics-ui.revrebel.io","items":[{"name":"metrics","type":"registry:theme","title":"Metrics by REVREBEL","description":"A bold hotel performance command center for REVREBEL Metrics: dark-blue strategy, smoke-light surfaces, retro-tech contrast, saturated status colors, punchy Khand typography, and dashboard UI built for clarity, speed, and action.","cssVars":{"light":{"background":"oklch(0.9659 0.0065 208.7829)","foreground":"oklch(0.3373 0.0925 258.5200)","card":"oklch(1.0000 0 0)","card-foreground":"oklch(0.3373 0.0925 258.5200)","popover":"oklch(1.0000 0 0)","popover-foreground":"oklch(0.3373 0.0925 258.5200)","primary":"oklch(0.3373 0.0925 258.5200)","primary-foreground":"oklch(0.9659 0.0065 208.7829)","secondary":"oklch(0.8642 0.1141 79.7487)","secondary-foreground":"oklch(0.3373 0.0925 258.5200)","muted":"oklch(0.8463 0.0383 219.9626)","muted-foreground":"oklch(0.3373 0.0925 258.5200)","accent":"oklch(0.7170 0.1537 37.7036)","accent-foreground":"oklch(1.0000 0 0)","destructive":"oklch(0.6254 0.1812 27.1628)","destructive-foreground":"oklch(1.0000 0 0)","border":"oklch(0.3373 0.0925 258.5200)","input":"oklch(0.8463 0.0383 219.9626)","ring":"oklch(0.3373 0.0925 258.5200)","chart-1":"oklch(0.8300 0.0400 219.3500)","chart-2":"oklch(0.8400 0.1400 85.2100)","chart-3":"oklch(0.6600 0.1800 44.7300)","chart-4":"oklch(0.5500 0.2100 32)","chart-5":"oklch(0.4500 0.1400 340.2100)","sidebar":"oklch(0.9659 0.0065 208.7829)","sidebar-foreground":"oklch(0.3373 0.0925 258.5200)","sidebar-primary":"oklch(0.3373 0.0925 258.5200)","sidebar-primary-foreground":"oklch(1.0000 0 0)","sidebar-accent":"oklch(0.8463 0.0383 219.9626)","sidebar-accent-foreground":"oklch(0.3373 0.0925 258.5200)","sidebar-border":"oklch(0.3373 0.0925 258.5200)","sidebar-ring":"oklch(0.3373 0.0925 258.5200)","radius":"0.1rem"},"dark":{"background":"oklch(0.2228 0.0519 258.36)","foreground":"oklch(0.9659 0.0065 208.7829)","card":"oklch(0.2453 0.0608 258.67)","card-foreground":"oklch(0.9659 0.0065 208.7829)","popover":"oklch(0.2453 0.0608 258.67)","popover-foreground":"oklch(0.9659 0.0065 208.7829)","primary":"oklch(0.8463 0.0383 219.9626)","primary-foreground":"oklch(0.2228 0.0519 258.36)","secondary":"oklch(0.7170 0.1537 37.7036)","secondary-foreground":"oklch(1.0000 0 0)","muted":"oklch(0.2700 0.0681 257.71)","muted-foreground":"oklch(0.8918 0.026 217.96)","accent":"oklch(0.8642 0.1141 79.7487)","accent-foreground":"oklch(0.2228 0.0519 258.36)","destructive":"oklch(0.6254 0.1812 27.1628)","destructive-foreground":"oklch(1.0000 0 0)","border":"oklch(0.4791 0.0703 259.06)","input":"oklch(0.2700 0.0681 257.71)","ring":"oklch(0.8463 0.0383 219.9626)","chart-1":"oklch(0.8463 0.0383 219.9626)","chart-2":"oklch(0.8642 0.1141 79.7487)","chart-3":"oklch(0.7170 0.1537 37.7036)","chart-4":"oklch(0.6254 0.1812 27.1628)","chart-5":"oklch(0.4940 0.108 350.12)","sidebar":"oklch(0.2453 0.0608 258.67)","sidebar-foreground":"oklch(0.9659 0.0065 208.7829)","sidebar-primary":"oklch(0.8463 0.0383 219.9626)","sidebar-primary-foreground":"oklch(0.2228 0.0519 258.36)","sidebar-accent":"oklch(0.7170 0.1537 37.7036)","sidebar-accent-foreground":"oklch(1.0000 0 0)","sidebar-border":"oklch(0.4791 0.0703 259.06)","sidebar-ring":"oklch(0.8463 0.0383 219.9626)","radius":"0.1rem"}},"dependencies":["radix-ui"],"files":[{"path":"registry/common/globals.css","type":"registry:style","target":"src/app/globals.css"},{"path":"registry/common/postcss.config.mjs","type":"registry:file","target":"postcss.config.mjs"},{"path":"registry/common/tsconfig.json","type":"registry:file","target":"tsconfig.json"},{"path":"registry/common/package.json","type":"registry:file","target":"package.json"},{"path":"registry/common/utils.ts","type":"registry:lib","target":"src/lib/utils.ts"},{"path":"registry/common/use-mobile.ts","type":"registry:hook","target":"src/hooks/use-mobile.ts"}]},{"name":"brand-header","type":"registry:component","title":"Brand Header","description":"A styled, simple, reusable header","registryDependencies":["https://metrics-ui.revrebel.io/r/theme.json","https://metrics-ui.revrebel.io/r/button.json","https://metrics-ui.revrebel.io/r/input.json","https://metrics-ui.revrebel.io/r/avatar.json","https://metrics-ui.revrebel.io/r/sidebar.json","https://metrics-ui.revrebel.io/r/sonner.json","https://metrics-ui.revrebel.io/r/logo.json"],"files":[{"path":"src/primitives/layouts/brand-header.tsx","type":"registry:component","target":"src/primitives/layouts/brand-header.tsx"}]}]}
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "Metrics UI Registry",
+  "homepage": "https://metrics-ui.revrebel.io",
+  "items": [
+    {
+      "name": "metrics",
+      "type": "registry:theme",
+      "title": "Metrics by REVREBEL",
+      "description": "A bold hotel performance command center for REVREBEL Metrics: dark-blue strategy, smoke-light surfaces, retro-tech contrast, saturated status colors, punchy Khand typography, and dashboard UI built for clarity, speed, and action.",
+      "cssVars": {
+        "light": {
+          "background": "oklch(0.9659 0.0065 208.7829)",
+          "foreground": "oklch(0.3373 0.0925 258.5200)",
+          "card": "oklch(1.0000 0 0)",
+          "card-foreground": "oklch(0.3373 0.0925 258.5200)",
+          "popover": "oklch(1.0000 0 0)",
+          "popover-foreground": "oklch(0.3373 0.0925 258.5200)",
+          "primary": "oklch(0.3373 0.0925 258.5200)",
+          "primary-foreground": "oklch(0.9659 0.0065 208.7829)",
+          "secondary": "oklch(0.8642 0.1141 79.7487)",
+          "secondary-foreground": "oklch(0.3373 0.0925 258.5200)",
+          "muted": "oklch(0.8463 0.0383 219.9626)",
+          "muted-foreground": "oklch(0.3373 0.0925 258.5200)",
+          "accent": "oklch(0.7170 0.1537 37.7036)",
+          "accent-foreground": "oklch(1.0000 0 0)",
+          "destructive": "oklch(0.6254 0.1812 27.1628)",
+          "destructive-foreground": "oklch(1.0000 0 0)",
+          "border": "oklch(0.3373 0.0925 258.5200)",
+          "input": "oklch(0.8463 0.0383 219.9626)",
+          "ring": "oklch(0.3373 0.0925 258.5200)",
+          "chart-1": "oklch(0.8300 0.0400 219.3500)",
+          "chart-2": "oklch(0.8400 0.1400 85.2100)",
+          "chart-3": "oklch(0.6600 0.1800 44.7300)",
+          "chart-4": "oklch(0.5500 0.2100 32)",
+          "chart-5": "oklch(0.4500 0.1400 340.2100)",
+          "sidebar": "oklch(0.9659 0.0065 208.7829)",
+          "sidebar-foreground": "oklch(0.3373 0.0925 258.5200)",
+          "sidebar-primary": "oklch(0.3373 0.0925 258.5200)",
+          "sidebar-primary-foreground": "oklch(1.0000 0 0)",
+          "sidebar-accent": "oklch(0.8463 0.0383 219.9626)",
+          "sidebar-accent-foreground": "oklch(0.3373 0.0925 258.5200)",
+          "sidebar-border": "oklch(0.3373 0.0925 258.5200)",
+          "sidebar-ring": "oklch(0.3373 0.0925 258.5200)",
+          "radius": "0.1rem"
+        },
+        "dark": {
+          "background": "oklch(0.2228 0.0519 258.36)",
+          "foreground": "oklch(0.9659 0.0065 208.7829)",
+          "card": "oklch(0.2453 0.0608 258.67)",
+          "card-foreground": "oklch(0.9659 0.0065 208.7829)",
+          "popover": "oklch(0.2453 0.0608 258.67)",
+          "popover-foreground": "oklch(0.9659 0.0065 208.7829)",
+          "primary": "oklch(0.8463 0.0383 219.9626)",
+          "primary-foreground": "oklch(0.2228 0.0519 258.36)",
+          "secondary": "oklch(0.7170 0.1537 37.7036)",
+          "secondary-foreground": "oklch(1.0000 0 0)",
+          "muted": "oklch(0.2700 0.0681 257.71)",
+          "muted-foreground": "oklch(0.8918 0.026 217.96)",
+          "accent": "oklch(0.8642 0.1141 79.7487)",
+          "accent-foreground": "oklch(0.2228 0.0519 258.36)",
+          "destructive": "oklch(0.6254 0.1812 27.1628)",
+          "destructive-foreground": "oklch(1.0000 0 0)",
+          "border": "oklch(0.4791 0.0703 259.06)",
+          "input": "oklch(0.2700 0.0681 257.71)",
+          "ring": "oklch(0.8463 0.0383 219.9626)",
+          "chart-1": "oklch(0.8463 0.0383 219.9626)",
+          "chart-2": "oklch(0.8642 0.1141 79.7487)",
+          "chart-3": "oklch(0.7170 0.1537 37.7036)",
+          "chart-4": "oklch(0.6254 0.1812 27.1628)",
+          "chart-5": "oklch(0.4940 0.108 350.12)",
+          "sidebar": "oklch(0.2453 0.0608 258.67)",
+          "sidebar-foreground": "oklch(0.9659 0.0065 208.7829)",
+          "sidebar-primary": "oklch(0.8463 0.0383 219.9626)",
+          "sidebar-primary-foreground": "oklch(0.2228 0.0519 258.36)",
+          "sidebar-accent": "oklch(0.7170 0.1537 37.7036)",
+          "sidebar-accent-foreground": "oklch(1.0000 0 0)",
+          "sidebar-border": "oklch(0.4791 0.0703 259.06)",
+          "sidebar-ring": "oklch(0.8463 0.0383 219.9626)",
+          "radius": "0.1rem"
+        }
+      },
+      "dependencies": [
+        "radix-ui"
+      ],
+      "files": [
+        {
+          "path": "registry/common/globals.css",
+          "type": "registry:style",
+          "target": "src/app/globals.css"
+        },
+        {
+          "path": "registry/common/postcss.config.mjs",
+          "type": "registry:file",
+          "target": "postcss.config.mjs"
+        },
+        {
+          "path": "registry/common/tsconfig.json",
+          "type": "registry:file",
+          "target": "tsconfig.json"
+        },
+        {
+          "path": "registry/common/package.json",
+          "type": "registry:file",
+          "target": "package.json"
+        },
+        {
+          "path": "registry/common/utils.ts",
+          "type": "registry:lib",
+          "target": "src/lib/utils.ts"
+        },
+        {
+          "path": "registry/common/use-mobile.ts",
+          "type": "registry:hook",
+          "target": "src/hooks/use-mobile.ts"
+        }
+      ]
+    },
+    {
+      "name": "brand-header",
+      "type": "registry:component",
+      "title": "Brand Header",
+      "description": "A styled, simple, reusable header",
+      "registryDependencies": [
+        "https://metrics-ui.revrebel.io/r/theme.json",
+        "https://metrics-ui.revrebel.io/r/button.json",
+        "https://metrics-ui.revrebel.io/r/input.json",
+        "https://metrics-ui.revrebel.io/r/avatar.json",
+        "https://metrics-ui.revrebel.io/r/sidebar.json",
+        "https://metrics-ui.revrebel.io/r/sonner.json",
+        "https://metrics-ui.revrebel.io/r/logo.json"
+      ],
+      "files": [
+        {
+          "path": "src/primitives/layouts/brand-header.tsx",
+          "type": "registry:component",
+          "target": "src/primitives/layouts/brand-header.tsx"
+        }
+      ]
+    }
+  ]
+}
