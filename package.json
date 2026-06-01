@@ -1,0 +1,39 @@
+{
+  "name": "metrics-core",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "build": "turbo run build --filter=./packages/*",
+    "build:all": "turbo run build",
+    "dev": "turbo run dev",
+    "dev:packages": "turbo run dev --filter=./packages/*",
+    "dev:app": "turbo run dev --filter=@apps/app",
+    "dev:admin": "turbo run dev --filter=@apps/admin",
+    "dev:docs": "turbo run dev --filter=@apps/docs",
+    "clean": "rm -rf .turbo && pnpm -r exec sh -c 'rm -rf dist .next .turbo *.tsbuildinfo'",
+    "clean:node_modules": "rm -rf node_modules apps/*/node_modules packages/*/node_modules",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "db:generate": "turbo run db:generate",
+    "db:push": "turbo run db:push"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.0",
+    "tailwindcss": "^4.3.0",
+    "turbo": "^2.0.0",
+    "typescript": "^5.6.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "@swc/core",
+      "esbuild",
+      "nextra-theme-docs",
+      "sharp"
+    ],
+    "patchedDependencies": {
+      "nextra-theme-docs@4.6.1": "patches/nextra-theme-docs@4.6.1.patch"
+    }
+  }
+}

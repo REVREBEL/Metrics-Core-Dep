@@ -1,0 +1,10 @@
+{
+  "project": "e88c64cc-b868-4fa2-bf7f-2f3410d38185",
+  "projectSlug": "metrics-core-ba-7p",
+  "environments": [
+    {
+      "env": "dev",
+      "path": "/"
+    }
+  ]
+}

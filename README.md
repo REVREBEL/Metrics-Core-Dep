@@ -29,42 +29,132 @@
 
 ## **THE PROJECT**
 
-* <!-- ... [WHY DID YOU CREATE THIS PROJECT?, MOTIVATION, PURPOSE, DESCRIPTION, OBJECTIVES, etc] -->
+Metrics-Core is the Zenith monorepo implementation for REVREBEL, designed for a single-window workflow across product apps, shared packages, database schema/migrations, docs, and data prep.
+
+Current architecture in this repo:
+- `apps/app`: customer-facing Next.js app
+- `apps/admin`: admin control Next.js app
+- `apps/docs`: Nextra docs app
+- `packages/db`: Drizzle + Postgres schema/client/migrations
+- `packages/bq-client`: BigQuery client wrapper
+- `packages/schema`: shared Zod + TypeScript schema contracts
+- `packages/ui`: shared UI package + registry build output
+- `data-prep`: Python ingestion/ELT workspace
+- `turbo.json`: Turborepo task orchestration
+- `pnpm-workspace.yaml`: monorepo workspace wiring
+- `.github/workflows/`: deploy/migration/dataform sync workflow scaffolds
 
 <br>
 <br>
 
 ## **INSTALLATION**
 
-* <!-- ... [SHOW HOW YOUR PROJECT IS INSTALLED] -->
+Prerequisites:
+- Node.js 20+
+- pnpm (Corepack-managed)
+- Infisical CLI (for secrets injection)
 
+Install dependencies at repo root:
+
+```bash
+pnpm install
+```
+
+Initialize Infisical for this project:
+
+```bash
+infisical login
+infisical init
+```
+
+This repo is configured with:
+- Project ID: `e88c64cc-b868-4fa2-bf7f-2f3410d38185`
+- Project slug: `metrics-core-ba-7p`
+- Config file: `.infisical.json`
 
 
 ## **USAGE**
 
-* <!-- ... [SHOW HOW YOUR PROJECT IS USED] -->
+Run all workspace dev tasks (Turbo):
+
+```bash
+pnpm dev
+```
+
+Run app-specific dev servers with Infisical path-scoped secrets:
+
+```bash
+# Customer app
+infisical run --path="/apps/app" -- pnpm --filter=@apps/app dev
+
+# Admin app
+infisical run --path="/apps/admin" -- pnpm --filter=@apps/admin dev
+
+# Docs app
+infisical run --path="/apps/docs" -- pnpm --filter=@apps/docs dev
+```
+
+Run full monorepo dev with shared/root secret scope:
+
+```bash
+infisical run -- pnpm dev
+```
+
+Common root tasks:
+
+```bash
+pnpm build
+pnpm lint
+pnpm db:generate
+pnpm db:push
+```
 
 <br>
 <br>
 
 ## **PROJECT TREE**
 
-<!-- ... [SHOW YOUR PROJECT TREE HERE IF USEFUL] -->
+```text
+.
+├── .github/
+│   └── workflows/
+│       ├── dataform-sync.yml
+│       ├── database-migrate.yml
+│       └── deploy.yml
+├── apps/
+│   ├── app/
+│   ├── admin/
+│   └── docs/
+├── packages/
+│   ├── bq-client/
+│   ├── config/
+│   ├── db/
+│   ├── schema/
+│   └── ui/
+├── data-prep/
+├── .infisical.json
+├── package.json
+├── pnpm-workspace.yaml
+└── turbo.json
+```
 
 <br>
 <br>
 
 ## **NOTES**
 
-* <!-- ... [ADD ADDITIONAL NOTES] -->
+- `apps/*` are intentionally thin wrappers; shared logic belongs in `packages/*`.
+- `packages/db` is the source of truth for Postgres schema and migrations.
+- `packages/ui` supports both direct workspace imports and generated registry output.
+- Dataform sync workflow is scaffolded; requires `DATAFORM_SYNC_TOKEN` GitHub secret and target poly-repo permissions.
+- Deployment workflow files are placeholders and should be finalized per environment.
 
 <br>
 <br>
 
 ## **SCREENSHOTS**
 
-<!-- ... [SOME DESCRIPTIVE IMAGES] -->
-
+- Add app screenshots after first successful local/dev deployment verification.
 
 
 <br>
