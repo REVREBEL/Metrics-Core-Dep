@@ -1,4 +1,4 @@
-import { IconArrowUpRightIcon } from "@tabler/icons-react";
+import { IconArrowUpRight as ArrowUpRightIcon } from "@tabler/icons-react";
 import { Button } from "./button";
 
 export default function ButtonSize() {
