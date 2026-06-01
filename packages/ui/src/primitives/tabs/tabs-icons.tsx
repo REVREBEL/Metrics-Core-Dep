@@ -11,7 +11,7 @@ export function TabsIcons() {
           Preview
         </TabsTrigger>
         <TabsTrigger value="code">
-          <IconAppWindow />
+          <IconCode />
           Code
         </TabsTrigger>
       </TabsList>
