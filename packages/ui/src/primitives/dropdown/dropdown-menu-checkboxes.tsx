@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@buttons"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -9,7 +9,7 @@ import {
   DropdownMenuGroup,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "./dropdown-menu"
 
 export function DropdownMenuCheckboxes() {
   const [showStatusBar, setShowStatusBar] = React.useState(true)

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Button } from "@/components/ui/button"
+import { Button } from "@buttons"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -9,7 +9,7 @@ import {
   DropdownMenuGroup,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "./dropdown-menu"
 import { IconBellIcon, IconMailIcon, IconMessageSquareIcon } from "@tabler/icons-react"
 
 export function DropdownMenuCheckboxesIcons() {
@@ -33,7 +33,7 @@ export function DropdownMenuCheckboxesIcons() {
               setNotifications({ ...notifications, email: checked === true })
             }
           >
-            <MailIcon />
+            <IconMailIcon />
             Email notifications
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
@@ -42,7 +42,7 @@ export function DropdownMenuCheckboxesIcons() {
               setNotifications({ ...notifications, sms: checked === true })
             }
           >
-            <MessageSquareIcon />
+            <IconMessageSquareIcon />
             SMS notifications
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
@@ -51,7 +51,7 @@ export function DropdownMenuCheckboxesIcons() {
               setNotifications({ ...notifications, push: checked === true })
             }
           >
-            <BellIcon />
+            <IconBellIcon />
             Push notifications
           </DropdownMenuCheckboxItem>
         </DropdownMenuGroup>
