@@ -492,20 +492,20 @@ export function DailyPickupTable({
 							/>
 							<SummaryCard
 								title="ADR"
-								value="62.47"
-								subValue="-0.30"
+								value="$362.47"
+								subValue="-$10.30"
 								isNegative
 							/>
 							<SummaryCard
 								title="Revenue"
-								value="17,520"
-								subValue="-38,742"
+								value="$317,520"
+								subValue="-$138,742"
 								isNegative
 							/>
 							<SummaryCard
 								title="RevPAR"
-								value="05.84"
-								subValue="-6.25"
+								value="$105.84"
+								subValue="-$46.25"
 								isNegative
 							/>
 						</div>
