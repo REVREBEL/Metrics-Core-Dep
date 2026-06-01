@@ -12,6 +12,7 @@ Preferred pattern:
 import { Button } from "@buttons/button"
 import { cn } from "@lib/utils"
 import { useIsMobile } from "@hooks/use-mobile"
+import { ExampleBlock } from "@studio-blocks"
 ```
 
 Avoid:
@@ -67,19 +68,31 @@ import { SomeBlock } from "@/components/shadcn-studio/blocks/some-block"
 @metrics-tables/*
   Metrics table components and table compositions.
 
-@studio-blocks/*
-  Larger imported/composed blocks from shadcn-studio/blocks.
-  Preserve these behind a dedicated alias until they are intentionally refactored into first-class Metrics components.
+@studio-blocks
+  Unstyled or externally sourced studio blocks exposed from primitives/studio-blocks.
+  These live outside Metrics component groups because they are not first-class Metrics-styled components yet.
 ```
 
 ## Studio block rule
 
 Do not map `@/components/shadcn-studio/blocks/*` to `@shared-ui` by default.
 
-Use:
+Studio blocks should live under:
+
+```txt
+packages/ui/src/primitives/studio-blocks/
+```
+
+and should be exported through:
+
+```txt
+packages/ui/src/primitives/studio-blocks/index.ts
+```
+
+Use the barrel import:
 
 ```ts
-import { ExampleBlock } from "@studio-blocks/example-block"
+import { ExampleBlock } from "@studio-blocks"
 ```
 
 instead of:
@@ -88,17 +101,23 @@ instead of:
 import { ExampleBlock } from "@shared-ui/example-block"
 ```
 
-The reason: `@shared-ui` should stay reserved for small reusable shared UI helpers. Studio blocks are usually larger imported block-level patterns, so keeping them behind `@studio-blocks` preserves their origin and lets the team migrate them deliberately.
+or:
+
+```ts
+import { ExampleBlock } from "@/components/shadcn-studio/blocks/example-block"
+```
+
+The reason: `@shared-ui` should stay reserved for small reusable shared UI helpers. Studio blocks are unstyled or externally sourced block-level patterns, so keeping them under `src/primitives/studio-blocks` makes it clear they sit outside the Metrics-styled component system until intentionally refactored.
 
 ## When to move a studio block
 
-A studio block can move out of `shadcn-studio/blocks` when it has been intentionally refactored into a first-class Metrics component.
+A studio block can move out of `primitives/studio-blocks` when it has been intentionally refactored into a first-class Metrics component.
 
 Use this decision path:
 
 ```txt
-Still an imported block-level pattern?
-  -> keep under @studio-blocks
+Still an unstyled or externally sourced block-level pattern?
+  -> keep under @studio-blocks / src/primitives/studio-blocks
 
 Small reusable helper used across many components?
   -> move to @shared-ui
@@ -128,9 +147,19 @@ Full Metrics dashboard/layout composition?
   "@metrics-sections/*": ["./src/components/metrics-sections/*"],
   "@metrics-charts/*": ["./src/components/metrics-charts/*"],
   "@metrics-tables/*": ["./src/components/metrics-tables/*"],
-  "@studio-blocks/*": ["./src/components/shadcn-studio/blocks/*"]
+  "@studio-blocks": ["./src/primitives/studio-blocks/index.ts"]
 }
 ```
+
+If deep imports are later required for tree-shaking or migration support, add a separate wildcard alias intentionally:
+
+```json
+{
+  "@studio-blocks/*": ["./src/primitives/studio-blocks/*"]
+}
+```
+
+Do not add the wildcard alias unless the team decides deep studio-block imports are acceptable. The preferred path is the single barrel import from `@studio-blocks`.
 
 ## Migration validation
 
