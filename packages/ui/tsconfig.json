@@ -43,7 +43,7 @@
       "@layouts": ["./src/components/layouts/index.ts"],
       "@metrics": ["./src/components/metrics/index.ts"],
       "@sections": ["./src/components/sections/index.ts"],
-      "@metrics-tables": ["./src/components/tables/index.ts"],
+      "@metrics-tables": ["./src/components/metrics-tables/index.ts"],
       "@timeline": ["./src/components/timeline/index.ts"],
 
       "@common": ["./src/common/index.ts"],
