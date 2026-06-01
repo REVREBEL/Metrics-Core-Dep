@@ -16,7 +16,6 @@ import {
     ChartTooltipContent,
     type ChartConfig,
 } from "@/components/ui/chart"
-import { MetricDashboardCard } from "@/components/widgets/metric-dashboard-card";
 
 export const description = "An interactive line chart"
 

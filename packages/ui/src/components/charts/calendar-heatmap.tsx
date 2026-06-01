@@ -251,7 +251,7 @@ export default function CalendarHeatmap({ startDate }: CalendarHeatmapProps): Re
             AND stay_date < '${formatLocalYYYYMMDD(endDate)}'
           ORDER BY 1
         `);
-        const transformedData = result.map((row) => {
+        const transformedData = result.map((row: any) => {
           const pickupRow = row as PickupQueryRow;
           const [y, m, d] = pickupRow.dateStr.split("-");
           const localDate = new Date(Number.parseInt(y, 10), Number.parseInt(m, 10) - 1, Number.parseInt(d, 10));
