@@ -1,9 +1,5 @@
-import { Button } from "@/components/ui/button"
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover"
+import { Button } from "@buttons";
+import { Popover, PopoverContent, PopoverTrigger } from "./popover";
 
 export function PopoverAlignments() {
   return (
@@ -35,5 +31,5 @@ export function PopoverAlignments() {
         </Popover>
       </div>
     </>
-  )
+  );
 }
