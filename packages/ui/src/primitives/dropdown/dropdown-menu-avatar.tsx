@@ -34,7 +34,7 @@ export function DropdownMenuAvatar() {
             Billing
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <IconBellIcon />
+            <IconBell />
             Notifications
           </DropdownMenuItem>
         </DropdownMenuGroup>
