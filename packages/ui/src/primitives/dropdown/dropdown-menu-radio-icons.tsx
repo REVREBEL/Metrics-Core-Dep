@@ -34,7 +34,7 @@ export function DropdownMenuRadioIcons() {
               Credit Card
             </DropdownMenuRadioItem>
             <DropdownMenuRadioItem value="paypal">
-              <IconHugeiconsIcon icon={Wallet01Icon} />
+              <HugeiconsIcon icon={Wallet01Icon} />
               PayPal
             </DropdownMenuRadioItem>
             <DropdownMenuRadioItem value="bank">
