@@ -1,7 +1,0 @@
-export * from "./channels_page"
-export * from "./dashboard_homepage"
-export * from "./dashboard_layout"
-export * from "./demand_page"
-export * from "./roomtypes_page"
-export * from "./segments_page"
-export * from "./website_page"
