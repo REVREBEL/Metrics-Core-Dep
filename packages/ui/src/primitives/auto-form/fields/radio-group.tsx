@@ -3,8 +3,8 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@ui";
-import { RadioGroup, RadioGroupItem } from "@ui";
+} from "@/components/ui/form";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import type * as z from "zod";
 import AutoFormLabel from "../common/label";
 import AutoFormTooltip from "../common/tooltip";

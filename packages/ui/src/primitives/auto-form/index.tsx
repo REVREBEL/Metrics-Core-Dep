@@ -1,12 +1,12 @@
 "use client";
-import { Form } from "@ui";
+import { Form } from "@/components/ui/form";
 import React from "react";
 import type { DefaultValues, FormState, UseFormReturn } from "react-hook-form";
 import { useForm } from "react-hook-form";
 import type { z } from "zod";
 
-import { Button } from "@buttons";
-import { cn } from "@lib";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import AutoFormObject from "./fields/object";
@@ -120,7 +120,6 @@ function AutoForm<SchemaType extends ZodObjectOrWrapped>({
   );
 }
 
-export { AutoForm };
 export default AutoForm;
 
 export * from "./fields/field";

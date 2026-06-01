@@ -1,4 +1,4 @@
-import { Tabs, TabsList, TabsTrigger } from "./tabs"
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export function TabsVertical() {
   return (
