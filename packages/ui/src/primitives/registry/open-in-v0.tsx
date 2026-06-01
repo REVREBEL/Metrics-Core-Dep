@@ -2,7 +2,7 @@ import { type MouseEvent, useCallback } from "react";
 import type { ComponentProps } from "react";
 import { toast } from "sonner";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@buttons";
 
 function buildV0Url(registryUrl: string, title?: string, prompt?: string) {
   const params = new URLSearchParams();

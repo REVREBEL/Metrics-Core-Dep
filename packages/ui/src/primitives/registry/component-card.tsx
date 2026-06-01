@@ -3,22 +3,22 @@
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 
-import { OpenInV0Button } from "@/components/registry/open-in-v0";
-import { Button } from "@/components/ui/button";
+import { OpenInV0Button } from "./open-in-v0";
+import { Button } from "@buttons";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@ui";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
-import type { Component } from "@/lib/registry";
+} from "@ui";
+import type { Component } from "@lib";
 
 interface ComponentCardProps {
   component: Component;
