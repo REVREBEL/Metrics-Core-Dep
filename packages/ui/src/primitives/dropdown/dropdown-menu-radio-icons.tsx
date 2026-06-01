@@ -12,7 +12,7 @@ import {
   DropdownMenuTrigger,
 } from "./dropdown-menu"
 import { Building02Icon, CreditCardIcon, Wallet01Icon } from "@hugeicons/core-free-icons"
-import { IconHugeiconsIcon } from "@tabler/icons-react"
+import { HugeiconsIcon } from "@hugeicons/react"
 
 export function DropdownMenuRadioIcons() {
   const [paymentMethod, setPaymentMethod] = React.useState("card")
