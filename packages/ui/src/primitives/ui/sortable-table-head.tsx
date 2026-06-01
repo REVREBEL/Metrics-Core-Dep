@@ -33,9 +33,9 @@ export function SortableTableHead({
 			>
 				{children}
 				{direction === "asc" ? (
-					<ArrowDownAZ className="size-3" aria-hidden="true" />
+					<IconArrowDownAZ className="size-3" aria-hidden="true" />
 				) : (
-					<ArrowUpAZ className="size-3" aria-hidden="true" />
+					<IconArrowUpAZ className="size-3" aria-hidden="true" />
 				)}
 			</button>
 		</TableHead>
