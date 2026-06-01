@@ -1,4 +1,4 @@
-import { IconMinusIcon, IconPlusIcon } from "@tabler/icons-react";
+import { IconMinus as MinusIcon, IconPlus as PlusIcon } from "@tabler/icons-react";
 import { Button } from "./button";
 import { ButtonGroup } from "./button-group";
 
