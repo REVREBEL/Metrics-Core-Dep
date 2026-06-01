@@ -38,7 +38,7 @@ export function DropdownMenuRadioIcons() {
               PayPal
             </DropdownMenuRadioItem>
             <DropdownMenuRadioItem value="bank">
-              <IconHugeiconsIcon icon={Building02Icon} />
+              <HugeiconsIcon icon={Building02Icon} />
               Bank Transfer
             </DropdownMenuRadioItem>
           </DropdownMenuRadioGroup>
