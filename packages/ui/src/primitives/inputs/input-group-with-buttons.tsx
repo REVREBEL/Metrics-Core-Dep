@@ -7,7 +7,7 @@ import {
   InputGroupButton,
   InputGroupInput,
 } from "./input-group"
-import {IconCopyIcon as CopyIcon, IconTrashIcon as TrashIcon} from "@tabler/icons-react"
+import { IconCopyIcon, IconTrashIcon } from "@tabler/icons-react"
 
 export function InputGroupWithButtons() {
   return (
