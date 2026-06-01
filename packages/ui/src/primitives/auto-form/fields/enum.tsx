@@ -2,14 +2,14 @@ import {
   FormControl,
   FormItem,
   FormMessage,
-} from "@ui";
+} from "@/components/ui/form";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@ui";
+} from "@/components/ui/select";
 import type * as z from "zod";
 import AutoFormLabel from "../common/label";
 import AutoFormTooltip from "../common/tooltip";

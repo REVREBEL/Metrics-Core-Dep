@@ -1,5 +1,5 @@
-import { FormControl, FormItem, FormMessage } from "@ui";
-import { Textarea } from "@textarea";
+import { FormControl, FormItem, FormMessage } from "@/components/ui/form";
+import { Textarea } from "@/components/ui/textarea";
 import AutoFormLabel from "../common/label";
 import AutoFormTooltip from "../common/tooltip";
 import type { AutoFormInputComponentProps } from "../types";
