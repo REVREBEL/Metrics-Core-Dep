@@ -1,4 +1,4 @@
-import { IconArrowUpIcon } from "@tabler/icons-react";
+import { IconArrowUp as ArrowUpIcon } from "@tabler/icons-react";
 import { Button } from "./button";
 
 export default function ButtonRounded() {
