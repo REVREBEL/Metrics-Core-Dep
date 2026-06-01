@@ -30,7 +30,7 @@ export function DropdownMenuRadioIcons() {
             onValueChange={setPaymentMethod}
           >
             <DropdownMenuRadioItem value="card">
-              <IconHugeiconsIcon icon={CreditCardIcon} />
+              <HugeiconsIcon icon={CreditCardIcon} />
               Credit Card
             </DropdownMenuRadioItem>
             <DropdownMenuRadioItem value="paypal">
