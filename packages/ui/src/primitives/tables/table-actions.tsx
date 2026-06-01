@@ -1,4 +1,4 @@
-import * as React from "react"
+Remove the entire line. For example, in `table-actions.tsx`, delete the `import * as React from "react"` line. The file remains valid with only the remaining imports.
 import { Button } from "@buttons"
 import {
   DropdownMenu,
