@@ -8,7 +8,7 @@ import {
   MenubarShortcut,
   MenubarTrigger,
 } from "./menubar"
-import { IconFileIcon, IconFolderIcon, IconHelpCircleIcon, IconSaveIcon, IconSettingsIcon, IconTrashIcon, Icon } from "@tabler/icons-react"
+import { IconFileFilled, IconFolderFilled, IconInfoSquareRoundedFilled, IconDeviceFloppyFilled, IconSettingsFilled, IconTrashFilled } from "@tabler/icons-react"
 
 export function MenubarIcons() {
   return (
@@ -17,16 +17,16 @@ export function MenubarIcons() {
         <MenubarTrigger>File</MenubarTrigger>
         <MenubarContent>
           <MenubarItem>
-            <FileIcon />
+            <IconFileFilled />
             New File <MenubarShortcut>⌘N</MenubarShortcut>
           </MenubarItem>
           <MenubarItem>
-            <FolderIcon />
+            <IconFolderFilled />
             Open Folder
           </MenubarItem>
           <MenubarSeparator />
           <MenubarItem>
-            <SaveIcon />
+            <IconDeviceFloppyFilled />
             Save <MenubarShortcut>⌘S</MenubarShortcut>
           </MenubarItem>
         </MenubarContent>
@@ -36,16 +36,16 @@ export function MenubarIcons() {
         <MenubarContent>
           <MenubarGroup>
             <MenubarItem>
-              <SettingsIcon />
+              <IconSettingsFilled />
               Settings
             </MenubarItem>
             <MenubarItem>
-              <HelpCircleIcon />
+              <IconInfoSquareRoundedFilled />
               Help
             </MenubarItem>
             <MenubarSeparator />
             <MenubarItem variant="destructive">
-              <TrashIcon />
+              <IconTrashFilled />
               Delete
             </MenubarItem>
           </MenubarGroup>
