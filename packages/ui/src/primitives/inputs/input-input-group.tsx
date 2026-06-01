@@ -5,7 +5,7 @@ import {
   InputGroupInput,
   InputGroupText,
 } from "./input-group"
-import {IconInfoIcon as InfoIcon} from "@tabler/icons-react"
+import { IconInfoIcon } from "@tabler/icons-react"
 
 export function InputInputGroup() {
   return (
