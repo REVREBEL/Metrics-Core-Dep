@@ -1,5 +1,5 @@
-import { FormControl, FormItem } from "@ui";
-import { Switch } from "@ui";
+import { FormControl, FormItem } from "@/components/ui/form";
+import { Switch } from "@/components/ui/switch";
 import AutoFormLabel from "../common/label";
 import AutoFormTooltip from "../common/tooltip";
 import type { AutoFormInputComponentProps } from "../types";

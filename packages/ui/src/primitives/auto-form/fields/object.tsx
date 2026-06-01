@@ -3,8 +3,8 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@ui";
-import { FormField } from "@ui";
+} from "@/components/ui/accordion";
+import { FormField } from "@/components/ui/form";
 import { type useForm, useFormContext } from "react-hook-form";
 import * as z from "zod";
 import { DEFAULT_ZOD_HANDLERS, INPUT_COMPONENTS } from "../config";
