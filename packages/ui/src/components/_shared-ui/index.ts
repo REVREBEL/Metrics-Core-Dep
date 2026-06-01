@@ -1,6 +1,5 @@
 export * from "./metric-card"
 export * from "./metric-card-shell"
-export * from "./metric-card-tabs"
 export * from "./metric-layout"
 export * from "./metric-trend-icon"
 export * from "./metric-source"

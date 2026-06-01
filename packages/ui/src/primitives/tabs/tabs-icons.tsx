@@ -1,6 +1,7 @@
+import { Tabs, TabsList, TabsTrigger } from "@tabs/tabs"
 import { IconAppWindow, IconCode } from "@tabler/icons-react"
 
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Tabs, TabsList, TabsTrigger } from "@tabs/tabs"
 
 export function TabsIcons() {
   return (
