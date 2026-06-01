@@ -1,9 +1,13 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
-import { Skeleton } from "@/components/ui/skeleton";
-import { useDuckDb } from "@/hooks/useDuckDb";
-import { MetricCard, MetricCardTabs } from "@/components/metric-cards/_shared/MetricCard";
+import {
+  MetricCard,
+  MetricCardTabs,
+} from "@shared-ui";
+import { Skeleton } from "@skeleton";
+import { useDuckDb } from "@hooks";
+import type React from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const DAY_SIZE = "24px";
 const DAY_MARGIN = "1px";
@@ -42,7 +46,13 @@ interface PickupQueryRow {
 }
 
 type PickupWindow = "1d" | "3d" | "7d" | "14d" | "30d" | "60d" | "90d" | "120d";
-type HeatmapBucket = "empty" | "low" | "mediumLow" | "mediumHigh" | "high" | "extreme";
+type HeatmapBucket =
+  | "empty"
+  | "low"
+  | "mediumLow"
+  | "mediumHigh"
+  | "high"
+  | "extreme";
 
 type CalendarCell = {
   key: string;
@@ -83,8 +93,16 @@ function addMonths(date: Date, months: number) {
 }
 
 function differenceInCalendarDays(date: Date, startDate: Date) {
-  const start = new Date(startDate.getFullYear(), startDate.getMonth(), startDate.getDate()).getTime();
-  const current = new Date(date.getFullYear(), date.getMonth(), date.getDate()).getTime();
+  const start = new Date(
+    startDate.getFullYear(),
+    startDate.getMonth(),
+    startDate.getDate(),
+  ).getTime();
+  const current = new Date(
+    date.getFullYear(),
+    date.getMonth(),
+    date.getDate(),
+  ).getTime();
   return Math.round((current - start) / 86_400_000);
 }
 
@@ -96,7 +114,10 @@ function getLookbackDays(selectedRange: PickupWindow) {
   return Number.parseInt(selectedRange.replace("d", ""), 10);
 }
 
-function getHeatmapBucket(rooms: number, availableRooms = PLACEHOLDER_AVAILABLE_ROOMS): HeatmapBucket {
+function getHeatmapBucket(
+  rooms: number,
+  availableRooms = PLACEHOLDER_AVAILABLE_ROOMS,
+): HeatmapBucket {
   if (rooms <= 0) return "empty";
 
   const pickupRatio = rooms / availableRooms;
@@ -120,15 +141,26 @@ function scaleDemoRooms(rooms: number, daysOut: number) {
   const horizonWeight = getArrivalHorizonWeight(daysOut);
   if (horizonWeight === 0) return 0;
 
-  return Math.max(rooms > 0 ? 1 : 0, Math.round(rooms * DEMO_PICKUP_SCALE * horizonWeight));
+  return Math.max(
+    rooms > 0 ? 1 : 0,
+    Math.round(rooms * DEMO_PICKUP_SCALE * horizonWeight),
+  );
 }
 
-function createMockHeatmapData(startDate: Date, months: number, lookbackDays: number): CalendarHeatmapData[] {
+function createMockHeatmapData(
+  startDate: Date,
+  months: number,
+  lookbackDays: number,
+): CalendarHeatmapData[] {
   const start = startOfMonth(startDate);
   const end = addMonths(start, months);
   const data: CalendarHeatmapData[] = [];
 
-  for (let cursor = new Date(start); cursor < end; cursor.setDate(cursor.getDate() + 1)) {
+  for (
+    let cursor = new Date(start);
+    cursor < end;
+    cursor.setDate(cursor.getDate() + 1)
+  ) {
     const date = new Date(cursor);
     const day = date.getDate();
     const monthIndex = date.getMonth();
@@ -138,7 +170,9 @@ function createMockHeatmapData(startDate: Date, months: number, lookbackDays: nu
     const seasonalLift = monthIndex >= 4 && monthIndex <= 8 ? 1.25 : 0.85;
     const basePattern = (day * 7 + monthIndex * 11) % 28;
 
-    let rooms = Math.round((basePattern * lookbackFactor + (isWeekend ? 5 : 1)) * seasonalLift);
+    let rooms = Math.round(
+      (basePattern * lookbackFactor + (isWeekend ? 5 : 1)) * seasonalLift,
+    );
 
     if (daysOut <= 90) {
       if (day === 5 || day === 19) rooms = Math.max(rooms, 2);
@@ -176,16 +210,24 @@ function getMonthCells(monthDate: Date): CalendarCell[] {
   const firstDayOffset = monthStart.getDay();
 
   for (let index = 0; index < firstDayOffset; index += 1) {
-    cells.push({ key: `blank-start-${formatLocalYYYYMMDD(monthStart)}-${index}` });
+    cells.push({
+      key: `blank-start-${formatLocalYYYYMMDD(monthStart)}-${index}`,
+    });
   }
 
-  for (let cursor = new Date(monthStart); cursor < monthEnd; cursor.setDate(cursor.getDate() + 1)) {
+  for (
+    let cursor = new Date(monthStart);
+    cursor < monthEnd;
+    cursor.setDate(cursor.getDate() + 1)
+  ) {
     const date = new Date(cursor);
     cells.push({ key: formatLocalYYYYMMDD(date), date });
   }
 
   while (cells.length % 7 !== 0) {
-    cells.push({ key: `blank-end-${formatLocalYYYYMMDD(monthStart)}-${cells.length}` });
+    cells.push({
+      key: `blank-end-${formatLocalYYYYMMDD(monthStart)}-${cells.length}`,
+    });
   }
 
   return cells;
@@ -213,14 +255,25 @@ function formatTooltipDate(date: Date) {
   });
 }
 
-export default function CalendarHeatmap({ startDate }: CalendarHeatmapProps): React.JSX.Element {
-  const calendarStartDate = useMemo(() => startOfMonth(startDate ?? new Date()), [startDate]);
+export default function CalendarHeatmap({
+  startDate,
+}: CalendarHeatmapProps): React.JSX.Element {
+  const calendarStartDate = useMemo(
+    () => startOfMonth(startDate ?? new Date()),
+    [startDate],
+  );
   const [selectedRange, setSelectedRange] = useState<PickupWindow>("7d");
   const initialDemoData = useMemo(
-    () => createMockHeatmapData(calendarStartDate, MONTH_COUNT, getLookbackDays(selectedRange)),
-    [calendarStartDate, selectedRange]
+    () =>
+      createMockHeatmapData(
+        calendarStartDate,
+        MONTH_COUNT,
+        getLookbackDays(selectedRange),
+      ),
+    [calendarStartDate, selectedRange],
   );
-  const [heatmapData, setHeatmapData] = useState<CalendarHeatmapData[]>(initialDemoData);
+  const [heatmapData, setHeatmapData] =
+    useState<CalendarHeatmapData[]>(initialDemoData);
   const [loadError, setLoadError] = useState<string | null>(null);
   const { execute, isInitializing, error } = useDuckDb();
   const [loading, setLoading] = useState(false);
@@ -228,7 +281,11 @@ export default function CalendarHeatmap({ startDate }: CalendarHeatmapProps): Re
   useEffect(() => {
     const endDate = addMonths(calendarStartDate, MONTH_COUNT);
     const lookbackDays = getLookbackDays(selectedRange);
-    const demoData = createMockHeatmapData(calendarStartDate, MONTH_COUNT, lookbackDays);
+    const demoData = createMockHeatmapData(
+      calendarStartDate,
+      MONTH_COUNT,
+      lookbackDays,
+    );
 
     if (isInitializing) {
       setHeatmapData(demoData);
@@ -254,7 +311,11 @@ export default function CalendarHeatmap({ startDate }: CalendarHeatmapProps): Re
         const transformedData = result.map((row: any) => {
           const pickupRow = row as PickupQueryRow;
           const [y, m, d] = pickupRow.dateStr.split("-");
-          const localDate = new Date(Number.parseInt(y, 10), Number.parseInt(m, 10) - 1, Number.parseInt(d, 10));
+          const localDate = new Date(
+            Number.parseInt(y, 10),
+            Number.parseInt(m, 10) - 1,
+            Number.parseInt(d, 10),
+          );
           const rooms = Number(pickupRow.rooms);
           const revenue = Number(pickupRow.revenue);
           return {
@@ -265,7 +326,9 @@ export default function CalendarHeatmap({ startDate }: CalendarHeatmapProps): Re
             adr: Number(pickupRow.adr) || 0,
           };
         });
-        setHeatmapData(hasVisiblePickup(transformedData) ? transformedData : demoData);
+        setHeatmapData(
+          hasVisiblePickup(transformedData) ? transformedData : demoData,
+        );
       } catch (e) {
         setLoadError(null);
         setHeatmapData(demoData);
@@ -279,7 +342,11 @@ export default function CalendarHeatmap({ startDate }: CalendarHeatmapProps): Re
 
   const dataMap = useMemo(() => {
     return heatmapData.reduce((acc, item) => {
-      acc.set(item.dateStr, { rooms: item.rooms, revenue: item.revenue, adr: item.adr });
+      acc.set(item.dateStr, {
+        rooms: item.rooms,
+        revenue: item.revenue,
+        adr: item.adr,
+      });
       return acc;
     }, new Map<string, Omit<CalendarHeatmapData, "date" | "dateStr">>());
   }, [heatmapData]);
@@ -292,8 +359,11 @@ export default function CalendarHeatmap({ startDate }: CalendarHeatmapProps): Re
   }, [heatmapData]);
 
   const monthDates = useMemo(
-    () => Array.from({ length: MONTH_COUNT }, (_, index) => addMonths(calendarStartDate, index)),
-    [calendarStartDate]
+    () =>
+      Array.from({ length: MONTH_COUNT }, (_, index) =>
+        addMonths(calendarStartDate, index),
+      ),
+    [calendarStartDate],
   );
 
   if (loading && !heatmapData.length) {
@@ -303,7 +373,7 @@ export default function CalendarHeatmap({ startDate }: CalendarHeatmapProps): Re
   if (error && !heatmapData.length) {
     return (
       <div className="flex h-120 w-full items-center justify-center rounded-md border">
-        <p className="text-sm font-medium text-destructive">
+        <p className="font-medium text-destructive text-sm">
           {loadError ?? "Failed to load heatmap."}
         </p>
       </div>
@@ -334,19 +404,29 @@ export default function CalendarHeatmap({ startDate }: CalendarHeatmapProps): Re
         <div className="calendar-heatmap__summary">
           <div>
             <div className="metric-card__label mb-1">Available Rooms</div>
-            <div className="metric-card__number text-4xl">{PLACEHOLDER_AVAILABLE_ROOMS}</div>
+            <div className="metric-card__number text-4xl">
+              {PLACEHOLDER_AVAILABLE_ROOMS}
+            </div>
           </div>
           <div>
             <div className="metric-card__label mb-1">Rooms Picked Up</div>
-            <div className="metric-card__number text-4xl">{heatmapStats.totalRooms.toLocaleString()}</div>
+            <div className="metric-card__number text-4xl">
+              {heatmapStats.totalRooms.toLocaleString()}
+            </div>
           </div>
           <div>
             <div className="metric-card__label mb-1">Peak Pickup Day</div>
-            <div className="metric-card__number text-4xl">{heatmapStats.maxCount.toLocaleString()}</div>
+            <div className="metric-card__number text-4xl">
+              {heatmapStats.maxCount.toLocaleString()}
+            </div>
           </div>
         </div>
 
-        <div className="calendar-heatmap__calendar" role="grid" aria-label="Pickup heatmap calendar">
+        <div
+          className="calendar-heatmap__calendar"
+          role="grid"
+          aria-label="Pickup heatmap calendar"
+        >
           <div className="calendar-heatmap__months">
             {monthDates.map((monthDate) => (
               <HeatmapMonth
@@ -376,18 +456,34 @@ function HeatmapMonth({
   return (
     <div className="calendar-heatmap__month">
       <div className="calendar-heatmap__month-caption">
-        <span className="calendar-heatmap__caption-label">{formatCaption(monthDate)}</span>
+        <span className="calendar-heatmap__caption-label">
+          {formatCaption(monthDate)}
+        </span>
       </div>
       <table className="calendar-heatmap__table">
         <tbody>
           {weeks.map((week, weekIndex) => (
-            <tr key={`${formatLocalYYYYMMDD(monthDate)}-${weekIndex}`} className="calendar-heatmap__week">
+            <tr
+              key={`${formatLocalYYYYMMDD(monthDate)}-${weekIndex}`}
+              className="calendar-heatmap__week"
+            >
               {week.map((cell) => {
                 if (!cell.date) {
-                  return <td key={cell.key} className="calendar-heatmap__day calendar-heatmap__outside" />;
+                  return (
+                    <td
+                      key={cell.key}
+                      className="calendar-heatmap__day calendar-heatmap__outside"
+                    />
+                  );
                 }
 
-                return <HeatmapDay key={cell.key} date={cell.date} dataMap={dataMap} />;
+                return (
+                  <HeatmapDay
+                    key={cell.key}
+                    date={cell.date}
+                    dataMap={dataMap}
+                  />
+                );
               })}
             </tr>
           ))}
@@ -416,7 +512,6 @@ function HeatmapDay({
     <td
       className={`calendar-heatmap__day ${bucketClassName} ${isToday ? "calendar-heatmap__today" : ""}`}
       data-day={dateStr}
-      role="gridcell"
       aria-label={formatTooltipDate(date)}
       style={{ backgroundColor: heatmapColor } as React.CSSProperties}
     >
@@ -426,16 +521,22 @@ function HeatmapDay({
         </button>
         <div className="calendar-heatmap__tooltip-wrap">
           <div className="calendar-heatmap__tooltip retro-shadow-base">
-            <div className="calendar-heatmap__tooltip-date">{formatTooltipDate(date)}</div>
+            <div className="calendar-heatmap__tooltip-date">
+              {formatTooltipDate(date)}
+            </div>
             <div className="calendar-heatmap__tooltip-grid">
-              <div className="calendar-heatmap__tooltip-number">{occupancyPct.toFixed(1)}%</div>
+              <div className="calendar-heatmap__tooltip-number">
+                {occupancyPct.toFixed(1)}%
+              </div>
               <div
                 className={`calendar-heatmap__tooltip-accent ${bucketClassName}`}
                 style={{ backgroundColor: heatmapColor }}
               />
               <div className="calendar-heatmap__tooltip-label">Occupancy</div>
 
-              <div className="calendar-heatmap__tooltip-number">{metrics.rooms.toLocaleString()}</div>
+              <div className="calendar-heatmap__tooltip-number">
+                {metrics.rooms.toLocaleString()}
+              </div>
               <div className="calendar-heatmap__tooltip-label">Rooms</div>
             </div>
           </div>
