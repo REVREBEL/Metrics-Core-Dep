@@ -49,7 +49,7 @@
     "./metrics-tables": "./src/components/metrics-tables/index.ts"
   },
   "scripts": {
-    "dev": "pnpm registry:build && next dev",
+    "dev": "pnpm registry:build && next dev --turbopack -p 3204",
     "build": "pnpm registry:build && next build",
     "start": "next start",
     "lint": "biome check",
