@@ -4,7 +4,7 @@ import {
   FieldGroup,
   FieldLabel,
 } from "@auto-form"
-import { Input } from "./input-group"
+import { Input } from "./input"
 import {
   InputGroup,
   InputGroupAddon,
