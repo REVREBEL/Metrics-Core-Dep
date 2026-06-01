@@ -72,7 +72,7 @@ const SidebarProvider = React.forwardRef<
 		ref,
 	) => {
 		const isMobile = useIsMobile();
-		const [openMobile] = React.useState(false);
+		const [openMobile, setOpenMobile] = React.useState(false);
 
 		// This is the internal state of the sidebar.
 		// We use openProp and setOpenProp for control from outside the component.
@@ -126,6 +126,7 @@ const SidebarProvider = React.forwardRef<
 				setOpen,
 				isMobile,
 				openMobile,
+				setOpenMobile,
 				toggleSidebar,
 			}),
 			[state, open, setOpen, isMobile, openMobile, toggleSidebar],

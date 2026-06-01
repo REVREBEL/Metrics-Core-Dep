@@ -218,7 +218,7 @@ Recommended component aliases:
   "@layouts": ["./src/components/layouts/index.ts"],
   "@metrics": ["./src/components/metrics/index.ts"],
   "@sections": ["./src/components/sections/index.ts"],
-  "@metrics-tables": ["./src/components/tables/index.ts"],
+  "@tables": ["./src/components/tables/index.ts"],
   "@timeline": ["./src/components/timeline/index.ts"]
 }
 ```
@@ -237,7 +237,7 @@ Recommended primitive aliases:
   "@popovers": ["./src/primitives/popovers/index.ts"],
   "@primitive-registry": ["./src/primitives/registry/index.ts"],
   "@skeleton": ["./src/primitives/skeleton/index.ts"],
-  "@tables": ["./src/primitives/tables/index.ts"],
+  "@primitive-tables": ["./src/primitives/tables/index.ts"],
   "@tabs": ["./src/primitives/tabs/index.ts"],
   "@textarea": ["./src/primitives/textarea/index.ts"],
   "@typography": ["./src/primitives/typography/index.ts"],
@@ -251,8 +251,8 @@ Use collision-safe names where components and primitives overlap:
 @charts              → src/components/charts
 @primitive-charts    → src/primitives/charts
 
-@metrics-tables      → src/components/tables
-@tables            → src/primitives/tables
+@tables              → src/components/tables
+@primitive-tables    → src/primitives/tables
 
 @layouts             → src/components/layouts
 @primitive-layouts   → src/primitives/layouts
@@ -265,7 +265,7 @@ Preferred:
 ```ts
 import { PerformanceCard } from "@metrics"
 import { AreaChartInteractive } from "@charts"
-import { DailyPickupTable } from "@metrics-tables"
+import { DailyPickupTable } from "@tables"
 import { DashboardSection } from "@sections"
 import { MetricCardShell } from "@shared-ui"
 import { Button } from "@buttons"

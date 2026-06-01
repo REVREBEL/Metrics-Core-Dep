@@ -1,5 +1,1 @@
-export * from "./tabs"
-export * from "./tabs-disabled"
-export * from "./tabs-icons"
-export * from "./tabs-line"
-export * from "./tabs-vertical"
+export * from "./tabs";

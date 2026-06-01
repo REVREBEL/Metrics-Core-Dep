@@ -2,9 +2,9 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@ui";
-import { Button } from "@buttons";
-import { Separator } from "@ui";
+} from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import { IconTrash } from "@tabler/icons-react";
 import { useFieldArray, type useForm } from "react-hook-form";
 import type * as z from "zod";
@@ -90,7 +90,7 @@ export default function AutoFormArray({
                   className="hover:bg-zinc-300 hover:text-black focus:ring-0 focus:ring-offset-0 focus-visible:ring-0 focus-visible:ring-offset-0 dark:bg-white dark:text-black dark:hover:bg-zinc-300 dark:hover:text-black dark:hover:ring-0 dark:hover:ring-offset-0 dark:focus-visible:ring-0 dark:focus-visible:ring-offset-0"
                   onClick={() => remove(index)}
                 >
-                  <IconTrash className="size-4 " />
+                  <Trash className="size-4 " />
                 </Button>
               </div>
 
@@ -104,7 +104,7 @@ export default function AutoFormArray({
           onClick={() => append({})}
           className="mt-4 flex items-center"
         >
-          <PlusIcon className="mr-2 size-4" />
+          <PlusIcon className="mr-2" size={16} />
           Add
         </Button>
       </AccordionContent>
