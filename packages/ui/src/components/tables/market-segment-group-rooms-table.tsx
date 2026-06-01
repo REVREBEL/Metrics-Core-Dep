@@ -56,6 +56,7 @@ export interface RoomstransientData {
 
 // Row actions component
 function RowActions({
+
 	row: _row,
 }: {
 	row: unknown;
@@ -120,6 +121,65 @@ export function MarketSegmentGroupRoomsTable({
 			try {
 				setIsLoading(true);
 				const query = `
+  row: _row
+}: {
+  row: unknown
+}) {
+  return (<DropdownMenu>
+    <DropdownMenuTrigger asChild>
+      <div className="flex justify-end">
+        <Button
+          size="icon"
+          variant="ghost"
+          className="shadow-none"
+          aria-label="Edit item"
+        >
+          <EllipsisIcon size={16} aria-hidden="true" />
+        </Button>
+      </div>
+    </DropdownMenuTrigger>
+    <DropdownMenuContent align="end">
+      <DropdownMenuGroup>
+        <DropdownMenuItem>
+          <span>Edit</span>
+          <DropdownMenuShortcut>⌘E</DropdownMenuShortcut>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
+          <span>Duplicate</span>
+          <DropdownMenuShortcut>⌘D</DropdownMenuShortcut>
+        </DropdownMenuItem>
+      </DropdownMenuGroup>
+      <DropdownMenuSeparator />
+      <DropdownMenuGroup>
+        <DropdownMenuItem>
+          <span>Archive</span>
+          <DropdownMenuShortcut>⌘A</DropdownMenuShortcut>
+        </DropdownMenuItem>
+      </DropdownMenuGroup>
+      <DropdownMenuSeparator />
+      <DropdownMenuItem className="text-destructive focus:text-destructive">
+        <span>Delete</span>
+        <DropdownMenuShortcut>⌘⌫</DropdownMenuShortcut>
+      </DropdownMenuItem>
+    </DropdownMenuContent>
+  </DropdownMenu>);
+}
+
+export default function RoomstransientTable({ year, month }: { year: string, month: string }) {
+  const { execute, isInitializing, error } = useDuckDb();
+  const [data, setData] = useState<RoomstransientData[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Fetch data from DuckDB
+  useMemo(() => {
+    async function fetchData() {
+      if (isInitializing || error || !year || !month) {
+        setIsLoading(false);
+        return;
+      }
+      try {
+        setIsLoading(true);
+        const query = `
           SELECT 
             segmentView,
             (SUM(rooms) / NULLIF(SUM(available_rooms), 0)) * 100 as occupancy,

@@ -6,11 +6,11 @@ export function TabsIcons() {
     <Tabs defaultValue="preview">
       <TabsList>
         <TabsTrigger value="preview">
-          <AppWindowIcon />
+          <IconAppWindow />
           Preview
         </TabsTrigger>
         <TabsTrigger value="code">
-          <CodeIcon />
+          <IconAppWindow />
           Code
         </TabsTrigger>
       </TabsList>
