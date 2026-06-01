@@ -26,7 +26,7 @@ export function DropdownMenuAvatar() {
       <DropdownMenuContent align="end">
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <IconBadgeCheckIcon />
+            <IconBadgeCheck />
             Account
           </DropdownMenuItem>
           <DropdownMenuItem>
