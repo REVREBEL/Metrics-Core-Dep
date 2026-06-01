@@ -1,13 +1,13 @@
-import { Button } from "@/components/ui/button"
-import { IconArrowUpIcon } from "@tabler/icons-react"
+import { IconArrowUp as ArrowUpIcon } from "@tabler/icons-react";
+import { Button } from "./button";
 
 export default function ButtonRounded() {
-  return (
-    <div className="flex gap-2">
-      <Button className="rounded-full">Get Started</Button>
-      <Button variant="outline" size="icon" className="rounded-full">
-        <ArrowUpIcon />
-      </Button>
-    </div>
-  )
+	return (
+		<div className="flex gap-2">
+			<Button className="rounded-full">Get Started</Button>
+			<Button variant="outline" size="icon" className="rounded-full">
+				<ArrowUpIcon />
+			</Button>
+		</div>
+	);
 }

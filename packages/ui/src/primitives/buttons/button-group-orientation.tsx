@@ -1,20 +1,20 @@
-import { Button } from "@/components/ui/button"
-import { ButtonGroup } from "@/components/ui/button-group"
-import { IconMinusIcon, IconPlusIcon } from "@tabler/icons-react"
+import { IconMinus as MinusIcon, IconPlus as PlusIcon } from "@tabler/icons-react";
+import { Button } from "./button";
+import { ButtonGroup } from "./button-group";
 
 export default function ButtonGroupOrientation() {
-  return (
-    <ButtonGroup
-      orientation="vertical"
-      aria-label="Media controls"
-      className="h-fit"
-    >
-      <Button variant="outline" size="icon">
-        <PlusIcon />
-      </Button>
-      <Button variant="outline" size="icon">
-        <MinusIcon />
-      </Button>
-    </ButtonGroup>
-  )
+	return (
+		<ButtonGroup
+			orientation="vertical"
+			aria-label="Media controls"
+			className="h-fit"
+		>
+			<Button variant="outline" size="icon">
+				<PlusIcon />
+			</Button>
+			<Button variant="outline" size="icon">
+				<MinusIcon />
+			</Button>
+		</ButtonGroup>
+	);
 }
