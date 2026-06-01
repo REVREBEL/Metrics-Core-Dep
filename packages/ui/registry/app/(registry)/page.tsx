@@ -27,6 +27,11 @@ export default function Home() {
             Distribute your design system tokens, custom components, hooks,
             pages, and other files to any React project.
           </p>
+          <p>
+            <Link href="/catalog" className="text-sm underline">
+              Open visual component catalog
+            </Link>
+          </p>
         </div>
       </div>
 

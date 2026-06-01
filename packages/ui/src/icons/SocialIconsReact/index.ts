@@ -1,0 +1,7 @@
+export * from "./SocialconsShadowFilledReact"
+export * from "./SocialIconsFilledReact"
+export * from "./SocialIconsFlatFilledReact"
+export * from "./SocialIconsFlatLineReact"
+export * from "./SocialIconsFlatOutlineReact"
+export * from "./SocialIconsOutlineReact"
+export * from "./SocialIconsShadowOutlineReact"

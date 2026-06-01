@@ -80,7 +80,9 @@
           "radius": "0.5rem"
         }
       },
-      "dependencies": ["radix-ui"],
+      "dependencies": [
+        "radix-ui"
+      ],
       "files": [
         {
           "path": "registry/common/globals.css",
@@ -179,12 +181,12 @@
       ],
       "files": [
         {
-          "path": "registry/layouts/minimal-layout.tsx",
+          "path": "src/components/layouts/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         },
         {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
+          "path": "registry/app/demo/[name]/blocks/blank-page.tsx",
           "type": "registry:page",
           "target": "src/app/page.tsx"
         }
@@ -260,7 +262,7 @@
           "target": "src/app/layout.tsx"
         },
         {
-          "path": "src/app/demo/[name]/blocks/dashboard-page.tsx",
+          "path": "registry/app/demo/[name]/blocks/dashboard-page.tsx",
           "type": "registry:page",
           "target": "src/app/page.tsx"
         }
@@ -331,12 +333,12 @@
       ],
       "files": [
         {
-          "path": "registry/layouts/minimal-layout.tsx",
+          "path": "src/components/layouts/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         },
         {
-          "path": "src/app/demo/[name]/blocks/store-page.tsx",
+          "path": "registry/app/demo/[name]/blocks/store-page.tsx",
           "type": "registry:page",
           "target": "src/app/page.tsx"
         }
@@ -368,7 +370,7 @@
           "target": "src/app/layout.tsx"
         },
         {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
+          "path": "registry/app/demo/[name]/blocks/blank-page.tsx",
           "type": "registry:page",
           "target": "src/app/page.tsx"
         }
@@ -398,7 +400,7 @@
           "target": "src/app/layout.tsx"
         },
         {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
+          "path": "registry/app/demo/[name]/blocks/blank-page.tsx",
           "type": "registry:page",
           "target": "src/app/page.tsx"
         }
@@ -422,12 +424,12 @@
           "target": "src/components/login.tsx"
         },
         {
-          "path": "registry/layouts/minimal-layout.tsx",
+          "path": "src/components/layouts/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         },
         {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
+          "path": "registry/app/demo/[name]/blocks/blank-page.tsx",
           "type": "registry:page",
           "target": "src/app/page.tsx"
         }
@@ -448,12 +450,12 @@
           "target": "src/components/logo.tsx"
         },
         {
-          "path": "registry/layouts/minimal-layout.tsx",
+          "path": "src/components/layouts/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         },
         {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
+          "path": "registry/app/demo/[name]/blocks/blank-page.tsx",
           "type": "registry:page",
           "target": "src/app/page.tsx"
         }
@@ -476,12 +478,12 @@
           "target": "src/components/hero.tsx"
         },
         {
-          "path": "registry/layouts/minimal-layout.tsx",
+          "path": "src/components/layouts/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         },
         {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
+          "path": "registry/app/demo/[name]/blocks/blank-page.tsx",
           "type": "registry:page",
           "target": "src/app/page.tsx"
         }
@@ -503,12 +505,12 @@
           "target": "src/components/promo.tsx"
         },
         {
-          "path": "registry/layouts/minimal-layout.tsx",
+          "path": "src/components/layouts/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         },
         {
-          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
+          "path": "registry/app/demo/[name]/blocks/blank-page.tsx",
           "type": "registry:page",
           "target": "src/app/page.tsx"
         }
@@ -534,7 +536,7 @@
           "target": "src/lib/products.ts"
         },
         {
-          "path": "registry/layouts/minimal-layout.tsx",
+          "path": "src/components/layouts/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         }

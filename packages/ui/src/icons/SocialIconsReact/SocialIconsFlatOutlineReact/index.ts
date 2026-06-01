@@ -1,19 +1,19 @@
-export { default as BlogFlatOutline } from "./BlogFlatOutline";
-export { default as BookingFlatOutline } from "./BookingFlatOutline";
-export { default as EmailFlatOutline } from "./EmailFlatOutline";
-export { default as ExpediaFlatOutline } from "./ExpediaFlatOutline";
-export { default as FacebookFlatOutline } from "./FacebookFlatOutline";
-export { default as GenericFlatOutline } from "./GenericFlatOutline";
-export { default as GithubFlatOutline } from "./GithubFlatOutline";
-export { default as InstagramFlatOutline } from "./InstagramFlatOutline";
-export { default as LinkedinFlatOutline } from "./LinkedinFlatOutline";
-export { default as PintrestFlatOutline } from "./PintrestFlatOutline";
-export { default as RssFlatOutline } from "./RssFlatOutline";
-export { default as SlackFlatOutline } from "./SlackFlatOutline";
-export { default as TelegramFlatOutline } from "./TelegramFlatOutline";
-export { default as TikTokFlatOutline } from "./TikTokFlatOutline";
-export { default as TripadvisorFlatOutline } from "./TripadvisorFlatOutline";
-export { default as XFlatOutline } from "./XFlatOutline";
-export { default as XFlatOutline1 } from "./XFlatOutline1";
-export { default as YelpFlatOutline } from "./YelpFlatOutline";
-export { default as YoutubeFlatOutline } from "./YoutubeFlatOutline";
+export * from "./BlogFlatOutline"
+export * from "./BookingFlatOutline"
+export * from "./EmailFlatOutline"
+export * from "./ExpediaFlatOutline"
+export * from "./FacebookFlatOutline"
+export * from "./GenericFlatOutline"
+export * from "./GithubFlatOutline"
+export * from "./InstagramFlatOutline"
+export * from "./LinkedinFlatOutline"
+export * from "./PintrestFlatOutline"
+export * from "./RssFlatOutline"
+export * from "./SlackFlatOutline"
+export * from "./TelegramFlatOutline"
+export * from "./TikTokFlatOutline"
+export * from "./TripadvisorFlatOutline"
+export * from "./XFlatOutline"
+export * from "./XFlatOutline1"
+export * from "./YelpFlatOutline"
+export * from "./YoutubeFlatOutline"

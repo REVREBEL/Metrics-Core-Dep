@@ -46,6 +46,7 @@ const blockItems = getBlocks();
 export const gettingStartedItems = [
   { title: "Home", path: "/" },
   { title: "Design Tokens", path: "/tokens" },
+  { title: "Component Catalog", path: "/catalog" },
 ];
 
 export function MobileSidebarTrigger() {
