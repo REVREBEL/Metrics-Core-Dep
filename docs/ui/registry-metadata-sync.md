@@ -2,6 +2,12 @@
 
 The Metrics UI package includes a registry metadata sync workflow that keeps the component catalog aligned with the source tree.
 
+This doc focuses on metadata. For the full composed registry build pipeline, see:
+
+```txt
+docs/ui/registry-build-pipeline.md
+```
+
 ## Purpose
 
 The sync workflow gives the UI catalog a reliable metadata source for component descriptions, prop notes, and AI-readable component guidance.
@@ -12,7 +18,7 @@ This is useful because not every registry item has complete inline metadata in `
 
 ```txt
 packages/ui/src/lib/component-metadata.ts
-packages/ui/scripts/registry-sync.mts
+packages/ui/scripts/registry-sync.mjs
 packages/ui/src/lib/registry.metadata.json
 ```
 
@@ -27,9 +33,10 @@ Typical metadata includes:
 - Prop names
 - Prop types
 - Required/optional state
+- Default value
 - Prop descriptions
 
-### `registry-sync.mts`
+### `registry-sync.mjs`
 
 Scans component files and updates the generated metadata JSON.
 
@@ -39,7 +46,7 @@ The script scans:
 packages/ui/src/components/**/*.tsx
 ```
 
-It ignores story, data, and internal-only directories.
+It ignores stories, data, and internal-only directories.
 
 ### `registry.metadata.json`
 
@@ -82,6 +89,14 @@ packages/ui/src/lib/registry.metadata.json
 
 The catalog uses that generated metadata whenever inline registry metadata is missing.
 
+Catalog population uses:
+
+```txt
+component render entries -> PLAYGROUND_REGISTRY
+props/description metadata -> registry.metadata.json
+co-located metadata.ts -> merged by registry:sync
+```
+
 Catalog URL:
 
 ```txt
@@ -105,6 +120,7 @@ export const metadata: ComponentMetadata = {
       name: "className",
       type: "string",
       required: false,
+      defaultValue: undefined,
       description: "Optional class override",
     },
   ],
@@ -145,8 +161,12 @@ Keep `metadata.ts` files as simple object literals. Avoid:
 5. Fill descriptions and props for priority components first.
 6. Open the catalog and confirm the component card displays correctly.
 
-## Future enhancement
+## Build pipeline relationship
 
-The next improvement is to make per-component `metadata.ts` files the preferred source of truth, with `registry:sync` automatically merging those files into `registry.metadata.json`.
+For normal team usage, prefer the full registry build command:
 
-That keeps metadata close to the component while preserving a single generated file for catalog runtime reads.
+```bash
+pnpm --filter @repo/ui run registry:build
+```
+
+That command runs metadata sync, manifest sync/repair, and the shadcn registry build in sequence.
