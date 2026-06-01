@@ -1,14 +1,19 @@
-"use client"
+"use client";
 
-import { cva, type VariantProps } from "class-variance-authority";
-import type React from "react";
 import {
-	createContext,
-	useCallback,
-	useContext,
-	useMemo,
-	useState,
-} from "react";
+	DropdownMenu,
+	DropdownMenuContent,
+	DropdownMenuItem,
+	DropdownMenuTrigger,
+} from "@dropdown";
+import { cn } from "@lib";
+import { Popover, PopoverContent, PopoverTrigger } from "@popovers";
+import {
+	CheckIcon,
+	Cross2Icon,
+	ExclamationTriangleIcon,
+	PlusIcon,
+} from "@radix-ui/react-icons";
 import {
 	Command,
 	CommandEmpty,
@@ -17,26 +22,18 @@ import {
 	CommandItem,
 	CommandList,
 	CommandSeparator,
-} from "@/components/ui/command";
+} from "@ui";
+import { Switch } from "@ui";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@ui";
+import { type VariantProps, cva } from "class-variance-authority";
+import type React from "react";
 import {
-	DropdownMenu,
-	DropdownMenuContent,
-	DropdownMenuItem,
-	DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
-	Popover,
-	PopoverContent,
-	PopoverTrigger,
-} from "@/components/ui/popover";
-import { Switch } from "@/components/ui/switch";
-import {
-	Tooltip,
-	TooltipContent,
-	TooltipTrigger,
-} from "@/components/ui/tooltip";
-import { cn } from "@/lib/utils";
-import { ExclamationTriangleIcon, CheckIcon, PlusIcon, Cross2Icon } from "@radix-ui/react-icons";
+	createContext,
+	useCallback,
+	useContext,
+	useMemo,
+	useState,
+} from "react";
 
 // i18n Configuration Interface
 export interface FilterI18nConfig {
@@ -513,7 +510,7 @@ function FilterInput<T = unknown>({
 	// Get validation message for field type
 	const getValidationMessage = (
 		fieldType: string,
-		hasCustomPattern: boolean = false,
+		hasCustomPattern = false,
 	): string => {
 		// If it's a text or number field with a custom pattern, use the generic invalid message
 		if ((fieldType === "text" || fieldType === "number") && hasCustomPattern) {
@@ -2060,11 +2057,7 @@ export function Filters<T = unknown>({
 	);
 
 	const addFilterWithOption = useCallback(
-		(
-			field: FilterFieldConfig<T>,
-			values: unknown[],
-			closePopover: boolean = true,
-		) => {
+		(field: FilterFieldConfig<T>, values: unknown[], closePopover = true) => {
 			if (!field.key) return;
 
 			const defaultOperator =
