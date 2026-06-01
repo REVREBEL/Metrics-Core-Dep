@@ -1,4 +1,4 @@
-import { Field, FieldDescription, FieldLabel } from "@inputs";
+import { Field, FieldDescription, FieldLabel } from "@auto-form";
 import {
 	Popover,
 	PopoverContent,

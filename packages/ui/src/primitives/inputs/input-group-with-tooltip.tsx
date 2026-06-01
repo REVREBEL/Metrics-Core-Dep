@@ -1,12 +1,12 @@
 "use client"
 
-import { ButtonGroup, ButtonGroupText } from "@buttons"
+import { ButtonGroup } from "@buttons"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@dropdown"
+} from "@dropdowns"
 import {
   Field,
   FieldDescription,
@@ -18,142 +18,99 @@ import {
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
+  InputGroupText,
 } from "./input-group"
-import {
-  Popover,
-  PopoverContent,
-  PopoverDescription,
-  PopoverHeader,
-  PopoverTitle,
-  PopoverTrigger,
-} from "@popovers"
 import {
   Tooltip,
   TooltipContent,
+  TooltipProvider,
   TooltipTrigger,
 } from "@ui"
-import { IconChevronDownIcon, IconInfoIcon, IconStarIcon } from "@tabler/icons-react"
-import { toast } from "sonner"
+import { IconChevronDown, IconInfoCircle, IconStar } from "@tabler/icons-react"
+import * as React from "react"
 
-export function InputGroupWithTooltip({
-  country,
-  setCountry,
-}: {
-  country: string
-  setCountry: (value: string) => void
-}) {
+const COUNTRIES = ["US", "UK", "CA", "AU", "DE"]
+
+export function InputGroupWithTooltip() {
+  const [country, setCountry] = React.useState("US")
+
   return (
-    <>
+    <TooltipProvider>
       <FieldGroup>
         <Field>
-          <FieldLabel htmlFor="input-tooltip-20">Tooltip</FieldLabel>
+          <FieldLabel htmlFor="input-tooltip-29">
+            Input Group with Tooltip
+          </FieldLabel>
           <InputGroup>
-            <InputGroupInput id="input-tooltip-20" />
+            <InputGroupInput id="input-tooltip-29" />
             <InputGroupAddon align="inline-end">
               <Tooltip>
-                <TooltipTrigger
-                  render={
-                    <InputGroupButton className="rounded-full" size="icon-xs" />
-                  }
-                >
-                  <InfoIcon />
+                <TooltipTrigger asChild>
+                  <IconInfoCircle />
                 </TooltipTrigger>
-                <TooltipContent>This is content in a tooltip.</TooltipContent>
+                <TooltipContent>
+                  <p>This is a tooltip.</p>
+                </TooltipContent>
               </Tooltip>
             </InputGroupAddon>
           </InputGroup>
-          <FieldDescription>
-            This is a description of the input group.
-          </FieldDescription>
-        </Field>
-        <Field>
-          <FieldLabel htmlFor="input-dropdown-21">Dropdown</FieldLabel>
           <InputGroup>
-            <InputGroupInput id="input-dropdown-21" />
-            <InputGroupAddon>
-              <DropdownMenu>
-                <DropdownMenuTrigger
-                  render={
-                    <InputGroupButton className="text-muted-foreground tabular-nums" />
-                  }
-                >
-                  {country} <ChevronDownIcon />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent
-                  align="start"
-                  className="min-w-16"
-                  sideOffset={10}
-                  alignOffset={-8}
-                >
-                  <DropdownMenuItem onClick={() => setCountry("+1")}>
-                    +1
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <InputGroupAddon>
+                  {country} <IconChevronDown />
+                </InputGroupAddon>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="start">
+                {COUNTRIES.map((c) => (
+                  <DropdownMenuItem key={c} onClick={() => setCountry(c)}>
+                    {c}
                   </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setCountry("+44")}>
-                    +44
-                  </DropdownMenuItem>
-                  <DropdownMenuItem onClick={() => setCountry("+46")}>
-                    +46
-                  </DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
-            </InputGroupAddon>
-          </InputGroup>
-          <FieldDescription>
-            This is a description of the input group.
-          </FieldDescription>
-        </Field>
-        <Field>
-          <FieldLabel htmlFor="input-secure-19">Popover</FieldLabel>
-          <InputGroup>
-            <Popover>
-              <PopoverTrigger render={<InputGroupAddon />} nativeButton={false}>
-                <InputGroupButton variant="secondary" size="icon-xs">
-                  <InfoIcon />
-                </InputGroupButton>
-              </PopoverTrigger>
-              <PopoverContent align="start">
-                <PopoverHeader>
-                  <PopoverTitle>Your connection is not secure.</PopoverTitle>
-                  <PopoverDescription>
-                    You should not enter any sensitive information on this site.
-                  </PopoverDescription>
-                </PopoverHeader>
-              </PopoverContent>
-            </Popover>
-            <InputGroupAddon className="pl-1 text-muted-foreground">
-              https://
-            </InputGroupAddon>
-            <InputGroupInput id="input-secure-19" />
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
+            <InputGroupInput id="input-tooltip-30" />
             <InputGroupAddon align="inline-end">
-              <InputGroupButton
-                size="icon-xs"
-                onClick={() => toast("Added to favorites")}
-              >
-                <StarIcon />
-              </InputGroupButton>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <IconInfoCircle />
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>This is a tooltip.</p>
+                </TooltipContent>
+              </Tooltip>
             </InputGroupAddon>
           </InputGroup>
-          <FieldDescription>
-            This is a description of the input group.
-          </FieldDescription>
         </Field>
         <Field>
-          <FieldLabel htmlFor="url">Button Group</FieldLabel>
-          <ButtonGroup>
-            <ButtonGroupText>https://</ButtonGroupText>
-            <InputGroup>
-              <InputGroupInput id="url" />
-              <InputGroupAddon align="inline-end">
-                <InfoIcon />
-              </InputGroupAddon>
-            </InputGroup>
-            <ButtonGroupText>.com</ButtonGroupText>
-          </ButtonGroup>
-          <FieldDescription>
-            This is a description of the input group.
-          </FieldDescription>
+          <FieldLabel htmlFor="input-tooltip-31">With Buttons</FieldLabel>
+          <InputGroup>
+            <InputGroupInput id="input-tooltip-31" />
+            <InputGroupAddon align="inline-end">
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <InputGroupButton variant="ghost" size="icon-xs">
+                    <IconStar />
+                  </InputGroupButton>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Add to favorites</p>
+                </TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <InputGroupButton variant="ghost" size="icon-xs">
+                    <IconInfoCircle />
+                  </InputGroupButton>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>More information</p>
+                </TooltipContent>
+              </Tooltip>
+            </InputGroupAddon>
+          </InputGroup>
         </Field>
       </FieldGroup>
-    </>
+    </TooltipProvider>
   )
 }

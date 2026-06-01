@@ -7,7 +7,7 @@ import {
 	DropdownMenuItem,
 	DropdownMenuSeparator,
 	DropdownMenuTrigger,
-} from "@dropdown";
+} from "@dropdowns";
 import {
 	Alert01Icon,
 	ChevronDown,
@@ -29,40 +29,40 @@ export default function ButtonGroupDropdown() {
 			<DropdownMenu>
 				<DropdownMenuTrigger asChild>
 					<Button variant="outline" className="pl-2!">
-						<HugeiconsIcon icon={ChevronDown} />
+						<IconHugeiconsIcon icon={ChevronDown} />
 					</Button>
 				</DropdownMenuTrigger>
 				<DropdownMenuContent align="end" className="w-44">
 					<DropdownMenuGroup>
 						<DropdownMenuItem>
-							<HugeiconsIcon icon={VolumeMute02Icon} />
+							<IconHugeiconsIcon icon={VolumeMute02Icon} />
 							Mute Conversation
 						</DropdownMenuItem>
 						<DropdownMenuItem>
-							<HugeiconsIcon icon={Tick01Icon} />
+							<IconHugeiconsIcon icon={Tick01Icon} />
 							Mark as Read
 						</DropdownMenuItem>
 						<DropdownMenuItem>
-							<HugeiconsIcon icon={Alert01Icon} />
+							<IconHugeiconsIcon icon={Alert01Icon} />
 							Report Conversation
 						</DropdownMenuItem>
 						<DropdownMenuItem>
-							<HugeiconsIcon icon={UserRemove01Icon} />
+							<IconHugeiconsIcon icon={UserRemove01Icon} />
 							Block User
 						</DropdownMenuItem>
 						<DropdownMenuItem>
-							<HugeiconsIcon icon={Share01Icon} />
+							<IconHugeiconsIcon icon={Share01Icon} />
 							Share Conversation
 						</DropdownMenuItem>
 						<DropdownMenuItem>
-							<HugeiconsIcon icon={Copy01Icon} />
+							<IconHugeiconsIcon icon={Copy01Icon} />
 							Copy Conversation
 						</DropdownMenuItem>
 					</DropdownMenuGroup>
 					<DropdownMenuSeparator />
 					<DropdownMenuGroup>
 						<DropdownMenuItem variant="destructive">
-							<HugeiconsIcon icon={Delete01Icon} />
+							<IconHugeiconsIcon icon={Delete01Icon} />
 							Delete Conversation
 						</DropdownMenuItem>
 					</DropdownMenuGroup>

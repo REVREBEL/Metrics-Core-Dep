@@ -1,6 +1,4 @@
-export * from "./BrowserCircleIconsColorPng"
 export * from "./BrowserCircleIconsColorReact"
 export * from "./BrowserCircleIconsReact"
-export * from "./BrowserIconsColorPng"
 export * from "./BrowserIconsColorReact"
 export * from "./BrowserIconsReact"
