@@ -1,24 +1,24 @@
-export * from "./button-default"
-export * from "./button-destructive"
-export * from "./button-ghost"
-export * from "./button-group-dropdown"
-export * from "./button-group-input-group"
-export * from "./button-group-input"
-export * from "./button-group-nested"
-export * from "./button-group-orientation"
-export * from "./button-group-popover"
-export * from "./button-group-select"
-export * from "./button-group-separator"
-export * from "./button-group-size"
-export * from "./button-group-split"
-export * from "./button-group"
-export * from "./button-icon"
-export * from "./button-link"
-export * from "./button-outline"
-export * from "./button-render"
-export * from "./button-rounded"
-export * from "./button-secondary"
-export * from "./button-size"
-export * from "./button-spinner"
-export * from "./button-with-icon"
-export * from "./button"
+export * from "./button";
+export * from "./button-group";
+export { default as ButtonDefault } from "./button-default";
+export { default as ButtonDestructive } from "./button-destructive";
+export { default as ButtonGhost } from "./button-ghost";
+export { default as ButtonGroupDropdown } from "./button-group-dropdown";
+export { default as ButtonGroupInputGroup } from "./button-group-input-group";
+export { default as ButtonGroupInput } from "./button-group-input";
+export { ButtonGroupNested } from "./button-group-nested";
+export { default as ButtonGroupOrientation } from "./button-group-orientation";
+export { default as ButtonGroupPopover } from "./button-group-popover";
+export { default as ButtonGroupSelect } from "./button-group-select";
+export { default as ButtonGroupSeparatorDemo } from "./button-group-separator";
+export { default as ButtonGroupSize } from "./button-group-size";
+export { default as ButtonGroupSplit } from "./button-group-split";
+export { default as ButtonIcon } from "./button-icon";
+export { default as ButtonLink } from "./button-link";
+export { default as ButtonOutline } from "./button-outline";
+export { default as ButtonRender } from "./button-render";
+export { default as ButtonRounded } from "./button-rounded";
+export { default as ButtonSecondary } from "./button-secondary";
+export { default as ButtonSize } from "./button-size";
+export { default as ButtonLoading } from "./button-spinner";
+export { default as ButtonWithIcon } from "./button-with-icon";
