@@ -1,5 +1,5 @@
-import { Field, FieldDescription, FieldLabel } from "@/components/ui/field"
-import { Textarea } from "@/components/ui/textarea"
+import { Field, FieldDescription, FieldLabel } from "@auto-form"
+import { Textarea } from "./textarea"
 
 export function TextareaInvalid() {
   return (
