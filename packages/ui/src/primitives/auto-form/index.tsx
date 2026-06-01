@@ -1,22 +1,18 @@
 "use client";
 import { Form } from "@ui";
 import React from "react";
-import type {
-  DefaultValues,
-  FormState,
-  UseFormReturn,
-} from "react-hook-form";
+import type { DefaultValues, FormState, UseFormReturn } from "react-hook-form";
 import { useForm } from "react-hook-form";
-import { type z } from "zod";
+import type { z } from "zod";
 
 import { Button } from "@buttons";
 import { cn } from "@lib";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import AutoFormObject from "./fields/object";
-import type { Dependency, FieldConfig } from "./types";
 import type { ZodObjectOrWrapped } from "./helpers";
 import { getDefaultValues, getObjectFormSchema } from "./helpers";
+import type { Dependency, FieldConfig } from "./types";
 
 export function AutoFormSubmit({
   children,
@@ -49,15 +45,15 @@ function AutoForm<SchemaType extends ZodObjectOrWrapped>({
   values?: Partial<z.infer<SchemaType>>;
   onValuesChange?: (
     values: Partial<z.infer<SchemaType>>,
-    form: UseFormReturn<z.infer<SchemaType>>
+    form: UseFormReturn<z.infer<SchemaType>>,
   ) => void;
   onParsedValuesChange?: (
     values: Partial<z.infer<SchemaType>>,
-    form: UseFormReturn<z.infer<SchemaType>>
+    form: UseFormReturn<z.infer<SchemaType>>,
   ) => void;
   onSubmit?: (
     values: z.infer<SchemaType>,
-    form: UseFormReturn<z.infer<SchemaType>>
+    form: UseFormReturn<z.infer<SchemaType>>,
   ) => void;
   fieldConfig?: FieldConfig<z.infer<SchemaType>>;
   children?:
@@ -126,3 +122,5 @@ function AutoForm<SchemaType extends ZodObjectOrWrapped>({
 
 export { AutoForm };
 export default AutoForm;
+
+export * from "./fields/field";
