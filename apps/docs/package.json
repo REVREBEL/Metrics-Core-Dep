@@ -20,7 +20,7 @@
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@shikijs/types": "^3.21.0",
+    "@shikijs/types": "^4.0.0",
     "@tabler/icons-react": "^3.44.0",
     "@tailwindcss/postcss": "^4.3.0",
     "comlink": "^4.4.2",
