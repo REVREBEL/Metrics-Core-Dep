@@ -1,5 +1,5 @@
 import { Input } from "@inputs";
-import { IconSearchIcon } from "@tabler/icons-react";
+import { IconSearch as SearchIcon } from "@tabler/icons-react";
 import { Button } from "./button";
 import { ButtonGroup } from "./button-group";
 
