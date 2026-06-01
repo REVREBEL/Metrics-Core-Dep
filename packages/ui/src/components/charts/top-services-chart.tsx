@@ -1,1 +1,1 @@
-export { default } from "@/widgets/TopChannelsChart";
+export { default } from "./top-channels-chart";

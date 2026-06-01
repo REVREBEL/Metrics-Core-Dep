@@ -3,7 +3,7 @@ import {
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/components/ui/field"
+} from "@auto-form"
 import {
   InputGroup,
   InputGroupAddon,
@@ -11,8 +11,8 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@/components/ui/input-group"
-import { IconCopyIcon, IconFileCodeIcon } from "@tabler/icons-react"
+} from "./input-group"
+import {IconCopyIcon as CopyIcon, IconFileCodeIcon as FileCodeIcon} from "@tabler/icons-react"
 
 export function InputGroupBlockStart() {
   return (

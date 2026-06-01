@@ -1,10 +1,21 @@
 "use client";
 
-import { Bar, BarChart, CartesianGrid, LabelList, XAxis, YAxis } from "recharts"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/primitives/card"
-import { type ChartConfig, ChartContainer } from "@/components/ui/chart"
-import { MoreVertical } from "lucide-react"
-
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@ui";
+import { type ChartConfig, ChartContainer } from "@charts";
+import { MoreVertical } from "lucide-react";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  LabelList,
+  XAxis,
+  YAxis,
+} from "recharts";
 
 const chartData = [
   { service: "UI design", sales: 99, fill: "var(--color-ui)" },
@@ -13,7 +24,7 @@ const chartData = [
   { service: "Animation", sales: 68, fill: "var(--color-animation)" },
   { service: "React", sales: 52, fill: "var(--color-react)" },
   { service: "SEO", sales: 45, fill: "var(--color-seo)" },
-]
+];
 
 const chartConfig = {
   sales: {
@@ -25,18 +36,18 @@ const chartConfig = {
   animation: { label: "Animation", color: "#CD2100" },
   react: { label: "React", color: "#7C2D5C" },
   seo: { label: "SEO", color: "#0B1E3F" },
-} satisfies ChartConfig
-
+} satisfies ChartConfig;
 
 export default function SalesChart() {
   return (
     <Card className="w-full max-w-4xl bg-[#F8FAFC]">
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-8">
-        <CardTitle className="text-xl font-bold text-[#0F172A]">Top Services by Sales</CardTitle>
-        <MoreVertical className="h-5 w-5 text-muted-foreground cursor-pointer" />
+        <CardTitle className="font-bold text-[#0F172A] text-xl">
+          Top Services by Sales
+        </CardTitle>
+        <MoreVertical className="h-5 w-5 cursor-pointer text-muted-foreground" />
       </CardHeader>
-      <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        
+      <CardContent className="grid grid-cols-1 gap-8 md:grid-cols-2">
         {/* Left Side: The Chart */}
         <ChartContainer config={chartConfig} className="min-h-[300px] w-full">
           <BarChart
@@ -45,7 +56,11 @@ export default function SalesChart() {
             layout="vertical"
             margin={{ left: -20, right: 20 }}
           >
-            <CartesianGrid horizontal={false} vertical={true} strokeDasharray="3 3" />
+            <CartesianGrid
+              horizontal={false}
+              vertical={true}
+              strokeDasharray="3 3"
+            />
             <XAxis
               type="number"
               dataKey="sales"
@@ -54,7 +69,7 @@ export default function SalesChart() {
               tickLine={false}
               ticks={[0, 25, 50, 75, 100]}
               tickFormatter={(value) => `${value}%`}
-              className="text-xs font-medium"
+              className="font-medium text-xs"
             />
             <YAxis
               dataKey="service"
@@ -63,7 +78,13 @@ export default function SalesChart() {
               axisLine={false}
               // This renders the 1, 2, 3 indices on the left
               tick={(props) => (
-                <text x={props.x} y={props.y} dy={4} textAnchor="end" className="text-xs fill-muted-foreground">
+                <text
+                  x={props.x}
+                  y={props.y}
+                  dy={4}
+                  textAnchor="end"
+                  className="fill-muted-foreground text-xs"
+                >
                   {props.index + 1}
                 </text>
               )}
@@ -78,29 +99,39 @@ export default function SalesChart() {
                 dataKey="service"
                 position="insideLeft"
                 offset={12}
-                className="fill-white text-[11px] font-medium"
+                className="fill-white font-medium text-[11px]"
               />
             </Bar>
           </BarChart>
         </ChartContainer>
 
         {/* Right Side: The Legend List */}
-        <div className="grid grid-cols-2 gap-y-8 gap-x-4 py-4">
+        <div className="grid grid-cols-2 gap-x-4 gap-y-8 py-4">
           {chartData.map((item) => (
             <div key={item.service} className="space-y-1">
               <div className="flex items-center gap-2">
-                <div 
-                  className="h-2 w-2 rounded-full" 
-                  style={{ backgroundColor: chartConfig[item.service.split(' ')[0].toLowerCase() as keyof typeof chartConfig]?.color }} 
+                <div
+                  className="h-2 w-2 rounded-full"
+                  style={{
+                    backgroundColor:
+                      chartConfig[
+                        item.service
+                          .split(" ")[0]
+                          .toLowerCase() as keyof typeof chartConfig
+                      ]?.color,
+                  }}
                 />
-                <span className="text-sm font-medium text-slate-600">{item.service}</span>
+                <span className="font-medium text-slate-600 text-sm">
+                  {item.service}
+                </span>
               </div>
-              <div className="text-2xl font-bold text-slate-900">{item.sales}%</div>
+              <div className="font-bold text-2xl text-slate-900">
+                {item.sales}%
+              </div>
             </div>
           ))}
         </div>
-
       </CardContent>
     </Card>
-  )
+  );
 }

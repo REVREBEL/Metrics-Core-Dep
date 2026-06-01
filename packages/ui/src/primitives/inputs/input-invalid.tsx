@@ -1,5 +1,5 @@
-import { Field, FieldDescription, FieldLabel } from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+import { Field, FieldDescription, FieldLabel } from "@auto-form"
+import { Input } from "./input"
 
 export function InputInvalid() {
   return (

@@ -2,8 +2,8 @@ import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
-} from "@/components/ui/input-group"
-import { IconCheckIcon, IconCreditCardIcon, IconInfoIcon, IconMailIcon, IconSearchIcon, IconStarIcon, Icon } from "@tabler/icons-react"
+} from "./input-group"
+import {IconCheckIcon as CheckIcon, IconCreditCardIcon as CreditCardIcon, IconInfoIcon as InfoIcon, IconMailIcon as MailIcon, IconSearchIcon as SearchIcon, IconStarIcon as StarIcon}  from "@tabler/icons-react"
 
 export default function InputGroupIcon() {
   return (
