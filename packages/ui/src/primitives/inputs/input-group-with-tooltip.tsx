@@ -32,8 +32,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@ui"
-import {IconInfoIcon as InfoIcon, IconStarIcon as StarIcon} from "@tabler/icons-react"
-import {IconChevronDownIcon as ChevronDownIcon} from "@tabler/icons-react"
+import { IconChevronDownIcon, IconInfoIcon, IconStarIcon } from "@tabler/icons-react"
 import { toast } from "sonner"
 
 export function InputGroupWithTooltip({
