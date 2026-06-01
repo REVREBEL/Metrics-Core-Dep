@@ -1,15 +1,15 @@
 import {
 	DataGrid,
 	DataGridContainer,
-} from "@/components/reui/data-grid/data-grid";
-import { DataGridColumnHeader } from "@/components/reui/data-grid/data-grid-column-header";
-import { DataGridColumnVisibility } from "@/components/reui/data-grid/data-grid-column-visibility";
-import { DataGridPagination } from "@/components/reui/data-grid/data-grid-pagination";
-import { DataGridTable } from "@/components/reui/data-grid/data-grid-table";
+} from "@data-grid";
+import { DataGridColumnHeader } from "@data-grid";
+import { DataGridColumnVisibility } from "@data-grid";
+import { DataGridPagination } from "@data-grid";
+import { DataGridTable } from "@data-grid";
 import {
 	DataGridTableRowSelect,
 	DataGridTableRowSelectAll,
-} from "@/components/reui/data-grid/data-grid-table";
+} from "@data-grid";
 import { Button } from "@buttons";
 import { useDuckDb } from "@hooks";
 import { Input } from "@inputs";

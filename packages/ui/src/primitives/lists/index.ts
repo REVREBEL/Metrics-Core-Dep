@@ -1,1 +1,1 @@
-export * from "./list-item"
+export { default as FilterInteraction } from './list-item'
