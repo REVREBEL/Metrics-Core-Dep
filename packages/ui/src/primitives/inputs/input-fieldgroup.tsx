@@ -1,11 +1,11 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@buttons"
 import {
   Field,
   FieldDescription,
   FieldGroup,
   FieldLabel,
-} from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+} from "@auto-form"
+import { Input } from "./input"
 
 export function InputFieldgroup() {
   return (

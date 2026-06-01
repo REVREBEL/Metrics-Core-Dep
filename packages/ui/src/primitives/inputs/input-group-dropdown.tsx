@@ -6,15 +6,15 @@ import {
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@dropdown"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/components/ui/input-group"
-import { ChevronDown, MoreHorizontalIcon } from "@hugeicons/core-free-icons"
-import { IconHugeiconsIcon } from "@tabler/icons-react"
+} from "./input-group"
+import {ChevronDown, MoreHorizontalIcon} from "@hugeicons/core-free-icons"
+import { IconHugeiconsIcon as HugeiconsIcon } from "@hugeicons/core-free-icons"
 
 export function InputGroupDropdown() {
   return (

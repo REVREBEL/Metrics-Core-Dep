@@ -3,14 +3,14 @@ import {
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
-} from "@/components/ui/input-group"
-import { Label } from "@/components/ui/label"
+} from "./input-group"
+import { Label } from "@ui"
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui/tooltip"
-import { IconInfoIcon } from "@tabler/icons-react"
+} from "@ui"
+import {IconInfoIcon as InfoIcon} from "@tabler/icons-react"
 
 export default function InputGroupLabel() {
   return (

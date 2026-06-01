@@ -3,9 +3,9 @@ import {
   InputGroupAddon,
   InputGroupInput,
   InputGroupText,
-} from "@/components/ui/input-group"
-import { Spinner } from "@/components/ui/spinner"
-import { IconLoaderIcon } from "@tabler/icons-react"
+} from "./input-group"
+import { Spinner } from "@ui"
+import {IconLoaderIcon as LoaderIcon} from "@tabler/icons-react"
 
 export default function InputGroupSpinner() {
   return (

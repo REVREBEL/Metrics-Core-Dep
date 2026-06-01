@@ -4,7 +4,7 @@ import {
   InputGroupInput,
   InputGroupText,
   InputGroupTextarea,
-} from "@/components/ui/input-group"
+} from "./input-group"
 
 export default function InputGroupTextExample() {
   return (
