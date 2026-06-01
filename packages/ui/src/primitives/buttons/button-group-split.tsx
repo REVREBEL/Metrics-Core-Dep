@@ -1,18 +1,15 @@
-import { Button } from "@/components/ui/button"
-import {
-  ButtonGroup,
-  ButtonGroupSeparator,
-} from "@/components/ui/button-group"
-import { IconPlus } from "@tabler/icons-react"
+import { IconPlus } from "@tabler/icons-react";
+import { Button } from "./button";
+import { ButtonGroup, ButtonGroupSeparator } from "./button-group";
 
 export default function ButtonGroupSplit() {
-  return (
-    <ButtonGroup>
-      <Button variant="secondary">Button</Button>
-      <ButtonGroupSeparator />
-      <Button size="icon" variant="secondary">
-        <IconPlus strokeWidth={1.5} size={20} />
-      </Button>
-    </ButtonGroup>
-  )
+	return (
+		<ButtonGroup>
+			<Button variant="secondary">Button</Button>
+			<ButtonGroupSeparator />
+			<Button size="icon" variant="secondary">
+				<IconPlus strokeWidth={1.5} size={20} />
+			</Button>
+		</ButtonGroup>
+	);
 }

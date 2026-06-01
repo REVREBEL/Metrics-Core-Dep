@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "./button";
 
 export default function ButtonDefault() {
-  return <Button>Button</Button>
+	return <Button>Button</Button>;
 }
