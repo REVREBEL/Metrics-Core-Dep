@@ -3,7 +3,7 @@
   /* Fonts */
   --font-brand: var(--font-brand);
   --font-numbers: var(--font-numbers);
-  --font-eyebrow: var(--font-eyebrow)
+  --font-eyebrow: var(--font-eyebrow);
   --font-buttons: var(--font-buttons);
   --font-display: var(--font-display);
   --font-sans: var(--font-sans);
@@ -176,7 +176,7 @@
   --color-green-900-inverse: var(--base-color-5-l400);
 
   /* {Light-Green} */
-  --color-lght-green: var(--base-color-3);
+  --color-light-green: var(--base-color-3);
   --color-light-green-fade: var(--base-color-3-fade);
   --color-light-green-inverse: var(--base-color-3-inverse);
   --color-light-green-inverse-fade: var(--base-color-3-inverse-fade);

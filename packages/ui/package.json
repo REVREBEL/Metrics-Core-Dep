@@ -57,7 +57,8 @@
     "registry:build": "pnpm dlx shadcn@latest build",
     "barrels:generate": "node ./scripts/generate-barrels.mts --exports",
     "barrels:check": "node ./scripts/generate-barrels.mts --check --exports",
-    "registry:validate": "node ./scripts/validate-registries.mts"
+    "registry:validate": "node ./scripts/validate-registries.mts",
+    "registry:sync": "node ./scripts/registry-sync.mts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
