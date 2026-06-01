@@ -64,7 +64,7 @@ function NumberFieldDecrement({
 			data-slot="number-field-decrement"
 			{...props}
 		>
-			<MinusIcon />
+			<IconMinus />
 		</NumberFieldPrimitive.Decrement>
 	);
 }
