@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./dropdown-menu"
-import { IconBadgeCheckIcon, IconBellIcon, IconCreditCardIcon, IconLogOutIcon, Icon } from "@tabler/icons-react"
+import { IconBadgeCheck, IconBell, IconCreditCard, IconLogOut } from "@tabler/icons-react"
 
 export function DropdownMenuAvatar() {
   return (
