@@ -1,11 +1,13 @@
-import { Button } from "@/components/ui/button"
+Remove the entire line. For example, in `table-actions.tsx`, delete the `import * as React from "react"` line. The file remains valid with only the remaining imports.
+import { Button } from "@buttons"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@dropdown"
+import { IconMoreHorizontal } from "@tabler/icons-react"
 import {
   Table,
   TableBody,
@@ -13,8 +15,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
-import { IconMoreHorizontalIcon } from "@tabler/icons-react"
+} from "./table"
 
 export function TableActions() {
   return (
@@ -33,12 +34,12 @@ export function TableActions() {
           <TableCell className="text-right">
             <DropdownMenu>
               <DropdownMenuTrigger
-                render={
-                  <Button variant="ghost" size="icon" className="size-8" />
-                }
+                asChild
               >
-                <MoreHorizontalIcon />
-                <span className="sr-only">Open menu</span>
+                <Button variant="ghost" size="icon" className="size-8">
+                  <IconMoreHorizontal />
+                  <span className="sr-only">Open menu</span>
+                </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuItem>Edit</DropdownMenuItem>
@@ -57,12 +58,12 @@ export function TableActions() {
           <TableCell className="text-right">
             <DropdownMenu>
               <DropdownMenuTrigger
-                render={
-                  <Button variant="ghost" size="icon" className="size-8" />
-                }
+                asChild
               >
-                <MoreHorizontalIcon />
-                <span className="sr-only">Open menu</span>
+                <Button variant="ghost" size="icon" className="size-8">
+                  <IconMoreHorizontal />
+                  <span className="sr-only">Open menu</span>
+                </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuItem>Edit</DropdownMenuItem>
@@ -81,12 +82,12 @@ export function TableActions() {
           <TableCell className="text-right">
             <DropdownMenu>
               <DropdownMenuTrigger
-                render={
-                  <Button variant="ghost" size="icon" className="size-8" />
-                }
+                asChild
               >
-                <MoreHorizontalIcon />
-                <span className="sr-only">Open menu</span>
+                <Button variant="ghost" size="icon" className="size-8">
+                  <IconMoreHorizontal />
+                  <span className="sr-only">Open menu</span>
+                </Button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
                 <DropdownMenuItem>Edit</DropdownMenuItem>
