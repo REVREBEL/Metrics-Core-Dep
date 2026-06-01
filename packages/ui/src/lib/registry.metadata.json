@@ -288,6 +288,30 @@
       }
     ]
   },
+  "layouts/pagination-icons-only": {
+    "displayName": "layouts",
+    "description": "Layout-level components for application shells, pages, and panel compositions.",
+    "props": [
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "description": "Optional Tailwind/CSS class overrides."
+      }
+    ]
+  },
+  "layouts/pagination": {
+    "displayName": "layouts",
+    "description": "Layout-level components for application shells, pages, and panel compositions.",
+    "props": [
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "description": "Optional Tailwind/CSS class overrides."
+      }
+    ]
+  },
   "layouts/properties/events_page": {
     "displayName": "events_page",
     "description": "",
@@ -322,6 +346,18 @@
     "displayName": "tasks_page",
     "description": "",
     "props": []
+  },
+  "layouts/resizable": {
+    "displayName": "layouts",
+    "description": "Layout-level components for application shells, pages, and panel compositions.",
+    "props": [
+      {
+        "name": "className",
+        "type": "string",
+        "required": false,
+        "description": "Optional Tailwind/CSS class overrides."
+      }
+    ]
   },
   "layouts/settings/account-settings_page": {
     "displayName": "account-settings_page",
