@@ -2,17 +2,17 @@
 
 import React, { useEffect, useMemo } from "react";
 
+import { MetricCard } from "@shared-ui";
+import { useDuckDb } from "@hooks";
 import {
   Bar,
-  ComposedChart,
   Cell,
+  ComposedChart,
   Line,
   ResponsiveContainer,
   Tooltip,
   XAxis,
 } from "recharts";
-import { MetricCard } from "@/components/metric-cards/_shared/MetricCard";
-import { useDuckDb } from "@/hooks/useDuckDb";
 
 type OTBChartDatum = {
   day: number;
@@ -22,24 +22,23 @@ type OTBChartDatum = {
   capacity: number;
 };
 
-const MOCK_CHART_DATA: OTBChartDatum[] = Array.from({ length: 31 }, (_, index) => {
-  const day = index + 1;
-  const isWeekend = [0, 6].includes(new Date(2024, 6, day).getDay());
-  const transient = isWeekend
-    ? 34 + ((day * 7) % 18)
-    : 22 + ((day * 5) % 16);
-  const group = isWeekend
-    ? 8 + ((day * 3) % 10)
-    : 14 + ((day * 4) % 18);
+const MOCK_CHART_DATA: OTBChartDatum[] = Array.from(
+  { length: 31 },
+  (_, index) => {
+    const day = index + 1;
+    const isWeekend = [0, 6].includes(new Date(2024, 6, day).getDay());
+    const transient = isWeekend ? 34 + ((day * 7) % 18) : 22 + ((day * 5) % 16);
+    const group = isWeekend ? 8 + ((day * 3) % 10) : 14 + ((day * 4) % 18);
 
-  return {
-    day,
-    isWeekend,
-    transient,
-    group,
-    capacity: 82,
-  };
-});
+    return {
+      day,
+      isWeekend,
+      transient,
+      group,
+      capacity: 82,
+    };
+  },
+);
 
 const getMonthName = (month?: string) => month || "Jul";
 const getYearLabel = (year?: string) => year || "2024";
@@ -70,13 +69,21 @@ const OTBMixTooltip = ({
 
   const dateStr = `${getMonthName(month)} ${label}, ${getYearLabel(year)}`;
   const dateObj = new Date(dateStr);
-  const weekday = dateObj.toLocaleDateString("en-US", { weekday: "long" }).toUpperCase();
-  const monthName = dateObj.toLocaleDateString("en-US", { month: "long" }).toUpperCase();
+  const weekday = dateObj
+    .toLocaleDateString("en-US", { weekday: "long" })
+    .toUpperCase();
+  const monthName = dateObj
+    .toLocaleDateString("en-US", { month: "long" })
+    .toUpperCase();
 
   const transient =
-    payload.find((p: { dataKey: string; value: number }) => p.dataKey === "transient")?.value || 0;
+    payload.find(
+      (p: { dataKey: string; value: number }) => p.dataKey === "transient",
+    )?.value || 0;
   const group =
-    payload.find((p: { dataKey: string; value: number }) => p.dataKey === "group")?.value || 0;
+    payload.find(
+      (p: { dataKey: string; value: number }) => p.dataKey === "group",
+    )?.value || 0;
   const total = transient + group;
   const transientPct = total > 0 ? Math.round((transient / total) * 100) : 0;
   const groupPct = total > 0 ? Math.round((group / total) * 100) : 0;
@@ -84,7 +91,7 @@ const OTBMixTooltip = ({
   const isWeekend = payload[0]?.payload?.isWeekend;
 
   return (
-    <div className="metric-card retro-shadow-base min-w-75 border-2 border-(--primary-b000) bg-(--card) p-6 text-(--primary-b000)">
+    <div className="metric-card retro-shadow-base min-w-75 border-(--primary-b000) border-2 bg-(--card) p-6 text-(--primary-b000)">
       <h3 className="metric-card__title mb-4 text-3xl">
         {`${weekday}, ${monthName} ${label}`}
       </h3>
@@ -101,10 +108,13 @@ const OTBMixTooltip = ({
                 style={{ backgroundColor: getTransientColor(isWeekend) }}
               />
               <div className="metric-card__number text-lg">
-                {String(transient).padStart(2, "0")} | {String(transientPct).padStart(2, "0")}%
+                {String(transient).padStart(2, "0")} |{" "}
+                {String(transientPct).padStart(2, "0")}%
               </div>
             </div>
-            <span className="mr-12 text-sm text-(--muted-foreground)">Transient</span>
+            <span className="mr-12 text-(--muted-foreground) text-sm">
+              Transient
+            </span>
           </div>
           <div className="flex w-full items-center justify-between">
             <div className="flex items-center gap-4">
@@ -113,22 +123,28 @@ const OTBMixTooltip = ({
                 style={{ backgroundColor: getGroupColor(isWeekend) }}
               />
               <div className="metric-card__number text-lg">
-                {String(group).padStart(2, "0")} | {String(groupPct).padStart(2, "0")}%
+                {String(group).padStart(2, "0")} |{" "}
+                {String(groupPct).padStart(2, "0")}%
               </div>
             </div>
-            <span className="mr-12 text-sm text-(--muted-foreground)">Group</span>
+            <span className="mr-12 text-(--muted-foreground) text-sm">
+              Group
+            </span>
           </div>
         </div>
       </div>
 
-      <div className="w-full border-t border-(--primary-b000) pt-2">
+      <div className="w-full border-(--primary-b000) border-t pt-2">
         <p className="metric-card__title text-2xl">OTB / % Mix Rooms By Day</p>
       </div>
     </div>
   );
 };
 
-export default function OTBChart({ year, month }: { year?: string; month?: string }) {
+export default function OTBChart({
+  year,
+  month,
+}: { year?: string; month?: string }) {
   const { execute, isInitializing, error } = useDuckDb();
   const [chartData, setChartData] = React.useState<OTBChartDatum[]>([]);
 
@@ -185,9 +201,9 @@ export default function OTBChart({ year, month }: { year?: string; month?: strin
           group: acc.group + item.group,
           total: acc.total + item.transient + item.group,
         }),
-        { transient: 0, group: 0, total: 0 }
+        { transient: 0, group: 0, total: 0 },
       ),
-    [chartData]
+    [chartData],
   );
 
   return (
@@ -199,21 +215,30 @@ export default function OTBChart({ year, month }: { year?: string; month?: strin
       <div className="mb-6 grid grid-cols-3 gap-5">
         <div>
           <div className="metric-card__label mb-2">Transient</div>
-          <div className="metric-card__number text-7xl">{totals.transient.toLocaleString()}</div>
+          <div className="metric-card__number text-7xl">
+            {totals.transient.toLocaleString()}
+          </div>
         </div>
         <div>
           <div className="metric-card__label mb-2">Group</div>
-          <div className="metric-card__number text-7xl">{totals.group.toLocaleString()}</div>
+          <div className="metric-card__number text-7xl">
+            {totals.group.toLocaleString()}
+          </div>
         </div>
         <div>
           <div className="metric-card__label mb-2">Total OTB</div>
-          <div className="metric-card__number text-7xl">{totals.total.toLocaleString()}</div>
+          <div className="metric-card__number text-7xl">
+            {totals.total.toLocaleString()}
+          </div>
         </div>
       </div>
 
       <div className="h-100 w-full">
         <ResponsiveContainer width="100%" height="100%">
-          <ComposedChart data={chartData} margin={{ top: 16, right: 12, bottom: 0, left: 12 }}>
+          <ComposedChart
+            data={chartData}
+            margin={{ top: 16, right: 12, bottom: 0, left: 12 }}
+          >
             <XAxis
               dataKey="day"
               axisLine={false}
@@ -226,7 +251,12 @@ export default function OTBChart({ year, month }: { year?: string; month?: strin
             />
 
             <Tooltip
-              content={<OTBMixTooltip month={getMonthName(month)} year={getYearLabel(year)} />}
+              content={
+                <OTBMixTooltip
+                  month={getMonthName(month)}
+                  year={getYearLabel(year)}
+                />
+              }
               cursor={{ fill: "transparent" }}
             />
 

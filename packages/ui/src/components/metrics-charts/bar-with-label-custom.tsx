@@ -12,15 +12,15 @@ import {
 } from "recharts";
 
 import {
+  MetricCard,
+  MetricInsight,
+} from "@shared-ui";
+import {
+  type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-  type ChartConfig,
-} from "@/components/ui/chart";
-import {
-  MetricCard,
-  MetricInsight,
-} from "@/components/metric-cards/_shared/MetricCard";
+} from "@charts";
 
 export const description = "A bar chart with a custom label";
 
@@ -118,7 +118,8 @@ export function ChartBarLabelCustom() {
 
       <div className="metric-card__chart-footer">
         <MetricInsight label="Trend:">
-          Trending up by 5.2% this month <TrendingUp className="inline h-4 w-4 align-text-bottom" />
+          Trending up by 5.2% this month{" "}
+          <TrendingUp className="inline h-4 w-4 align-text-bottom" />
         </MetricInsight>
       </div>
     </MetricCard>
