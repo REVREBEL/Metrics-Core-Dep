@@ -129,7 +129,7 @@ const SidebarProvider = React.forwardRef<
 				setOpenMobile,
 				toggleSidebar,
 			}),
-			[state, open, setOpen, isMobile, openMobile, toggleSidebar],
+const [openMobile, setOpenMobile] = React.useState(false);
 		);
 
 		return (
