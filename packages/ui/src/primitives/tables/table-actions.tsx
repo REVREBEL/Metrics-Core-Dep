@@ -1,3 +1,5 @@
+import { IconDots } from "@tabler/icons-react"
+
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -14,7 +16,25 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { IconMoreHorizontalIcon } from "@tabler/icons-react"
+
+function ActionsMenu() {
+  return (
+    <DropdownMenu>
+      <DropdownMenuTrigger asChild>
+        <Button variant="ghost" size="icon" className="size-8">
+          <IconDots />
+          <span className="sr-only">Open menu</span>
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent align="end">
+        <DropdownMenuItem>Edit</DropdownMenuItem>
+        <DropdownMenuItem>Duplicate</DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem variant="destructive">Delete</DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  )
+}
 
 export function TableActions() {
   return (
@@ -31,72 +51,21 @@ export function TableActions() {
           <TableCell className="font-medium">Wireless Mouse</TableCell>
           <TableCell>$29.99</TableCell>
           <TableCell className="text-right">
-            <DropdownMenu>
-              <DropdownMenuTrigger
-                render={
-                  <Button variant="ghost" size="icon" className="size-8" />
-                }
-              >
-                <MoreHorizontalIcon />
-                <span className="sr-only">Open menu</span>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem>Edit</DropdownMenuItem>
-                <DropdownMenuItem>Duplicate</DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem variant="destructive">
-                  Delete
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <ActionsMenu />
           </TableCell>
         </TableRow>
         <TableRow>
           <TableCell className="font-medium">Mechanical Keyboard</TableCell>
           <TableCell>$129.99</TableCell>
           <TableCell className="text-right">
-            <DropdownMenu>
-              <DropdownMenuTrigger
-                render={
-                  <Button variant="ghost" size="icon" className="size-8" />
-                }
-              >
-                <MoreHorizontalIcon />
-                <span className="sr-only">Open menu</span>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem>Edit</DropdownMenuItem>
-                <DropdownMenuItem>Duplicate</DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem variant="destructive">
-                  Delete
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <ActionsMenu />
           </TableCell>
         </TableRow>
         <TableRow>
           <TableCell className="font-medium">USB-C Hub</TableCell>
           <TableCell>$49.99</TableCell>
           <TableCell className="text-right">
-            <DropdownMenu>
-              <DropdownMenuTrigger
-                render={
-                  <Button variant="ghost" size="icon" className="size-8" />
-                }
-              >
-                <MoreHorizontalIcon />
-                <span className="sr-only">Open menu</span>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem>Edit</DropdownMenuItem>
-                <DropdownMenuItem>Duplicate</DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem variant="destructive">
-                  Delete
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+            <ActionsMenu />
           </TableCell>
         </TableRow>
       </TableBody>
