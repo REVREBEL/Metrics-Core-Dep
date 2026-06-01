@@ -40,7 +40,7 @@ import {
 	ScrollBar,
 } from "@ui";
 import { EllipsisIcon, FunnelX, Settings2 } from "lucide-react";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 export interface RoomstransientData {
 	segmentView: string;
