@@ -11,7 +11,7 @@ import {
 } from "recharts";
 
 import { ArrowCircleDown, ArrowCircleUp } from "@icons";
-import { MetricCardTabs } from "@shared-ui";
+import { metric-card-tabs } from "@shared-ui";
 
 const SEGMENT_TABS = [
 	{ label: "Transient", value: "transient" },

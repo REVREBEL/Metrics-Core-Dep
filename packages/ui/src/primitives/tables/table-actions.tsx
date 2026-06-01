@@ -1,11 +1,11 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@buttons/button"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@dropdowns/dropdown-menu"
 import {
   Table,
   TableBody,
@@ -13,8 +13,8 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
-import { IconMoreHorizontalIcon } from "@tabler/icons-react"
+} from "@tables/table"
+import { MoreHorizontalIcon } from "@tabler/icons-react"
 
 export function TableActions() {
   return (
