@@ -2,7 +2,7 @@
 
 Shared UI package and shadcn-compatible registry for REVREBEL Metrics.
 
-This package owns the reusable component library, primitive wrappers, registry items, demo/catalog surfaces, registry manifest, and generated registry metadata used by `metrics-ui.revrebel.io`.
+This package owns the reusable component library, primitive wrappers, registry items, demo/catalog surfaces, registry manifest, generated registry metadata, and expanded registry theme tokens used by `metrics-ui.revrebel.io`.
 
 ## Package scope
 
@@ -11,6 +11,7 @@ This package owns the reusable component library, primitive wrappers, registry i
 - Shared React components and primitives
 - Registry components, blocks, and generated registry JSON
 - Registry manifest path normalization and validation
+- Expanded theme token sync into registry light/dark `cssVars`
 - The public UI catalog at `metrics-ui.revrebel.io/catalog`
 - Component metadata used by the catalog and AI/component discovery workflows
 - Theme, token, layout, and primitive documentation for the Metrics UI system
@@ -30,6 +31,7 @@ The pipeline runs:
 ```txt
 registry:sync
 registry:manifest:sync
+registry:tokens:sync
 pnpm dlx shadcn@latest build
 ```
 
@@ -37,15 +39,17 @@ That means `registry:build` now:
 
 1. Syncs component metadata.
 2. Syncs and repairs registry manifest paths.
-3. Runs the shadcn registry build.
-4. Fails fast if unresolved registry file paths remain.
+3. Syncs expanded CSS token variables into the registry theme.
+4. Runs the shadcn registry build.
+5. Fails fast if unresolved registry file paths remain.
 
 ## Package scripts
 
 ```txt
 registry:sync          -> node ./scripts/registry-sync.mjs
 registry:manifest:sync -> node ./scripts/registry-manifest-sync.mjs
-registry:build         -> registry:sync + registry:manifest:sync + shadcn build
+registry:tokens:sync   -> node ./scripts/registry-tokens-sync.mjs
+registry:build         -> registry:sync + registry:manifest:sync + registry:tokens:sync + shadcn build
 ```
 
 ## Registry metadata sync
@@ -119,6 +123,48 @@ The manifest sync script:
 
 This protects the registry build from stale references like moved components or old `src/components/*` paths that now live under primitives or grouped source directories.
 
+## Registry token sync
+
+### Key file
+
+```txt
+scripts/registry-tokens-sync.mjs
+```
+
+### Command
+
+Run from the repo root:
+
+```bash
+pnpm --filter @repo/ui run registry:tokens:sync
+```
+
+### What `registry:tokens:sync` does
+
+The token sync script expands the registry theme beyond the base shadcn token set by reading CSS custom properties from the UI token source files and merging them into the `registry.json` theme `cssVars`.
+
+This gives agents and registry consumers access to the broader Metrics token system, including brand colors, chart colors, semantic source colors, and component-facing token aliases.
+
+Verification status:
+
+```txt
+registry:tokens:sync merged 566 vars from CSS, added 533 to light and 533 to dark.
+```
+
+### Token naming rule
+
+Use canonical token names when adding expanded tokens. Do not add the broken misspelled light-green token as a fallback. The canonical token is:
+
+```txt
+--color-light-green
+```
+
+The misspelled token should not be used for new registry output:
+
+```txt
+--color-lght-green
+```
+
 ## Catalog behavior
 
 The visual catalog route is:
@@ -139,6 +185,7 @@ Catalog population uses:
 component render entries -> PLAYGROUND_REGISTRY
 props/description metadata -> registry.metadata.json
 co-located metadata.ts -> merged by registry:sync
+expanded theme variables -> registry:tokens:sync
 ```
 
 `catalog/page.tsx` reads from `registry.metadata.json` when inline registry metadata is missing.
@@ -193,19 +240,22 @@ Keep each metadata file in a simple object literal format like the example above
    pnpm --filter @repo/ui run registry:build
    ```
 
-4. Fill or refine description and props in generated metadata for the components that matter first.
-5. Open:
+4. Fix any unresolved manifest path report.
+5. Review `src/lib/registry.metadata.json` for generated or merged metadata.
+6. Confirm expanded token changes in `registry.json` when token source files change.
+7. Open:
 
    ```txt
    https://metrics-ui.revrebel.io/catalog
    ```
 
-6. Confirm the catalog card displays the intended metadata.
+8. Confirm the catalog card displays the intended metadata.
 
 ## Related docs
 
-See the repo docs page:
+See the repo docs pages:
 
 ```txt
 docs/ui/registry-build-pipeline.md
+docs/ui/registry-token-sync.md
 ```
