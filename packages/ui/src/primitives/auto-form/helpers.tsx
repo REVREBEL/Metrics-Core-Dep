@@ -213,9 +213,13 @@ export function getObjectFormSchema(
  */
 export function getSchemaDescription(schema: z.ZodType): string | undefined {
   // Try to get from registry first (Zod v4)
-  const registered = z.globalRegistry.get(schema);
+  const registered = (z as any).globalRegistry?.get(schema);
   if (registered?.description) {
     return registered.description;
+  }
+  const fallbackDescription = (schema as any)._def?.description || (schema as any).description;
+  if (fallbackDescription) {
+    return fallbackDescription;
   }
 
   // Fallback: check if description is on the schema itself
