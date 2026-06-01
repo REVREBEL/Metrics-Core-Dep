@@ -10,7 +10,7 @@ import {
   MenubarRadioItem,
   MenubarSeparator,
   MenubarTrigger,
-} from "@/components/ui/menubar"
+} from "./menubar"
 
 export function MenubarRadio() {
   const [user, setUser] = React.useState("benoit")

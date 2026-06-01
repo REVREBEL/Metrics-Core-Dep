@@ -7,7 +7,7 @@ import {
   MenubarSeparator,
   MenubarShortcut,
   MenubarTrigger,
-} from "@/components/ui/menubar"
+} from "./menubar"
 import { IconFileIcon, IconFolderIcon, IconHelpCircleIcon, IconSaveIcon, IconSettingsIcon, IconTrashIcon, Icon } from "@tabler/icons-react"
 
 export function MenubarIcons() {
