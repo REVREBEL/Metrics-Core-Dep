@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@buttons"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -8,7 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "./dropdown-menu"
 import { Delete01Icon, Edit02Icon, Share01Icon } from "@hugeicons/core-free-icons"
 import { IconHugeiconsIcon } from "@tabler/icons-react"
 
@@ -21,18 +21,18 @@ export function DropdownMenuDestructive() {
       <DropdownMenuContent>
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <HugeiconsIcon icon={Edit02Icon} />
+            <IconHugeiconsIcon icon={Edit02Icon} />
             Edit
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <HugeiconsIcon icon={Share01Icon} />
+            <IconHugeiconsIcon icon={Share01Icon} />
             Share
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem variant="destructive">
-            <HugeiconsIcon icon={Delete01Icon} />
+            <IconHugeiconsIcon icon={Delete01Icon} />
             Delete
           </DropdownMenuItem>
         </DropdownMenuGroup>
