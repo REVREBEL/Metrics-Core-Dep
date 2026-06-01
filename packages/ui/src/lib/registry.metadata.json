@@ -1,787 +1,95 @@
 {
-  "charts/analytics-chart": {
-    "displayName": "analytics-chart",
-    "description": "",
-    "props": []
-  },
-  "charts/analytics": {
-    "displayName": "analytics",
-    "description": "",
-    "props": []
-  },
-  "charts/area-chart-interactive": {
-    "displayName": "area-chart-interactive",
-    "description": "",
-    "props": []
-  },
-  "charts/bar-chart-interactive": {
-    "displayName": "bar-chart-interactive",
-    "description": "",
-    "props": []
-  },
-  "charts/bar-with-label-custom": {
-    "displayName": "bar-with-label-custom",
-    "description": "",
-    "props": []
-  },
-  "charts/calendar-heatmap": {
-    "displayName": "calendar-heatmap",
-    "description": "",
-    "props": []
-  },
-  "charts/interactive-area-line-combo": {
-    "displayName": "interactive-area-line-combo",
-    "description": "",
-    "props": []
-  },
-  "charts/line-chart-interactive": {
-    "displayName": "line-chart-interactive",
-    "description": "",
-    "props": []
-  },
-  "charts/otb-stacked-bar-chart": {
-    "displayName": "otb-stacked-bar-chart",
-    "description": "",
-    "props": []
-  },
-  "charts/overview": {
-    "displayName": "overview",
-    "description": "",
-    "props": []
-  },
-  "charts/pie-chart-donut-center-text": {
-    "displayName": "pie-chart-donut-center-text",
-    "description": "",
-    "props": []
-  },
-  "charts/pie-chart-interactive": {
-    "displayName": "pie-chart-interactive",
-    "description": "",
-    "props": []
-  },
-  "charts/pie-donut-chart-active": {
-    "displayName": "pie-donut-chart-active",
-    "description": "",
-    "props": []
-  },
-  "charts/radial-ring-chart-with-label": {
-    "displayName": "radial-ring-chart-with-label",
-    "description": "",
-    "props": []
-  },
-  "charts/recent-sales": {
-    "displayName": "recent-sales",
-    "description": "",
-    "props": []
-  },
-  "charts/top-channels-chart": {
-    "displayName": "top-channels-chart",
-    "description": "",
-    "props": []
-  },
-  "charts/top-services-bar-chart": {
-    "displayName": "top-services-bar-chart",
-    "description": "",
-    "props": []
-  },
-  "charts/top-services-chart": {
-    "displayName": "top-services-chart",
-    "description": "",
-    "props": []
-  },
-  "errors/forbidden": {
+  "metrics-errors/forbidden": {
     "displayName": "forbidden",
     "description": "",
     "props": []
   },
-  "errors/general-error": {
+  "metrics-errors/general-error": {
     "displayName": "general-error",
     "description": "",
     "props": []
   },
-  "errors/maintenance-error": {
+  "metrics-errors/maintenance-error": {
     "displayName": "maintenance-error",
     "description": "",
     "props": []
   },
-  "errors/not-found-error": {
+  "metrics-errors/not-found-error": {
     "displayName": "not-found-error",
     "description": "",
     "props": []
   },
-  "errors/unauthorized-error": {
+  "metrics-errors/unauthorized-error": {
     "displayName": "unauthorized-error",
     "description": "",
     "props": []
   },
-  "feedback/empty-state": {
+  "metrics-feedback/empty-state": {
     "displayName": "empty-state",
     "description": "",
     "props": []
   },
-  "layouts/campaigns/active_page": {
-    "displayName": "active_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/campaigns/campaigns_layout": {
-    "displayName": "campaigns_layout",
-    "description": "",
-    "props": []
-  },
-  "layouts/campaigns/performance_page": {
-    "displayName": "performance_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/campaigns/setup_page": {
-    "displayName": "setup_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/chats/chat-assistant_page": {
-    "displayName": "chat-assistant_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/chats/chats_layout": {
-    "displayName": "chats_layout",
-    "description": "",
-    "props": []
-  },
-  "layouts/chats/new_page": {
-    "displayName": "new_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/dashboard/channels_page": {
-    "displayName": "channels_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/dashboard/dashboard_homepage": {
-    "displayName": "dashboard_homepage",
-    "description": "",
-    "props": []
-  },
-  "layouts/dashboard/dashboard_layout": {
-    "displayName": "dashboard_layout",
-    "description": "",
-    "props": []
-  },
-  "layouts/dashboard/demand_page": {
-    "displayName": "demand_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/dashboard/roomtypes_page": {
-    "displayName": "roomtypes_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/dashboard/segments_page": {
-    "displayName": "segments_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/dashboard/website_page": {
-    "displayName": "website_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/data-library/data-health_page": {
-    "displayName": "data-health_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/data-library/data-library_layout": {
-    "displayName": "data-library_layout",
-    "description": "",
-    "props": []
-  },
-  "layouts/data-library/lookups-manager_table-row": {
-    "displayName": "lookups-manager_table-row",
-    "description": "",
-    "props": []
-  },
-  "layouts/data-library/lookups-manager_table": {
-    "displayName": "lookups-manager_table",
-    "description": "",
-    "props": []
-  },
-  "layouts/data-library/lookups_page": {
-    "displayName": "lookups_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/data-library/mapping-manager_table": {
-    "displayName": "mapping-manager_table",
-    "description": "",
-    "props": []
-  },
-  "layouts/data-library/mapping-row-edit_drawer": {
-    "displayName": "mapping-row-edit_drawer",
-    "description": "",
-    "props": []
-  },
-  "layouts/data-library/mappings_page": {
-    "displayName": "mappings_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/data-library/unmapped-codes_page": {
-    "displayName": "unmapped-codes_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/global_layout": {
-    "displayName": "layouts",
-    "description": "Layout-level components for application shells, pages, and panel compositions.",
-    "props": [
-      {
-        "name": "className",
-        "type": "string",
-        "required": false,
-        "description": "Optional Tailwind/CSS class overrides."
-      }
-    ]
-  },
-  "layouts/help-desk/documentation_page": {
-    "displayName": "documentation_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/help-desk/helpdesk_layout": {
-    "displayName": "helpdesk_layout",
-    "description": "",
-    "props": []
-  },
-  "layouts/help-desk/helpdesk_page": {
-    "displayName": "helpdesk_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/metric-library/base_page": {
-    "displayName": "base_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/metric-library/calculated_page": {
-    "displayName": "calculated_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/metric-library/metric-library_layout": {
-    "displayName": "metric-library_layout",
-    "description": "",
-    "props": []
-  },
-  "layouts/minimal-layout": {
-    "displayName": "layouts",
-    "description": "Layout-level components for application shells, pages, and panel compositions.",
-    "props": [
-      {
-        "name": "className",
-        "type": "string",
-        "required": false,
-        "description": "Optional Tailwind/CSS class overrides."
-      }
-    ]
-  },
-  "layouts/pagination-icons-only": {
-    "displayName": "layouts",
-    "description": "Layout-level components for application shells, pages, and panel compositions.",
-    "props": [
-      {
-        "name": "className",
-        "type": "string",
-        "required": false,
-        "description": "Optional Tailwind/CSS class overrides."
-      }
-    ]
-  },
-  "layouts/pagination": {
-    "displayName": "layouts",
-    "description": "Layout-level components for application shells, pages, and panel compositions.",
-    "props": [
-      {
-        "name": "className",
-        "type": "string",
-        "required": false,
-        "description": "Optional Tailwind/CSS class overrides."
-      }
-    ]
-  },
-  "layouts/properties/events_page": {
-    "displayName": "events_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/properties/lookups_page": {
-    "displayName": "lookups_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/properties/notes_page": {
-    "displayName": "notes_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/properties/page": {
-    "displayName": "page",
-    "description": "",
-    "props": []
-  },
-  "layouts/properties/properties_layout": {
-    "displayName": "properties_layout",
-    "description": "",
-    "props": []
-  },
-  "layouts/properties/strategies_page": {
-    "displayName": "strategies_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/properties/tasks_page": {
-    "displayName": "tasks_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/resizable": {
-    "displayName": "layouts",
-    "description": "Layout-level components for application shells, pages, and panel compositions.",
-    "props": [
-      {
-        "name": "className",
-        "type": "string",
-        "required": false,
-        "description": "Optional Tailwind/CSS class overrides."
-      }
-    ]
-  },
-  "layouts/settings/account-settings_page": {
-    "displayName": "account-settings_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/account_form": {
-    "displayName": "account_form",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/account_page": {
-    "displayName": "account_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/content-section_page": {
-    "displayName": "content-section_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/display_form": {
-    "displayName": "display_form",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/display_page": {
-    "displayName": "display_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/forgot-password_page": {
-    "displayName": "forgot-password_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/login_page": {
-    "displayName": "login_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/notifications_form": {
-    "displayName": "notifications_form",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/notifications_page": {
-    "displayName": "notifications_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/profile_form": {
-    "displayName": "profile_form",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/profile_page": {
-    "displayName": "profile_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/register_page": {
-    "displayName": "register_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/settings_layout": {
-    "displayName": "settings_layout",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/settings_sidebar-nav": {
-    "displayName": "settings_sidebar-nav",
-    "description": "",
-    "props": []
-  },
-  "layouts/settings/users-invite_dialog": {
-    "displayName": "users-invite_dialog",
-    "description": "",
-    "props": []
-  },
-  "layouts/shell-layout": {
-    "displayName": "layouts",
-    "description": "Layout-level components for application shells, pages, and panel compositions.",
-    "props": [
-      {
-        "name": "className",
-        "type": "string",
-        "required": false,
-        "description": "Optional Tailwind/CSS class overrides."
-      }
-    ]
-  },
-  "layouts/strategies/playbooks_page": {
-    "displayName": "playbooks_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/strategies/recommended-actions_page": {
-    "displayName": "recommended-actions_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/strategies/strategies_layout": {
-    "displayName": "strategies_layout",
-    "description": "",
-    "props": []
-  },
-  "layouts/strategies/triggers_page": {
-    "displayName": "triggers_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/calendar-view_page": {
-    "displayName": "calendar-view_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/data-actions_table-row": {
-    "displayName": "data-actions_table-row",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/data-bulk-actions_table": {
-    "displayName": "data-bulk-actions_table",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/group-views": {
-    "displayName": "group-views",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/growth-plan-view_switcher": {
-    "displayName": "growth-plan-view_switcher",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/growth-plan_header": {
-    "displayName": "growth-plan_header",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/growth-plan_sidebar": {
-    "displayName": "growth-plan_sidebar",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/growth-plan_states": {
-    "displayName": "growth-plan_states",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/kanban_page": {
-    "displayName": "kanban_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/meeting-recap_page": {
-    "displayName": "meeting-recap_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/owner-rollup_page": {
-    "displayName": "owner-rollup_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/tasks-columns": {
-    "displayName": "tasks-columns",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/tasks-import_dialog": {
-    "displayName": "tasks-import_dialog",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/tasks-multi-delete_dialog": {
-    "displayName": "tasks-multi-delete_dialog",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/tasks-mutate_drawer": {
-    "displayName": "tasks-mutate_drawer",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/tasks-primary-buttons": {
-    "displayName": "tasks-primary-buttons",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/tasks_dialogs": {
-    "displayName": "tasks_dialogs",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/tasks_layout": {
-    "displayName": "tasks_layout",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/tasks_provider": {
-    "displayName": "tasks_provider",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/tasks_table": {
-    "displayName": "tasks_table",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/workstream-mutate_drawer": {
-    "displayName": "workstream-mutate_drawer",
-    "description": "",
-    "props": []
-  },
-  "layouts/tasks/workstreams_section": {
-    "displayName": "workstreams_section",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/data-bulk-actions_table": {
-    "displayName": "data-bulk-actions_table",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/data-row-actions_table_row": {
-    "displayName": "data-row-actions_table_row",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/page": {
-    "displayName": "page",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/permissions-panel_page": {
-    "displayName": "permissions-panel_page",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/users-action_dialog": {
-    "displayName": "users-action_dialog",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/users-delete_dialog": {
-    "displayName": "users-delete_dialog",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/users-invite_dialog": {
-    "displayName": "users-invite_dialog",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/users-multi-delete_dialog": {
-    "displayName": "users-multi-delete_dialog",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/users-primary-buttons": {
-    "displayName": "users-primary-buttons",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/users_columns": {
-    "displayName": "users_columns",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/users_dialogs": {
-    "displayName": "users_dialogs",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/users_provider": {
-    "displayName": "users_provider",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/users_table": {
-    "displayName": "users_table",
-    "description": "",
-    "props": []
-  },
-  "layouts/users/verify-email": {
-    "displayName": "verify-email",
-    "description": "",
-    "props": []
-  },
-  "metrics/browser-stats-card": {
-    "displayName": "browser-stats-card",
-    "description": "",
-    "props": []
-  },
-  "metrics/budget-snapshot-card": {
-    "displayName": "budget-snapshot-card",
-    "description": "",
-    "props": []
-  },
-  "metrics/conversion-card": {
-    "displayName": "conversion-card",
-    "description": "",
-    "props": []
-  },
-  "metrics/model-comparison-card": {
-    "displayName": "model-comparison-card",
-    "description": "",
-    "props": []
-  },
-  "metrics/performance-card-other": {
-    "displayName": "performance-card-other",
-    "description": "",
-    "props": []
-  },
-  "metrics/performance-card": {
-    "displayName": "performance-card",
-    "description": "",
-    "props": []
-  },
-  "metrics/sales-metrics-card": {
-    "displayName": "sales-metrics-card",
-    "description": "",
-    "props": []
-  },
-  "metrics/simple-kpi-cards": {
-    "displayName": "simple-kpi-cards",
-    "description": "",
-    "props": []
-  },
-  "metrics/simple-statistics-cards": {
-    "displayName": "simple-statistics-cards",
-    "description": "",
-    "props": []
-  },
-  "metrics/social-visits-card": {
-    "displayName": "social-visits-card",
-    "description": "",
-    "props": []
-  },
-  "metrics/stat-card": {
-    "displayName": "stat-card",
-    "description": "",
-    "props": []
-  },
-  "metrics/statistics-card-fin": {
-    "displayName": "statistics-card-fin",
-    "description": "",
-    "props": []
-  },
-  "metrics/total-earning-card": {
-    "displayName": "total-earning-card",
-    "description": "",
-    "props": []
-  },
-  "metrics/total-stats-card": {
-    "displayName": "total-stats-card",
-    "description": "",
-    "props": []
-  },
-  "sections/analytics-overview": {
+  "metrics-sections/analytics-overview": {
     "displayName": "analytics-overview",
     "description": "",
     "props": []
   },
-  "sections/analytics-section": {
+  "metrics-sections/analytics-section": {
     "displayName": "analytics-section",
     "description": "",
     "props": []
   },
-  "sections/campaigns-section": {
+  "metrics-sections/campaigns-section": {
     "displayName": "campaigns-section",
     "description": "",
     "props": []
   },
-  "sections/charts-grid": {
+  "metrics-sections/charts-grid": {
     "displayName": "charts-grid",
     "description": "",
     "props": []
   },
-  "sections/dashboard-section": {
+  "metrics-sections/dashboard-section": {
     "displayName": "dashboard-section",
     "description": "",
     "props": []
   },
-  "sections/overview-section": {
+  "metrics-sections/overview-section": {
     "displayName": "overview-section",
     "description": "",
     "props": []
   },
-  "sections/posts-section": {
+  "metrics-sections/posts-section": {
     "displayName": "posts-section",
     "description": "",
     "props": []
   },
-  "sections/sales-metrics": {
+  "metrics-sections/sales-metrics": {
     "displayName": "sales-metrics",
     "description": "",
     "props": []
   },
-  "tables/daily-pickup-table": {
+  "metrics-tables/daily-pickup-table": {
     "displayName": "daily-pickup-table",
     "description": "",
     "props": []
   },
-  "tables/data-table": {
+  "metrics-tables/data-table": {
     "displayName": "data-table",
     "description": "",
     "props": []
   },
-  "tables/market-segment-group-rooms-table": {
+  "metrics-tables/market-segment-group-rooms-table": {
     "displayName": "market-segment-group-rooms-table",
     "description": "",
     "props": []
   },
-  "tables/market-segment-transient-rooms-table": {
+  "metrics-tables/market-segment-transient-rooms-table": {
     "displayName": "market-segment-transient-rooms-table",
     "description": "",
     "props": []
   },
-  "timeline/timeline-component": {
+  "metrics-timeline/timeline-component": {
     "displayName": "timeline-component",
     "description": "",
     "props": []

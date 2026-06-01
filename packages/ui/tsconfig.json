@@ -139,6 +139,18 @@
       ],
       "@utils": [
         "./src/utils/index.ts"
+      ],
+      "@data-grid": [
+        "./src/primitives/data-grid/index.ts"
+      ],
+      "@image-blocks": [
+        "./src/primitives/image-blocks/index.ts"
+      ],
+      "@links": [
+        "./src/primitives/links/index.ts"
+      ],
+      "@lists": [
+        "./src/primitives/lists/index.ts"
       ]
     },
     "plugins": [
