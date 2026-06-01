@@ -954,3 +954,72 @@
   hyphens: auto;
 }
 
+
+main table,
+article table {
+  display: table !important;
+  width: 100% !important;
+  overflow-x: auto;
+  border-collapse: collapse !important;
+  border: 2px solid var(--table-foreground) !important;
+  background-color: var(--table-background) !important;
+  box-shadow: none !important;
+}
+
+main table th,
+article table th {
+  font-family: var(--font-sans) !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  border: 2px solid var(--table-foreground) !important;
+  padding: 0.2em 1em !important;
+  color: var(--foreground) !important;
+  background-color: var(--table-background) !important;
+}
+
+main table td,
+article table td {
+  padding: 0.5em 1em !important;
+  color: var(--table-foreground) !important;
+  background-color: var(--table-background) !important;
+  border: 2px solid var(--table-foreground) !important;
+}
+
+main pre,
+article pre {
+  margin: 1em 0 !important;
+  padding: 1rem !important;
+  background-color: var(--code-background) !important;
+  border: none;
+  border-radius: 0 !important;
+}
+
+main pre code,
+article pre code {
+  font-family: var(--font-code) !important;
+  font-size: 14px !important;
+  color: var(--code-foreground) !important;
+  background: transparent !important;
+  border: none;
+}
+
+.nextra-code span {
+  font-family: var(--font-code) !important;
+  font-size: 14px !important;
+  color: var(--code-foreground) !important;
+}
+
+.nextra-code {
+  font-family: var(--font-code) !important;
+  font-size: 14px !important;
+  color: var(--code-accent-background) !important;
+}
+
+main :not(pre) > code,
+article :not(pre) > code {
+  font-family: var(--font-code) !important;
+  color: var(--code-background) !important;
+  background-color: var(--code-accent) !important;
+  border: none;
+  border-radius: 0 !important;
+}
