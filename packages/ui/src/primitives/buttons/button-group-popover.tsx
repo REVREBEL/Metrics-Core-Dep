@@ -7,7 +7,7 @@ import {
 	PopoverTitle,
 	PopoverTrigger,
 } from "@popovers";
-import { IconBotIcon, IconChevronDownIcon } from "@tabler/icons-react";
+import { BotIcon, ChevronDownIcon } from "@tabler/icons-react";
 import { Textarea } from "@textarea";
 import { Button } from "./button";
 import { ButtonGroup } from "./button-group";
