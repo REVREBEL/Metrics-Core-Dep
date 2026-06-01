@@ -1,4 +1,4 @@
-import { Tabs, TabsList, TabsTrigger } from "./tabs"
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { IconAppWindow, IconCode } from "@tabler/icons-react"
 
 export function TabsIcons() {
@@ -6,11 +6,11 @@ export function TabsIcons() {
     <Tabs defaultValue="preview">
       <TabsList>
         <TabsTrigger value="preview">
-          <IconAppWindow />
+          <AppWindowIcon />
           Preview
         </TabsTrigger>
         <TabsTrigger value="code">
-          <IconCode />
+          <CodeIcon />
           Code
         </TabsTrigger>
       </TabsList>

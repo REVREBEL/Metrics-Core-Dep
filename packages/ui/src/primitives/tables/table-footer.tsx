@@ -1,4 +1,3 @@
-import * as React from "react"
 import {
   Table,
   TableBody,
@@ -8,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./table"
+} from "@/components/ui/table"
 
 const invoices = [
   {
