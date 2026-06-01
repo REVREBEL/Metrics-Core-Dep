@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button"
+import { Button } from "@buttons";
 import {
   Popover,
   PopoverContent,
@@ -6,7 +6,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "./popover";
 
 export function PopoverBasic() {
   return (
@@ -25,5 +25,5 @@ export function PopoverBasic() {
         </PopoverContent>
       </Popover>
     </>
-  )
+  );
 }

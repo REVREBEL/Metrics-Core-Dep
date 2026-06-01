@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Field, FieldGroup, FieldLabel } from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+import { Field, FieldGroup, FieldLabel } from "@auto-form";
+import { Button } from "@buttons";
+import { Input } from "@inputs";
 import {
   Popover,
   PopoverContent,
@@ -8,7 +8,7 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "./popover";
 
 export function PopoverForm() {
   return (
@@ -41,5 +41,5 @@ export function PopoverForm() {
         </PopoverContent>
       </Popover>
     </>
-  )
+  );
 }
