@@ -40,7 +40,13 @@
     "./types": "./src/types/index.ts",
     "./utils": "./src/utils/index.ts",
     "./components/*": "./src/components/*.tsx",
-    "./styles.css": "./src/styles.css"
+    "./styles.css": "./src/styles.css",
+    "./shared-ui/controls": "./src/components/_shared-ui/controls/index.ts",
+    "./metrics-layouts": "./src/components/metrics-layouts/index.ts",
+    "./metrics-core": "./src/components/metrics-core/index.ts",
+    "./metrics-sections": "./src/components/metrics-sections/index.ts",
+    "./metrics-charts": "./src/components/metrics-charts/index.ts",
+    "./metrics-tables": "./src/components/metrics-tables/index.ts"
   },
   "scripts": {
     "dev": "pnpm registry:build && next dev",
@@ -48,7 +54,10 @@
     "start": "next start",
     "lint": "biome check",
     "lint:fix": "biome check --write",
-    "registry:build": "pnpm dlx shadcn@latest build"
+    "registry:build": "pnpm dlx shadcn@latest build",
+    "barrels:generate": "node ./scripts/generate-barrels.mts --exports",
+    "barrels:check": "node ./scripts/generate-barrels.mts --check --exports",
+    "registry:validate": "node ./scripts/validate-registries.mts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

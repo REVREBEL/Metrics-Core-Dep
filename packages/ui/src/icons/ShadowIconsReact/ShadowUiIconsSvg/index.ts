@@ -1,29 +1,29 @@
-export { default as AddFile } from "./AddFile";
-export { default as AddImage } from "./AddImage";
-export { default as AddList } from "./AddList";
-export { default as AddShoppingCart } from "./AddShoppingCart";
-export { default as AdministrativeTools } from "./AdministrativeTools";
-export { default as Answers } from "./Answers";
-export { default as HealthBook } from "./HealthBook";
-export { default as Help } from "./Help";
-export { default as Hibernate } from "./Hibernate";
-export { default as HighPriority } from "./HighPriority";
-export { default as HomeAutomation } from "./HomeAutomation";
-export { default as Hospital } from "./Hospital";
-export { default as Hospital3 } from "./Hospital3";
-export { default as Multiply } from "./Multiply";
-export { default as Multiply2 } from "./Multiply2";
-export { default as Mute } from "./Mute";
-export { default as PhotosFolder } from "./PhotosFolder";
-export { default as Picture } from "./Picture";
-export { default as PlusMath } from "./PlusMath";
-export { default as Questions } from "./Questions";
-export { default as RemoteWorking } from "./RemoteWorking";
-export { default as Sell } from "./Sell";
-export { default as Shift } from "./Shift";
-export { default as Shipped } from "./Shipped";
-export { default as Speaker } from "./Speaker";
-export { default as XboxMenu } from "./XboxMenu";
-export { default as XboxX } from "./XboxX";
-export { default as ZoomIn } from "./ZoomIn";
-export { default as ZoomOut } from "./ZoomOut";
+export * from "./AddFile"
+export * from "./AddImage"
+export * from "./AddList"
+export * from "./AddShoppingCart"
+export * from "./AdministrativeTools"
+export * from "./Answers"
+export * from "./HealthBook"
+export * from "./Help"
+export * from "./Hibernate"
+export * from "./HighPriority"
+export * from "./HomeAutomation"
+export * from "./Hospital"
+export * from "./Hospital3"
+export * from "./Multiply"
+export * from "./Multiply2"
+export * from "./Mute"
+export * from "./PhotosFolder"
+export * from "./Picture"
+export * from "./PlusMath"
+export * from "./Questions"
+export * from "./RemoteWorking"
+export * from "./Sell"
+export * from "./Shift"
+export * from "./Shipped"
+export * from "./Speaker"
+export * from "./XboxMenu"
+export * from "./XboxX"
+export * from "./ZoomIn"
+export * from "./ZoomOut"
