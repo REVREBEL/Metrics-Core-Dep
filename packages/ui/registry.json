@@ -1247,7 +1247,7 @@
       ],
       "files": [
         {
-          "path": "src/components/layouts/minimal-layout.tsx",
+          "path": "registry/app/demo/[name]/blocks/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         },
@@ -1399,7 +1399,7 @@
       ],
       "files": [
         {
-          "path": "src/components/layouts/minimal-layout.tsx",
+          "path": "registry/app/demo/[name]/blocks/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         },
@@ -1490,7 +1490,7 @@
           "target": "src/components/login.tsx"
         },
         {
-          "path": "src/components/layouts/minimal-layout.tsx",
+          "path": "registry/app/demo/[name]/blocks/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         },
@@ -1516,7 +1516,7 @@
           "target": "src/components/logo.tsx"
         },
         {
-          "path": "src/components/layouts/minimal-layout.tsx",
+          "path": "registry/app/demo/[name]/blocks/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         },
@@ -1544,7 +1544,7 @@
           "target": "src/components/hero.tsx"
         },
         {
-          "path": "src/components/layouts/minimal-layout.tsx",
+          "path": "registry/app/demo/[name]/blocks/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         },
@@ -1571,7 +1571,7 @@
           "target": "src/components/promo.tsx"
         },
         {
-          "path": "src/components/layouts/minimal-layout.tsx",
+          "path": "registry/app/demo/[name]/blocks/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         },
@@ -1602,7 +1602,7 @@
           "target": "src/lib/products.ts"
         },
         {
-          "path": "src/components/layouts/minimal-layout.tsx",
+          "path": "registry/app/demo/[name]/blocks/minimal-layout.tsx",
           "type": "registry:file",
           "target": "src/app/layout.tsx"
         }
@@ -1747,7 +1747,7 @@
       "description": "Beautiful charts. Built using Recharts. Copy and paste into your apps.",
       "files": [
         {
-          "path": "src/primitives/ui/chart.tsx",
+          "path": "src/primitives/charts/chart.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1843,7 +1843,7 @@
       "description": "Building forms with React Hook Form and Zod.",
       "files": [
         {
-          "path": "src/primitives/ui/form.tsx",
+          "path": "src/primitives/auto-form/form.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1915,7 +1915,7 @@
       "description": "A collection of links for navigating websites.",
       "files": [
         {
-          "path": "src/primitives/ui/navigation-menu.tsx",
+          "path": "src/primitives/menus/navigation-menu.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1927,7 +1927,7 @@
       "description": "Pagination with page navigation, next and previous links.",
       "files": [
         {
-          "path": "src/primitives/ui/pagination.tsx",
+          "path": "registry/app/demo/[name]/ui/pagination.tsx",
           "type": "registry:ui"
         }
       ]
@@ -1975,7 +1975,7 @@
       "description": "Accessible resizable panel groups and layouts with keyboard support.",
       "files": [
         {
-          "path": "src/primitives/ui/resizable.tsx",
+          "path": "registry/app/demo/[name]/ui/resizable.tsx",
           "type": "registry:ui"
         }
       ]
@@ -2035,7 +2035,7 @@
       "description": "A composable, themeable and customizable sidebar component.",
       "files": [
         {
-          "path": "src/primitives/ui/sidebar.tsx",
+          "path": "src/primitives/layouts/sidebar.tsx",
           "type": "registry:ui"
         }
       ]
@@ -2184,6 +2184,2694 @@
         "https://metrics-ui.revrebel.io/r/popover.json"
       ],
       "files": []
+    },
+    {
+      "name": "config",
+      "type": "registry:ui",
+      "title": "Config",
+      "description": "Auto-generated registry entry for config.",
+      "files": [
+        {
+          "path": "src/primitives/auto-form/config.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dependencies",
+      "type": "registry:ui",
+      "title": "Dependencies",
+      "description": "Auto-generated registry entry for dependencies.",
+      "files": [
+        {
+          "path": "src/primitives/auto-form/dependencies.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "array",
+      "type": "registry:ui",
+      "title": "Array",
+      "description": "Auto-generated registry entry for array.",
+      "files": [
+        {
+          "path": "src/primitives/auto-form/fields/array.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "date",
+      "type": "registry:ui",
+      "title": "Date",
+      "description": "Auto-generated registry entry for date.",
+      "files": [
+        {
+          "path": "src/primitives/auto-form/fields/date.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "enum",
+      "type": "registry:ui",
+      "title": "Enum",
+      "description": "Auto-generated registry entry for enum.",
+      "files": [
+        {
+          "path": "src/primitives/auto-form/fields/enum.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "field-group",
+      "type": "registry:ui",
+      "title": "Field Group",
+      "description": "Auto-generated registry entry for field-group.",
+      "files": [
+        {
+          "path": "src/primitives/auto-form/fields/field-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "field",
+      "type": "registry:ui",
+      "title": "Field",
+      "description": "Auto-generated registry entry for field.",
+      "files": [
+        {
+          "path": "src/primitives/auto-form/fields/field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "number",
+      "type": "registry:ui",
+      "title": "Number",
+      "description": "Auto-generated registry entry for number.",
+      "files": [
+        {
+          "path": "src/primitives/auto-form/fields/number.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "object",
+      "type": "registry:ui",
+      "title": "Object",
+      "description": "Auto-generated registry entry for object.",
+      "files": [
+        {
+          "path": "src/primitives/auto-form/fields/object.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "helpers",
+      "type": "registry:ui",
+      "title": "Helpers",
+      "description": "Auto-generated registry entry for helpers.",
+      "files": [
+        {
+          "path": "src/primitives/auto-form/helpers.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "shared-form-types",
+      "type": "registry:ui",
+      "title": "Shared Form Types",
+      "description": "Auto-generated registry entry for shared-form-types.",
+      "files": [
+        {
+          "path": "src/primitives/auto-form/shared-form-types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "types",
+      "type": "registry:ui",
+      "title": "Types",
+      "description": "Auto-generated registry entry for types.",
+      "files": [
+        {
+          "path": "src/primitives/auto-form/types.ts",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-default",
+      "type": "registry:ui",
+      "title": "Button Default",
+      "description": "Auto-generated registry entry for button-default.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-default.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-destructive",
+      "type": "registry:ui",
+      "title": "Button Destructive",
+      "description": "Auto-generated registry entry for button-destructive.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-destructive.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-ghost",
+      "type": "registry:ui",
+      "title": "Button Ghost",
+      "description": "Auto-generated registry entry for button-ghost.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-ghost.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group-dropdown",
+      "type": "registry:ui",
+      "title": "Button Group Dropdown",
+      "description": "Auto-generated registry entry for button-group-dropdown.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-group-dropdown.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group-input-group",
+      "type": "registry:ui",
+      "title": "Button Group Input Group",
+      "description": "Auto-generated registry entry for button-group-input-group.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-group-input-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group-input",
+      "type": "registry:ui",
+      "title": "Button Group Input",
+      "description": "Auto-generated registry entry for button-group-input.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-group-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group-nested",
+      "type": "registry:ui",
+      "title": "Button Group Nested",
+      "description": "Auto-generated registry entry for button-group-nested.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-group-nested.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group-orientation",
+      "type": "registry:ui",
+      "title": "Button Group Orientation",
+      "description": "Auto-generated registry entry for button-group-orientation.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-group-orientation.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group-popover",
+      "type": "registry:ui",
+      "title": "Button Group Popover",
+      "description": "Auto-generated registry entry for button-group-popover.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-group-popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group-select",
+      "type": "registry:ui",
+      "title": "Button Group Select",
+      "description": "Auto-generated registry entry for button-group-select.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-group-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group-separator",
+      "type": "registry:ui",
+      "title": "Button Group Separator",
+      "description": "Auto-generated registry entry for button-group-separator.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-group-separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group-size",
+      "type": "registry:ui",
+      "title": "Button Group Size",
+      "description": "Auto-generated registry entry for button-group-size.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-group-size.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group-split",
+      "type": "registry:ui",
+      "title": "Button Group Split",
+      "description": "Auto-generated registry entry for button-group-split.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-group-split.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group",
+      "type": "registry:ui",
+      "title": "Button Group",
+      "description": "Auto-generated registry entry for button-group.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-icon",
+      "type": "registry:ui",
+      "title": "Button Icon",
+      "description": "Auto-generated registry entry for button-icon.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-icon.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-link",
+      "type": "registry:ui",
+      "title": "Button Link",
+      "description": "Auto-generated registry entry for button-link.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-link.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-outline",
+      "type": "registry:ui",
+      "title": "Button Outline",
+      "description": "Auto-generated registry entry for button-outline.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-outline.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-render",
+      "type": "registry:ui",
+      "title": "Button Render",
+      "description": "Auto-generated registry entry for button-render.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-render.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-rounded",
+      "type": "registry:ui",
+      "title": "Button Rounded",
+      "description": "Auto-generated registry entry for button-rounded.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-rounded.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-secondary",
+      "type": "registry:ui",
+      "title": "Button Secondary",
+      "description": "Auto-generated registry entry for button-secondary.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-secondary.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-size",
+      "type": "registry:ui",
+      "title": "Button Size",
+      "description": "Auto-generated registry entry for button-size.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-size.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-spinner",
+      "type": "registry:ui",
+      "title": "Button Spinner",
+      "description": "Auto-generated registry entry for button-spinner.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-with-icon",
+      "type": "registry:ui",
+      "title": "Button With Icon",
+      "description": "Auto-generated registry entry for button-with-icon.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/button-with-icon.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "discover-button",
+      "type": "registry:ui",
+      "title": "Discover Button",
+      "description": "Auto-generated registry entry for discover-button.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/discover-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "status-button",
+      "type": "registry:ui",
+      "title": "Status Button",
+      "description": "Auto-generated registry entry for status-button.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/status-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toolbar-button",
+      "type": "registry:ui",
+      "title": "Toolbar Button",
+      "description": "Auto-generated registry entry for toolbar-button.",
+      "files": [
+        {
+          "path": "src/primitives/buttons/toolbar-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart-demos",
+      "type": "registry:ui",
+      "title": "Chart Demos",
+      "description": "Auto-generated registry entry for chart-demos.",
+      "files": [
+        {
+          "path": "src/primitives/charts/chart-demos.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart-sales-metrics",
+      "type": "registry:ui",
+      "title": "Chart Sales Metrics",
+      "description": "Auto-generated registry entry for chart-sales-metrics.",
+      "files": [
+        {
+          "path": "src/primitives/charts/chart-sales-metrics.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "line-chart",
+      "type": "registry:ui",
+      "title": "Line Chart",
+      "description": "Auto-generated registry entry for line-chart.",
+      "files": [
+        {
+          "path": "src/primitives/charts/line-chart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "statistics-card",
+      "type": "registry:ui",
+      "title": "Statistics Card",
+      "description": "Auto-generated registry entry for statistics-card.",
+      "files": [
+        {
+          "path": "src/primitives/charts/statistics-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "statistics-with-status",
+      "type": "registry:ui",
+      "title": "Statistics With Status",
+      "description": "Auto-generated registry entry for statistics-with-status.",
+      "files": [
+        {
+          "path": "src/primitives/charts/statistics-with-status.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "widget-product-insights",
+      "type": "registry:ui",
+      "title": "Widget Product Insights",
+      "description": "Auto-generated registry entry for widget-product-insights.",
+      "files": [
+        {
+          "path": "src/primitives/charts/widget-product-insights.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "widget-total-earning",
+      "type": "registry:ui",
+      "title": "Widget Total Earning",
+      "description": "Auto-generated registry entry for widget-total-earning.",
+      "files": [
+        {
+          "path": "src/primitives/charts/widget-total-earning.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-grid-column-filter",
+      "type": "registry:ui",
+      "title": "Data Grid Column Filter",
+      "description": "Auto-generated registry entry for data-grid-column-filter.",
+      "files": [
+        {
+          "path": "src/primitives/data-grid/data-grid-column-filter.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-grid-column-header",
+      "type": "registry:ui",
+      "title": "Data Grid Column Header",
+      "description": "Auto-generated registry entry for data-grid-column-header.",
+      "files": [
+        {
+          "path": "src/primitives/data-grid/data-grid-column-header.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-grid-column-visibility",
+      "type": "registry:ui",
+      "title": "Data Grid Column Visibility",
+      "description": "Auto-generated registry entry for data-grid-column-visibility.",
+      "files": [
+        {
+          "path": "src/primitives/data-grid/data-grid-column-visibility.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-grid-pagination",
+      "type": "registry:ui",
+      "title": "Data Grid Pagination",
+      "description": "Auto-generated registry entry for data-grid-pagination.",
+      "files": [
+        {
+          "path": "src/primitives/data-grid/data-grid-pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-grid-table-dnd-rows",
+      "type": "registry:ui",
+      "title": "Data Grid Table Dnd Rows",
+      "description": "Auto-generated registry entry for data-grid-table-dnd-rows.",
+      "files": [
+        {
+          "path": "src/primitives/data-grid/data-grid-table-dnd-rows.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-grid-table-dnd",
+      "type": "registry:ui",
+      "title": "Data Grid Table Dnd",
+      "description": "Auto-generated registry entry for data-grid-table-dnd.",
+      "files": [
+        {
+          "path": "src/primitives/data-grid/data-grid-table-dnd.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-grid-table",
+      "type": "registry:ui",
+      "title": "Data Grid Table",
+      "description": "Auto-generated registry entry for data-grid-table.",
+      "files": [
+        {
+          "path": "src/primitives/data-grid/data-grid-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "data-grid",
+      "type": "registry:ui",
+      "title": "Data Grid",
+      "description": "Auto-generated registry entry for data-grid.",
+      "files": [
+        {
+          "path": "src/primitives/data-grid/data-grid.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-language",
+      "type": "registry:ui",
+      "title": "Dropdown Language",
+      "description": "Auto-generated registry entry for dropdown-language.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/dropdown-language.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-avatar",
+      "type": "registry:ui",
+      "title": "Dropdown Menu Avatar",
+      "description": "Auto-generated registry entry for dropdown-menu-avatar.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/dropdown-menu-avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-basic",
+      "type": "registry:ui",
+      "title": "Dropdown Menu Basic",
+      "description": "Auto-generated registry entry for dropdown-menu-basic.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/dropdown-menu-basic.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-checkboxes-icons",
+      "type": "registry:ui",
+      "title": "Dropdown Menu Checkboxes Icons",
+      "description": "Auto-generated registry entry for dropdown-menu-checkboxes-icons.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/dropdown-menu-checkboxes-icons.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-checkboxes",
+      "type": "registry:ui",
+      "title": "Dropdown Menu Checkboxes",
+      "description": "Auto-generated registry entry for dropdown-menu-checkboxes.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/dropdown-menu-checkboxes.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-destructive",
+      "type": "registry:ui",
+      "title": "Dropdown Menu Destructive",
+      "description": "Auto-generated registry entry for dropdown-menu-destructive.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/dropdown-menu-destructive.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-icons",
+      "type": "registry:ui",
+      "title": "Dropdown Menu Icons",
+      "description": "Auto-generated registry entry for dropdown-menu-icons.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/dropdown-menu-icons.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-radio-group",
+      "type": "registry:ui",
+      "title": "Dropdown Menu Radio Group",
+      "description": "Auto-generated registry entry for dropdown-menu-radio-group.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/dropdown-menu-radio-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-radio-icons",
+      "type": "registry:ui",
+      "title": "Dropdown Menu Radio Icons",
+      "description": "Auto-generated registry entry for dropdown-menu-radio-icons.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/dropdown-menu-radio-icons.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-shortcuts",
+      "type": "registry:ui",
+      "title": "Dropdown Menu Shortcuts",
+      "description": "Auto-generated registry entry for dropdown-menu-shortcuts.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/dropdown-menu-shortcuts.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-menu-submenu",
+      "type": "registry:ui",
+      "title": "Dropdown Menu Submenu",
+      "description": "Auto-generated registry entry for dropdown-menu-submenu.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/dropdown-menu-submenu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "dropdown-profile",
+      "type": "registry:ui",
+      "title": "Dropdown Profile",
+      "description": "Auto-generated registry entry for dropdown-profile.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/dropdown-profile.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select-dropdown",
+      "type": "registry:ui",
+      "title": "Select Dropdown",
+      "description": "Auto-generated registry entry for select-dropdown.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/select-dropdown.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "smooth-dropdown",
+      "type": "registry:ui",
+      "title": "Smooth Dropdown",
+      "description": "Auto-generated registry entry for smooth-dropdown.",
+      "files": [
+        {
+          "path": "src/primitives/dropdowns/smooth-dropdown.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "image-edit-block",
+      "type": "registry:ui",
+      "title": "Image Edit Block",
+      "description": "Auto-generated registry entry for image-edit-block.",
+      "files": [
+        {
+          "path": "src/primitives/image-blocks/image-edit-block.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "image-edit-dialog",
+      "type": "registry:ui",
+      "title": "Image Edit Dialog",
+      "description": "Auto-generated registry entry for image-edit-dialog.",
+      "files": [
+        {
+          "path": "src/primitives/image-blocks/image-edit-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "combobox-option",
+      "type": "registry:ui",
+      "title": "Combobox Option",
+      "description": "Auto-generated registry entry for combobox-option.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/combobox-option.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "Auto-generated registry entry for combobox.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/combobox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-badge",
+      "type": "registry:ui",
+      "title": "Input Badge",
+      "description": "Auto-generated registry entry for input-badge.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-basic",
+      "type": "registry:ui",
+      "title": "Input Basic",
+      "description": "Auto-generated registry entry for input-basic.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-basic.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-button-group",
+      "type": "registry:ui",
+      "title": "Input Button Group",
+      "description": "Auto-generated registry entry for input-button-group.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-button-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-disabled",
+      "type": "registry:ui",
+      "title": "Input Disabled",
+      "description": "Auto-generated registry entry for input-disabled.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-disabled.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-field",
+      "type": "registry:ui",
+      "title": "Input Field",
+      "description": "Auto-generated registry entry for input-field.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-fieldgroup",
+      "type": "registry:ui",
+      "title": "Input Fieldgroup",
+      "description": "Auto-generated registry entry for input-fieldgroup.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-fieldgroup.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-file",
+      "type": "registry:ui",
+      "title": "Input File",
+      "description": "Auto-generated registry entry for input-file.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-file.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-form",
+      "type": "registry:ui",
+      "title": "Input Form",
+      "description": "Auto-generated registry entry for input-form.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-grid",
+      "type": "registry:ui",
+      "title": "Input Grid",
+      "description": "Auto-generated registry entry for input-grid.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-grid.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-basic",
+      "type": "registry:ui",
+      "title": "Input Group Basic",
+      "description": "Auto-generated registry entry for input-group-basic.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-basic.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-block-end",
+      "type": "registry:ui",
+      "title": "Input Group Block End",
+      "description": "Auto-generated registry entry for input-group-block-end.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-block-end.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-block-start",
+      "type": "registry:ui",
+      "title": "Input Group Block Start",
+      "description": "Auto-generated registry entry for input-group-block-start.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-block-start.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-button-group",
+      "type": "registry:ui",
+      "title": "Input Group Button Group",
+      "description": "Auto-generated registry entry for input-group-button-group.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-button-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-button",
+      "type": "registry:ui",
+      "title": "Input Group Button",
+      "description": "Auto-generated registry entry for input-group-button.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-custom",
+      "type": "registry:ui",
+      "title": "Input Group Custom",
+      "description": "Auto-generated registry entry for input-group-custom.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-custom.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-dropdown",
+      "type": "registry:ui",
+      "title": "Input Group Dropdown",
+      "description": "Auto-generated registry entry for input-group-dropdown.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-dropdown.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-icon",
+      "type": "registry:ui",
+      "title": "Input Group Icon",
+      "description": "Auto-generated registry entry for input-group-icon.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-icon.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-in-card",
+      "type": "registry:ui",
+      "title": "Input Group In Card",
+      "description": "Auto-generated registry entry for input-group-in-card.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-in-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-inline-end",
+      "type": "registry:ui",
+      "title": "Input Group Inline End",
+      "description": "Auto-generated registry entry for input-group-inline-end.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-inline-end.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-inline-start",
+      "type": "registry:ui",
+      "title": "Input Group Inline Start",
+      "description": "Auto-generated registry entry for input-group-inline-start.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-inline-start.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-kbd",
+      "type": "registry:ui",
+      "title": "Input Group Kbd",
+      "description": "Auto-generated registry entry for input-group-kbd.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-kbd.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-label",
+      "type": "registry:ui",
+      "title": "Input Group Label",
+      "description": "Auto-generated registry entry for input-group-label.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-label.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-spinner",
+      "type": "registry:ui",
+      "title": "Input Group Spinner",
+      "description": "Auto-generated registry entry for input-group-spinner.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-text",
+      "type": "registry:ui",
+      "title": "Input Group Text",
+      "description": "Auto-generated registry entry for input-group-text.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-textarea-examples",
+      "type": "registry:ui",
+      "title": "Input Group Textarea Examples",
+      "description": "Auto-generated registry entry for input-group-textarea-examples.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-textarea-examples.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-textarea",
+      "type": "registry:ui",
+      "title": "Input Group Textarea",
+      "description": "Auto-generated registry entry for input-group-textarea.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-textarea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-tooltip",
+      "type": "registry:ui",
+      "title": "Input Group Tooltip",
+      "description": "Auto-generated registry entry for input-group-tooltip.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-with-addons",
+      "type": "registry:ui",
+      "title": "Input Group With Addons",
+      "description": "Auto-generated registry entry for input-group-with-addons.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-with-addons.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-with-buttons",
+      "type": "registry:ui",
+      "title": "Input Group With Buttons",
+      "description": "Auto-generated registry entry for input-group-with-buttons.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-with-buttons.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-with-kbd",
+      "type": "registry:ui",
+      "title": "Input Group With Kbd",
+      "description": "Auto-generated registry entry for input-group-with-kbd.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-with-kbd.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group-with-tooltip",
+      "type": "registry:ui",
+      "title": "Input Group With Tooltip",
+      "description": "Auto-generated registry entry for input-group-with-tooltip.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group-with-tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-group",
+      "type": "registry:ui",
+      "title": "Input Group",
+      "description": "Auto-generated registry entry for input-group.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-inline",
+      "type": "registry:ui",
+      "title": "Input Inline",
+      "description": "Auto-generated registry entry for input-inline.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-inline.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-input-group",
+      "type": "registry:ui",
+      "title": "Input Input Group",
+      "description": "Auto-generated registry entry for input-input-group.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-input-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-invalid",
+      "type": "registry:ui",
+      "title": "Input Invalid",
+      "description": "Auto-generated registry entry for input-invalid.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-invalid.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-alphanumeric",
+      "type": "registry:ui",
+      "title": "Input Otp Alphanumeric",
+      "description": "Auto-generated registry entry for input-otp-alphanumeric.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-otp-alphanumeric.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-controlled",
+      "type": "registry:ui",
+      "title": "Input Otp Controlled",
+      "description": "Auto-generated registry entry for input-otp-controlled.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-otp-controlled.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-disabled",
+      "type": "registry:ui",
+      "title": "Input Otp Disabled",
+      "description": "Auto-generated registry entry for input-otp-disabled.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-otp-disabled.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-form",
+      "type": "registry:ui",
+      "title": "Input Otp Form",
+      "description": "Auto-generated registry entry for input-otp-form.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-otp-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-four-digits",
+      "type": "registry:ui",
+      "title": "Input Otp Four Digits",
+      "description": "Auto-generated registry entry for input-otp-four-digits.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-otp-four-digits.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-invalid",
+      "type": "registry:ui",
+      "title": "Input Otp Invalid",
+      "description": "Auto-generated registry entry for input-otp-invalid.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-otp-invalid.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-pattern",
+      "type": "registry:ui",
+      "title": "Input Otp Pattern",
+      "description": "Auto-generated registry entry for input-otp-pattern.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-otp-pattern.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input-otp-separator",
+      "type": "registry:ui",
+      "title": "Input Otp Separator",
+      "description": "Auto-generated registry entry for input-otp-separator.",
+      "files": [
+        {
+          "path": "src/primitives/inputs/input-otp-separator.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "coming-soon",
+      "type": "registry:ui",
+      "title": "Coming Soon",
+      "description": "Auto-generated registry entry for coming-soon.",
+      "files": [
+        {
+          "path": "src/primitives/layouts/coming-soon.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "measured-container",
+      "type": "registry:ui",
+      "title": "Measured Container",
+      "description": "Auto-generated registry entry for measured-container.",
+      "files": [
+        {
+          "path": "src/primitives/layouts/measured-container.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "navigation-progress",
+      "type": "registry:ui",
+      "title": "Navigation Progress",
+      "description": "Auto-generated registry entry for navigation-progress.",
+      "files": [
+        {
+          "path": "src/primitives/layouts/navigation-progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "resizable-handle",
+      "type": "registry:ui",
+      "title": "Resizable Handle",
+      "description": "Auto-generated registry entry for resizable-handle.",
+      "files": [
+        {
+          "path": "src/primitives/layouts/resizable-handle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "resizable-vertical",
+      "type": "registry:ui",
+      "title": "Resizable Vertical",
+      "description": "Auto-generated registry entry for resizable-vertical.",
+      "files": [
+        {
+          "path": "src/primitives/layouts/resizable-vertical.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "social-proof-01",
+      "type": "registry:ui",
+      "title": "Social Proof 01",
+      "description": "Auto-generated registry entry for social-proof-01.",
+      "files": [
+        {
+          "path": "src/primitives/layouts/social-proof-01.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "social-proof-07",
+      "type": "registry:ui",
+      "title": "Social Proof 07",
+      "description": "Auto-generated registry entry for social-proof-07.",
+      "files": [
+        {
+          "path": "src/primitives/layouts/social-proof-07.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sub-nav",
+      "type": "registry:ui",
+      "title": "Sub Nav",
+      "description": "Auto-generated registry entry for sub-nav.",
+      "files": [
+        {
+          "path": "src/primitives/layouts/sub-nav.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "swap-layout-loader",
+      "type": "registry:ui",
+      "title": "Swap Layout Loader",
+      "description": "Auto-generated registry entry for swap-layout-loader.",
+      "files": [
+        {
+          "path": "src/primitives/layouts/swap-layout-loader.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "swap-layout",
+      "type": "registry:ui",
+      "title": "Swap Layout",
+      "description": "Auto-generated registry entry for swap-layout.",
+      "files": [
+        {
+          "path": "src/primitives/layouts/swap-layout.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "link-bubble-menu",
+      "type": "registry:ui",
+      "title": "Link Bubble Menu",
+      "description": "Auto-generated registry entry for link-bubble-menu.",
+      "files": [
+        {
+          "path": "src/primitives/links/link-bubble-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "link-edit-block",
+      "type": "registry:ui",
+      "title": "Link Edit Block",
+      "description": "Auto-generated registry entry for link-edit-block.",
+      "files": [
+        {
+          "path": "src/primitives/links/link-edit-block.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "link-edit-popover",
+      "type": "registry:ui",
+      "title": "Link Edit Popover",
+      "description": "Auto-generated registry entry for link-edit-popover.",
+      "files": [
+        {
+          "path": "src/primitives/links/link-edit-popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "link-popover-block",
+      "type": "registry:ui",
+      "title": "Link Popover Block",
+      "description": "Auto-generated registry entry for link-popover-block.",
+      "files": [
+        {
+          "path": "src/primitives/links/link-popover-block.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "list-item",
+      "type": "registry:ui",
+      "title": "List Item",
+      "description": "Auto-generated registry entry for list-item.",
+      "files": [
+        {
+          "path": "src/primitives/lists/list-item.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menu-option",
+      "type": "registry:ui",
+      "title": "Menu Option",
+      "description": "Auto-generated registry entry for menu-option.",
+      "files": [
+        {
+          "path": "src/primitives/menus/menu-option.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menu-other",
+      "type": "registry:ui",
+      "title": "Menu Other",
+      "description": "Auto-generated registry entry for menu-other.",
+      "files": [
+        {
+          "path": "src/primitives/menus/menu-other.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menu",
+      "type": "registry:ui",
+      "title": "Menu",
+      "description": "Auto-generated registry entry for menu.",
+      "files": [
+        {
+          "path": "src/primitives/menus/menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menubar-checkbox",
+      "type": "registry:ui",
+      "title": "Menubar Checkbox",
+      "description": "Auto-generated registry entry for menubar-checkbox.",
+      "files": [
+        {
+          "path": "src/primitives/menus/menubar-checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menubar-icons",
+      "type": "registry:ui",
+      "title": "Menubar Icons",
+      "description": "Auto-generated registry entry for menubar-icons.",
+      "files": [
+        {
+          "path": "src/primitives/menus/menubar-icons.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menubar-radio",
+      "type": "registry:ui",
+      "title": "Menubar Radio",
+      "description": "Auto-generated registry entry for menubar-radio.",
+      "files": [
+        {
+          "path": "src/primitives/menus/menubar-radio.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menubar-submenu",
+      "type": "registry:ui",
+      "title": "Menubar Submenu",
+      "description": "Auto-generated registry entry for menubar-submenu.",
+      "files": [
+        {
+          "path": "src/primitives/menus/menubar-submenu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover-alignments",
+      "type": "registry:ui",
+      "title": "Popover Alignments",
+      "description": "Auto-generated registry entry for popover-alignments.",
+      "files": [
+        {
+          "path": "src/primitives/popovers/popover-alignments.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover-basic",
+      "type": "registry:ui",
+      "title": "Popover Basic",
+      "description": "Auto-generated registry entry for popover-basic.",
+      "files": [
+        {
+          "path": "src/primitives/popovers/popover-basic.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover-form",
+      "type": "registry:ui",
+      "title": "Popover Form",
+      "description": "Auto-generated registry entry for popover-form.",
+      "files": [
+        {
+          "path": "src/primitives/popovers/popover-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "add-to-cursor",
+      "type": "registry:ui",
+      "title": "Add To Cursor",
+      "description": "Auto-generated registry entry for add-to-cursor.",
+      "files": [
+        {
+          "path": "src/primitives/registry/add-to-cursor.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "component-card",
+      "type": "registry:ui",
+      "title": "Component Card",
+      "description": "Auto-generated registry entry for component-card.",
+      "files": [
+        {
+          "path": "src/primitives/registry/component-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "mcp-tabs",
+      "type": "registry:ui",
+      "title": "Mcp Tabs",
+      "description": "Auto-generated registry entry for mcp-tabs.",
+      "files": [
+        {
+          "path": "src/primitives/registry/mcp-tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "open-in-v0",
+      "type": "registry:ui",
+      "title": "Open In V0",
+      "description": "Auto-generated registry entry for open-in-v0.",
+      "files": [
+        {
+          "path": "src/primitives/registry/open-in-v0.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "registry-logo",
+      "type": "registry:ui",
+      "title": "Registry Logo",
+      "description": "Auto-generated registry entry for registry-logo.",
+      "files": [
+        {
+          "path": "src/primitives/registry/registry-logo.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "registry-sidebar",
+      "type": "registry:ui",
+      "title": "Registry Sidebar",
+      "description": "Auto-generated registry entry for registry-sidebar.",
+      "files": [
+        {
+          "path": "src/primitives/registry/registry-sidebar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "theme-toggle",
+      "type": "registry:ui",
+      "title": "Theme Toggle",
+      "description": "Auto-generated registry entry for theme-toggle.",
+      "files": [
+        {
+          "path": "src/primitives/registry/theme-toggle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "five",
+      "type": "registry:ui",
+      "title": "Five",
+      "description": "Auto-generated registry entry for five.",
+      "files": [
+        {
+          "path": "src/primitives/sections/five.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "four",
+      "type": "registry:ui",
+      "title": "Four",
+      "description": "Auto-generated registry entry for four.",
+      "files": [
+        {
+          "path": "src/primitives/sections/four.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "one",
+      "type": "registry:ui",
+      "title": "One",
+      "description": "Auto-generated registry entry for one.",
+      "files": [
+        {
+          "path": "src/primitives/sections/one.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "three",
+      "type": "registry:ui",
+      "title": "Three",
+      "description": "Auto-generated registry entry for three.",
+      "files": [
+        {
+          "path": "src/primitives/sections/three.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toolbar-section",
+      "type": "registry:ui",
+      "title": "Toolbar Section",
+      "description": "Auto-generated registry entry for toolbar-section.",
+      "files": [
+        {
+          "path": "src/primitives/sections/toolbar-section.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "two",
+      "type": "registry:ui",
+      "title": "Two",
+      "description": "Auto-generated registry entry for two.",
+      "files": [
+        {
+          "path": "src/primitives/sections/two.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "empty-state",
+      "type": "registry:ui",
+      "title": "Empty State",
+      "description": "Auto-generated registry entry for empty-state.",
+      "files": [
+        {
+          "path": "src/primitives/skeleton/empty-state.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-avatar",
+      "type": "registry:ui",
+      "title": "Skeleton Avatar",
+      "description": "Auto-generated registry entry for skeleton-avatar.",
+      "files": [
+        {
+          "path": "src/primitives/skeleton/skeleton-avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-card",
+      "type": "registry:ui",
+      "title": "Skeleton Card",
+      "description": "Auto-generated registry entry for skeleton-card.",
+      "files": [
+        {
+          "path": "src/primitives/skeleton/skeleton-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-demo",
+      "type": "registry:ui",
+      "title": "Skeleton Demo",
+      "description": "Auto-generated registry entry for skeleton-demo.",
+      "files": [
+        {
+          "path": "src/primitives/skeleton/skeleton-demo.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-form",
+      "type": "registry:ui",
+      "title": "Skeleton Form",
+      "description": "Auto-generated registry entry for skeleton-form.",
+      "files": [
+        {
+          "path": "src/primitives/skeleton/skeleton-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-table",
+      "type": "registry:ui",
+      "title": "Skeleton Table",
+      "description": "Auto-generated registry entry for skeleton-table.",
+      "files": [
+        {
+          "path": "src/primitives/skeleton/skeleton-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-text",
+      "type": "registry:ui",
+      "title": "Skeleton Text",
+      "description": "Auto-generated registry entry for skeleton-text.",
+      "files": [
+        {
+          "path": "src/primitives/skeleton/skeleton-text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "datatable-transaction",
+      "type": "registry:ui",
+      "title": "Datatable Transaction",
+      "description": "Auto-generated registry entry for datatable-transaction.",
+      "files": [
+        {
+          "path": "src/primitives/tables/datatable-transaction.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table-actions",
+      "type": "registry:ui",
+      "title": "Table Actions",
+      "description": "Auto-generated registry entry for table-actions.",
+      "files": [
+        {
+          "path": "src/primitives/tables/table-actions.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table-footer",
+      "type": "registry:ui",
+      "title": "Table Footer",
+      "description": "Auto-generated registry entry for table-footer.",
+      "files": [
+        {
+          "path": "src/primitives/tables/table-footer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "discrete-tabs",
+      "type": "registry:ui",
+      "title": "Discrete Tabs",
+      "description": "Auto-generated registry entry for discrete-tabs.",
+      "files": [
+        {
+          "path": "src/primitives/tabs/discrete-tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs-disabled",
+      "type": "registry:ui",
+      "title": "Tabs Disabled",
+      "description": "Auto-generated registry entry for tabs-disabled.",
+      "files": [
+        {
+          "path": "src/primitives/tabs/tabs-disabled.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs-icons",
+      "type": "registry:ui",
+      "title": "Tabs Icons",
+      "description": "Auto-generated registry entry for tabs-icons.",
+      "files": [
+        {
+          "path": "src/primitives/tabs/tabs-icons.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs-line",
+      "type": "registry:ui",
+      "title": "Tabs Line",
+      "description": "Auto-generated registry entry for tabs-line.",
+      "files": [
+        {
+          "path": "src/primitives/tabs/tabs-line.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs-vertical",
+      "type": "registry:ui",
+      "title": "Tabs Vertical",
+      "description": "Auto-generated registry entry for tabs-vertical.",
+      "files": [
+        {
+          "path": "src/primitives/tabs/tabs-vertical.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "long-text",
+      "type": "registry:ui",
+      "title": "Long Text",
+      "description": "Auto-generated registry entry for long-text.",
+      "files": [
+        {
+          "path": "src/primitives/textarea/long-text.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea-button",
+      "type": "registry:ui",
+      "title": "Textarea Button",
+      "description": "Auto-generated registry entry for textarea-button.",
+      "files": [
+        {
+          "path": "src/primitives/textarea/textarea-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea-disabled",
+      "type": "registry:ui",
+      "title": "Textarea Disabled",
+      "description": "Auto-generated registry entry for textarea-disabled.",
+      "files": [
+        {
+          "path": "src/primitives/textarea/textarea-disabled.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea-field",
+      "type": "registry:ui",
+      "title": "Textarea Field",
+      "description": "Auto-generated registry entry for textarea-field.",
+      "files": [
+        {
+          "path": "src/primitives/textarea/textarea-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea-invalid",
+      "type": "registry:ui",
+      "title": "Textarea Invalid",
+      "description": "Auto-generated registry entry for textarea-invalid.",
+      "files": [
+        {
+          "path": "src/primitives/textarea/textarea-invalid.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "v1-1-0",
+      "type": "registry:ui",
+      "title": "V1 1 0",
+      "description": "Auto-generated registry entry for v1-1-0.",
+      "files": [
+        {
+          "path": "src/primitives/timelines/content/v1-1-0.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "v1-2-0",
+      "type": "registry:ui",
+      "title": "V1 2 0",
+      "description": "Auto-generated registry entry for v1-2-0.",
+      "files": [
+        {
+          "path": "src/primitives/timelines/content/v1-2-0.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "v1-3-0",
+      "type": "registry:ui",
+      "title": "V1 3 0",
+      "description": "Auto-generated registry entry for v1-3-0.",
+      "files": [
+        {
+          "path": "src/primitives/timelines/content/v1-3-0.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "timeline-component-05",
+      "type": "registry:ui",
+      "title": "Timeline Component 05",
+      "description": "Auto-generated registry entry for timeline-component-05.",
+      "files": [
+        {
+          "path": "src/primitives/timelines/timeline-component-05.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography-blockquote",
+      "type": "registry:ui",
+      "title": "Typography Blockquote",
+      "description": "Auto-generated registry entry for typography-blockquote.",
+      "files": [
+        {
+          "path": "src/primitives/typography/typography-blockquote.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography-h1",
+      "type": "registry:ui",
+      "title": "Typography H1",
+      "description": "Auto-generated registry entry for typography-h1.",
+      "files": [
+        {
+          "path": "src/primitives/typography/typography-h1.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography-h2",
+      "type": "registry:ui",
+      "title": "Typography H2",
+      "description": "Auto-generated registry entry for typography-h2.",
+      "files": [
+        {
+          "path": "src/primitives/typography/typography-h2.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography-h3",
+      "type": "registry:ui",
+      "title": "Typography H3",
+      "description": "Auto-generated registry entry for typography-h3.",
+      "files": [
+        {
+          "path": "src/primitives/typography/typography-h3.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography-h4",
+      "type": "registry:ui",
+      "title": "Typography H4",
+      "description": "Auto-generated registry entry for typography-h4.",
+      "files": [
+        {
+          "path": "src/primitives/typography/typography-h4.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography-inline-code",
+      "type": "registry:ui",
+      "title": "Typography Inline Code",
+      "description": "Auto-generated registry entry for typography-inline-code.",
+      "files": [
+        {
+          "path": "src/primitives/typography/typography-inline-code.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography-large",
+      "type": "registry:ui",
+      "title": "Typography Large",
+      "description": "Auto-generated registry entry for typography-large.",
+      "files": [
+        {
+          "path": "src/primitives/typography/typography-large.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography-lead",
+      "type": "registry:ui",
+      "title": "Typography Lead",
+      "description": "Auto-generated registry entry for typography-lead.",
+      "files": [
+        {
+          "path": "src/primitives/typography/typography-lead.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography-list",
+      "type": "registry:ui",
+      "title": "Typography List",
+      "description": "Auto-generated registry entry for typography-list.",
+      "files": [
+        {
+          "path": "src/primitives/typography/typography-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography-muted",
+      "type": "registry:ui",
+      "title": "Typography Muted",
+      "description": "Auto-generated registry entry for typography-muted.",
+      "files": [
+        {
+          "path": "src/primitives/typography/typography-muted.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography-p",
+      "type": "registry:ui",
+      "title": "Typography P",
+      "description": "Auto-generated registry entry for typography-p.",
+      "files": [
+        {
+          "path": "src/primitives/typography/typography-p.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography-small",
+      "type": "registry:ui",
+      "title": "Typography Small",
+      "description": "Auto-generated registry entry for typography-small.",
+      "files": [
+        {
+          "path": "src/primitives/typography/typography-small.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "typography-table",
+      "type": "registry:ui",
+      "title": "Typography Table",
+      "description": "Auto-generated registry entry for typography-table.",
+      "files": [
+        {
+          "path": "src/primitives/typography/typography-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command-menu",
+      "type": "registry:ui",
+      "title": "Command Menu",
+      "description": "Auto-generated registry entry for command-menu.",
+      "files": [
+        {
+          "path": "src/primitives/ui/command-menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "config-drawer",
+      "type": "registry:ui",
+      "title": "Config Drawer",
+      "description": "Auto-generated registry entry for config-drawer.",
+      "files": [
+        {
+          "path": "src/primitives/ui/config-drawer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "copy-code",
+      "type": "registry:ui",
+      "title": "Copy Code",
+      "description": "Auto-generated registry entry for copy-code.",
+      "files": [
+        {
+          "path": "src/primitives/ui/copy-code.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "day-picker",
+      "type": "registry:ui",
+      "title": "Day Picker",
+      "description": "Auto-generated registry entry for day-picker.",
+      "files": [
+        {
+          "path": "src/primitives/ui/day-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "direction",
+      "type": "registry:ui",
+      "title": "Direction",
+      "description": "Auto-generated registry entry for direction.",
+      "files": [
+        {
+          "path": "src/primitives/ui/direction.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "edit-switch",
+      "type": "registry:ui",
+      "title": "Edit Switch",
+      "description": "Auto-generated registry entry for edit-switch.",
+      "files": [
+        {
+          "path": "src/primitives/ui/edit-switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "empty",
+      "type": "registry:ui",
+      "title": "Empty",
+      "description": "Auto-generated registry entry for empty.",
+      "files": [
+        {
+          "path": "src/primitives/ui/empty.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "filters",
+      "type": "registry:ui",
+      "title": "Filters",
+      "description": "Auto-generated registry entry for filters.",
+      "files": [
+        {
+          "path": "src/primitives/ui/filters.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "group",
+      "type": "registry:ui",
+      "title": "Group",
+      "description": "Auto-generated registry entry for group.",
+      "files": [
+        {
+          "path": "src/primitives/ui/group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "hover-card-sides",
+      "type": "registry:ui",
+      "title": "Hover Card Sides",
+      "description": "Auto-generated registry entry for hover-card-sides.",
+      "files": [
+        {
+          "path": "src/primitives/ui/hover-card-sides.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "item",
+      "type": "registry:ui",
+      "title": "Item",
+      "description": "Auto-generated registry entry for item.",
+      "files": [
+        {
+          "path": "src/primitives/ui/item.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "title": "Kbd",
+      "description": "Auto-generated registry entry for kbd.",
+      "files": [
+        {
+          "path": "src/primitives/ui/kbd.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "native-select",
+      "type": "registry:ui",
+      "title": "Native Select",
+      "description": "Auto-generated registry entry for native-select.",
+      "files": [
+        {
+          "path": "src/primitives/ui/native-select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "number-field",
+      "type": "registry:ui",
+      "title": "Number Field",
+      "description": "Auto-generated registry entry for number-field.",
+      "files": [
+        {
+          "path": "src/primitives/ui/number-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "preview-card",
+      "type": "registry:ui",
+      "title": "Preview Card",
+      "description": "Auto-generated registry entry for preview-card.",
+      "files": [
+        {
+          "path": "src/primitives/ui/preview-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rating",
+      "type": "registry:ui",
+      "title": "Rating",
+      "description": "Auto-generated registry entry for rating.",
+      "files": [
+        {
+          "path": "src/primitives/ui/rating.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sortable-table-head",
+      "type": "registry:ui",
+      "title": "Sortable Table Head",
+      "description": "Auto-generated registry entry for sortable-table-head.",
+      "files": [
+        {
+          "path": "src/primitives/ui/sortable-table-head.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "Spinner",
+      "description": "Auto-generated registry entry for spinner.",
+      "files": [
+        {
+          "path": "src/primitives/ui/spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "description": "Auto-generated registry entry for toast.",
+      "files": [
+        {
+          "path": "src/primitives/ui/toast.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "account-settings",
+      "type": "registry:ui",
+      "title": "Account Settings",
+      "description": "Auto-generated registry entry for account-settings.",
+      "files": [
+        {
+          "path": "src/primitives/users/account-settings.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "connect-account",
+      "type": "registry:ui",
+      "title": "Connect Account",
+      "description": "Auto-generated registry entry for connect-account.",
+      "files": [
+        {
+          "path": "src/primitives/users/connect-account.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "danger-zone",
+      "type": "registry:ui",
+      "title": "Danger Zone",
+      "description": "Auto-generated registry entry for danger-zone.",
+      "files": [
+        {
+          "path": "src/primitives/users/danger-zone.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "email-password",
+      "type": "registry:ui",
+      "title": "Email Password",
+      "description": "Auto-generated registry entry for email-password.",
+      "files": [
+        {
+          "path": "src/primitives/users/email-password.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "forgot-password-form",
+      "type": "registry:ui",
+      "title": "Forgot Password Form",
+      "description": "Auto-generated registry entry for forgot-password-form.",
+      "files": [
+        {
+          "path": "src/primitives/users/forgot-password-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "forgot-password",
+      "type": "registry:ui",
+      "title": "Forgot Password",
+      "description": "Auto-generated registry entry for forgot-password.",
+      "files": [
+        {
+          "path": "src/primitives/users/forgot-password.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "login-form",
+      "type": "registry:ui",
+      "title": "Login Form",
+      "description": "Auto-generated registry entry for login-form.",
+      "files": [
+        {
+          "path": "src/primitives/users/login-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "login-page",
+      "type": "registry:ui",
+      "title": "Login Page",
+      "description": "Auto-generated registry entry for login-page.",
+      "files": [
+        {
+          "path": "src/primitives/users/login-page.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "password-input",
+      "type": "registry:ui",
+      "title": "Password Input",
+      "description": "Auto-generated registry entry for password-input.",
+      "files": [
+        {
+          "path": "src/primitives/users/password-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "personal-info",
+      "type": "registry:ui",
+      "title": "Personal Info",
+      "description": "Auto-generated registry entry for personal-info.",
+      "files": [
+        {
+          "path": "src/primitives/users/personal-info.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "profile-dropdown",
+      "type": "registry:ui",
+      "title": "Profile Dropdown",
+      "description": "Auto-generated registry entry for profile-dropdown.",
+      "files": [
+        {
+          "path": "src/primitives/users/profile-dropdown.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "register-form",
+      "type": "registry:ui",
+      "title": "Register Form",
+      "description": "Auto-generated registry entry for register-form.",
+      "files": [
+        {
+          "path": "src/primitives/users/register-form.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "register",
+      "type": "registry:ui",
+      "title": "Register",
+      "description": "Auto-generated registry entry for register.",
+      "files": [
+        {
+          "path": "src/primitives/users/register.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sign-out-dialog",
+      "type": "registry:ui",
+      "title": "Sign Out Dialog",
+      "description": "Auto-generated registry entry for sign-out-dialog.",
+      "files": [
+        {
+          "path": "src/primitives/users/sign-out-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "social-url",
+      "type": "registry:ui",
+      "title": "Social Url",
+      "description": "Auto-generated registry entry for social-url.",
+      "files": [
+        {
+          "path": "src/primitives/users/social-url.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "verify-email",
+      "type": "registry:ui",
+      "title": "Verify Email",
+      "description": "Auto-generated registry entry for verify-email.",
+      "files": [
+        {
+          "path": "src/primitives/users/verify-email.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

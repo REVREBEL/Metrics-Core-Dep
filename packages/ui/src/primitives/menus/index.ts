@@ -1,3 +1,5 @@
+export * from "./menu-option"
+export * from "./menu-other"
 export * from "./menu"
 export * from "./menubar-checkbox"
 export * from "./menubar-icons"

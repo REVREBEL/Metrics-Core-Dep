@@ -1,3 +1,5 @@
+export * from "./combobox-option"
+export * from "./combobox"
 export * from "./input-badge"
 export * from "./input-basic"
 export * from "./input-button-group"
