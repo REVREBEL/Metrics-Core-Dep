@@ -32,7 +32,7 @@ export function DropdownMenuIcons() {
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem variant="destructive">
-          <IconHugeiconsIcon icon={Logout01Icon} />
+          <HugeiconsIcon icon={Logout01Icon} />
           Log out
         </DropdownMenuItem>
       </DropdownMenuContent>
