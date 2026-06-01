@@ -5,9 +5,9 @@ const ROOT = process.cwd()
 const COMPONENT_ROOT = path.join(ROOT, "src/components")
 const OUT_FILE = path.join(ROOT, "src/lib/registry.metadata.json")
 
-async function walk(dir: string): Promise<string[]> {
+async function walk(dir) {
   const entries = await fs.readdir(dir, { withFileTypes: true })
-  const out: string[] = []
+  const out = []
   for (const entry of entries) {
     const full = path.join(dir, entry.name)
     if (entry.isDirectory()) {
@@ -24,21 +24,21 @@ async function walk(dir: string): Promise<string[]> {
   return out
 }
 
-function toRelComponentKey(abs: string): string {
+function toRelComponentKey(abs) {
   const rel = path.relative(COMPONENT_ROOT, abs).replace(/\\/g, "/")
   return rel.replace(/\.tsx$/, "")
 }
 
-function parseMetadataTs(raw: string): { displayName?: string; description?: string; props?: unknown[] } | null {
+function parseMetadataTs(raw) {
   const displayName = raw.match(/displayName\s*:\s*["'`](.*?)["'`]/)?.[1]
   const description = raw.match(/description\s*:\s*["'`]([\s\S]*?)["'`]/)?.[1]
 
   const propsBlockMatch = raw.match(/props\s*:\s*\[([\s\S]*?)\]/)
-  let props: Array<Record<string, unknown>> = []
+  const props = []
 
   if (propsBlockMatch?.[1]) {
     const itemRegex = /\{([\s\S]*?)\}/g
-    let match: RegExpExecArray | null = itemRegex.exec(propsBlockMatch[1])
+    let match = itemRegex.exec(propsBlockMatch[1])
     while (match) {
       const body = match[1]
       const name = body.match(/name\s*:\s*["'`](.*?)["'`]/)?.[1]
@@ -67,7 +67,7 @@ function parseMetadataTs(raw: string): { displayName?: string; description?: str
   }
 }
 
-async function loadColocatedMetadata(absComponentFile: string) {
+async function loadColocatedMetadata(absComponentFile) {
   const dir = path.dirname(absComponentFile)
   const metadataPath = path.join(dir, "metadata.ts")
 
@@ -82,9 +82,9 @@ async function loadColocatedMetadata(absComponentFile: string) {
 async function main() {
   const files = await walk(COMPONENT_ROOT)
   const existingRaw = await fs.readFile(OUT_FILE, "utf8").catch(() => "{}")
-  const existing = JSON.parse(existingRaw) as Record<string, any>
+  const existing = JSON.parse(existingRaw)
 
-  const next: Record<string, any> = {}
+  const next = {}
   let mergedFromColocated = 0
 
   for (const abs of files) {

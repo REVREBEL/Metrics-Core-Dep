@@ -54,11 +54,13 @@
     "start": "next start",
     "lint": "biome check",
     "lint:fix": "biome check --write",
-    "registry:build": "pnpm dlx shadcn@latest build",
+    "registry:build": "pnpm run registry:sync && pnpm run registry:manifest:sync && pnpm run registry:tokens:sync && pnpm dlx shadcn@latest build",
     "barrels:generate": "node ./scripts/generate-barrels.mts --exports",
     "barrels:check": "node ./scripts/generate-barrels.mts --check --exports",
     "registry:validate": "node ./scripts/validate-registries.mts",
-    "registry:sync": "node ./scripts/registry-sync.mts"
+    "registry:sync": "node ./scripts/registry-sync.mjs",
+    "registry:manifest:sync": "node ./scripts/registry-manifest-sync.mjs",
+    "registry:tokens:sync": "node ./scripts/registry-tokens-sync.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
