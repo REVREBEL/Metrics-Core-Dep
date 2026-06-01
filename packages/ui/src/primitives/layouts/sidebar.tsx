@@ -398,7 +398,8 @@ function SidebarGroupLabel({
 }: React.ComponentProps<"div"> & { asChild?: boolean }) {
   const Comp = asChild ? SlotPrimitive.Slot : "div";
 
-  return (<Comp
+  return (
+    <Comp
       data-slot="sidebar-group-label"
       data-sidebar="group-label"
       className={cn(
