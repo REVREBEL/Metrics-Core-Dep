@@ -1,4 +1,4 @@
-export { default as AreaChartInteractive } from "./area-chart-interactive"
+export { ChartAreaInteractive as AreaChartInteractive } from "./area-chart-interactive"
 export { default as BarChartInteractive } from "./bar-chart-interactive"
 export { default as BarWithLabelCustom } from "./bar-with-label-custom"
 export { default as CalendarHeatmap } from "./calendar-heatmap"
