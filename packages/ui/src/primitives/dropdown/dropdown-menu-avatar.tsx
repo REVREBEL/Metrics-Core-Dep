@@ -1,7 +1,7 @@
 "use client"
 
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
+import { Avatar, AvatarFallback, AvatarImage } from "@ui"
+import { Button } from "@buttons"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,8 +9,8 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
-import { IconBadgeCheckIcon, IconBellIcon, IconCreditCardIcon, IconLogOutIcon, Icon } from "@tabler/icons-react"
+} from "./dropdown-menu"
+import { IconBadgeCheck, IconBell, IconCreditCard, IconLogOut } from "@tabler/icons-react"
 
 export function DropdownMenuAvatar() {
   return (
@@ -26,21 +26,21 @@ export function DropdownMenuAvatar() {
       <DropdownMenuContent align="end">
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <BadgeCheckIcon />
+            <IconBadgeCheck />
             Account
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <CreditCardIcon />
+            <IconCreditCard />
             Billing
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <BellIcon />
+            <IconBell />
             Notifications
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <LogOutIcon />
+          <IconLogOut />
           Sign Out
         </DropdownMenuItem>
       </DropdownMenuContent>
