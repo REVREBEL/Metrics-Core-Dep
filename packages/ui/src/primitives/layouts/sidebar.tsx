@@ -383,7 +383,6 @@ function SidebarGroupLabel({
   const Comp = asChild ? SlotPrimitive.Slot : "div";
 
   return (
-    <Comp
       data-slot="sidebar-group-label"
       data-sidebar="group-label"
       className={cn(
