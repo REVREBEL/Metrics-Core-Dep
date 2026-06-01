@@ -14,16 +14,16 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-import { RegistryLogo } from "@/components/registry/registry-logo";
-import { ModeToggle } from "@/components/registry/theme-toggle";
-import { Button } from "@/components/ui/button";
+import { RegistryLogo } from "./registry-logo";
+import { ModeToggle } from "./theme-toggle";
+import { Button } from "@buttons";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import { Input } from "@/components/ui/input";
-import { ScrollArea } from "@/components/ui/scroll-area";
+} from "@ui";
+import { Input } from "@inputs";
+import { ScrollArea } from "@ui";
 import {
   Sidebar,
   SidebarContent,
@@ -36,8 +36,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/components/ui/sidebar";
-import { getBlocks, getComponents, getUIPrimitives } from "@/lib/registry";
+} from "@ui";
+import { getBlocks, getComponents, getUIPrimitives } from "@lib";
 
 const uiItems = getUIPrimitives();
 const componentItems = getComponents();
