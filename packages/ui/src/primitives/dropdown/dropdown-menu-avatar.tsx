@@ -30,7 +30,7 @@ export function DropdownMenuAvatar() {
             Account
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <IconCreditCardIcon />
+            <IconCreditCard />
             Billing
           </DropdownMenuItem>
           <DropdownMenuItem>
