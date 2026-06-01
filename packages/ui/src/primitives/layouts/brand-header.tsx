@@ -4,12 +4,11 @@ import { HelpCircle, Menu, Search, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { useSidebar } from "@/components/ui/sidebar";
+import { Avatar, AvatarFallback, Logo } from "@ui";
+import { Button } from "@buttons";
+import { Input } from "@inputs";
+import { useSidebar } from "./sidebar";
 
-import { Logo } from "./logo";
 
 export function BrandHeader() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
