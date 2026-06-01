@@ -1,4 +1,164 @@
 {
+  "metrics-charts/analytics-chart": {
+    "displayName": "analytics-chart",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/analytics": {
+    "displayName": "analytics",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/area-chart-interactive": {
+    "displayName": "area-chart-interactive",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/bar-chart-interactive": {
+    "displayName": "bar-chart-interactive",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/bar-with-label-custom": {
+    "displayName": "bar-with-label-custom",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/calendar-heatmap": {
+    "displayName": "calendar-heatmap",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/interactive-area-line-combo": {
+    "displayName": "interactive-area-line-combo",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/line-chart-interactive": {
+    "displayName": "line-chart-interactive",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/otb-stacked-bar-chart": {
+    "displayName": "otb-stacked-bar-chart",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/overview": {
+    "displayName": "overview",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/pie-chart-donut-center-text": {
+    "displayName": "pie-chart-donut-center-text",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/pie-chart-interactive": {
+    "displayName": "pie-chart-interactive",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/pie-donut-chart-active": {
+    "displayName": "pie-donut-chart-active",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/radial-ring-chart-with-label": {
+    "displayName": "radial-ring-chart-with-label",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/recent-sales": {
+    "displayName": "recent-sales",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/top-channels-chart": {
+    "displayName": "top-channels-chart",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/top-services-bar-chart": {
+    "displayName": "top-services-bar-chart",
+    "description": "",
+    "props": []
+  },
+  "metrics-charts/top-services-chart": {
+    "displayName": "top-services-chart",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/browser-stats-card": {
+    "displayName": "browser-stats-card",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/budget-snapshot-card": {
+    "displayName": "budget-snapshot-card",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/conversion-card": {
+    "displayName": "conversion-card",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/model-comparison-card": {
+    "displayName": "model-comparison-card",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/performance-card-other": {
+    "displayName": "performance-card-other",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/performance-card": {
+    "displayName": "performance-card",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/sales-metrics-card": {
+    "displayName": "sales-metrics-card",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/simple-kpi-cards": {
+    "displayName": "simple-kpi-cards",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/simple-statistics-cards": {
+    "displayName": "simple-statistics-cards",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/social-visits-card": {
+    "displayName": "social-visits-card",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/stat-card": {
+    "displayName": "stat-card",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/statistics-card-fin": {
+    "displayName": "statistics-card-fin",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/total-earning-card": {
+    "displayName": "total-earning-card",
+    "description": "",
+    "props": []
+  },
+  "metrics-core/total-stats-card": {
+    "displayName": "total-stats-card",
+    "description": "",
+    "props": []
+  },
   "metrics-errors/forbidden": {
     "displayName": "forbidden",
     "description": "",
@@ -26,6 +186,466 @@
   },
   "metrics-feedback/empty-state": {
     "displayName": "empty-state",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/campaigns/active_page": {
+    "displayName": "active_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/campaigns/campaigns_layout": {
+    "displayName": "campaigns_layout",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/campaigns/performance_page": {
+    "displayName": "performance_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/campaigns/setup_page": {
+    "displayName": "setup_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/chats/chat-assistant_page": {
+    "displayName": "chat-assistant_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/chats/chats_layout": {
+    "displayName": "chats_layout",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/chats/new_page": {
+    "displayName": "new_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/dashboard/channels_page": {
+    "displayName": "channels_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/dashboard/dashboard_homepage": {
+    "displayName": "dashboard_homepage",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/dashboard/dashboard_layout": {
+    "displayName": "dashboard_layout",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/dashboard/demand_page": {
+    "displayName": "demand_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/dashboard/roomtypes_page": {
+    "displayName": "roomtypes_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/dashboard/segments_page": {
+    "displayName": "segments_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/dashboard/website_page": {
+    "displayName": "website_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/data-library/data-health_page": {
+    "displayName": "data-health_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/data-library/data-library_layout": {
+    "displayName": "data-library_layout",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/data-library/lookups-manager_table-row": {
+    "displayName": "lookups-manager_table-row",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/data-library/lookups-manager_table": {
+    "displayName": "lookups-manager_table",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/data-library/lookups_page": {
+    "displayName": "lookups_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/data-library/mapping-manager_table": {
+    "displayName": "mapping-manager_table",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/data-library/mapping-row-edit_drawer": {
+    "displayName": "mapping-row-edit_drawer",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/data-library/mappings_page": {
+    "displayName": "mappings_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/data-library/unmapped-codes_page": {
+    "displayName": "unmapped-codes_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/help-desk/documentation_page": {
+    "displayName": "documentation_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/help-desk/helpdesk_layout": {
+    "displayName": "helpdesk_layout",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/help-desk/helpdesk_page": {
+    "displayName": "helpdesk_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/metric-library/base_page": {
+    "displayName": "base_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/metric-library/calculated_page": {
+    "displayName": "calculated_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/metric-library/metric-library_layout": {
+    "displayName": "metric-library_layout",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/properties/events_page": {
+    "displayName": "events_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/properties/lookups_page": {
+    "displayName": "lookups_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/properties/notes_page": {
+    "displayName": "notes_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/properties/page": {
+    "displayName": "page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/properties/properties_layout": {
+    "displayName": "properties_layout",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/properties/strategies_page": {
+    "displayName": "strategies_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/properties/tasks_page": {
+    "displayName": "tasks_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/account-settings_page": {
+    "displayName": "account-settings_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/account_form": {
+    "displayName": "account_form",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/account_page": {
+    "displayName": "account_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/content-section_page": {
+    "displayName": "content-section_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/display_form": {
+    "displayName": "display_form",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/display_page": {
+    "displayName": "display_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/forgot-password_page": {
+    "displayName": "forgot-password_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/login_page": {
+    "displayName": "login_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/notifications_form": {
+    "displayName": "notifications_form",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/notifications_page": {
+    "displayName": "notifications_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/profile_form": {
+    "displayName": "profile_form",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/profile_page": {
+    "displayName": "profile_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/register_page": {
+    "displayName": "register_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/settings_layout": {
+    "displayName": "settings_layout",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/settings_sidebar-nav": {
+    "displayName": "settings_sidebar-nav",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/settings/users-invite_dialog": {
+    "displayName": "users-invite_dialog",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/strategies/playbooks_page": {
+    "displayName": "playbooks_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/strategies/recommended-actions_page": {
+    "displayName": "recommended-actions_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/strategies/strategies_layout": {
+    "displayName": "strategies_layout",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/strategies/triggers_page": {
+    "displayName": "triggers_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/calendar-view_page": {
+    "displayName": "calendar-view_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/data-actions_table-row": {
+    "displayName": "data-actions_table-row",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/data-bulk-actions_table": {
+    "displayName": "data-bulk-actions_table",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/group-views": {
+    "displayName": "group-views",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/growth-plan-view_switcher": {
+    "displayName": "growth-plan-view_switcher",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/growth-plan_header": {
+    "displayName": "growth-plan_header",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/growth-plan_sidebar": {
+    "displayName": "growth-plan_sidebar",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/growth-plan_states": {
+    "displayName": "growth-plan_states",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/kanban_page": {
+    "displayName": "kanban_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/meeting-recap_page": {
+    "displayName": "meeting-recap_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/owner-rollup_page": {
+    "displayName": "owner-rollup_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/tasks-columns": {
+    "displayName": "tasks-columns",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/tasks-import_dialog": {
+    "displayName": "tasks-import_dialog",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/tasks-multi-delete_dialog": {
+    "displayName": "tasks-multi-delete_dialog",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/tasks-mutate_drawer": {
+    "displayName": "tasks-mutate_drawer",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/tasks-primary-buttons": {
+    "displayName": "tasks-primary-buttons",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/tasks_dialogs": {
+    "displayName": "tasks_dialogs",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/tasks_layout": {
+    "displayName": "tasks_layout",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/tasks_provider": {
+    "displayName": "tasks_provider",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/tasks_table": {
+    "displayName": "tasks_table",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/workstream-mutate_drawer": {
+    "displayName": "workstream-mutate_drawer",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/tasks/workstreams_section": {
+    "displayName": "workstreams_section",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/data-bulk-actions_table": {
+    "displayName": "data-bulk-actions_table",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/data-row-actions_table_row": {
+    "displayName": "data-row-actions_table_row",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/page": {
+    "displayName": "page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/permissions-panel_page": {
+    "displayName": "permissions-panel_page",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/users-action_dialog": {
+    "displayName": "users-action_dialog",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/users-delete_dialog": {
+    "displayName": "users-delete_dialog",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/users-invite_dialog": {
+    "displayName": "users-invite_dialog",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/users-multi-delete_dialog": {
+    "displayName": "users-multi-delete_dialog",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/users-primary-buttons": {
+    "displayName": "users-primary-buttons",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/users_columns": {
+    "displayName": "users_columns",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/users_dialogs": {
+    "displayName": "users_dialogs",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/users_provider": {
+    "displayName": "users_provider",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/users_table": {
+    "displayName": "users_table",
+    "description": "",
+    "props": []
+  },
+  "metrics-layouts/users/verify-email": {
+    "displayName": "verify-email",
     "description": "",
     "props": []
   },
