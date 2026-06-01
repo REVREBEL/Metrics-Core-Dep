@@ -4,7 +4,7 @@ import {
   InputGroupButton,
   InputGroupText,
   InputGroupTextarea,
-} from "@/components/ui/input-group"
+} from "./input-group"
 import {
   IconBrandJavascript,
   IconCopy,

@@ -5,7 +5,7 @@ import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/components/ui/input-otp"
+} from "./input-otp"
 
 export default function InputOTPControlled() {
   const [value, setValue] = React.useState("")

@@ -1,10 +1,10 @@
-import { Field, FieldLabel } from "@/components/ui/field"
+import { Field, FieldLabel } from "@auto-form"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupInput,
   InputGroupText,
-} from "@/components/ui/input-group"
+} from "./input-group"
 import { IconInfoIcon } from "@tabler/icons-react"
 
 export function InputInputGroup() {

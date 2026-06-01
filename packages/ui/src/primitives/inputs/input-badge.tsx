@@ -1,6 +1,6 @@
-import { Badge } from "@/components/ui/badge"
-import { Field, FieldLabel } from "@/components/ui/field"
-import { Input } from "@/components/ui/input"
+import { Badge } from "@ui"
+import { Field, FieldLabel } from "@auto-form"
+import { Input } from "./input"
 
 export function InputBadge() {
   return (

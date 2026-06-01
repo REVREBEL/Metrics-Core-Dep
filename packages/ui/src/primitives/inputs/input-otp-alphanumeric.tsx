@@ -5,7 +5,7 @@ import {
   InputOTPGroup,
   InputOTPSeparator,
   InputOTPSlot,
-} from "@/components/ui/input-otp"
+} from "./input-otp"
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
 
 export function InputOTPAlphanumeric() {

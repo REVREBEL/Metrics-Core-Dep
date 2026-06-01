@@ -1,21 +1,27 @@
 "use client";
 
-import { useMemo, useState } from "react";
 import { MoreVertical } from "lucide-react";
+import { useMemo, useState } from "react";
 
-import ExpediaIcon from "@/assets/ChannelIconsReact/ChannelIconsCircleReact/ExpediaCircle";
-import BookingIcon from "@/assets/ChannelIconsReact/ChannelIconsCircleReact/BookingCircle";
-import AgodaIcon from "@/assets/ChannelIconsReact/ChannelIconsCircleReact/AgodaCircle";
-import PricelineIcon from "@/assets/ChannelIconsReact/ChannelIconsCircleReact/PricelineCircle";
-import HotelbedsIcon from "@/assets/ChannelIconsReact/ChannelIconsCircleReact/HotelbedsCircle";
-import HopperIcon from "@/assets/ChannelIconsReact/ChannelIconsCircleReact/HopperCircle";
+import AgodaIcon from "@icons/ChannelIconsReact/ChannelIconsCircleReact/AgodaCircle";
+import BookingIcon from "@icons/ChannelIconsReact/ChannelIconsCircleReact/BookingCircle";
+import ExpediaIcon from "@icons/ChannelIconsReact/ChannelIconsCircleReact/ExpediaCircle";
+import HopperIcon from "@icons/ChannelIconsReact/ChannelIconsCircleReact/HopperCircle";
+import HotelbedsIcon from "@icons/ChannelIconsReact/ChannelIconsCircleReact/HotelbedsCircle";
+import PricelineIcon from "@icons/ChannelIconsReact/ChannelIconsCircleReact/PricelineCircle";
 import {
   MetricCard,
   MetricCardTabs,
-} from "@/components/metric-cards/_shared/MetricCard";
+} from "@shared-ui";
 
 type ChannelMetric = "rooms" | "adr" | "revenue" | "alos";
-type ChannelKey = "expedia" | "booking" | "agoda" | "priceline" | "hotelbeds" | "hopper";
+type ChannelKey =
+  | "expedia"
+  | "booking"
+  | "agoda"
+  | "priceline"
+  | "hotelbeds"
+  | "hopper";
 
 type ChannelDatum = {
   key: ChannelKey;
@@ -162,7 +168,11 @@ function getBarLabel(item: ChannelDatum, metric: ChannelMetric) {
   }
 }
 
-function getSideMetric(item: ChannelDatum, metric: ChannelMetric, totals: { rooms: number; revenue: number }) {
+function getSideMetric(
+  item: ChannelDatum,
+  metric: ChannelMetric,
+  totals: { rooms: number; revenue: number },
+) {
   switch (metric) {
     case "rooms": {
       const value = totals.rooms ? (item.rooms / totals.rooms) * 100 : 0;
@@ -237,11 +247,13 @@ export default function TopChannelsChart() {
       rooms: CHANNEL_DATA.reduce((sum, item) => sum + item.rooms, 0),
       revenue: CHANNEL_DATA.reduce((sum, item) => sum + item.revenue, 0),
     }),
-    []
+    [],
   );
 
   const displayData = useMemo<ChannelDisplayDatum[]>(() => {
-    const maxValue = Math.max(...CHANNEL_DATA.map((item) => getMetricValue(item, activeMetric)));
+    const maxValue = Math.max(
+      ...CHANNEL_DATA.map((item) => getMetricValue(item, activeMetric)),
+    );
 
     return CHANNEL_DATA.map((item) => {
       const value = getMetricValue(item, activeMetric);
@@ -265,7 +277,9 @@ export default function TopChannelsChart() {
       metric="total"
       sourceType="indicator"
       source="total"
-      headerAction={<MoreVertical className="h-5 w-5 cursor-pointer text-primary" />}
+      headerAction={
+        <MoreVertical className="h-5 w-5 cursor-pointer text-primary" />
+      }
     >
       <MetricCardTabs
         tabs={CHANNEL_TABS}
@@ -274,7 +288,10 @@ export default function TopChannelsChart() {
       />
 
       <div className="top-channels-chart">
-        <div className="top-channels-chart__bars" aria-label="Top OTA channel bars">
+        <div
+          className="top-channels-chart__bars"
+          aria-label="Top OTA channel bars"
+        >
           {displayData.map((channel, index) => {
             const isMuted = hoveredKey !== null && hoveredKey !== channel.key;
             const labelInside = channel.width >= 24;
@@ -296,7 +313,9 @@ export default function TopChannelsChart() {
                     className="top-channels-chart__bar"
                     style={{ width: `${channel.width}%` }}
                   >
-                    <span className="top-channels-chart__bar-name">{channel.name}</span>
+                    <span className="top-channels-chart__bar-name">
+                      {channel.name}
+                    </span>
                     {labelInside && (
                       <span className="top-channels-chart__bar-value top-channels-chart__bar-value--inside">
                         {channel.barLabel}
@@ -317,7 +336,10 @@ export default function TopChannelsChart() {
           })}
         </div>
 
-        <div className="top-channels-chart__metrics" aria-label="Channel comparison metrics">
+        <div
+          className="top-channels-chart__metrics"
+          aria-label="Channel comparison metrics"
+        >
           {displayData.map((channel) => {
             const Icon = channel.Icon;
             const isMuted = hoveredKey !== null && hoveredKey !== channel.key;
@@ -334,7 +356,9 @@ export default function TopChannelsChart() {
               >
                 <Icon className="top-channels-chart__icon" aria-hidden="true" />
                 <div>
-                  <div className="top-channels-chart__metric-value">{channel.sideLabel}</div>
+                  <div className="top-channels-chart__metric-value">
+                    {channel.sideLabel}
+                  </div>
                   <div className="top-channels-chart__metric-label">
                     {getMetricLabel(activeMetric)}
                   </div>

@@ -1,11 +1,11 @@
 "use client"
 
-import { Field, FieldLabel } from "@/components/ui/field"
+import { Field, FieldLabel } from "@auto-form"
 import {
   InputOTP,
   InputOTPGroup,
   InputOTPSlot,
-} from "@/components/ui/input-otp"
+} from "./input-otp"
 import { REGEXP_ONLY_DIGITS } from "input-otp"
 
 export function InputOTPPattern() {
