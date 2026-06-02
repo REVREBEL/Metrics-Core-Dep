@@ -24,7 +24,7 @@ export default function InputGroupButtonExample() {
           <InputGroupButton
             aria-label="Copy"
             title="Copy"
-            size="icon"
+            size="icon-sm"
             onClick={() => {
               copyToClipboard("https://x.com/shadcn")
             }}
@@ -38,7 +38,7 @@ export default function InputGroupButtonExample() {
         <Popover>
           <PopoverTrigger asChild>
             <InputGroupAddon>
-              <InputGroupButton variant="secondary" size="icon">
+              <InputGroupButton variant="secondary" size="icon-sm">
                 <IconInfoCircle strokeWidth={1.5} size={20} />
               </InputGroupButton>
             </InputGroupAddon>
@@ -65,7 +65,7 @@ export default function InputGroupButtonExample() {
       <InputGroup>
         <InputGroupInput placeholder="Type to search..." />
         <InputGroupAddon align="inline-end">
-          <InputGroupButton variant="secondary">Search</InputGroupButton>
+          <InputGroupButton variant="secondary" size="xs">Search</InputGroupButton>
         </InputGroupAddon>
       </InputGroup>
     </div>

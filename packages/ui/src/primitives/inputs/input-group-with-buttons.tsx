@@ -1,13 +1,11 @@
-import { Button } from "@buttons"
 import { Field, FieldGroup, FieldLabel } from "@auto-form"
-import { Input } from "./input"
 import {
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
   InputGroupInput,
 } from "./input-group"
-import { IconCopyIcon, IconTrashIcon } from "@tabler/icons-react"
+import { IconCopy, IconTrash } from "@tabler/icons-react"
 
 export function InputGroupWithButtons() {
   return (
@@ -42,7 +40,7 @@ export function InputGroupWithButtons() {
           <InputGroupInput id="input-button-17" />
           <InputGroupAddon align="inline-end">
             <InputGroupButton size="icon-xs">
-              <CopyIcon />
+              <IconCopy />
             </InputGroupButton>
           </InputGroupAddon>
         </InputGroup>
@@ -50,7 +48,7 @@ export function InputGroupWithButtons() {
           <InputGroupInput id="input-button-18" />
           <InputGroupAddon align="inline-end">
             <InputGroupButton variant="secondary" size="icon-xs">
-              <TrashIcon />
+              <IconTrash />
             </InputGroupButton>
           </InputGroupAddon>
         </InputGroup>

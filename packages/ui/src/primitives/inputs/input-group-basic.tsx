@@ -1,4 +1,6 @@
 import { Input } from "./input"
+import { InputGroup, InputGroupInput } from "./input-group"
+import { Field, FieldGroup, FieldLabel } from "@auto-form"
 
 export function InputGroupBasic() {
   return (
