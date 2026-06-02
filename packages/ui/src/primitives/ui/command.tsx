@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Command as CommandPrimitive } from 'cmdk'
-import { IconSearchIcon } from "@tabler/icons-react"
+import { IconSearch } from "@tabler/icons-react"
 import { cn } from '@/lib/utils'
 import {
   Dialog,
@@ -66,7 +66,7 @@ function CommandInput({
       data-slot='command-input-wrapper'
       className='flex h-9 items-center gap-2 border-b px-3'
     >
-      <SearchIcon className='size-4 shrink-0 opacity-50' />
+      <IconSearch className='size-4 shrink-0 opacity-50' />
       <CommandPrimitive.Input
         data-slot='command-input'
         className={cn(

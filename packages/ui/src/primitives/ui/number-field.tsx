@@ -1,7 +1,7 @@
 "use client";
 
 import { NumberField as NumberFieldPrimitive } from "@base-ui/react/number-field";
-import { IconMinusIcon, IconPlusIcon } from "@tabler/icons-react";
+import { IconMinus, IconPlus } from "@tabler/icons-react";
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
@@ -64,7 +64,7 @@ function NumberFieldDecrement({
       data-slot="number-field-decrement"
       {...props}
     >
-      <MinusIcon />
+      <IconMinus />
     </NumberFieldPrimitive.Decrement>
   );
 }
@@ -82,7 +82,7 @@ function NumberFieldIncrement({
       data-slot="number-field-increment"
       {...props}
     >
-      <PlusIcon />
+      <IconPlus />
     </NumberFieldPrimitive.Increment>
   );
 }

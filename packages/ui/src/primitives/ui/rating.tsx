@@ -3,7 +3,7 @@
 import * as React from 'react'
 
 import { cva, type VariantProps } from 'class-variance-authority'
-import { IconStarIcon, IconTypeLucideProps } from "@tabler/icons-react"
+import { IconStar, IconProps } from "@tabler/icons-react"
 
 import { cn } from '@/lib/utils'
 
@@ -29,7 +29,7 @@ const RATING_DEFAULTS = {
   maxStars: 5,
   size: 20,
   variant: 'default' as const,
-  icon: <StarIcon />
+  icon: <IconStar />
 } as const
 
 // Types
@@ -43,7 +43,7 @@ interface RatingItemProps extends React.ComponentProps<'label'> {
   readOnly?: boolean
   disabled?: boolean
   precision: number
-  Icon: React.ReactElement<LucideProps>
+  Icon: React.ReactElement<IconProps>
   onMouseLeave: React.MouseEventHandler<HTMLLabelElement>
   onValueHover: (value: number) => void
   onValueChange?: (value: number) => void
@@ -55,7 +55,7 @@ interface RatingProps extends React.ComponentProps<'div'> {
   name?: string
   max?: number
   size?: number
-  icon?: React.ReactElement<LucideProps>
+  icon?: React.ReactElement<IconProps>
   variant?: VariantProps<typeof ratingVariants>['variant']
   readOnly?: boolean
   disabled?: boolean

@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ButtonGroup } from "@/components/ui/button-group"
-import { IconPlusIcon } from "@tabler/icons-react"
+import { IconPlus } from "@tabler/icons-react"
 
 export default function ButtonGroupSize() {
   return (
@@ -16,7 +16,7 @@ export default function ButtonGroupSize() {
           Group
         </Button>
         <Button variant="outline" size="icon-sm">
-          <PlusIcon />
+          <IconPlus />
         </Button>
       </ButtonGroup>
       <ButtonGroup>
@@ -24,7 +24,7 @@ export default function ButtonGroupSize() {
         <Button variant="outline">Button</Button>
         <Button variant="outline">Group</Button>
         <Button variant="outline" size="icon">
-          <PlusIcon />
+          <IconPlus />
         </Button>
       </ButtonGroup>
       <ButtonGroup>
@@ -38,7 +38,7 @@ export default function ButtonGroupSize() {
           Group
         </Button>
         <Button variant="outline" size="icon-lg">
-          <PlusIcon />
+          <IconPlus />
         </Button>
       </ButtonGroup>
     </div>

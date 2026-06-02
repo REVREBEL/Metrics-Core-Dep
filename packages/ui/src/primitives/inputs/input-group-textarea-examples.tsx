@@ -13,7 +13,7 @@ import {
   InputGroupTextarea,
 } from "./input-group"
 import { Textarea } from "@textarea"
-import {IconArrowUpIcon as ArrowUpIcon, IconCodeIcon as CodeIcon, IconCopyIcon as CopyIcon, IconInfoIcon as InfoIcon, IconRefreshCwIcon as RefreshCwIcon}  from "@tabler/icons-react"
+import {IconArrowUp, IconCode, IconCopy, IconInfoCircle, IconRefresh}  from "@tabler/icons-react"
 
 export function InputGroupTextareaExamples() {
   return (
@@ -71,7 +71,7 @@ export function InputGroupTextareaExamples() {
           <InputGroupTextarea id="prompt-31" />
           <InputGroupAddon align="block-start">
             <InputGroupText>Ask, Search or Chat...</InputGroupText>
-            <InfoIcon className="ml-auto text-muted-foreground" />
+            <IconInfoCircle className="ml-auto text-muted-foreground" />
           </InputGroupAddon>
         </InputGroup>
         <FieldDescription>
@@ -94,7 +94,7 @@ export function InputGroupTextareaExamples() {
               size="icon-xs"
               className="ml-auto rounded-full"
             >
-              <ArrowUpIcon />
+              <IconArrowUp />
               <span className="sr-only">Send</span>
             </InputGroupButton>
           </InputGroupAddon>
@@ -128,14 +128,14 @@ export function InputGroupTextareaExamples() {
           />
           <InputGroupAddon align="block-start" className="border-b">
             <InputGroupText className="font-mono font-medium">
-              <CodeIcon />
+              <IconCode />
               script.js
             </InputGroupText>
             <InputGroupButton size="icon-xs" className="ml-auto">
-              <RefreshCwIcon />
+              <IconRefresh />
             </InputGroupButton>
             <InputGroupButton size="icon-xs" variant="ghost">
-              <CopyIcon />
+              <IconCopy />
             </InputGroupButton>
           </InputGroupAddon>
           <InputGroupAddon align="block-end" className="border-t">

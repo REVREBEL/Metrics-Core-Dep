@@ -9,7 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "./dropdown-menu"
 import { CreditCardIcon, Logout01Icon, Settings01Icon, UserIcon } from "@hugeicons/core-free-icons"
-import { IconHugeiconsIcon } from "@tabler/icons-react"
+import { HugeiconsIcon } from "@hugeicons/react"
 
 export function DropdownMenuIcons() {
   return (
@@ -19,15 +19,15 @@ export function DropdownMenuIcons() {
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem>
-          <IconHugeiconsIcon icon={UserIcon} />
+          <HugeiconsIcon icon={UserIcon} />
           Profile
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <IconHugeiconsIcon icon={CreditCardIcon} />
+          <HugeiconsIcon icon={CreditCardIcon} />
           Billing
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <IconHugeiconsIcon icon={Settings01Icon} />
+          <HugeiconsIcon icon={Settings01Icon} />
           Settings
         </DropdownMenuItem>
         <DropdownMenuSeparator />

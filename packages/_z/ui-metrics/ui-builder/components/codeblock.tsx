@@ -2,7 +2,7 @@
 import React, { memo, useCallback, useMemo } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { coldarkDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { IconCopyIcon, IconCheckIcon } from "@tabler/icons-react";
+import { IconCopy, IconCheck } from "@tabler/icons-react";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 import { Button } from "@/components/ui/button";
 
@@ -94,7 +94,7 @@ export const CodeBlock = memo(function CodeBlock({
             size="icon"
             onClick={onCopy}
           >
-            {isCopied ? <CheckIcon /> : <CopyIcon />}
+            {isCopied ? <IconCheck /> : <IconCopy />}
             <span className="sr-only">Copy code</span>
           </Button>
         </div>

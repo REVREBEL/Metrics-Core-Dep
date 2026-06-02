@@ -32,7 +32,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@ui"
-import { IconChevronDownIcon, IconInfoIcon, IconStarIcon } from "@tabler/icons-react"
+import { IconChevronDown, IconInfoCircle, IconStar } from "@tabler/icons-react"
 import { toast } from "sonner"
 
 export function InputGroupWithTooltip({
@@ -56,7 +56,7 @@ export function InputGroupWithTooltip({
                     <InputGroupButton className="rounded-full" size="icon-xs" />
                   }
                 >
-                  <InfoIcon />
+                  <IconInfoCircle />
                 </TooltipTrigger>
                 <TooltipContent>This is content in a tooltip.</TooltipContent>
               </Tooltip>
@@ -77,7 +77,7 @@ export function InputGroupWithTooltip({
                     <InputGroupButton className="text-muted-foreground tabular-nums" />
                   }
                 >
-                  {country} <ChevronDownIcon />
+                  {country} <IconChevronDown />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent
                   align="start"
@@ -108,7 +108,7 @@ export function InputGroupWithTooltip({
             <Popover>
               <PopoverTrigger render={<InputGroupAddon />} nativeButton={false}>
                 <InputGroupButton variant="secondary" size="icon-xs">
-                  <InfoIcon />
+                  <IconInfoCircle />
                 </InputGroupButton>
               </PopoverTrigger>
               <PopoverContent align="start">
@@ -129,7 +129,7 @@ export function InputGroupWithTooltip({
                 size="icon-xs"
                 onClick={() => toast("Added to favorites")}
               >
-                <StarIcon />
+                <IconStar />
               </InputGroupButton>
             </InputGroupAddon>
           </InputGroup>
@@ -144,7 +144,7 @@ export function InputGroupWithTooltip({
             <InputGroup>
               <InputGroupInput id="url" />
               <InputGroupAddon align="inline-end">
-                <InfoIcon />
+                <IconInfoCircle />
               </InputGroupAddon>
             </InputGroup>
             <ButtonGroupText>.com</ButtonGroupText>

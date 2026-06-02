@@ -1,7 +1,7 @@
 "use client"
 
 import { useMemo, useRef, useState, useTransition } from "react"
-import { IconSortAscendingLetters as ArrowUpAZ, IconSortDescendingLetters as ArrowDownAZ, IconCheck as Check, IconAlertCircle as CircleAlert, IconRefresh as RefreshCcw, IconDeviceFloppy as Save, IconSearch as SearchIcon } from "@tabler/icons-react"
+import { IconSortAscendingLetters, IconSortDescendingLetters, IconCheck, IconAlertCircle, IconRefresh, IconDeviceFloppy, IconSearch } from "@tabler/icons-react"
 import { toast } from "sonner"
 
 import { Badge } from "@/components/ui/badge"
@@ -259,14 +259,14 @@ export function LookupTableManager({
             onClick={resetChanges}
             disabled={changeCount === 0 || isSaving}
           >
-            <RefreshCcw />
+            <IconRefresh />
             Reset
           </Button>
           <Button
             onClick={saveChanges}
             disabled={changeCount === 0 || hasValidationErrors || isSaving}
           >
-            {isSaving ? <RefreshCcw className="animate-spin" /> : <Save />}
+            {isSaving ? <IconRefresh className="animate-spin" /> : <IconDeviceFloppy />}
             Save
           </Button>
         </div>
@@ -348,12 +348,12 @@ export function LookupTableManager({
                   </div>
                   {hasValidationErrors ? (
                     <Badge variant="destructive" className="h-8">
-                      <CircleAlert />
+                      <IconAlertCircle />
                       Validation blocked
                     </Badge>
                   ) : (
                     <Badge variant="secondary" className="h-8">
-                      <Check />
+                      <IconCheck />
                       Valid
                     </Badge>
                   )}
@@ -361,7 +361,7 @@ export function LookupTableManager({
 
                 <div className="mt-4 grid gap-3 lg:grid-cols-[minmax(240px,1fr)_180px_180px]">
                   <div className="relative">
-                    <SearchIcon
+                    <IconSearch
                       className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
                       aria-hidden="true"
                     />
@@ -394,7 +394,7 @@ export function LookupTableManager({
                     onClick={() => handleSort(sortKey)}
                     className="justify-start"
                   >
-                    {sortDirection === "asc" ? <ArrowDownAZ /> : <ArrowUpAZ />}
+                    {sortDirection === "asc" ? <IconSortDescendingLetters /> : <IconSortAscendingLetters />}
                     {sortLabel(sortKey)}
                   </Button>
                 </div>
@@ -507,7 +507,7 @@ function EmptyState({
 }) {
   return (
     <div className="flex min-h-80 flex-col items-center justify-center gap-2 p-8 text-center">
-      <CircleAlert
+      <IconAlertCircle
         className="size-8 text-muted-foreground"
         aria-hidden="true"
       />

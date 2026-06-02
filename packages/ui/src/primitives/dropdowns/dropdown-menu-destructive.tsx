@@ -10,7 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "./dropdown-menu"
 import { Delete01Icon, Edit02Icon, Share01Icon } from "@hugeicons/core-free-icons"
-import { IconHugeiconsIcon } from "@tabler/icons-react"
+import { HugeiconsIcon } from "@hugeicons/react"
 
 export function DropdownMenuDestructive() {
   return (
@@ -21,18 +21,18 @@ export function DropdownMenuDestructive() {
       <DropdownMenuContent>
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <IconHugeiconsIcon icon={Edit02Icon} />
+            <HugeiconsIcon icon={Edit02Icon} />
             Edit
           </DropdownMenuItem>
           <DropdownMenuItem>
-            <IconHugeiconsIcon icon={Share01Icon} />
+            <HugeiconsIcon icon={Share01Icon} />
             Share
           </DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem variant="destructive">
-            <IconHugeiconsIcon icon={Delete01Icon} />
+            <HugeiconsIcon icon={Delete01Icon} />
             Delete
           </DropdownMenuItem>
         </DropdownMenuGroup>

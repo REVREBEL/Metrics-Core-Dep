@@ -9,7 +9,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@ui"
-import {IconHelpCircle as HelpCircle, IconInfoIcon as InfoIcon} from "@tabler/icons-react"
+import {IconHelpCircle, IconInfoCircle} from "@tabler/icons-react"
 
 export default function InputGroupTooltip() {
   return (
@@ -27,7 +27,7 @@ export default function InputGroupTooltip() {
                 />
               }
             >
-              <InfoIcon />
+              <IconInfoCircle />
             </TooltipTrigger>
             <TooltipContent>
               <p>Password must be at least 8 characters</p>
@@ -48,7 +48,7 @@ export default function InputGroupTooltip() {
                 />
               }
             >
-              <HelpCircle />
+              <IconHelpCircle />
             </TooltipTrigger>
             <TooltipContent>
               <p>We&apos;ll use this to send you notifications</p>
@@ -61,7 +61,7 @@ export default function InputGroupTooltip() {
         <Tooltip>
           <TooltipTrigger render={<InputGroupAddon />}>
             <InputGroupButton variant="ghost" aria-label="Help" size="icon-xs">
-              <HelpCircle />
+              <IconHelpCircle />
             </InputGroupButton>
           </TooltipTrigger>
           <TooltipContent side="left">

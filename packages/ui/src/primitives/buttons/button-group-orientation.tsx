@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ButtonGroup } from "@/components/ui/button-group"
-import { IconMinusIcon, IconPlusIcon } from "@tabler/icons-react"
+import { IconMinus, IconPlus } from "@tabler/icons-react"
 
 export default function ButtonGroupOrientation() {
   return (
@@ -10,10 +10,10 @@ export default function ButtonGroupOrientation() {
       className="h-fit"
     >
       <Button variant="outline" size="icon">
-        <PlusIcon />
+        <IconPlus />
       </Button>
       <Button variant="outline" size="icon">
-        <MinusIcon />
+        <IconMinus />
       </Button>
     </ButtonGroup>
   )

@@ -14,7 +14,7 @@ import {
   InputGroupInput,
 } from "./input-group"
 import {ChevronDown, MoreHorizontalIcon} from "@hugeicons/core-free-icons"
-import { IconHugeiconsIcon as HugeiconsIcon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 
 export function InputGroupDropdown() {
   return (

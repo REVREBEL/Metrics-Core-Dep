@@ -14,7 +14,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
-import { IconAudioLinesIcon, IconPlusIcon } from "@tabler/icons-react"
+import { IconWaveSine, IconPlus } from "@tabler/icons-react"
 
 export default function ButtonGroupInputGroup() {
   const [voiceEnabled, setVoiceEnabled] = React.useState(false)
@@ -23,7 +23,7 @@ export default function ButtonGroupInputGroup() {
     <ButtonGroup className="[--radius:9999rem]">
       <ButtonGroup>
         <Button variant="outline" size="icon">
-          <PlusIcon />
+          <IconPlus />
         </Button>
       </ButtonGroup>
       <ButtonGroup>
@@ -47,7 +47,7 @@ export default function ButtonGroupInputGroup() {
                   />
                 }
               >
-                <AudioLinesIcon />
+                <IconWaveSine />
               </TooltipTrigger>
               <TooltipContent>Voice Mode</TooltipContent>
             </Tooltip>

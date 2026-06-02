@@ -16,7 +16,7 @@ import {
   InputGroupText,
   InputGroupTextarea,
 } from "./input-group"
-import {IconExternalLinkIcon as ExternalLinkIcon, IconMailIcon as MailIcon} from "@tabler/icons-react"
+import {IconExternalLink, IconMail} from "@tabler/icons-react"
 
 export function InputGroupInCard() {
   return (
@@ -36,7 +36,7 @@ export function InputGroupInCard() {
                 placeholder="you@example.com"
               />
               <InputGroupAddon align="inline-end">
-                <MailIcon />
+                <IconMail />
               </InputGroupAddon>
             </InputGroup>
           </Field>
@@ -48,7 +48,7 @@ export function InputGroupInCard() {
               </InputGroupAddon>
               <InputGroupInput id="website-input" placeholder="example.com" />
               <InputGroupAddon align="inline-end">
-                <ExternalLinkIcon />
+                <IconExternalLink />
               </InputGroupAddon>
             </InputGroup>
           </Field>

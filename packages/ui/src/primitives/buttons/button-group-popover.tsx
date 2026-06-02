@@ -10,13 +10,13 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover"
 import { Textarea } from "@/components/ui/textarea"
-import { IconBotIcon, IconChevronDownIcon } from "@tabler/icons-react"
+import { IconRobot, IconChevronDown } from "@tabler/icons-react"
 
 export default function ButtonGroupPopover() {
   return (
     <ButtonGroup>
       <Button variant="outline">
-        <BotIcon /> Copilot
+        <IconRobot /> Copilot
       </Button>
       <Popover>
         <PopoverTrigger
@@ -24,7 +24,7 @@ export default function ButtonGroupPopover() {
             <Button variant="outline" size="icon" aria-label="Open Popover" />
           }
         >
-          <ChevronDownIcon />
+          <IconChevronDown />
         </PopoverTrigger>
         <PopoverContent align="end" className="rounded-xl text-sm">
           <PopoverHeader>

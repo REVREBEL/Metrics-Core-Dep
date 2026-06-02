@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/tooltip";
 
 import { Button } from "@/components/ui/button";
-import { IconXIcon } from "@tabler/icons-react";
+import { IconX } from "@tabler/icons-react";
 import { ChevronDownIcon } from "@radix-ui/react-icons";
 
 type ToggleGroupProps = {
@@ -245,7 +245,7 @@ export function ToggleGroup({
                               </DropdownOption>
                             )}
                           </span>
-                          <ChevronDownIcon className="!size-3 ml-1 text-muted-foreground/60 shrink-0" />
+                          <IconChevronDown className="!size-3 ml-1 text-muted-foreground/60 shrink-0" />
                         </Button>
                       </DropdownMenuTrigger>
                       {/* X icon to clear selection, outside the trigger */}
@@ -261,7 +261,7 @@ export function ToggleGroup({
                           onClick={handleToggleClickEvent}
                           data-option-value={option.value}
                         >
-                          <XIcon className="!size-3 text-muted-foreground" />
+                          <IconX className="!size-3 text-muted-foreground" />
                         </Button>
                       )}
                     </div>

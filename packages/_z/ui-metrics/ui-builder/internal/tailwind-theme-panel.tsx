@@ -7,7 +7,7 @@ import {
 } from "@/components/ui/ui-builder/internal/utils/base-colors";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
-import { IconCheck as CheckIcon, IconInfoCircle as InfoIcon, IconMoon as MoonIcon, IconSun as SunIcon } from "@tabler/icons-react";
+import { IconCheck, IconInfoCircle, IconMoon, IconSun } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import {
   useLayerStore,
@@ -54,7 +54,7 @@ export function TailwindThemePanel() {
       </Toggle>
       {!isCustomTheme && (
         <span className="flex items-center gap-2">
-          <InfoIcon className="size-4" /> Using Your Project&apos;s Theme
+          <IconInfoCircle className="size-4" /> Using Your Project&apos;s Theme
         </span>
       )}
       {selectedPageData && isCustomTheme && (
@@ -198,7 +198,7 @@ function ThemeColorOption({ color, colorTheme, mode, onClick }: { color: BaseCol
           className="size-4 rounded-full"
           style={style}
         >
-          {color.name === colorTheme && <CheckIcon className="size-4" />}
+          {color.name === colorTheme && <IconCheck className="size-4" />}
         </div>
         {color.label}
       </Button>
@@ -252,9 +252,9 @@ function ThemeModeOption({modeOption, mode, onClick}: {modeOption: "light" | "da
         className={cn(mode === modeOption && "border-2 border-primary")}
       >
         {modeOption === "light" ? (
-          <SunIcon className="mr-1 -translate-x-1" />
+          <IconSun className="mr-1 -translate-x-1" />
         ) : (
-          <MoonIcon className="mr-1 -translate-x-1" />
+          <IconMoon className="mr-1 -translate-x-1" />
         )}
         {modeOption}
       </Button>

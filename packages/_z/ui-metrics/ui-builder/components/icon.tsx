@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { IconHugeiconsIcon } from "@tabler/icons-react";
+import { HugeiconsIcon } from "@hugeicons/react";
 import * as HugeIcons from "@hugeicons/core-free-icons";
 import { cn } from "@/lib/utils";
 
@@ -70,7 +70,7 @@ const Icon = React.forwardRef<HTMLSpanElement, IconProps>(
     },
     ref
   ) => {
-    const iconDef = HugeIcons[iconName] as HugeIconDefinition | undefined;
+    const iconDef = HugeIcons[iconName] as HugeIconDefinition;
 
     if (!iconDef) {
       console.error(`Icon "${iconName}" does not exist in Hugeicons`);

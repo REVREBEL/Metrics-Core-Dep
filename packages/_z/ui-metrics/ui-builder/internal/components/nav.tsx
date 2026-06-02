@@ -1,7 +1,7 @@
 "use client";
 
 import { forwardRef, useCallback, useMemo, useState } from "react";
-import { IconEye, IconFileUp, IconRedo, IconUndo, IconSunIcon, IconMoonIcon, IconCheckIcon, IconPlusIcon, IconMonitor, IconTablet, IconSmartphone, IconMaximize, IconMoreVertical, IconPanelRight, Icon } from "@tabler/icons-react";
+import { IconEye, IconFileUp, IconRedo, IconUndo, IconSun, IconMoon, IconCheck, IconPlus, IconMonitor, IconTablet, IconSmartphone, IconMaximize, IconMoreVertical, IconPanelRight, Icon } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -589,8 +589,8 @@ function ModeToggle() {
         <DropdownMenuTrigger asChild>
           <TooltipTrigger asChild>
             <Button variant="outline" size="icon">
-              <SunIcon className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <MoonIcon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <IconSun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <IconMoon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
               <span className="sr-only">Toggle theme</span>
             </Button>
           </TooltipTrigger>
@@ -680,7 +680,7 @@ function PagesPopover() {
           onKeyDown={handleKeyDown}
         />
         <Button type="submit" variant="secondary">
-          <PlusIcon className="w-4 h-4" />
+          <IconPlus className="w-4 h-4" />
         </Button>
       </div>
     </form>
@@ -756,7 +756,7 @@ const PageItem = ({
       className={cn(selectedPageId === page.id && "font-bold")}
     >
       {selectedPageId === page.id ? (
-        <CheckIcon className="w-4 h-4 mr-2" />
+        <IconCheck className="w-4 h-4 mr-2" />
       ) : null}
       {page.name}
     </CommandItem>
