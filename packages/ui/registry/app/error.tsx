@@ -6,10 +6,7 @@ import Link from "next/link";
 import {
   MobileSidebarTrigger,
   RegistrySidebar,
-} from "@/components/registry/registry-sidebar";
-import { Button } from "@/components/ui/button";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import { Toaster } from "@/components/ui/sonner";
+} from "@/primitives/registry/registry-sidebar";
 
 export default function ErrorPage({
   error,
@@ -23,7 +20,7 @@ export default function ErrorPage({
   }, [error]);
 
   return (
-    <SidebarProvider>
+    <>
       <MobileSidebarTrigger />
       <RegistrySidebar />
       <main className="flex w-full justify-center">
@@ -35,14 +32,22 @@ export default function ErrorPage({
             Something went wrong
           </h2>
           <div className="mt-6 flex gap-3">
-            <Button onClick={reset}>Try Again</Button>
-            <Button variant="secondary" asChild>
-              <Link href="/r/registry.json">View Registry</Link>
-            </Button>
+            <button
+              className="rounded-md bg-primary px-4 py-2 text-primary-foreground text-sm"
+              onClick={reset}
+              type="button"
+            >
+              Try Again
+            </button>
+            <Link
+              className="rounded-md border px-4 py-2 text-sm"
+              href="/r/registry.json"
+            >
+              View Registry
+            </Link>
           </div>
         </div>
       </main>
-      <Toaster />
-    </SidebarProvider>
+    </>
   );
 }

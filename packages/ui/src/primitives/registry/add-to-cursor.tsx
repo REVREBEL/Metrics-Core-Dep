@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Button } from "@buttons";
+import { Button } from "@/primitives/buttons/button";
 
 export function AddToCursor({
   mcp,
