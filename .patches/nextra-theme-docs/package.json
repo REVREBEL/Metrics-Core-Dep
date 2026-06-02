@@ -43,7 +43,7 @@
     "postcss": "^8.4.49",
     "react": "19.2.6",
     "tailwindcss": "4.3.0",
-    "vitest": "^3.0.0",
+    "vitest": "^4.0.0",
     "zx": "^8.2.4",
     "esbuild-react-compiler-plugin": "0.0.0",
     "nextra": "4.6.1"
