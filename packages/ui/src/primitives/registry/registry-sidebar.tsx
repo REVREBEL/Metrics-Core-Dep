@@ -13,6 +13,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import registryManifest from "@/registry";
 
 import { RegistryLogo } from "./registry-logo";
 import { ModeToggle } from "./theme-toggle";
@@ -39,9 +40,21 @@ import {
 } from "@layouts";
 import { getBlocks, getComponents, getUIPrimitives } from "@/lib/registry";
 
-const uiItems = getUIPrimitives();
-const componentItems = getComponents();
-const blockItems = getBlocks();
+type RegistryItem = {
+  name: string;
+  type: string;
+  title?: string;
+};
+
+const allRegistryItems = ((registryManifest as { items?: RegistryItem[] }).items ??
+  []) as RegistryItem[];
+const uiItems = allRegistryItems.filter((item) => item.type === "registry:ui");
+const componentItems = allRegistryItems.filter(
+  (item) => item.type === "registry:component",
+);
+const blockItems = allRegistryItems.filter(
+  (item) => item.type === "registry:block",
+);
 
 export const gettingStartedItems = [
   { title: "Home", path: "/" },
@@ -75,17 +88,23 @@ export function RegistrySidebar() {
     if (searchTerm) {
       setFilteredUiItems(
         uiItems.filter((item) =>
-          item.title.toLowerCase().includes(searchTerm.toLowerCase()),
+          (item.title ?? item.name)
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()),
         ),
       );
       setFilteredComponents(
         componentItems.filter((item) =>
-          item.title.toLowerCase().includes(searchTerm.toLowerCase()),
+          (item.title ?? item.name)
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()),
         ),
       );
       setFilteredBlocks(
         blockItems.filter((item) =>
-          item.title.toLowerCase().includes(searchTerm.toLowerCase()),
+          (item.title ?? item.name)
+            .toLowerCase()
+            .includes(searchTerm.toLowerCase()),
         ),
       );
     } else {
@@ -154,7 +173,7 @@ export function RegistrySidebar() {
                             onClick={() => setOpenMobile(false)}
                             href={item.path}
                           >
-                            {item.title}
+                            {item.title ?? item.name}
                           </Link>
                         </SidebarMenuButton>
                       </SidebarMenuItem>
@@ -192,7 +211,7 @@ export function RegistrySidebar() {
                             onClick={() => setOpenMobile(false)}
                             href={`/registry/${item.name}`}
                           >
-                            {item.title}
+                            {item.title ?? item.name}
                           </Link>
                         </SidebarMenuButton>
                       </SidebarMenuItem>
@@ -230,7 +249,7 @@ export function RegistrySidebar() {
                             onClick={() => setOpenMobile(false)}
                             href={`/registry/${item.name}`}
                           >
-                            {item.title}
+                            {item.title ?? item.name}
                           </Link>
                         </SidebarMenuButton>
                       </SidebarMenuItem>
@@ -267,7 +286,7 @@ export function RegistrySidebar() {
                             onClick={() => setOpenMobile(false)}
                             href={`/registry/${item.name}`}
                           >
-                            {item.title}
+                            {item.title ?? item.name}
                           </Link>
                         </SidebarMenuButton>
                       </SidebarMenuItem>
