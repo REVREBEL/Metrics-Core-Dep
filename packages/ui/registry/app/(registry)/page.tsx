@@ -1,19 +1,33 @@
 import { ArrowRight, Blocks, Component, ToyBrick } from "lucide-react";
 import Link from "next/link";
 
-import { MCPTabs } from "@/components/registry/mcp-tabs";
+import { MCPTabs } from "@/primitives/registry/mcp-tabs";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { getBlocks, getComponents, getUIPrimitives } from "@/lib/registry";
+} from "@/primitives/ui/card";
+import registryManifest from "@/registry";
 
-const uiItems = getUIPrimitives().slice(0, 5);
-const componentItems = getComponents().slice(0, 5);
-const blockItems = getBlocks().slice(0, 5);
+type RegistryItem = {
+  name: string;
+  type: string;
+  title?: string;
+};
+
+const registryItems = ((registryManifest as { items?: RegistryItem[] }).items ??
+  []) as RegistryItem[];
+const uiItems = registryItems
+  .filter((item) => item.type === "registry:ui")
+  .slice(0, 5);
+const componentItems = registryItems
+  .filter((item) => item.type === "registry:component")
+  .slice(0, 5);
+const blockItems = registryItems
+  .filter((item) => item.type === "registry:block")
+  .slice(0, 5);
 
 export default function Home() {
   return (
@@ -59,7 +73,7 @@ export default function Home() {
                   href={`/registry/${item.name}`}
                   className="text-sm hover:underline"
                 >
-                  {item.title}
+                  {item.title ?? item.name}
                 </Link>
                 <ArrowRight className="size-4 text-muted-foreground" />
               </div>
@@ -93,7 +107,7 @@ export default function Home() {
                     href={`/registry/${item.name}`}
                     className="text-sm hover:underline"
                   >
-                    {item.title}
+                    {item.title ?? item.name}
                   </Link>
                   <ArrowRight className="size-4 text-muted-foreground" />
                 </div>
@@ -126,7 +140,7 @@ export default function Home() {
                     href={`/registry/${item.name}`}
                     className="text-sm hover:underline"
                   >
-                    {item.title}
+                    {item.title ?? item.name}
                   </Link>
                   <ArrowRight className="size-4 text-muted-foreground" />
                 </div>

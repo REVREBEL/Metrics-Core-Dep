@@ -4,21 +4,27 @@ import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 
 import { OpenInV0Button } from "./open-in-v0";
-import { Button } from "@buttons";
+import { Button } from "@/primitives/buttons/button";
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-} from "@ui";
+} from "@/primitives/ui/card";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@ui";
-import type { Component } from "@/lib/registry";
+} from "@/primitives/ui/tooltip";
+
+type Component = {
+  name: string;
+  type: string;
+  title?: string;
+  description?: string;
+};
 
 interface ComponentCardProps {
   component: Component;

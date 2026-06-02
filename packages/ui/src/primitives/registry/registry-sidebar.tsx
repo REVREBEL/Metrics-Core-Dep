@@ -1,44 +1,11 @@
 "use client";
 
-import {
-  Blocks,
-  ChevronDown,
-  Component,
-  Home,
-  Menu,
-  Search,
-  ToyBrick,
-  X,
-} from "lucide-react";
+import { Blocks, Component, Home, Search, ToyBrick } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import type { ReactNode } from "react";
+import { useMemo, useState } from "react";
 import registryManifest from "@/registry";
-
-import { RegistryLogo } from "./registry-logo";
-import { ModeToggle } from "./theme-toggle";
-import { Button } from "@buttons";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@ui";
-import { Input } from "@inputs";
-import { ScrollArea } from "@ui";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarGroup,
-  SidebarGroupContent,
-  SidebarGroupLabel,
-  SidebarHeader,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  useSidebar,
-} from "@layouts";
-import { getBlocks, getComponents, getUIPrimitives } from "@/lib/registry";
 
 type RegistryItem = {
   name: string;
@@ -46,264 +13,144 @@ type RegistryItem = {
   title?: string;
 };
 
+type NavItem = {
+  name: string;
+  title: string;
+  path: string;
+};
+
 const allRegistryItems = ((registryManifest as { items?: RegistryItem[] }).items ??
   []) as RegistryItem[];
-const uiItems = allRegistryItems.filter((item) => item.type === "registry:ui");
-const componentItems = allRegistryItems.filter(
-  (item) => item.type === "registry:component",
-);
-const blockItems = allRegistryItems.filter(
-  (item) => item.type === "registry:block",
-);
 
-export const gettingStartedItems = [
-  { title: "Home", path: "/" },
-  { title: "Design Tokens", path: "/tokens" },
-  { title: "Component Catalog", path: "/catalog" },
+export const gettingStartedItems: NavItem[] = [
+  { name: "home", title: "Home", path: "/" },
+  { name: "tokens", title: "Design Tokens", path: "/tokens" },
+  { name: "catalog", title: "Component Catalog", path: "/catalog" },
 ];
 
-export function MobileSidebarTrigger() {
-  const { setOpenMobile } = useSidebar();
+function registryItemsByType(type: string): NavItem[] {
+  return allRegistryItems
+    .filter((item) => item.type === type)
+    .map((item) => ({
+      name: item.name,
+      title: item.title ?? item.name,
+      path: `/registry/${item.name}`,
+    }));
+}
 
+const blockItems = registryItemsByType("registry:block");
+const componentItems = registryItemsByType("registry:component");
+const uiItems = registryItemsByType("registry:ui");
+
+function MobileSidebarTrigger() {
+  return null;
+}
+
+function RegistrySection({
+  title,
+  icon,
+  items,
+  pathname,
+}: {
+  title: string;
+  icon: ReactNode;
+  items: NavItem[];
+  pathname: string;
+}) {
   return (
-    <div className="absolute top-8 right-4 md:hidden">
-      <Button aria-label="Open menu" onClick={() => setOpenMobile(true)}>
-        <Menu className="size-5" />
-      </Button>
-    </div>
+    <section className="border-b px-3 py-3">
+      <div className="mb-2 flex items-center gap-2 font-medium text-muted-foreground text-xs uppercase tracking-wide">
+        {icon}
+        {title}
+      </div>
+      <nav className="grid gap-1">
+        {items.map((item) => {
+          const isActive = pathname === item.path;
+          return (
+            <Link
+              className={[
+                "truncate rounded-md px-2 py-1.5 text-sm transition-colors",
+                isActive
+                  ? "bg-primary text-primary-foreground"
+                  : "text-muted-foreground hover:bg-muted hover:text-foreground",
+              ].join(" ")}
+              href={item.path}
+              key={item.name}
+            >
+              {item.title}
+            </Link>
+          );
+        })}
+      </nav>
+    </section>
   );
 }
 
-export function RegistrySidebar() {
+function RegistrySidebar() {
   const pathname = usePathname();
-
-  const { setOpenMobile } = useSidebar();
-
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredUiItems, setFilteredUiItems] = useState(uiItems);
-  const [filteredComponents, setFilteredComponents] = useState(componentItems);
-  const [filteredBlocks, setFilteredBlocks] = useState(blockItems);
 
-  useEffect(() => {
-    if (searchTerm) {
-      setFilteredUiItems(
-        uiItems.filter((item) =>
-          (item.title ?? item.name)
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()),
-        ),
-      );
-      setFilteredComponents(
-        componentItems.filter((item) =>
-          (item.title ?? item.name)
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()),
-        ),
-      );
-      setFilteredBlocks(
-        blockItems.filter((item) =>
-          (item.title ?? item.name)
-            .toLowerCase()
-            .includes(searchTerm.toLowerCase()),
-        ),
-      );
-    } else {
-      setFilteredUiItems(uiItems);
-      setFilteredComponents(componentItems);
-      setFilteredBlocks(blockItems);
+  const filterItems = useMemo(() => {
+    const term = searchTerm.trim().toLowerCase();
+    if (!term) {
+      return (items: NavItem[]) => items;
     }
+
+    return (items: NavItem[]) =>
+      items.filter((item) => item.title.toLowerCase().includes(term));
   }, [searchTerm]);
 
   return (
-    <Sidebar collapsible="icon">
-      <SidebarHeader className="border-b">
-        <div className="flex items-center justify-between px-2 py-2">
-          <Link href="/" className="flex min-w-0 items-center gap-2">
-            <RegistryLogo />
+    <aside className="hidden h-svh w-72 shrink-0 border-r bg-background md:block">
+      <div className="sticky top-0 flex h-svh flex-col">
+        <header className="border-b px-4 py-4">
+          <Link href="/" className="flex items-center gap-2 font-semibold">
+            <span className="rounded-md bg-primary px-2 py-1 text-primary-foreground text-xs">
+              UI
+            </span>
+            Registry
           </Link>
-
-          <Button
-            variant="ghost"
-            className="md:hidden"
-            onClick={() => setOpenMobile(false)}
-          >
-            <X />
-          </Button>
-        </div>
-        <div className="px-2 py-2 opacity-100 transition-all duration-200">
-          <div className="relative">
-            <Search className="absolute top-2.5 left-2.5 size-4 text-muted-foreground" />
-            <Input
-              type="search"
+          <label className="relative mt-4 block">
+            <Search className="absolute left-2 top-2.5 size-4 text-muted-foreground" />
+            <input
+              className="h-9 w-full rounded-md border bg-background pl-8 pr-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              onChange={(event) => setSearchTerm(event.target.value)}
               placeholder="Search..."
-              className="pl-8"
+              type="search"
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
             />
-          </div>
+          </label>
+        </header>
+
+        <div className="min-h-0 flex-1 overflow-y-auto">
+          <RegistrySection
+            icon={<Home className="size-4" />}
+            items={gettingStartedItems}
+            pathname={pathname}
+            title="Getting Started"
+          />
+          <RegistrySection
+            icon={<Blocks className="size-4" />}
+            items={filterItems(blockItems)}
+            pathname={pathname}
+            title="Blocks"
+          />
+          <RegistrySection
+            icon={<Component className="size-4" />}
+            items={filterItems(componentItems)}
+            pathname={pathname}
+            title="Components"
+          />
+          <RegistrySection
+            icon={<ToyBrick className="size-4" />}
+            items={filterItems(uiItems)}
+            pathname={pathname}
+            title="UI Primitives"
+          />
         </div>
-      </SidebarHeader>
-
-      <SidebarContent>
-        <ScrollArea className="h-full w-full pr-2">
-          <Collapsible defaultOpen={true} className="group/collapsible">
-            <SidebarGroup>
-              <CollapsibleTrigger className="w-full">
-                <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-                  <div className="flex min-w-0 items-center">
-                    <Home className="size-4 flex-shrink-0" />
-                    <span className="ml-2 opacity-100 transition-all duration-200">
-                      Getting Started
-                    </span>
-                  </div>
-                  <ChevronDown className="size-4 flex-shrink-0 opacity-100 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
-                </SidebarGroupLabel>
-              </CollapsibleTrigger>
-
-              <CollapsibleContent>
-                <SidebarGroupContent>
-                  <SidebarMenu>
-                    {gettingStartedItems.map((item) => (
-                      <SidebarMenuItem key={item.path}>
-                        <SidebarMenuButton
-                          asChild
-                          isActive={pathname === item.path}
-                        >
-                          <Link
-                            onClick={() => setOpenMobile(false)}
-                            href={item.path}
-                          >
-                            {item.title ?? item.name}
-                          </Link>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    ))}
-                  </SidebarMenu>
-                </SidebarGroupContent>
-              </CollapsibleContent>
-            </SidebarGroup>
-          </Collapsible>
-
-          <Collapsible defaultOpen={true} className="group/collapsible">
-            <SidebarGroup>
-              <CollapsibleTrigger className="w-full">
-                <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-                  <div className="flex min-w-0 items-center">
-                    <Blocks className="size-4 flex-shrink-0" />
-                    <span className="ml-2 transition-all duration-200">
-                      Blocks
-                    </span>
-                  </div>
-                  <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
-                </SidebarGroupLabel>
-              </CollapsibleTrigger>
-
-              <CollapsibleContent>
-                <SidebarGroupContent>
-                  <SidebarMenu>
-                    {filteredBlocks.map((item) => (
-                      <SidebarMenuItem key={item.name}>
-                        <SidebarMenuButton
-                          asChild
-                          isActive={pathname === item.name}
-                        >
-                          <Link
-                            onClick={() => setOpenMobile(false)}
-                            href={`/registry/${item.name}`}
-                          >
-                            {item.title ?? item.name}
-                          </Link>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    ))}
-                  </SidebarMenu>
-                </SidebarGroupContent>
-              </CollapsibleContent>
-            </SidebarGroup>
-          </Collapsible>
-
-          <Collapsible defaultOpen={true} className="group/collapsible">
-            <SidebarGroup>
-              <CollapsibleTrigger className="w-full">
-                <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-                  <div className="flex min-w-0 items-center">
-                    <Component className="size-4 flex-shrink-0" />
-                    <span className="ml-2 transition-all duration-200">
-                      Components
-                    </span>
-                  </div>
-                  <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
-                </SidebarGroupLabel>
-              </CollapsibleTrigger>
-
-              <CollapsibleContent>
-                <SidebarGroupContent>
-                  <SidebarMenu>
-                    {filteredComponents.map((item) => (
-                      <SidebarMenuItem key={item.name}>
-                        <SidebarMenuButton
-                          asChild
-                          isActive={pathname === item.name}
-                        >
-                          <Link
-                            onClick={() => setOpenMobile(false)}
-                            href={`/registry/${item.name}`}
-                          >
-                            {item.title ?? item.name}
-                          </Link>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    ))}
-                  </SidebarMenu>
-                </SidebarGroupContent>
-              </CollapsibleContent>
-            </SidebarGroup>
-          </Collapsible>
-
-          <Collapsible defaultOpen={true} className="group/collapsible">
-            <SidebarGroup>
-              <CollapsibleTrigger className="w-full">
-                <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
-                  <div className="flex min-w-0 items-center">
-                    <ToyBrick className="size-4 flex-shrink-0" />
-                    <span className="ml-2 transition-all duration-200">
-                      UI Primitives
-                    </span>
-                  </div>
-                  <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
-                </SidebarGroupLabel>
-              </CollapsibleTrigger>
-              <CollapsibleContent>
-                <SidebarGroupContent>
-                  <SidebarMenu>
-                    {filteredUiItems.map((item) => (
-                      <SidebarMenuItem key={item.name}>
-                        <SidebarMenuButton
-                          asChild
-                          isActive={pathname === item.name}
-                        >
-                          <Link
-                            onClick={() => setOpenMobile(false)}
-                            href={`/registry/${item.name}`}
-                          >
-                            {item.title ?? item.name}
-                          </Link>
-                        </SidebarMenuButton>
-                      </SidebarMenuItem>
-                    ))}
-                  </SidebarMenu>
-                </SidebarGroupContent>
-              </CollapsibleContent>
-            </SidebarGroup>
-          </Collapsible>
-        </ScrollArea>
-      </SidebarContent>
-
-      <SidebarFooter>
-        <div className="flex justify-end">
-          <ModeToggle />
-        </div>
-      </SidebarFooter>
-    </Sidebar>
+      </div>
+    </aside>
   );
 }
+
+export { MobileSidebarTrigger, RegistrySidebar };
