@@ -3,12 +3,14 @@
 import { MoreVertical } from "lucide-react";
 import { useMemo, useState } from "react";
 
-import AgodaIcon from "@icons/ChannelIconsReact/ChannelIconsCircleReact/AgodaCircle";
-import BookingIcon from "@icons/ChannelIconsReact/ChannelIconsCircleReact/BookingCircle";
-import ExpediaIcon from "@icons/ChannelIconsReact/ChannelIconsCircleReact/ExpediaCircle";
-import HopperIcon from "@icons/ChannelIconsReact/ChannelIconsCircleReact/HopperCircle";
-import HotelbedsIcon from "@icons/ChannelIconsReact/ChannelIconsCircleReact/HotelbedsCircle";
-import PricelineIcon from "@icons/ChannelIconsReact/ChannelIconsCircleReact/PricelineCircle";
+import {
+  AgodaCircle as AgodaIcon,
+  BookingCircle as BookingIcon,
+  ExpediaCircle as ExpediaIcon,
+  HopperCircle as HopperIcon,
+  HotelbedsCircle as HotelbedsIcon,
+  PricelineCircle as PricelineIcon,
+} from "@icons";
 import {
   MetricCard,
   MetricCardTabs,
@@ -23,234 +25,142 @@ type ChannelKey =
   | "hotelbeds"
   | "hopper";
 
-type ChannelDatum = {
+interface ChannelData {
   key: ChannelKey;
   name: string;
+  Icon: any;
   rooms: number;
   adr: number;
   revenue: number;
   alos: number;
-  retailAdr: number;
-  transientAlos: number;
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
-};
+}
 
-type ChannelDisplayDatum = ChannelDatum & {
-  value: number;
-  width: number;
-  barLabel: string;
-  sideLabel: string;
-  sideValue: number;
-};
-
-const CHANNEL_TABS = [
-  { label: "Rooms", value: "rooms" },
-  { label: "ADR", value: "adr" },
-  { label: "Revenue", value: "revenue" },
-  { label: "ALOS", value: "alos" },
-] satisfies Array<{ label: string; value: ChannelMetric }>;
-
-const CHANNEL_DATA = [
+const CHANNEL_DATA: ChannelData[] = [
   {
     key: "expedia",
     name: "Expedia",
-    rooms: 412,
-    adr: 214.75,
-    revenue: 88477,
-    alos: 2.4,
-    retailAdr: 229.5,
-    transientAlos: 2.1,
     Icon: ExpediaIcon,
+    rooms: 1245,
+    adr: 185.5,
+    revenue: 231000,
+    alos: 3.2,
   },
   {
     key: "booking",
-    name: "Booking",
-    rooms: 368,
-    adr: 226.1,
-    revenue: 83205,
-    alos: 2.1,
-    retailAdr: 229.5,
-    transientAlos: 2.1,
+    name: "Booking.com",
     Icon: BookingIcon,
+    rooms: 1102,
+    adr: 192.2,
+    revenue: 211800,
+    alos: 2.8,
   },
   {
     key: "agoda",
     name: "Agoda",
-    rooms: 214,
-    adr: 189.25,
-    revenue: 40500,
-    alos: 2.8,
-    retailAdr: 229.5,
-    transientAlos: 2.1,
     Icon: AgodaIcon,
+    rooms: 856,
+    adr: 165.8,
+    revenue: 141900,
+    alos: 4.1,
   },
   {
     key: "priceline",
     name: "Priceline",
-    rooms: 176,
-    adr: 198.35,
-    revenue: 34910,
-    alos: 1.9,
-    retailAdr: 229.5,
-    transientAlos: 2.1,
     Icon: PricelineIcon,
+    rooms: 642,
+    adr: 178.4,
+    revenue: 114500,
+    alos: 2.4,
   },
   {
     key: "hotelbeds",
     name: "Hotelbeds",
-    rooms: 142,
-    adr: 171.8,
-    revenue: 24396,
-    alos: 3.2,
-    retailAdr: 229.5,
-    transientAlos: 2.1,
     Icon: HotelbedsIcon,
+    rooms: 423,
+    adr: 155.2,
+    revenue: 65600,
+    alos: 3.5,
   },
   {
     key: "hopper",
     name: "Hopper",
-    rooms: 96,
-    adr: 203.6,
-    revenue: 19546,
-    alos: 1.7,
-    retailAdr: 229.5,
-    transientAlos: 2.1,
     Icon: HopperIcon,
+    rooms: 285,
+    adr: 142.6,
+    revenue: 40500,
+    alos: 1.9,
   },
-] satisfies ChannelDatum[];
+];
 
-const formatNumber = (value: number) =>
-  new Intl.NumberFormat("en-US", {
-    maximumFractionDigits: 0,
-  }).format(value);
+const CHANNEL_TABS = [
+  { label: "Rooms", value: "rooms" as const },
+  { label: "ADR", value: "adr" as const },
+  { label: "Revenue", value: "revenue" as const },
+  { label: "ALOS", value: "alos" as const },
+];
 
-const formatCurrency = (value: number, maximumFractionDigits = 0) =>
-  new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-    maximumFractionDigits,
-    minimumFractionDigits: maximumFractionDigits,
-  }).format(value);
-
-const formatSignedCurrency = (value: number) => {
-  const prefix = value > 0 ? "+" : value < 0 ? "-" : "";
-  return `${prefix}${formatCurrency(Math.abs(value), 0)}`;
-};
-
-const formatSignedDecimal = (value: number) => {
-  const prefix = value > 0 ? "+" : value < 0 ? "-" : "";
-  return `${prefix}${Math.abs(value).toFixed(1)}`;
-};
-
-function getMetricValue(item: ChannelDatum, metric: ChannelMetric) {
-  switch (metric) {
-    case "rooms":
-      return item.rooms;
-    case "adr":
-      return item.adr;
-    case "revenue":
-      return item.revenue;
-    case "alos":
-      return item.alos;
-  }
-}
-
-function getBarLabel(item: ChannelDatum, metric: ChannelMetric) {
-  switch (metric) {
-    case "rooms":
-      return formatNumber(item.rooms);
-    case "adr":
-      return formatCurrency(item.adr, 0);
-    case "revenue":
-      return formatCurrency(item.revenue, 0);
-    case "alos":
-      return item.alos.toFixed(1);
-  }
-}
-
-function getSideMetric(
-  item: ChannelDatum,
-  metric: ChannelMetric,
-  totals: { rooms: number; revenue: number },
-) {
-  switch (metric) {
-    case "rooms": {
-      const value = totals.rooms ? (item.rooms / totals.rooms) * 100 : 0;
-      return {
-        value,
-        label: `${value.toFixed(1)}%`,
-      };
-    }
-    case "adr": {
-      const value = item.adr - item.retailAdr;
-      return {
-        value,
-        label: formatSignedCurrency(value),
-      };
-    }
-    case "revenue": {
-      const value = totals.revenue ? (item.revenue / totals.revenue) * 100 : 0;
-      return {
-        value,
-        label: `${value.toFixed(1)}%`,
-      };
-    }
-    case "alos": {
-      const value = item.alos - item.transientAlos;
-      return {
-        value,
-        label: formatSignedDecimal(value),
-      };
-    }
-  }
-}
-
-function getMetricLabel(metric: ChannelMetric) {
-  switch (metric) {
-    case "rooms":
-      return (
-        <>
-          % of
-          <span>total rooms</span>
-        </>
-      );
-    case "adr":
-      return (
-        <>
-          vs
-          <span>retail ADR</span>
-        </>
-      );
-    case "revenue":
-      return (
-        <>
-          % of
-          <span>total revenue</span>
-        </>
-      );
-    case "alos":
-      return (
-        <>
-          vs
-          <span>transient ALOS</span>
-        </>
-      );
-  }
-}
-
-export default function TopChannelsChart() {
+export function TopChannelsChart() {
   const [activeMetric, setActiveMetric] = useState<ChannelMetric>("rooms");
   const [hoveredKey, setHoveredKey] = useState<ChannelKey | null>(null);
 
-  const totals = useMemo(
-    () => ({
-      rooms: CHANNEL_DATA.reduce((sum, item) => sum + item.rooms, 0),
-      revenue: CHANNEL_DATA.reduce((sum, item) => sum + item.revenue, 0),
-    }),
-    [],
-  );
+  const totals = useMemo(() => {
+    return CHANNEL_DATA.reduce(
+      (acc, curr) => ({
+        rooms: acc.rooms + curr.rooms,
+        revenue: acc.revenue + curr.revenue,
+      }),
+      { rooms: 0, revenue: 0 },
+    );
+  }, []);
 
-  const displayData = useMemo<ChannelDisplayDatum[]>(() => {
+  const getMetricValue = (item: ChannelData, metric: ChannelMetric) => {
+    return item[metric];
+  };
+
+  const getMetricLabel = (metric: ChannelMetric) => {
+    switch (metric) {
+      case "rooms":
+        return "Total Rooms";
+      case "adr":
+        return "Avg. Daily Rate";
+      case "revenue":
+        return "Total Revenue";
+      case "alos":
+        return "Avg. LOS";
+    }
+  };
+
+  const getBarLabel = (item: ChannelData, metric: ChannelMetric) => {
+    const val = getMetricValue(item, metric);
+    switch (metric) {
+      case "adr":
+        return `$${val.toLocaleString()}`;
+      case "revenue":
+        return `$${(val / 1000).toFixed(1)}k`;
+      case "alos":
+        return `${val.toFixed(1)}d`;
+      default:
+        return val.toLocaleString();
+    }
+  };
+
+  const getSideMetric = (
+    item: ChannelData,
+    metric: ChannelMetric,
+    totals: { rooms: number; revenue: number },
+  ) => {
+    if (metric === "rooms") {
+      const share = ((item.rooms / totals.rooms) * 100).toFixed(1);
+      return { label: `${share}%`, value: item.rooms };
+    }
+    if (metric === "revenue") {
+      const share = ((item.revenue / totals.revenue) * 100).toFixed(1);
+      return { label: `${share}%`, value: item.revenue };
+    }
+    return { label: getBarLabel(item, metric), value: item[metric] };
+  };
+
+  const displayData = useMemo(() => {
     const maxValue = Math.max(
       ...CHANNEL_DATA.map((item) => getMetricValue(item, activeMetric)),
     );

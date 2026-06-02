@@ -18,7 +18,7 @@ import {
   ChartTooltipContent,
 } from "@charts";
 
-export const description = "A radial chart with a label";
+const description = "A radial chart with a label";
 
 const chartData = [
   { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
