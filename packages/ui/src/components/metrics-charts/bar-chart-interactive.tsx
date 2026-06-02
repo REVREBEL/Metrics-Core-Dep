@@ -17,7 +17,7 @@ import {
   ChartTooltipContent,
 } from "@charts";
 
-export const description = "An interactive bar chart";
+const description = "An interactive bar chart";
 
 const chartData = [
   { date: "2024-04-01", desktop: 222, mobile: 150 },

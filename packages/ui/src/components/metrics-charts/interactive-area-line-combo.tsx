@@ -3,8 +3,7 @@
 import { Skeleton } from "@skeleton";
 import { ToggleGroup, ToggleGroupItem } from "@ui";
 import { useDuckDb } from "@hooks";
-import ArrowCircleDown from "@icons/ArrowCircleDown";
-import ArrowCircleUp from "@icons/ArrowCircleUp";
+import { ArrowCircleDown, ArrowCircleUp } from "@icons";
 import { TrendingUp } from "lucide-react";
 import * as React from "react";
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
@@ -26,7 +25,7 @@ import {
   ChartTooltipContent,
 } from "@charts";
 
-export const description = "Area Line Combo Chart";
+const description = "Area Line Combo Chart";
 
 const chartLineData = [
   { date: "2024-04-01", desktop: 222, mobile: 150 },
@@ -130,3 +129,145 @@ const chartAreaData = [
   { month: "May", desktop: 209, mobile: 130 },
   { month: "June", desktop: 214, mobile: 140 },
 ];
+
+const chartConfig = {
+  desktop: {
+    label: "Desktop",
+    color: "var(--chart-1)",
+  },
+  mobile: {
+    label: "Mobile",
+    color: "var(--chart-2)",
+  },
+} satisfies ChartConfig;
+
+export function InteractiveAreaLineCombo() {
+  const [activeChart, setActiveChart] = React.useState<keyof typeof chartConfig>(
+    "desktop",
+  );
+  const { execute, isInitializing, error } = useDuckDb();
+  const [data, setData] = React.useState(chartLineData);
+
+  React.useEffect(() => {
+    if (isInitializing) return;
+    async function fetchData() {
+      try {
+        const res = await execute(
+          "SELECT * FROM 'ga4_TrafficAcquisition_281286275.parquet' LIMIT 10",
+        );
+        console.log(res);
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    fetchData();
+  }, [execute, isInitializing]);
+
+  if (isInitializing) return <Skeleton className="h-[400px] w-full" />;
+
+  const total = React.useMemo(
+    () => ({
+      desktop: chartLineData.reduce((acc, curr) => acc + curr.desktop, 0),
+      mobile: chartLineData.reduce((acc, curr) => acc + curr.mobile, 0),
+    }),
+    [],
+  );
+
+  return (
+    <Card>
+      <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
+        <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6">
+          <CardTitle>Area Chart - Interactive</CardTitle>
+          <CardDescription>
+            Showing total visitors for the last 3 months
+          </CardDescription>
+        </div>
+        <div className="flex">
+          {["desktop", "mobile"].map((key) => {
+            const chart = key as keyof typeof chartConfig;
+            return (
+              <button
+                key={chart}
+                type="button"
+                data-active={activeChart === chart}
+                className="relative z-30 flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-muted/50 sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
+                onClick={() => setActiveChart(chart)}
+              >
+                <span className="text-muted-foreground text-xs uppercase">
+                  {chartConfig[chart].label}
+                </span>
+                <span className="font-bold text-lg leading-none sm:text-3xl">
+                  {total[key as keyof typeof total].toLocaleString()}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </CardHeader>
+      <CardContent className="px-2 sm:p-6">
+        <ChartContainer
+          config={chartConfig}
+          className="aspect-auto h-[250px] w-full"
+        >
+          <LineChart
+            accessibilityLayer
+            data={chartLineData}
+            margin={{
+              left: 12,
+              right: 12,
+            }}
+          >
+            <CartesianGrid vertical={false} />
+            <XAxis
+              dataKey="date"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={8}
+              minTickGap={32}
+              tickFormatter={(value) => {
+                const date = new Date(value);
+                return date.toLocaleDateString("en-US", {
+                  month: "short",
+                  day: "numeric",
+                });
+              }}
+            />
+            <ChartTooltip
+              content={
+                <ChartTooltipContent
+                  className="w-[150px]"
+                  nameKey="views"
+                  labelFormatter={(value) => {
+                    return new Date(value).toLocaleDateString("en-US", {
+                      month: "short",
+                      day: "numeric",
+                    });
+                  }}
+                />
+              }
+            />
+            <Line
+              dataKey={activeChart}
+              type="monotone"
+              stroke={chartConfig[activeChart].color}
+              strokeWidth={2}
+              dot={false}
+            />
+          </LineChart>
+        </ChartContainer>
+      </CardContent>
+      <CardFooter>
+        <div className="flex w-full items-start gap-2 text-sm">
+          <div className="grid gap-2">
+            <div className="flex items-center gap-2 font-medium leading-none">
+              Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+            </div>
+            <div className="flex items-center gap-2 leading-none text-muted-foreground">
+              January - June 2024
+            </div>
+          </div>
+        </div>
+      </CardFooter>
+    </Card>
+  );
+}
