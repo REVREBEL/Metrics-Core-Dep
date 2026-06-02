@@ -1,4 +1,4 @@
-import { Checkbox } from "@/components/ui/checkbox"
+import { Checkbox } from "@ui"
 import {
   Field,
   FieldDescription,
@@ -6,7 +6,7 @@ import {
   FieldLabel,
   FieldSeparator,
   FieldSet,
-} from "@/components/ui/field"
+} from "@auto-form"
 
 export default function FieldGroupExample() {
   return (

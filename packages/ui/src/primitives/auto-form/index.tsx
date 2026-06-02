@@ -120,7 +120,8 @@ function AutoForm<SchemaType extends ZodObjectOrWrapped>({
   );
 }
 
-export default AutoForm;
+export { AutoForm };
+
 
 export * from "./fields/field";
 export * from "./form";

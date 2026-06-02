@@ -3,13 +3,13 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+} from "@auto-form";
+import { RadioGroup, RadioGroupItem } from "@ui";
 import type * as z from "zod";
-import AutoFormLabel from "../common/label";
-import AutoFormTooltip from "../common/tooltip";
-import type { AutoFormInputComponentProps } from "../types";
-import { getBaseSchema } from "../helpers";
+import { AutoFormLabel } from "@auto-form";
+import { AutoFormTooltip } from "@auto-form";
+import type { AutoFormInputComponentProps } from "@auto-form";
+import { getBaseSchema } from "@auto-form";
 
 /**
  * Get enum values from a ZodEnum schema.

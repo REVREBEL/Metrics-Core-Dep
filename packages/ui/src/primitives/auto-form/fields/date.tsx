@@ -1,9 +1,9 @@
-import { DatePicker } from "@/components/ui/date-picker";
-import { FormControl, FormItem, FormMessage } from "@/components/ui/form";
-import AutoFormLabel from "../common/label";
-import AutoFormTooltip from "../common/tooltip";
-import type { AutoFormInputComponentProps } from "../types";
-import { getBaseType } from "../helpers";
+import { DatePicker } from "@ui";
+import { FormControl, FormItem, FormMessage } from "@auto-form";
+import { AutoFormLabel } from "@auto-form";
+import { AutoFormTooltip } from "@auto-form";
+import type { AutoFormInputComponentProps } from "@auto-form";
+import { getBaseType } from "@auto-form";
 
 /**
  * Convert a value to a Date object if needed.

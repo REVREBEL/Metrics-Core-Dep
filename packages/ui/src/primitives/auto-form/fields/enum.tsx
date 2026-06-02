@@ -2,19 +2,19 @@ import {
   FormControl,
   FormItem,
   FormMessage,
-} from "@/components/ui/form";
+} from "@auto-form";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
+} from "@ui";
 import type * as z from "zod";
-import AutoFormLabel from "../common/label";
-import AutoFormTooltip from "../common/tooltip";
-import type { AutoFormInputComponentProps } from "../types";
-import { getBaseSchema } from "../helpers";
+import { AutoFormLabel } from "@auto-form";
+import { AutoFormTooltip } from "@auto-form";
+import type { AutoFormInputComponentProps } from "@auto-form";
+import { getBaseSchema } from "@auto-form";
 
 /**
  * Get enum values from a ZodEnum schema.

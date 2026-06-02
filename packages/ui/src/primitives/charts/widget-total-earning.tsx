@@ -1,16 +1,16 @@
 import { ChevronDownIcon, ChevronUpIcon, EllipsisVerticalIcon } from 'lucide-react'
 
-import { Avatar, AvatarFallback } from '@/components/ui/avatar'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Avatar, AvatarFallback } from '@ui'
+import { Button } from '@buttons'
+import { Card, CardContent, CardHeader } from '@ui'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu'
-import { Progress } from '@/components/ui/progress'
+} from '@dropdowns'
+import { Progress } from '@ui'
 
 const listItems = ['Share', 'Update', 'Refresh']
 
