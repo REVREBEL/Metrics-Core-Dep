@@ -26,8 +26,8 @@ import {
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from "@/components/ui/chart";
-import { MetricCard } from "@/components/metric-cards/_shared/MetricCard";
+} from "@charts";
+import { MetricCard } from "@shared-ui";
 
 type SocialKey = "facebook" | "instagram" | "x" | "linkedin" | "tiktok" | "blog";
 

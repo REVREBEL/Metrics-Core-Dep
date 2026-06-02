@@ -22,18 +22,18 @@ import {
   Users,
 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@buttons";
 import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from "@/components/ui/chart";
+} from "@charts";
 import {
   MetricCard,
   MetricCardTitle,
   MetricInsight,
-} from "@/components/metric-cards/_shared/MetricCard";
+} from "@shared-ui";
 
 type Platform = "Facebook" | "Instagram" | "X" | "LinkedIn" | "TikTok";
 type CampaignStatus = "active" | "paused" | "completed" | "draft";
@@ -83,7 +83,7 @@ function getPlatformSocial(platform: Platform): SocialKey {
     X: "x",
     LinkedIn: "linkedin",
     TikTok: "tiktok",
-  }[platform];
+  }[platform] as SocialKey;
 }
 
 function getPlatformColor(platform: Platform) {
