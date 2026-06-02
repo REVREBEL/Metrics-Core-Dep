@@ -6,7 +6,7 @@ import {
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@dropdown"
+} from "@dropdowns"
 import {
   InputGroup,
   InputGroupAddon,

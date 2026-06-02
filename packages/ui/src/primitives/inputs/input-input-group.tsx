@@ -5,7 +5,7 @@ import {
   InputGroupInput,
   InputGroupText,
 } from "./input-group"
-import { IconInfoIcon } from "@tabler/icons-react"
+import { IconInfoCircle } from "@tabler/icons-react"
 
 export function InputInputGroup() {
   return (
@@ -17,7 +17,7 @@ export function InputInputGroup() {
           <InputGroupText>https://</InputGroupText>
         </InputGroupAddon>
         <InputGroupAddon align="inline-end">
-          <InfoIcon />
+          <IconInfoCircle />
         </InputGroupAddon>
       </InputGroup>
     </Field>

@@ -3,7 +3,7 @@
 import * as React from "react"
 import { Menubar as MenubarPrimitive } from "radix-ui"
 
-import { cn } from "@lib"
+import { cn } from "@/lib/utils"
 import { IconSquareRoundedCheckFilled, IconSquareRoundedArrowRightFilled } from "@tabler/icons-react"
 
 function Menubar({

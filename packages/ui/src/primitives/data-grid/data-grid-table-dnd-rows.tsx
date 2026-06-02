@@ -8,7 +8,7 @@ import {
   useMemo,
   useRef,
 } from "react"
-import { useDataGrid } from "@/components/reui/data-grid/data-grid"
+import { useDataGrid } from "./data-grid"
 import {
   DataGridTableBase,
   DataGridTableBody,
@@ -22,7 +22,7 @@ import {
   DataGridTableHeadRowCell,
   DataGridTableHeadRowCellResize,
   DataGridTableRowSpacer,
-} from "@/components/reui/data-grid/data-grid-table"
+} from "./data-grid-table"
 import {
   closestCenter,
   DndContext,
@@ -45,7 +45,7 @@ import { CSS } from "@dnd-kit/utilities"
 import { type Cell, flexRender, type HeaderGroup, type Row } from "@tanstack/react-table"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { Button } from "@buttons"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { DragDropHorizontalIcon } from "@hugeicons/core-free-icons"
 

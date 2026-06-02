@@ -2,14 +2,14 @@
 
 import { useMemo, useState } from "react";
 
-import { PLAYGROUND_REGISTRY } from "@/lib/registry";
 import metadataMap from "@/lib/registry.metadata.json";
+import registryManifest from "@/registry";
 
-type RegistryEntry = {
-  name?: string;
-  type?: string;
-  component?: React.ComponentType<any>;
-  metadata?: unknown;
+type RegistryItem = {
+  name: string;
+  type: string;
+  title?: string;
+  description?: string;
 };
 
 function safeStringify(value: unknown): string {
@@ -22,23 +22,29 @@ function safeStringify(value: unknown): string {
 
 export default function CatalogPage() {
   const [query, setQuery] = useState("");
+  const [visibleCount, setVisibleCount] = useState(24);
+  const [previewKeys, setPreviewKeys] = useState<Record<string, boolean>>({});
+
+  const registryItems = ((registryManifest as { items?: RegistryItem[] }).items ??
+    []) as RegistryItem[];
 
   const items = useMemo(() => {
-    return Object.entries(PLAYGROUND_REGISTRY)
-      .map(([key, value]) => ({ key, ...(value as RegistryEntry) }))
+    return registryItems
       .filter((item) => {
-        const haystack = `${item.key} ${item.name ?? ""} ${item.type ?? ""}`.toLowerCase();
+        const haystack = `${item.name ?? ""} ${item.title ?? ""} ${item.type ?? ""}`.toLowerCase();
         return haystack.includes(query.trim().toLowerCase());
       })
-      .sort((a, b) => (a.name ?? a.key).localeCompare(b.name ?? b.key));
-  }, [query]);
+      .sort((a, b) => (a.title ?? a.name).localeCompare(b.title ?? b.name));
+  }, [query, registryItems]);
+
+  const visibleItems = items.slice(0, visibleCount);
 
   return (
     <div className="container mx-auto max-w-7xl px-6 py-8">
       <div className="mb-6 space-y-2">
         <h1 className="font-semibold text-2xl tracking-tight">Component Catalog</h1>
         <p className="text-muted-foreground text-sm">
-          Auto-generated from <code>PLAYGROUND_REGISTRY</code>. New registered components appear here automatically.
+          Auto-generated from <code>registry.json</code>. New registered components appear here automatically.
         </p>
       </div>
 
@@ -52,42 +58,66 @@ export default function CatalogPage() {
       </div>
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        {items.map((item) => {
-          const Component = item.component;
+        {visibleItems.map((item) => {
+          const showPreview = Boolean(previewKeys[item.name]);
 
           return (
-            <section key={item.key} className="rounded-lg border bg-card p-4">
+            <section key={item.name} className="rounded-lg border bg-card p-4">
               <header className="mb-3 border-b pb-3">
-                <h2 className="font-medium text-base">{item.name ?? item.key}</h2>
-                <p className="text-muted-foreground text-xs">key: {item.key}</p>
+                <h2 className="font-medium text-base">{item.title ?? item.name}</h2>
+                <p className="text-muted-foreground text-xs">key: {item.name}</p>
                 <p className="text-muted-foreground text-xs">type: {item.type ?? "unknown"}</p>
               </header>
 
               <div className="mb-3 rounded-md border bg-background p-3">
-                {Component ? <Component /> : <p className="text-muted-foreground text-sm">No renderable component</p>}
+                {!showPreview ? (
+                  <button
+                    type="button"
+                    className="rounded-md border px-3 py-1.5 text-xs"
+                    onClick={() =>
+                      setPreviewKeys((prev) => ({ ...prev, [item.name]: true }))
+                    }
+                  >
+                    Render preview
+                  </button>
+                ) : (
+                  <iframe
+                    src={`/demo/${item.name}`}
+                    className="h-72 w-full rounded-md border"
+                    title={`${item.name} preview`}
+                  />
+                )}
               </div>
 
-              {item.metadata ? (
-                <details className="rounded-md border bg-background p-2">
-                  <summary className="cursor-pointer text-sm">Props metadata</summary>
-                  <pre className="mt-2 overflow-auto text-xs">{safeStringify(item.metadata)}</pre>
-                </details>
-              ) : (
-                <details className="rounded-md border bg-background p-2">
-                  <summary className="cursor-pointer text-sm">Props metadata</summary>
-                  <pre className="mt-2 overflow-auto text-xs">
-                    {safeStringify(
+              <details className="rounded-md border bg-background p-2">
+                <summary className="cursor-pointer text-sm">Props metadata</summary>
+                <pre className="mt-2 overflow-auto text-xs">
+                  {safeStringify(
+                    (metadataMap as Record<string, unknown>)[item.name] ??
                       (metadataMap as Record<string, unknown>)[
-                        String(item.name ?? item.key).replace(/^widget_/, "").toLowerCase()
-                      ] ?? null
-                    )}
-                  </pre>
-                </details>
-              )}
+                        item.name.replace(/^widget_/, "").toLowerCase()
+                      ] ??
+                      null,
+                  )}
+                </pre>
+              </details>
             </section>
           );
         })}
       </div>
+      {visibleCount < items.length ? (
+        <div className="mt-6 flex justify-center">
+          <button
+            type="button"
+            className="rounded-md border px-4 py-2 text-sm"
+            onClick={() =>
+              setVisibleCount((count) => Math.min(count + 24, items.length))
+            }
+          >
+            Load more ({items.length - visibleCount} remaining)
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }

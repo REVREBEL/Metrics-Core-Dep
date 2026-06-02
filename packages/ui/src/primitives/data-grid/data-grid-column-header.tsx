@@ -1,11 +1,11 @@
 "use client"
 
 import { type HTMLAttributes, memo, type ReactNode, useMemo } from "react"
-import { useDataGrid } from "@/components/reui/data-grid/data-grid"
+import { useDataGrid } from "./data-grid"
 import { type Column } from "@tanstack/react-table"
 
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { Button } from "@buttons"
 import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
@@ -18,7 +18,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@dropdowns"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { ArrowDown02Icon, ArrowUp02Icon, UnfoldMoreIcon, Tick02Icon, ArrowLeft03Icon, ArrowRight03Icon, ArrowLeft02Icon, ArrowRight02Icon, SlidersHorizontalIcon, PinOffIcon } from "@hugeicons/core-free-icons"
 

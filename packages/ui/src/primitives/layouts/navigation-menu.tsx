@@ -3,7 +3,7 @@ import { NavigationMenu as NavigationMenuPrimitive } from "radix-ui";
 import type * as React from "react";
 
 import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import { IconHugeiconsIcon } from "@tabler/icons-react";
 
 function NavigationMenu({

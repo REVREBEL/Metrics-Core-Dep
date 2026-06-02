@@ -8,7 +8,7 @@ import * as React from "react";
 import { Button } from "@buttons";
 import { useIsMobile } from "@hooks";
 import { Input } from "@inputs";
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import { Skeleton } from "@skeleton";
 import {
 	Separator,

@@ -3,7 +3,7 @@ import { cva } from "class-variance-authority";
 import { IconCaretDownFilled } from '@tabler/icons-react';
 import type * as React from "react";
 
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 
 function NavigationMenu({
   className,

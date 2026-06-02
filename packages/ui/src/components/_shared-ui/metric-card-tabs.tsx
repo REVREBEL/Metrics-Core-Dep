@@ -3,7 +3,7 @@
 import * as React from "react";
 
 import { Tabs, TabsList, TabsTrigger } from "@tabs";
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 
 export type MetricCardTabsOption<TValue extends string = string> = {
   label: React.ReactNode;

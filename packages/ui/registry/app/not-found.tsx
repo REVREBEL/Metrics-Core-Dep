@@ -3,14 +3,11 @@ import Link from "next/link";
 import {
   MobileSidebarTrigger,
   RegistrySidebar,
-} from "@/components/registry/registry-sidebar";
-import { Button } from "@/components/ui/button";
-import { SidebarProvider } from "@/components/ui/sidebar";
-import { Toaster } from "@/components/ui/sonner";
+} from "@/primitives/registry/registry-sidebar";
 
 export default function NotFound() {
   return (
-    <SidebarProvider>
+    <>
       <MobileSidebarTrigger />
       <RegistrySidebar />
       <main className="flex w-full justify-center">
@@ -22,16 +19,21 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <div className="mt-8 flex gap-3">
-            <Button asChild>
-              <Link href="/">Go Home</Link>
-            </Button>
-            <Button variant="outline" asChild>
-              <Link href="/r/registry.json">View Registry</Link>
-            </Button>
+            <Link
+              className="rounded-md bg-primary px-4 py-2 text-primary-foreground text-sm"
+              href="/"
+            >
+              Go Home
+            </Link>
+            <Link
+              className="rounded-md border px-4 py-2 text-sm"
+              href="/r/registry.json"
+            >
+              View Registry
+            </Link>
           </div>
         </div>
       </main>
-      <Toaster />
-    </SidebarProvider>
+    </>
   );
 }

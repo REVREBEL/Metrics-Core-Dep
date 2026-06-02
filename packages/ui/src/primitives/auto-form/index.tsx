@@ -1,18 +1,18 @@
 "use client";
-import { Form } from "@auto-form";
 import React from "react";
 import type { DefaultValues, FormState, UseFormReturn } from "react-hook-form";
 import { useForm } from "react-hook-form";
 import type { z } from "zod";
 
 import { Button } from "@buttons";
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import AutoFormObject from "./fields/object";
 import type { ZodObjectOrWrapped } from "./helpers";
 import { getDefaultValues, getObjectFormSchema } from "./helpers";
 import type { Dependency, FieldConfig } from "./types";
+import { Form } from "./form";
 
 export function AutoFormSubmit({
   children,
@@ -123,3 +123,5 @@ function AutoForm<SchemaType extends ZodObjectOrWrapped>({
 export { AutoForm };
 
 
+export * from "./fields/field";
+export * from "./form";

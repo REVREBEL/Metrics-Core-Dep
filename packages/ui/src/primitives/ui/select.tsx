@@ -1,4 +1,4 @@
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import * as SelectPrimitive from "@radix-ui/react-select";
 import { IconCheck, IconChevronDown, IconChevronUp } from "@tabler/icons-react";
 import type * as React from "react";

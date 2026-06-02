@@ -4,7 +4,7 @@ import { mergeProps } from "@base-ui/react/merge-props";
 import { useRender } from "@base-ui/react/use-render";
 import type * as React from "react";
 
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import { ChevronRightIcon, DotsHorizontalIcon } from "@radix-ui/react-icons";
 
 function Breadcrumb({ ...props }: React.ComponentProps<"nav">) {

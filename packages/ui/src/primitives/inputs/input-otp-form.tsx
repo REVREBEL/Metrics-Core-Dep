@@ -14,7 +14,7 @@ import {
   InputOTPSeparator,
   InputOTPSlot,
 } from "./input-otp"
-import { IconRefreshCwIcon } from "@tabler/icons-react"
+import { IconRefresh } from "@tabler/icons-react"
 
 export function InputOTPForm() {
   return (
@@ -33,7 +33,7 @@ export function InputOTPForm() {
               Verification code
             </FieldLabel>
             <Button variant="outline" size="xs">
-              <RefreshCwIcon />
+              <IconRefresh />
               Resend Code
             </Button>
           </div>

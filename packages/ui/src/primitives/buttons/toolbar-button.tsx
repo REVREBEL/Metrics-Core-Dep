@@ -6,9 +6,9 @@ import {
   TooltipTrigger,
 } from "@ui"
 import { Toggle } from "@ui"
-import { cn } from "@lib"
+import { cn } from "@/lib/utils"
 
-interface ToolbarButtonProps extends React.ComponentProps<typeof Toggle> {
+export interface ToolbarButtonProps extends React.ComponentProps<typeof Toggle> {
   isActive?: boolean
   tooltip?: string
   tooltipOptions?: TooltipContentProps

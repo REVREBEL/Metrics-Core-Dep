@@ -3,7 +3,6 @@ import { notFound } from "next/navigation";
 import { demos } from "@/app/demo/[name]/index";
 
 import { Renderer } from "@/app/demo/[name]/renderer";
-import { getRegistryItem } from "@/lib/registry";
 
 export async function generateStaticParams() {
   return Object.keys(demos).map((name) => ({
@@ -18,13 +17,11 @@ export default async function DemoPage({
 }) {
   const { name } = await params;
 
-  const component = getRegistryItem(name);
-
-  if (!component) {
+  const demo = demos[name as keyof typeof demos];
+  if (!demo) {
     notFound();
   }
-
-  const { components } = demos[name];
+  const { components } = demo;
 
   return (
     <div className="flex h-[100vh] w-full flex-col gap-4 bg-card">

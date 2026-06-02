@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { IconXboxX } from "@tabler/icons-react";
 import type * as React from "react";
