@@ -36,8 +36,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@ui";
-import { getBlocks, getComponents, getUIPrimitives } from "@lib";
+} from "@layouts";
+import { getBlocks, getComponents, getUIPrimitives } from "@/lib/registry";
 
 const uiItems = getUIPrimitives();
 const componentItems = getComponents();

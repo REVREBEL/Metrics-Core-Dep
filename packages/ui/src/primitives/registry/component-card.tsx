@@ -18,7 +18,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@ui";
-import type { Component } from "@lib";
+import type { Component } from "@/lib/registry";
 
 interface ComponentCardProps {
   component: Component;
