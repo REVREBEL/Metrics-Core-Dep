@@ -10,7 +10,7 @@ import {
   DropdownMenuGroup,
   DropdownMenuLabel,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@dropdowns"
 
 function DataGridColumnVisibility<TData>({
   table,

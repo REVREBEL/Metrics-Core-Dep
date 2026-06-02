@@ -1,4 +1,4 @@
-import { CircleCheckIcon } from 'lucide-react'
+import { IconSquareRoundedCheckFilled } from '@tabler/icons-react';
 
 type Feature = {
   title: string
@@ -23,7 +23,7 @@ const SocialProof = ({ features }: { features: Feature[] }) => {
             <ul className='mt-11 space-y-6 text-lg font-medium'>
               {features.map((feature, index) => (
                 <li key={index} className='flex gap-2'>
-                  <CircleCheckIcon className='mt-0.75 size-5' />
+                  <IconSquareRoundedCheckFilled className='mt-0.75 size-5' />
                   <span>{feature.title}</span>
                 </li>
               ))}

@@ -1,6 +1,6 @@
 import type { ComponentType } from 'react'
 
-import { Card, CardContent, CardDescription, CardTitle } from '@/components/ui/card'
+import { Card, CardContent, CardDescription, CardTitle } from "@ui/card"
 
 type MetricItem = {
   icon: ComponentType

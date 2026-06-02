@@ -22,6 +22,8 @@ function safeStringify(value: unknown): string {
 
 export default function CatalogPage() {
   const [query, setQuery] = useState("");
+  const [visibleCount, setVisibleCount] = useState(24);
+  const [previewKeys, setPreviewKeys] = useState<Record<string, boolean>>({});
 
   const items = useMemo(() => {
     return Object.entries(PLAYGROUND_REGISTRY)
@@ -32,6 +34,8 @@ export default function CatalogPage() {
       })
       .sort((a, b) => (a.name ?? a.key).localeCompare(b.name ?? b.key));
   }, [query]);
+
+  const visibleItems = items.slice(0, visibleCount);
 
   return (
     <div className="container mx-auto max-w-7xl px-6 py-8">
@@ -52,8 +56,9 @@ export default function CatalogPage() {
       </div>
 
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        {items.map((item) => {
+        {visibleItems.map((item) => {
           const Component = item.component;
+          const showPreview = Boolean(previewKeys[item.key]);
 
           return (
             <section key={item.key} className="rounded-lg border bg-card p-4">
@@ -64,7 +69,23 @@ export default function CatalogPage() {
               </header>
 
               <div className="mb-3 rounded-md border bg-background p-3">
-                {Component ? <Component /> : <p className="text-muted-foreground text-sm">No renderable component</p>}
+                {!showPreview ? (
+                  <button
+                    type="button"
+                    className="rounded-md border px-3 py-1.5 text-xs"
+                    onClick={() =>
+                      setPreviewKeys((prev) => ({ ...prev, [item.key]: true }))
+                    }
+                  >
+                    Render preview
+                  </button>
+                ) : Component ? (
+                  <Component />
+                ) : (
+                  <p className="text-muted-foreground text-sm">
+                    No renderable component
+                  </p>
+                )}
               </div>
 
               {item.metadata ? (
@@ -88,6 +109,19 @@ export default function CatalogPage() {
           );
         })}
       </div>
+      {visibleCount < items.length ? (
+        <div className="mt-6 flex justify-center">
+          <button
+            type="button"
+            className="rounded-md border px-4 py-2 text-sm"
+            onClick={() =>
+              setVisibleCount((count) => Math.min(count + 24, items.length))
+            }
+          >
+            Load more ({items.length - visibleCount} remaining)
+          </button>
+        </div>
+      ) : null}
     </div>
   );
 }

@@ -3,7 +3,7 @@
 import type { FormEvent } from "react";
 import { useState } from "react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@buttons";
 import {
   Combobox,
   ComboboxEmpty,
@@ -11,9 +11,8 @@ import {
   ComboboxItem,
   ComboboxList,
   ComboboxPopup,
-} from "@/components/ui/combobox";
-import { Field, FieldError, FieldLabel } from "@/components/ui/field";
-import { Form } from "@/components/ui/form";
+} from "@ui";
+import { Field, FieldError, FieldLabel, Form } from "@auto-form";
 
 const items = [
   { label: "Apple", value: "apple" },
@@ -43,7 +42,7 @@ export default function Particle() {
   };
 
   return (
-    <Form className="max-w-64" onSubmit={onSubmit}>
+    <Form className="max-w-64" onSubmit={onSubmit as any}>
       <Field name="item">
         <FieldLabel>Favorite item</FieldLabel>
         <Combobox disabled={loading} items={items} required>
@@ -51,7 +50,7 @@ export default function Particle() {
           <ComboboxPopup>
             <ComboboxEmpty>No results found.</ComboboxEmpty>
             <ComboboxList>
-              {(item) => (
+              {(item: any) => (
                 <ComboboxItem key={item.value} value={item}>
                   {item.label}
                 </ComboboxItem>
