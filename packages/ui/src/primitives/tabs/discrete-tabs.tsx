@@ -2,7 +2,7 @@
 
 import { type SetStateAction, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 
 const Calendar: React.FC<React.SVGProps<SVGSVGElement> & { size?: number }> = ({
   className,

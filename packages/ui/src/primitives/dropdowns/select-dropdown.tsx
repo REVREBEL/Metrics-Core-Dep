@@ -1,5 +1,5 @@
 import { Loader } from 'lucide-react'
-import { cn } from '@lib'
+import { cn } from "@/lib/utils"
 import { FormControl } from '@auto-form'
 import {
   Select,

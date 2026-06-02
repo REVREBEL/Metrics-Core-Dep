@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import type { z } from "zod";
 
 import { Button } from "@buttons";
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import AutoFormObject from "./fields/object";
