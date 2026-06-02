@@ -4,7 +4,7 @@ import { NumberField as NumberFieldPrimitive } from "@base-ui/react/number-field
 import { IconMinus, IconPlus } from "@tabler/icons-react";
 import * as React from "react";
 
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import { Label } from "@ui";
 
 const NumberFieldContext = React.createContext<{

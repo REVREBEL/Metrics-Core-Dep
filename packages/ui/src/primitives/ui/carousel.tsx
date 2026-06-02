@@ -7,7 +7,7 @@ import * as React from "react";
 
 import { Button } from "@buttons";
 import { ArrowLeft01Icon, ArrowRight01Icon } from "@hugeicons/core-free-icons";
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import { IconHugeiconsIcon } from "@tabler/icons-react";
 
 type CarouselApi = UseEmblaCarouselType[1];

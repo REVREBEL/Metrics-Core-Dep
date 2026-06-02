@@ -1,4 +1,4 @@
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import { IconLoader2 } from "@tabler/icons-react";
 
 function Spinner({

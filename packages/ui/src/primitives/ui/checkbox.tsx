@@ -1,4 +1,4 @@
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import { IconCheck } from "@tabler/icons-react";
 import type * as React from "react";

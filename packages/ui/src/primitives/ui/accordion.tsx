@@ -4,7 +4,7 @@ import { Accordion as AccordionPrimitive } from "radix-ui";
 import type * as React from "react";
 
 import { ArrowDown01Icon, ArrowUp01Icon } from "@hugeicons/core-free-icons";
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import { IconHugeiconsIcon } from "@tabler/icons-react";
 
 function Accordion({

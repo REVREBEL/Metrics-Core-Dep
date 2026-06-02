@@ -44,7 +44,7 @@ import {
 import { CSS } from "@dnd-kit/utilities"
 import { type Cell, flexRender, type HeaderGroup, type Row } from "@tanstack/react-table"
 
-import { cn } from "@lib"
+import { cn } from "@/lib/utils"
 import { Button } from "@buttons"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { DragDropHorizontalIcon } from "@hugeicons/core-free-icons"

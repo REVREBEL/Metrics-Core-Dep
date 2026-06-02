@@ -3,7 +3,7 @@
 import * as React from "react";
 import { Info } from "lucide-react";
 
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import { MetricCardShell } from "./metric-card-shell";
 import type { MetricTheme } from "./metric-theme";
 

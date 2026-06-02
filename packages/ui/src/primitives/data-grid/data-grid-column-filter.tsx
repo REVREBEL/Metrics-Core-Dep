@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react"
 import { type Column } from "@tanstack/react-table"
 
-import { cn } from "@lib"
+import { cn } from "@/lib/utils"
 import { Badge } from "@ui"
 import { Button } from "@buttons"
 import { Input } from "@inputs"

@@ -1,6 +1,6 @@
 import { IconArrowDownAZ, IconArrowUpAZ } from "@tabler/icons-react";
 
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 
 import { TableHead } from "./table";
 

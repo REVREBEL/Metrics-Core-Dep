@@ -1,4 +1,4 @@
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import * as SheetPrimitive from "@radix-ui/react-dialog";
 import { IconX } from "@tabler/icons-react";
 import type * as React from "react";

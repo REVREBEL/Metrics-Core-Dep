@@ -10,7 +10,7 @@ import {
 } from "@tabler/icons-react";
 
 import { buttonVariants } from "@buttons";
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 
 const toastManager = Toast.createToastManager();
 const anchoredToastManager = Toast.createToastManager();

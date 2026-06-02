@@ -5,7 +5,7 @@ import { IconChevronsUpDown, IconX } from "@tabler/icons-react";
 import * as React from "react";
 
 import { Input } from "@inputs";
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import { ScrollArea } from "@ui";
 
 const ComboboxContext = React.createContext<{

@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@buttons";
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import { Popover, PopoverContent, PopoverTrigger } from "@popovers";
 import { CalendarIcon } from "@radix-ui/react-icons";
 import { Calendar } from "@ui";
