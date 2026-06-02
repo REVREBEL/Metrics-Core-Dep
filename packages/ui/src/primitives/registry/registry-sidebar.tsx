@@ -38,7 +38,6 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@layouts";
-import { getBlocks, getComponents, getUIPrimitives } from "@/lib/registry";
 
 type RegistryItem = {
   name: string;
