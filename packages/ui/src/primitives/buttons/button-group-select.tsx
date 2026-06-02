@@ -6,7 +6,7 @@ import {
 	SelectGroup,
 	SelectItem,
 	SelectTrigger,
-} from "@dropdown";
+} from "@ui";
 import { ArrowRight01Icon } from "@hugeicons/core-free-icons";
 import { Input } from "@inputs";
 import { IconHugeiconsIcon } from "@tabler/icons-react";
@@ -28,7 +28,7 @@ export default function ButtonGroupSelect() {
 			<ButtonGroup>
 				<Select
 					value={currency}
-					onValueChange={(value) => setCurrency(value as string)}
+					onValueChange={(value: string) => setCurrency(value)}
 				>
 					<SelectTrigger className="font-mono">{currency}</SelectTrigger>
 					<SelectContent align="start">
@@ -46,7 +46,7 @@ export default function ButtonGroupSelect() {
 			</ButtonGroup>
 			<ButtonGroup>
 				<Button aria-label="Send" size="icon" variant="outline">
-					<HugeiconsIcon icon={ArrowRight01Icon} />
+					<IconHugeiconsIcon icon={ArrowRight01Icon} />
 				</Button>
 			</ButtonGroup>
 		</ButtonGroup>

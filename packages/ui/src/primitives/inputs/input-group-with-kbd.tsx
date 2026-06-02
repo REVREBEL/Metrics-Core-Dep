@@ -4,7 +4,6 @@ import {
   FieldGroup,
   FieldLabel,
 } from "@auto-form"
-import { Input } from "./input"
 import {
   InputGroup,
   InputGroupAddon,
@@ -12,7 +11,7 @@ import {
 } from "./input-group"
 import { Kbd, KbdGroup } from "@ui"
 import { Spinner } from "@ui"
-import { IconCheckIcon, IconInfoIcon, IconSearchIcon, IconSparklesIcon } from "@tabler/icons-react"
+import { IconCheck, IconInfoCircle, IconSearch, IconSparkles } from "@tabler/icons-react"
 
 export function InputGroupWithKbd() {
   return (
@@ -47,7 +46,7 @@ export function InputGroupWithKbd() {
             placeholder="Type to search..."
           />
           <InputGroupAddon align="inline-start">
-            <SparklesIcon />
+            <IconSparkles />
           </InputGroupAddon>
           <InputGroupAddon align="inline-end">
             <KbdGroup>
@@ -63,7 +62,7 @@ export function InputGroupWithKbd() {
           <InputGroupInput id="input-username-26" defaultValue="shadcn" />
           <InputGroupAddon align="inline-end">
             <div className="flex size-4 items-center justify-center rounded-full bg-green-500 dark:bg-green-800">
-              <CheckIcon className="size-3 text-white" />
+              <IconCheck className="size-3 text-white" />
             </div>
           </InputGroupAddon>
         </InputGroup>
@@ -77,7 +76,7 @@ export function InputGroupWithKbd() {
           placeholder="Search documentation..."
         />
         <InputGroupAddon>
-          <SearchIcon />
+          <IconSearch />
         </InputGroupAddon>
         <InputGroupAddon align="inline-end">12 results</InputGroupAddon>
       </InputGroup>
@@ -88,7 +87,7 @@ export function InputGroupWithKbd() {
           disabled
         />
         <InputGroupAddon>
-          <SearchIcon />
+          <IconSearch />
         </InputGroupAddon>
         <InputGroupAddon align="inline-end">Disabled</InputGroupAddon>
       </InputGroup>
@@ -98,7 +97,7 @@ export function InputGroupWithKbd() {
           <InputGroup>
             <InputGroupInput id="input-group-11" placeholder="First Name" />
             <InputGroupAddon align="inline-end">
-              <InfoIcon />
+              <IconInfoCircle />
             </InputGroupAddon>
           </InputGroup>
         </Field>
@@ -107,7 +106,7 @@ export function InputGroupWithKbd() {
           <InputGroup>
             <InputGroupInput id="input-group-12" placeholder="Last Name" />
             <InputGroupAddon align="inline-end">
-              <InfoIcon />
+              <IconInfoCircle />
             </InputGroupAddon>
           </InputGroup>
         </Field>
