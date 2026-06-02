@@ -24,7 +24,11 @@ export default async function DemoPage({
     notFound();
   }
 
-  const { components } = demos[name];
+  const demo = demos[name as keyof typeof demos];
+  if (!demo) {
+    notFound();
+  }
+  const { components } = demo;
 
   return (
     <div className="flex h-[100vh] w-full flex-col gap-4 bg-card">

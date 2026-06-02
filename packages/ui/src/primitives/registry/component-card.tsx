@@ -24,12 +24,14 @@ interface ComponentCardProps {
   component: Component;
   baseUrl: string;
   prompt: string;
+  hasDemo?: boolean;
 }
 
 export function ComponentCard({
   component,
   baseUrl,
   prompt,
+  hasDemo = true,
 }: ComponentCardProps) {
   const [copied, setCopied] = useState(false);
 
@@ -95,18 +97,27 @@ export function ComponentCard({
         </CardHeader>
 
         <CardContent className="flex flex-col items-center justify-center gap-4 rounded-md px-6">
-          <div
-            className={
-              "h-[800px] w-full overflow-hidden rounded-md border border-border p-4"
-            }
-          >
-            <iframe
-              id="iframe"
-              src={`/demo/${component.name}`}
-              className="h-full w-full"
-              title="Page Preview"
-            />
-          </div>
+          {hasDemo ? (
+            <div
+              className={
+                "h-[800px] w-full overflow-hidden rounded-md border border-border p-4"
+              }
+            >
+              <iframe
+                id="iframe"
+                src={`/demo/${component.name}`}
+                className="h-full w-full"
+                title="Page Preview"
+              />
+            </div>
+          ) : (
+            <div className="w-full rounded-md border border-border p-6 text-sm text-muted-foreground">
+              No demo page is registered for <code>{component.name}</code> yet.
+              This registry item is available for install/export, but needs a
+              demo entry in <code>registry/app/demo/[name]/index.tsx</code> to
+              render a live preview.
+            </div>
+          )}
         </CardContent>
       </Card>
     </section>
