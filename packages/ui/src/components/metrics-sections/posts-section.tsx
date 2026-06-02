@@ -13,11 +13,11 @@ import {
   Trash2,
 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@buttons";
 import {
   MetricCard,
   MetricCardTitle,
-} from "@/components/metric-cards/_shared/MetricCard";
+} from "@shared-ui";
 
 type Platform = "Facebook" | "Instagram" | "X" | "LinkedIn" | "TikTok";
 type PostStatus = "scheduled" | "posted" | "failed" | "draft";
@@ -97,7 +97,7 @@ function getPlatformSocial(platform: Platform): SocialKey {
     X: "x",
     LinkedIn: "linkedin",
     TikTok: "tiktok",
-  }[platform];
+  }[platform] as SocialKey;
 }
 
 function getPrimarySocial(platforms: Platform[]): SocialKey {

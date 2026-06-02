@@ -1,10 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import ArrowCircleDown from "@/icons/ArrowCircleDown";
-import ArrowCircleUp from "@/icons/ArrowCircleUp";
+import { ArrowCircleDown, ArrowCircleUp } from "@icons";
 import { TrendingUp } from "lucide-react";
-import { Card, CardContent } from "@/components/primitives/card";
+import { Card, CardContent } from "@ui";
 import {
   AreaChart,
   Area,

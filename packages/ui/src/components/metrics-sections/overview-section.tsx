@@ -11,7 +11,7 @@ import {
   WifiOff,
 } from "lucide-react";
 
-import { MetricCard, MetricCardTabs } from "@/components/metric-cards/_shared/MetricCard";
+import { MetricCard, MetricCardTabs } from "@shared-ui";
 
 type AudienceEntry = {
   label: string;

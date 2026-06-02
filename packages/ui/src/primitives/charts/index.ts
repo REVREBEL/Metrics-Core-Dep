@@ -1,5 +1,5 @@
 export * from "./chart-demos"
-export * from "./chart-sales-metrics"
+export { default as SalesMetricsCard } from "./chart-sales-metrics"
 export * from "./chart"
 export * from "./line-chart"
 export * from "./statistics-card"

@@ -28,13 +28,13 @@ import {
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
-} from "@/components/ui/chart";
+} from "@charts";
 import {
   MetricCard,
   MetricCardLabel,
   MetricCardTitle,
   MetricInsight,
-} from "@/components/metric-cards/_shared/MetricCard";
+} from "@shared-ui";
 
 type SocialKey = "facebook" | "instagram" | "x" | "linkedin" | "tiktok" | "blog";
 
