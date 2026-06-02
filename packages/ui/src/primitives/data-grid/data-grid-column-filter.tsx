@@ -3,16 +3,16 @@
 import { useMemo, useState } from "react"
 import { type Column } from "@tanstack/react-table"
 
-import { cn } from "@/lib/utils"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { cn } from "@lib"
+import { Badge } from "@ui"
+import { Button } from "@buttons"
+import { Input } from "@inputs"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
-import { Separator } from "@/components/ui/separator"
+} from "@popovers"
+import { Separator } from "@ui"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { AddCircleIcon, Tick02Icon } from "@hugeicons/core-free-icons"
 

@@ -46,7 +46,11 @@
     "./metrics-core": "./src/components/metrics-core/index.ts",
     "./metrics-sections": "./src/components/metrics-sections/index.ts",
     "./metrics-charts": "./src/components/metrics-charts/index.ts",
-    "./metrics-tables": "./src/components/metrics-tables/index.ts"
+    "./metrics-tables": "./src/components/metrics-tables/index.ts",
+    "./data-grid": "./src/primitives/data-grid/index.ts",
+    "./image-blocks": "./src/primitives/image-blocks/index.ts",
+    "./links": "./src/primitives/links/index.ts",
+    "./lists": "./src/primitives/lists/index.ts"
   },
   "scripts": {
     "dev": "pnpm registry:build && next dev --turbopack -p 3204",
@@ -54,17 +58,20 @@
     "start": "next start",
     "lint": "biome check",
     "lint:fix": "biome check --write",
-    "registry:build": "pnpm run registry:sync && pnpm run registry:manifest:sync && pnpm run registry:tokens:sync && pnpm run registry:prepare && pnpm dlx shadcn@latest build",
-    "barrels:generate": "node ./scripts/generate-barrels.mts --exports",
-    "barrels:check": "node ./scripts/generate-barrels.mts --check --exports",
-    "registry:validate": "node ./scripts/validate-registries.mts",
+    "registry:build": "pnpm run registry:sync && pnpm run registry:items:sync && pnpm run registry:manifest:sync && pnpm run registry:tokens:sync && pnpm run registry:playground:sync && pnpm run registry:prepare && pnpm dlx shadcn@latest build",
+    "barrels:generate": "node ./scripts/generate-barrels.mjs --exports",
+    "barrels:check": "node ./scripts/generate-barrels.mjs --check --exports",
+    "registry:validate": "node ./scripts/validate-registries.mjs",
     "registry:sync": "node ./scripts/registry-sync.mjs",
     "registry:manifest:sync": "node ./scripts/registry-manifest-sync.mjs",
     "registry:tokens:sync": "node ./scripts/registry-tokens-sync.mjs",
-    "registry:prepare": "node ./scripts/registry-prepare-next-root.mjs"
+    "registry:prepare": "node ./scripts/registry-prepare-next-root.mjs",
+    "registry:items:sync": "node ./scripts/registry-items-sync.mjs",
+    "registry:playground:sync": "node ./scripts/registry-playground-sync.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
+    "@tabler/icons-react": "^3.44.0",
     "@tanstack/react-table": "^8.21.3",
     "@vercel/analytics": "^2.0.0",
     "@vercel/speed-insights": "^2.0.0",
@@ -95,6 +102,7 @@
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/user-event": "^14.6.1",
+    "@tiptap/react": "^3.24.0",
     "@types/jsdom": "^28.0.0",
     "@types/node": "^22.19.3",
     "@types/react": "^19.2.13",

@@ -1,14 +1,14 @@
 import * as React from "react"
 import type { Editor } from "@tiptap/react"
 import type { VariantProps } from "class-variance-authority"
-import type { toggleVariants } from "@/components/ui/toggle"
+import type { toggleVariants } from "@ui"
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
-} from "@/components/ui/popover"
+} from "@popovers"
 import { Link2Icon } from "@radix-ui/react-icons"
-import { ToolbarButton } from "../toolbar-button"
+import { ToolbarButton } from "@buttons"
 import { LinkEditBlock } from "./link-edit-block"
 
 interface LinkEditPopoverProps extends VariantProps<typeof toggleVariants> {

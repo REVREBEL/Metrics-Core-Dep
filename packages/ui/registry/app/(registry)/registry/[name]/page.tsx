@@ -2,6 +2,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { demos } from "@/app/demo/[name]/index";
 import { ComponentCard } from "@/components/registry/component-card";
 import { Button } from "@/components/ui/button";
 import { getRegistryItem, getRegistryItems } from "@/lib/registry";
@@ -26,6 +27,7 @@ export default async function RegistryItemPage({
   if (!component) {
     notFound();
   }
+  const hasDemo = Boolean(demos[component.name as keyof typeof demos]);
 
   return (
     <div className="container p-5 md:p-10">
@@ -47,6 +49,7 @@ export default async function RegistryItemPage({
         component={component}
         baseUrl={process.env.VERCEL_PROJECT_PRODUCTION_URL ?? ""}
         prompt={getPrompt()}
+        hasDemo={hasDemo}
       />
     </div>
   );

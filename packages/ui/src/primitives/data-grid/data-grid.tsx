@@ -8,7 +8,7 @@ import {
   type Table,
 } from "@tanstack/react-table"
 
-import { cn } from "@/lib/utils"
+import { cn } from "@lib"
 
 declare module "@tanstack/react-table" {
    

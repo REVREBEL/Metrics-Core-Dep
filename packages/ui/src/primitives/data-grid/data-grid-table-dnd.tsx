@@ -1,7 +1,7 @@
 "use client"
 
 import { type CSSProperties, Fragment, useId, useRef } from "react"
-import { useDataGrid } from "@/components/reui/data-grid/data-grid"
+import { useDataGrid } from "./data-grid"
 import {
   DataGridTableBase,
   DataGridTableBody,
@@ -16,7 +16,7 @@ import {
   DataGridTableHeadRowCell,
   DataGridTableHeadRowCellResize,
   DataGridTableRowSpacer,
-} from "@/components/reui/data-grid/data-grid-table"
+} from "./data-grid-table"
 import {
   closestCenter,
   DndContext,
@@ -42,7 +42,7 @@ import {
   type Row,
 } from "@tanstack/react-table"
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@buttons"
 import { HugeiconsIcon } from "@hugeicons/react"
 import { DragDropVerticalIcon } from "@hugeicons/core-free-icons"
 
