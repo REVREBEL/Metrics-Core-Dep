@@ -1,13 +1,13 @@
 import { IconDots } from "@tabler/icons-react"
 
-import { Button } from "@/components/ui/button"
+import { Button } from "@buttons"
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+} from "@dropdowns"
 import {
   Table,
   TableBody,
@@ -15,7 +15,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "@/components/ui/table"
+} from "./table"
 
 function ActionsMenu() {
   return (

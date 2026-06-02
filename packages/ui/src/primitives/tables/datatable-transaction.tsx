@@ -14,20 +14,20 @@ import {
   useReactTable
 } from '@tanstack/react-table'
 
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
+import { Avatar, AvatarFallback, AvatarImage } from '@ui'
+import { Badge } from '@ui'
+import { Button } from '@buttons'
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger
-} from '@/components/ui/dropdown-menu'
-import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem } from '@/components/ui/pagination'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+} from '@dropdowns'
+import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem } from '@ui'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './table'
 
-import { usePagination } from '@/hooks/use-pagination'
+import { usePagination } from '@hooks'
 
 export type Item = {
   id: string

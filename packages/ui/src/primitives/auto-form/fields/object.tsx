@@ -2,20 +2,24 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { FormField } from "@/components/ui/form";
+  AccordionTrigger
+} from "@ui";
+import { FormField } from "@auto-form";
 import { type useForm, useFormContext } from "react-hook-form";
+import * as React from "react";
 import * as z from "zod";
-import { DEFAULT_ZOD_HANDLERS, INPUT_COMPONENTS } from "../config";
-import type { Dependency, FieldConfig, FieldConfigItem } from "../types";
 import {
   beautifyObjectName,
   getBaseSchema,
   getBaseType,
   sortFieldsByOrder,
   zodToHtmlInputProps,
-} from "../helpers";
+  FieldConfig,
+  FieldConfigItem,
+  Dependency,
+  DEFAULT_ZOD_HANDLERS,
+  INPUT_COMPONENTS
+} from "@auto-form";
 import AutoFormArray from "./array";
 import resolveDependencies from "../dependencies";
 

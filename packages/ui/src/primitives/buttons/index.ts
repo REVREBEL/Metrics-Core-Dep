@@ -22,3 +22,6 @@ export { default as ButtonSecondary } from "./button-secondary";
 export { default as ButtonSize } from "./button-size";
 export { default as ButtonLoading } from "./button-spinner";
 export { default as ButtonWithIcon } from "./button-with-icon";
+export * from "./status-button";
+export * from "./toolbar-button";
+export { default as DiscoverButton } from "./discover-button";

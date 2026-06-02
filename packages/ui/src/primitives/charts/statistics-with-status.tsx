@@ -1,9 +1,9 @@
 import { TrendingUpIcon, TrendingDownIcon, MinusIcon, ShieldAlertIcon } from 'lucide-react'
 
-import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@ui'
+import { Card, CardContent, CardHeader, CardTitle } from '@ui'
 
-import { cn } from '@/lib/utils'
+import { cn } from '@lib'
 
 export type StatisticsCardProps = {
   value: string
