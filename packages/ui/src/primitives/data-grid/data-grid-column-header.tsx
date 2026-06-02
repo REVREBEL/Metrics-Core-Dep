@@ -4,7 +4,7 @@ import { type HTMLAttributes, memo, type ReactNode, useMemo } from "react"
 import { useDataGrid } from "./data-grid"
 import { type Column } from "@tanstack/react-table"
 
-import { cn } from "@lib"
+import { cn } from "@/lib/utils"
 import { Button } from "@buttons"
 import {
   DropdownMenu,

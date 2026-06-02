@@ -12,7 +12,7 @@ import {
 } from "@tanstack/react-table"
 import { cva } from "class-variance-authority"
 
-import { cn } from "@lib"
+import { cn } from "@/lib/utils"
 import { Checkbox } from "@ui"
 
 const headerCellSpacingVariants = cva("", {

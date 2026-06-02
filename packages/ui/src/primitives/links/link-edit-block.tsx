@@ -3,7 +3,7 @@ import { Button } from "@buttons"
 import { Label } from "@ui"
 import { Switch } from "@ui"
 import { Input } from "@inputs"
-import { cn } from "@lib"
+import { cn } from "@/lib/utils"
 
 export interface LinkEditorProps extends React.ComponentProps<"div"> {
   defaultUrl?: string

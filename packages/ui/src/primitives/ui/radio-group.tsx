@@ -1,4 +1,4 @@
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group";
 import type * as React from "react";
 

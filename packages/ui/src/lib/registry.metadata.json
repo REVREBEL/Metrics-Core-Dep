@@ -104,6 +104,11 @@
     "description": "",
     "props": []
   },
+  "metrics-core/metric-dashboard-card": {
+    "displayName": "metric-dashboard-card",
+    "description": "",
+    "props": []
+  },
   "metrics-core/model-comparison-card": {
     "displayName": "model-comparison-card",
     "description": "",

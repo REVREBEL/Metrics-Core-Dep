@@ -17,7 +17,7 @@ import { usePathname } from "next/navigation";
 import type * as React from "react";
 
 import { Button } from "@buttons";
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import {
 	Sidebar,
 	SidebarContent,

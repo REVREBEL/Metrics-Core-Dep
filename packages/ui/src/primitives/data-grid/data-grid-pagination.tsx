@@ -3,7 +3,7 @@
 import React, { type ReactNode } from "react"
 import { useDataGrid } from "./data-grid"
 
-import { cn } from "@lib"
+import { cn } from "@/lib/utils"
 import { Button } from "@buttons"
 import {
   Select,

@@ -3,7 +3,7 @@
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
-import { cn } from "@lib"
+import { cn } from "@/lib/utils"
 import { Button } from "@buttons"
 import { Textarea } from "@textarea"
 import { Input } from "./input"

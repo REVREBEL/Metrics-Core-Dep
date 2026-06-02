@@ -14,7 +14,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import { Button } from "@buttons";
 import { Input } from "@inputs";
-import { cn } from "@lib";
+import { cn } from "@/lib/utils";
 import {
 	Table,
 	TableBody,
