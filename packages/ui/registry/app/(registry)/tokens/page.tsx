@@ -4,8 +4,8 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import type React from "react";
 
-import { FontBlock } from "@/app/(registry)/tokens/font-block";
 import { ColorBlock } from "./color-block";
+import { FontBlock } from "./font-block";
 
 export default function TokensPage() {
   return (

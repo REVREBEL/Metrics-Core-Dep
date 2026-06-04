@@ -1,5 +1,5 @@
-import DashboardPage from "@/app/demo/[name]/blocks/dashboard-page";
-import ShellLayout from "@/app/demo/[name]/blocks/shell-layout";
+import DashboardPage from "./dashboard-page";
+import ShellLayout from "./shell-layout";
 
 export const dashboard = {
   name: "dashboard",

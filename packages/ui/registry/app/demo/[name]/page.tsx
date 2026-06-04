@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
 
-import { demos } from "@/app/demo/[name]/index";
+import { demos } from "./index";
 
-import { Renderer } from "@/app/demo/[name]/renderer";
+import { Renderer } from "./renderer";
 
 export async function generateStaticParams() {
   return Object.keys(demos).map((name) => ({

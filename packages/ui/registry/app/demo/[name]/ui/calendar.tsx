@@ -1,5 +1,5 @@
-import { MultiCalendar } from "@/app/demo/[name]/ui/multi-calendar";
-import { SingleCalendar } from "@/app/demo/[name]/ui/single-calendar";
+import { MultiCalendar } from "./multi-calendar";
+import { SingleCalendar } from "./single-calendar";
 
 export const calendar = {
   name: "calendar",
