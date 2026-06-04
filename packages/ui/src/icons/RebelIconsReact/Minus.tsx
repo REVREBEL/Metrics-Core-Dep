@@ -1,4 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgMinus = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100" {...props}><path d="M88.447 38.528H11.554a2.024 2.024 0 0 0-2.024 2.024v18.896c0 1.118.907 2.024 2.024 2.024h76.892a2.024 2.024 0 0 0 2.023-2.024V40.552a2.023 2.023 0 0 0-2.022-2.024" /></svg>;
+
+const SvgMinus = (props: SVGProps<SVGSVGElement>) => <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" {...props}><path d="M88.447 38.528H11.554c-1.118 0-2.024.907-2.024 2.024v18.896c0 1.118.907 2.024 2.024 2.024h76.892c1.117 0 2.023-.907 2.023-2.024V40.552c.001-1.117-.905-2.024-2.022-2.024Z"/></svg>;
+
 export default SvgMinus;

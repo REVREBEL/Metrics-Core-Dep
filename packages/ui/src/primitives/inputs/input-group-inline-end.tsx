@@ -4,7 +4,7 @@ import {
   InputGroupAddon,
   InputGroupInput,
 } from "./input-group"
-import {IconEyeOffIcon as EyeOffIcon} from "@tabler/icons-react"
+import {IconEyeOff} from "@tabler/icons-react"
 
 export function InputGroupInlineEnd() {
   return (
@@ -17,7 +17,7 @@ export function InputGroupInlineEnd() {
           placeholder="Enter password"
         />
         <InputGroupAddon align="inline-end">
-          <EyeOffIcon />
+          <IconEyeOff />
         </InputGroupAddon>
       </InputGroup>
       <FieldDescription>Icon positioned at the end.</FieldDescription>

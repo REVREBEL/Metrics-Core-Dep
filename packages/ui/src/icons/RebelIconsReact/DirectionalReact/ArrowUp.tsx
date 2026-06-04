@@ -1,4 +1,11 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgArrowUp = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" data-name="Layer 1" viewBox="0 0 14 18.5" {...props}><path d="M7.4 1.637a.52.52 0 0 0-.417-.215h-.001a.51.51 0 0 0-.418.216L1.279 9.074a.513.513 0 0 0 .419.811h2.487v6.678c0 .284.229.513.513.513H9.3c.284 0 .513-.23.514-.514V9.885h2.488a.516.516 0 0 0 .418-.813z" /></svg>;
+
+const SvgArrowUp = (props: SVGProps<SVGSVGElement>) => <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="1em" height="1em" {...props}>
+  <defs>
+    <style>{".cls-1 {\n        fill: #010101;\n      }"}</style>
+  </defs>
+  <path className="cls-1" d="M169.52,97.81L104.97,7.6c-1.19-1.63-3.07-2.58-5.08-2.6h-.02c-2.03.02-3.91.99-5.08,2.63L30.66,97.85c-1.36,1.91-1.54,4.41-.47,6.49,1.04,2.08,3.2,3.39,5.52,3.39h30.17s-.02,81.02-.02,81.02c0,3.44,2.79,6.24,6.22,6.24h55.83c3.42.02,6.22-2.77,6.22-6.23v-81.01h30.17c2.33,0,4.46-1.31,5.52-3.37s.87-4.56-.5-6.47l.2-.11Z"/>
+</svg>;
+
 export default SvgArrowUp;

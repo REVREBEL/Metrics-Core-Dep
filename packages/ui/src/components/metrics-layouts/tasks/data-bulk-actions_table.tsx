@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { type Table } from '@tanstack/react-table'
-import { IconTrash as Trash2, IconCircleArrowUp as CircleArrowUp, IconArrowsUpDown as ArrowUpDown, IconDownload as Download } from "@tabler/icons-react"
+import { IconTrash, IconCircleArrowUp, IconArrowsUpDown, IconDownload } from "@tabler/icons-react"
 import { toast } from 'sonner'
 import { sleep } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
@@ -83,7 +83,7 @@ export function DataTableBulkActions<TData>({
                   aria-label='Update status'
                   title='Update status'
                 >
-                  <CircleArrowUp />
+                  <IconCircleArrowUp />
                   <span className='sr-only'>Update status</span>
                 </Button>
               </DropdownMenuTrigger>
@@ -119,7 +119,7 @@ export function DataTableBulkActions<TData>({
                   aria-label='Update priority'
                   title='Update priority'
                 >
-                  <ArrowUpDown />
+                  <IconArrowsUpDown />
                   <span className='sr-only'>Update priority</span>
                 </Button>
               </DropdownMenuTrigger>
@@ -153,7 +153,7 @@ export function DataTableBulkActions<TData>({
               aria-label='Export tasks'
               title='Export tasks'
             >
-              <Download />
+              <IconDownload />
               <span className='sr-only'>Export tasks</span>
             </Button>
           </TooltipTrigger>
@@ -172,7 +172,7 @@ export function DataTableBulkActions<TData>({
               aria-label='Delete selected tasks'
               title='Delete selected tasks'
             >
-              <Trash2 />
+              <IconTrash />
               <span className='sr-only'>Delete selected tasks</span>
             </Button>
           </TooltipTrigger>

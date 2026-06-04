@@ -1,4 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgLockCircle = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 18 18" {...props}><g fillRule="evenodd"><path d="M8.836 5.298a1.5 1.5 0 0 0-1.499 1.498v.993h2.998v-.993a1.5 1.5 0 0 0-1.5-1.498" /><path d="M12.436 13.188h-7.2v-5.4h.93v-.992a2.673 2.673 0 0 1 2.67-2.669 2.673 2.673 0 0 1 2.67 2.669v.992h.93zM8.836.45a8.385 8.385 0 1 0 0 16.77 8.385 8.385 0 0 0 0-16.77" /></g></svg>;
+
+const SvgLockCircle = (props: SVGProps<SVGSVGElement>) => <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" {...props}><g fillRule="evenodd"><path d="M8.83566 5.29767c-.8262 0-1.4985.6723-1.4985 1.4985v.9927h2.9979v-.9927c0-.8262-.6723-1.4985-1.4994-1.4985"/><path d="M12.4357 13.1884h-7.2v-5.4h.9306v-.9927c0-1.4706 1.1979-2.6685 2.6694-2.6685 1.4724 0 2.6703 1.1979 2.6703 2.6685v.9927h.9297v5.4Zm-3.6-12.7386c-4.6314 0-8.3853 3.7548-8.3853 8.3853 0 4.6314 3.7539 8.3853 8.3853 8.3853 4.6314 0 8.3853-3.7539 8.3853-8.3853 0-4.6305-3.7539-8.3853-8.3853-8.3853v0Z"/></g></svg>;
+
 export default SvgLockCircle;

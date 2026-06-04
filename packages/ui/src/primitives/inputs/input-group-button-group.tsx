@@ -6,7 +6,7 @@ import {
 } from "./input-group"
 import { Label } from "@ui"
 import {Link02Icon} from "@hugeicons/core-free-icons"
-import { IconHugeiconsIcon as HugeiconsIcon } from "@hugeicons/core-free-icons"
+import { HugeiconsIcon } from "@hugeicons/react"
 
 export default function InputGroupButtonGroup() {
   return (

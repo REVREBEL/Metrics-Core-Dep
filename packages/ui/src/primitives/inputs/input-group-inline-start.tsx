@@ -4,7 +4,7 @@ import {
   InputGroupAddon,
   InputGroupInput,
 } from "./input-group"
-import {IconSearchIcon as SearchIcon} from "@tabler/icons-react"
+import {IconSearch} from "@tabler/icons-react"
 
 export function InputGroupInlineStart() {
   return (
@@ -13,7 +13,7 @@ export function InputGroupInlineStart() {
       <InputGroup>
         <InputGroupInput id="inline-start-input" placeholder="Search..." />
         <InputGroupAddon align="inline-start">
-          <SearchIcon className="text-muted-foreground" />
+          <IconSearch className="text-muted-foreground" />
         </InputGroupAddon>
       </InputGroup>
       <FieldDescription>Icon positioned at the start.</FieldDescription>

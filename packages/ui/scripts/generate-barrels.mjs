@@ -12,6 +12,8 @@ const EXCLUDED_DIRS = new Set([
   ".turbo",
 ])
 
+const SPECIALIZED_BARREL_DIRS = new Set(["icons"])
+
 function isTypeDeclaration(file) {
   return file.endsWith(".d.ts")
 }
@@ -25,7 +27,13 @@ async function listDirsRecursive(root) {
 
     await Promise.all(
       entries
-        .filter((entry) => entry.isDirectory() && !EXCLUDED_DIRS.has(entry.name))
+        .filter((entry) => {
+          if (!entry.isDirectory()) return false
+          if (EXCLUDED_DIRS.has(entry.name)) return false
+
+          const relativePath = path.relative(root, path.join(dir, entry.name))
+          return !SPECIALIZED_BARREL_DIRS.has(relativePath)
+        })
         .map((entry) => walk(path.join(dir, entry.name)))
     )
   }

@@ -10,7 +10,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@ui"
-import {IconInfoIcon as InfoIcon} from "@tabler/icons-react"
+import {IconInfoCircle} from "@tabler/icons-react"
 
 export default function InputGroupLabel() {
   return (
@@ -38,7 +38,7 @@ export default function InputGroupLabel() {
                 />
               }
             >
-              <InfoIcon />
+              <IconInfoCircle />
             </TooltipTrigger>
             <TooltipContent>
               <p>We&apos;ll use this to send you notifications</p>

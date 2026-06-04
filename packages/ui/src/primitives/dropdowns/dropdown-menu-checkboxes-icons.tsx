@@ -10,7 +10,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "./dropdown-menu"
-import { IconBellIcon, IconMailIcon, IconMessageSquareIcon } from "@tabler/icons-react"
+import { IconBell, IconMail, IconMessage } from "@tabler/icons-react"
 
 export function DropdownMenuCheckboxesIcons() {
   const [notifications, setNotifications] = React.useState({
@@ -33,7 +33,7 @@ export function DropdownMenuCheckboxesIcons() {
               setNotifications({ ...notifications, email: checked === true })
             }
           >
-            <IconMailIcon />
+            <IconMail />
             Email notifications
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
@@ -42,7 +42,7 @@ export function DropdownMenuCheckboxesIcons() {
               setNotifications({ ...notifications, sms: checked === true })
             }
           >
-            <IconMessageSquareIcon />
+            <IconMessage />
             SMS notifications
           </DropdownMenuCheckboxItem>
           <DropdownMenuCheckboxItem
@@ -51,7 +51,7 @@ export function DropdownMenuCheckboxesIcons() {
               setNotifications({ ...notifications, push: checked === true })
             }
           >
-            <IconBellIcon />
+            <IconBell />
             Push notifications
           </DropdownMenuCheckboxItem>
         </DropdownMenuGroup>

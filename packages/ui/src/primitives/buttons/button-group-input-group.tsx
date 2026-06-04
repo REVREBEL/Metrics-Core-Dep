@@ -7,7 +7,8 @@ import {
 	InputGroupInput,
 } from "@inputs";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@ui";
-import { IconAudioLines as AudioLinesIcon, IconPlus as PlusIcon } from "@tabler/icons-react";
+import { AudioLinesStrokeRounded as AudioLinesIcon } from "@icons";
+import { IconPlus as PlusIcon } from "@tabler/icons-react";
 import * as React from "react";
 import { Button } from "./button";
 import { ButtonGroup } from "./button-group";

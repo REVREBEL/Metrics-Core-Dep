@@ -1,4 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgPlayVideo = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100" {...props}><path d="M85.527 80.647a4.97 4.97 0 0 0 4.973-4.974V24.327a4.97 4.97 0 0 0-4.973-4.974H14.474A4.97 4.97 0 0 0 9.5 24.327v51.346a4.97 4.97 0 0 0 4.974 4.974zm-4.974-9.948H19.446V29.301h61.107z" /><path d="m64.819 50.288-11.98 6.913-11.974 6.917V36.462l11.974 6.918Z" /></svg>;
+
+const SvgPlayVideo = (props: SVGProps<SVGSVGElement>) => <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" {...props}><g><path d="M85.527 80.647c2.748 0 4.973-2.225 4.973-4.974V24.327c0-2.749-2.225-4.974-4.973-4.974H14.474c-2.748 0-4.974 2.225-4.974 4.974v51.346c0 2.749 2.225 4.974 4.974 4.974h71.053Zm-4.974-9.948H19.446V29.301h61.107v41.398Z"/><path d="M64.819 50.288l-11.98 6.913 -11.974 6.917 0-13.83 0-13.826 11.974 6.918Z"/></g></svg>;
+
 export default SvgPlayVideo;

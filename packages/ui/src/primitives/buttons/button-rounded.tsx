@@ -1,4 +1,4 @@
-import { IconArrowUp as ArrowUpIcon } from "@tabler/icons-react";
+import { IconSquareRoundedChevronUpFilled } from "@tabler/icons-react";
 import { Button } from "./button";
 
 export default function ButtonRounded() {
@@ -6,7 +6,7 @@ export default function ButtonRounded() {
 		<div className="flex gap-2">
 			<Button className="rounded-full">Get Started</Button>
 			<Button variant="outline" size="icon" className="rounded-full">
-				<ArrowUpIcon />
+				<IconSquareRoundedChevronUpFilled />
 			</Button>
 		</div>
 	);

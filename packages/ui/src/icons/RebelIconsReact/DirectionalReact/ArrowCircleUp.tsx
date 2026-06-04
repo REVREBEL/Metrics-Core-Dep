@@ -1,4 +1,12 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgArrowCircleUp = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" data-name="Layer 1" viewBox="0 0 24 24" {...props}><path d="M12 3c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9m3.326 7.589a.3.3 0 0 1-.264.161h-1.437v3.856a.297.297 0 0 1-.297.297H10.67a.297.297 0 0 1-.297-.296v-3.856H8.937a.297.297 0 0 1-.242-.469l3.052-4.294a.296.296 0 0 1 .482-.001l3.072 4.294c.065.091.074.21.023.308Z" /></svg>;
+
+const SvgArrowCircleUp = (props: SVGProps<SVGSVGElement>) => <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="1em" height="1em" {...props}>
+  <defs>
+    <style>{".cls-1 {\n        fill: #010101;\n      }\n\n      .cls-2 {\n        fill: #a7a9ac;\n      }"}</style>
+  </defs>
+  <circle className="cls-1" cx="100" cy="100" r="97.5"/>
+  <path className="cls-2" d="M141.54,87.75l-38.57-53.91c-.71-.98-1.84-1.55-3.03-1.57h-.01c-1.21,0-2.34.58-3.03,1.55l-38.32,53.89c-.81,1.12-.92,2.62-.28,3.86.62,1.23,1.91,2.01,3.3,2.01h18.03v48.41c-.01,2.06,1.65,3.72,3.7,3.72h33.36c2.04-.01,3.72-1.69,3.72-3.74v-48.43h18.03c1.39,0,2.66-.78,3.3-2.03s.52-2.74-.3-3.88l.12.1Z"/>
+</svg>;
+
 export default SvgArrowCircleUp;

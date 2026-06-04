@@ -61,6 +61,10 @@
     "registry:build": "pnpm run registry:sync && pnpm run registry:items:sync && pnpm run registry:manifest:sync && pnpm run registry:tokens:sync && pnpm run registry:playground:sync && pnpm run registry:prepare && pnpm dlx shadcn@latest build",
     "barrels:generate": "node ./scripts/generate-barrels.mjs --exports",
     "barrels:check": "node ./scripts/generate-barrels.mjs --check --exports",
+    "icons:sync": "node ./scripts/sync-icons.mjs",
+    "icons:sync:check": "node ./scripts/sync-icons.mjs --check",
+    "icons:barrels:generate": "node ./scripts/generate-icon-barrels.mjs",
+    "icons:barrels:check": "node ./scripts/generate-icon-barrels.mjs --check",
     "registry:validate": "node ./scripts/validate-registries.mjs",
     "registry:sync": "node ./scripts/registry-sync.mjs",
     "registry:manifest:sync": "node ./scripts/registry-manifest-sync.mjs",
@@ -133,7 +137,7 @@
     "jsdom": "^29.0.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18",
-    "typescript": "5.4.5",
+    "typescript": "5.4.5"
   },
   "packageManager": "pnpm@10.34.1"
 }
