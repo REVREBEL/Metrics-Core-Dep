@@ -23,17 +23,5 @@
     "tailwindcss": "^4.3.0",
     "turbo": "^2.0.0",
     "typescript": "^6.0.0"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@biomejs/biome",
-      "@swc/core",
-      "esbuild",
-      "nextra-theme-docs",
-      "sharp"
-    ],
-    "patchedDependencies": {
-      "nextra-theme-docs@4.6.1": "patches/nextra-theme-docs@4.6.1.patch"
-    }
   }
 }

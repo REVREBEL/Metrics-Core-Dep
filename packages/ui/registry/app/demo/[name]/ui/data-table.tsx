@@ -1,4 +1,4 @@
-import { FinanceDataTable } from "@/app/demo/[name]/ui/data-table-payments";
+import { FinanceDataTable } from "./data-table-payments";
 
 export const dataTable = {
   name: "data-table",

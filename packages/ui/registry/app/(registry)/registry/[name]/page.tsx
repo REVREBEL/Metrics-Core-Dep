@@ -2,7 +2,7 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-import { demos } from "@/app/demo/[name]/index";
+import { demos } from "../../../demo/[name]/index";
 import { ComponentCard } from "@/primitives/registry/component-card";
 import { getPrompt } from "@/lib/utils";
 import registryManifest from "@/registry";

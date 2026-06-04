@@ -1,6 +1,6 @@
-import { AreaChartComponent } from "@/app/demo/[name]/ui/area-chart";
-import { BarChartComponent } from "@/app/demo/[name]/ui/bar-chart";
-import { PieChartComponent } from "@/app/demo/[name]/ui/pie-chart";
+import { AreaChartComponent } from "./area-chart";
+import { BarChartComponent } from "./bar-chart";
+import { PieChartComponent } from "./pie-chart";
 
 export const chart = {
   name: "chart",

@@ -40,6 +40,10 @@ export function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms))
 }
 
+export function getPrompt() {
+  return 'Use this registry item as a production-ready starting point. Preserve the component structure, styling tokens, and accessibility behavior.'
+}
+
 export function escapeHtml(unsafe: string) {
   if (typeof unsafe !== 'string') return unsafe;
   // Replace &, <, >, except if they are already part of an HTML entity to avoid double encoding.

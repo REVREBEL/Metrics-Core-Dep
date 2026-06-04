@@ -6706,6 +6706,16 @@ export const PLAYGROUND_REGISTRY: Record<string, any> = {
     })),
     metadata: null,
   },
+  ui_navigation_menu: {
+    name: "navigation-menu",
+    type: "ui-primitive",
+    component: dynamic(() => import("@/primitives/ui/navigation-menu").then((mod) => {
+      const m = mod as Record<string, unknown>
+      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
+      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
+    })),
+    metadata: null,
+  },
   ui_navigation_progress: {
     name: "navigation-progress",
     type: "ui-primitive",
@@ -6760,6 +6770,16 @@ export const PLAYGROUND_REGISTRY: Record<string, any> = {
     name: "open-in-v0",
     type: "ui-primitive",
     component: dynamic(() => import("@/primitives/registry/open-in-v0").then((mod) => {
+      const m = mod as Record<string, unknown>
+      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
+      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
+    })),
+    metadata: null,
+  },
+  ui_pagination: {
+    name: "pagination",
+    type: "ui-primitive",
+    component: dynamic(() => import("@/primitives/ui/pagination").then((mod) => {
       const m = mod as Record<string, unknown>
       const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
       return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
