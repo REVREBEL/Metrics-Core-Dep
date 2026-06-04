@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-
 import { IconStar, type IconTypeLucideProps } from "@tabler/icons-react";
 import { type VariantProps, cva } from "class-variance-authority";
 

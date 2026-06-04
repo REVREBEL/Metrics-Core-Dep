@@ -12,7 +12,7 @@ import {
   InputGroupText,
   InputGroupTextarea,
 } from "./input-group"
-import {IconCopyIcon as CopyIcon, IconFileCodeIcon as FileCodeIcon} from "@tabler/icons-react"
+import {IconCopy, IconFileCode} from "@tabler/icons-react"
 
 export function InputGroupBlockStart() {
   return (
@@ -39,10 +39,10 @@ export function InputGroupBlockStart() {
             className="font-mono text-sm"
           />
           <InputGroupAddon align="block-start">
-            <FileCodeIcon className="text-muted-foreground" />
+            <IconFileCode className="text-muted-foreground" />
             <InputGroupText className="font-mono">script.js</InputGroupText>
             <InputGroupButton size="icon-xs" className="ml-auto">
-              <CopyIcon />
+              <IconCopy />
               <span className="sr-only">Copy</span>
             </InputGroupButton>
           </InputGroupAddon>

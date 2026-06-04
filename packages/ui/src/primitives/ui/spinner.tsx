@@ -1,12 +1,12 @@
 import { cn } from "@/lib/utils";
-import { IconLoader2 } from "@tabler/icons-react";
+import { IconFidgetSpinnerFilled } from '@tabler/icons-react';
 
 function Spinner({
 	className,
 	...props
-}: React.ComponentProps<typeof Loader2Icon>) {
+}: React.ComponentProps<typeof IconFidgetSpinnerFilled>) {
 	return (
-		<Loader2Icon
+		<IconFidgetSpinnerFilled
 			aria-label="Loading"
 			className={cn("animate-spin", className)}
 			role="status"

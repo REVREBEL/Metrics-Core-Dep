@@ -13,7 +13,7 @@ import {
   InputGroupInput,
   InputGroupText,
 } from "./input-group"
-import {IconCopyIcon as CopyIcon, IconEyeOffIcon as EyeOffIcon, IconInfoIcon as InfoIcon, IconMicIcon as MicIcon, IconRadioIcon as RadioIcon, IconSearchIcon as SearchIcon, IconStarIcon as StarIcon}  from "@tabler/icons-react"
+import {IconCopy, IconEyeOff, IconInfoCircle, IconMicrophone, IconRadio, IconSearch, IconStar}  from "@tabler/icons-react"
 import { toast } from "sonner"
 
 export function InputGroupWithAddons() {
@@ -26,7 +26,7 @@ export function InputGroupWithAddons() {
         <InputGroup>
           <InputGroupInput id="input-icon-left-05" />
           <InputGroupAddon>
-            <SearchIcon className="text-muted-foreground" />
+            <IconSearch className="text-muted-foreground" />
           </InputGroupAddon>
         </InputGroup>
       </Field>
@@ -37,7 +37,7 @@ export function InputGroupWithAddons() {
         <InputGroup>
           <InputGroupInput id="input-icon-right-07" />
           <InputGroupAddon align="inline-end">
-            <EyeOffIcon />
+            <IconEyeOff />
           </InputGroupAddon>
         </InputGroup>
       </Field>
@@ -48,10 +48,10 @@ export function InputGroupWithAddons() {
         <InputGroup>
           <InputGroupInput id="input-icon-both-09" />
           <InputGroupAddon>
-            <MicIcon className="text-muted-foreground" />
+            <IconMicrophone className="text-muted-foreground" />
           </InputGroupAddon>
           <InputGroupAddon align="inline-end">
-            <RadioIcon className="animate-pulse text-red-500" />
+            <IconRadio className="animate-pulse text-red-500" />
           </InputGroupAddon>
         </InputGroup>
       </Field>
@@ -61,7 +61,7 @@ export function InputGroupWithAddons() {
           <InputGroupInput id="input-addon-20" />
           <InputGroupAddon align="block-start">
             <InputGroupText>First Name</InputGroupText>
-            <InfoIcon className="ml-auto text-muted-foreground" />
+            <IconInfoCircle className="ml-auto text-muted-foreground" />
           </InputGroupAddon>
         </InputGroup>
       </Field>
@@ -71,7 +71,7 @@ export function InputGroupWithAddons() {
           <InputGroupInput id="input-addon-21" />
           <InputGroupAddon align="block-end">
             <InputGroupText>20/240 characters</InputGroupText>
-            <InfoIcon className="ml-auto text-muted-foreground" />
+            <IconInfoCircle className="ml-auto text-muted-foreground" />
           </InputGroupAddon>
         </InputGroup>
       </Field>
@@ -80,16 +80,16 @@ export function InputGroupWithAddons() {
         <InputGroup>
           <InputGroupInput id="input-icon-both-10" />
           <InputGroupAddon align="inline-end">
-            <StarIcon />
+            <IconStar />
             <InputGroupButton
               size="icon-xs"
               onClick={() => toast("Copied to clipboard")}
             >
-              <CopyIcon />
+              <IconCopy />
             </InputGroupButton>
           </InputGroupAddon>
           <InputGroupAddon>
-            <RadioIcon className="animate-pulse text-red-500" />
+            <IconRadio className="animate-pulse text-red-500" />
           </InputGroupAddon>
         </InputGroup>
       </Field>
@@ -98,7 +98,7 @@ export function InputGroupWithAddons() {
         <InputGroup>
           <InputGroupInput id="input-description-10" />
           <InputGroupAddon align="inline-end">
-            <InfoIcon />
+            <IconInfoCircle />
           </InputGroupAddon>
         </InputGroup>
         <FieldDescription>

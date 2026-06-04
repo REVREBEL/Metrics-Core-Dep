@@ -9,16 +9,14 @@ import {
 	DropdownMenuTrigger,
 } from "@dropdowns";
 import {
-	Alert01Icon,
-	ChevronDown,
-	Copy01Icon,
-	Delete01Icon,
-	Share01Icon,
-	Tick01Icon,
-	UserRemove01Icon,
-	VolumeMute02Icon,
-} from "@hugeicons/core-free-icons";
-import { IconHugeiconsIcon } from "@tabler/icons-react";
+IconAlertSquareRoundedFilled,
+IconSquareRoundedChevronDownFilled,
+IconCopyFilled,
+IconSquareRoundedPlusFilled,
+IconSquareRoundedCheckFilled,
+IconSquareRoundedXFilled,
+IconBellXFilled,
+} from '@tabler/icons-react';
 import { Button } from "./button";
 import { ButtonGroup } from "./button-group";
 
@@ -29,40 +27,40 @@ export default function ButtonGroupDropdown() {
 			<DropdownMenu>
 				<DropdownMenuTrigger asChild>
 					<Button variant="outline" className="pl-2!">
-						<IconHugeiconsIcon icon={ChevronDown} />
+						<IconSquareRoundedChevronDownFilled />
 					</Button>
 				</DropdownMenuTrigger>
 				<DropdownMenuContent align="end" className="w-44">
 					<DropdownMenuGroup>
 						<DropdownMenuItem>
-							<IconHugeiconsIcon icon={VolumeMute02Icon} />
+							<IconBellXFilled />
 							Mute Conversation
 						</DropdownMenuItem>
 						<DropdownMenuItem>
-							<IconHugeiconsIcon icon={Tick01Icon} />
+							<IconSquareRoundedCheckFilled />
 							Mark as Read
 						</DropdownMenuItem>
 						<DropdownMenuItem>
-							<IconHugeiconsIcon icon={Alert01Icon} />
+							<IconAlertSquareRoundedFilled />
 							Report Conversation
 						</DropdownMenuItem>
 						<DropdownMenuItem>
-							<IconHugeiconsIcon icon={UserRemove01Icon} />
+							<IconSquareRoundedXFilled />
 							Block User
 						</DropdownMenuItem>
 						<DropdownMenuItem>
-							<IconHugeiconsIcon icon={Share01Icon} />
+							<IconSquareRoundedPlusFilled />
 							Share Conversation
 						</DropdownMenuItem>
 						<DropdownMenuItem>
-							<IconHugeiconsIcon icon={Copy01Icon} />
+							<IconCopyFilled />
 							Copy Conversation
 						</DropdownMenuItem>
 					</DropdownMenuGroup>
 					<DropdownMenuSeparator />
 					<DropdownMenuGroup>
 						<DropdownMenuItem variant="destructive">
-							<IconHugeiconsIcon icon={Delete01Icon} />
+							<IconSquareRoundedXFilled />
 							Delete Conversation
 						</DropdownMenuItem>
 					</DropdownMenuGroup>

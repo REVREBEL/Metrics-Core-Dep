@@ -26,7 +26,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@ui"
-import { IconChevronDown, IconInfoCircle, IconStar } from "@tabler/icons-react"
+import { IconSquareRoundedChevronDownFilled, IconInfoSquareRoundedFilled, IconStar } from "@tabler/icons-react"
 import * as React from "react"
 
 const COUNTRIES = ["US", "UK", "CA", "AU", "DE"]
@@ -83,32 +83,20 @@ export function InputGroupWithTooltip() {
           </InputGroup>
         </Field>
         <Field>
-          <FieldLabel htmlFor="input-tooltip-31">With Buttons</FieldLabel>
-          <InputGroup>
-            <InputGroupInput id="input-tooltip-31" />
-            <InputGroupAddon align="inline-end">
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <InputGroupButton variant="ghost" size="icon-xs">
-                    <IconStar />
-                  </InputGroupButton>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>Add to favorites</p>
-                </TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <InputGroupButton variant="ghost" size="icon-xs">
-                    <IconInfoCircle />
-                  </InputGroupButton>
-                </TooltipTrigger>
-                <TooltipContent>
-                  <p>More information</p>
-                </TooltipContent>
-              </Tooltip>
-            </InputGroupAddon>
-          </InputGroup>
+          <FieldLabel htmlFor="url">Button Group</FieldLabel>
+          <ButtonGroup>
+            <ButtonGroupText>https://</ButtonGroupText>
+            <InputGroup>
+              <InputGroupInput id="url" />
+              <InputGroupAddon align="inline-end">
+                <IconAlertSquareRoundedFilled />
+              </InputGroupAddon>
+            </InputGroup>
+            <ButtonGroupText>.com</ButtonGroupText>
+          </ButtonGroup>
+          <FieldDescription>
+            This is a description of the input group.
+          </FieldDescription>
         </Field>
       </FieldGroup>
     </TooltipProvider>

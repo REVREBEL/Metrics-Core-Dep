@@ -3,9 +3,8 @@
 import { ContextMenu as ContextMenuPrimitive } from "radix-ui";
 import type * as React from "react";
 
-import { ArrowRight01Icon, Tick02Icon } from "@hugeicons/core-free-icons";
+import { IconSquareRoundedArrowRightFilled, IconSquareRoundedCheckFilled } from '@tabler/icons-react';
 import { cn } from "@/lib/utils";
-import { IconHugeiconsIcon } from "@tabler/icons-react";
 
 function ContextMenu({
 	...props
@@ -121,9 +120,7 @@ function ContextMenuSubTrigger({
 			{...props}
 		>
 			{children}
-			<IconHugeiconsIcon
-				icon={ArrowRight01Icon}
-				strokeWidth={2}
+			<IconSquareRoundedArrowRightFilled
 				className="ml-auto"
 			/>
 		</ContextMenuPrimitive.SubTrigger>
@@ -168,7 +165,7 @@ function ContextMenuCheckboxItem({
 		>
 			<span className="pointer-events-none absolute right-2">
 				<ContextMenuPrimitive.ItemIndicator>
-					<IconHugeiconsIcon icon={Tick02Icon} strokeWidth={2} />
+					<IconSquareRoundedCheckFilled />
 				</ContextMenuPrimitive.ItemIndicator>
 			</span>
 			{children}

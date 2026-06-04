@@ -5,7 +5,7 @@ import {
   InputGroupText,
 } from "./input-group"
 import { Spinner } from "@ui"
-import {IconLoaderIcon as LoaderIcon} from "@tabler/icons-react"
+import {IconLoader} from "@tabler/icons-react"
 
 export default function InputGroupSpinner() {
   return (
@@ -32,7 +32,7 @@ export default function InputGroupSpinner() {
       <InputGroup>
         <InputGroupInput placeholder="Refreshing data..." />
         <InputGroupAddon>
-          <LoaderIcon className="animate-spin" />
+          <IconLoader className="animate-spin" />
         </InputGroupAddon>
         <InputGroupAddon align="inline-end">
           <InputGroupText className="text-muted-foreground">

@@ -2,10 +2,9 @@
 
 import { Accordion as AccordionPrimitive } from "radix-ui";
 import type * as React from "react";
-
-import { ArrowDown01Icon, ArrowUp01Icon } from "@hugeicons/core-free-icons";
+import { IconSquareRoundedDownUpFilled, IconSquareRoundedArrowUpFilled } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
-import { IconHugeiconsIcon } from "@tabler/icons-react";
+
 
 function Accordion({
 	className,
@@ -49,15 +48,11 @@ function AccordionTrigger({
 				{...props}
 			>
 				{children}
-				<IconHugeiconsIcon
-					icon={ArrowDown01Icon}
-					strokeWidth={2}
-					data-slot="accordion-trigger-icon"
+			"@tabler/icons-react";
+			<IconSquareRoundedChevronDownFilled data-slot="accordion-trigger-icon"
 					className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden"
 				/>
-				<IconHugeiconsIcon
-					icon={ArrowUp01Icon}
-					strokeWidth={2}
+				<IconSquareRoundedArrowUpFilled
 					data-slot="accordion-trigger-icon"
 					className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline"
 				/>

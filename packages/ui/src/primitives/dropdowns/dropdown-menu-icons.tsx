@@ -8,8 +8,12 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./dropdown-menu"
-import { CreditCardIcon, Logout01Icon, Settings01Icon, UserIcon } from "@hugeicons/core-free-icons"
-import { IconIconHugeiconsIcon } from "@tabler/icons-react"
+import { 
+  IconCreditCardFilled, 
+  IconSettingsFilled, 
+  IconUserFilled, 
+  IconWritingSignFilled
+} from '@tabler/icons-react';
 
 export function DropdownMenuIcons() {
   return (
@@ -19,20 +23,20 @@ export function DropdownMenuIcons() {
       </DropdownMenuTrigger>
       <DropdownMenuContent>
         <DropdownMenuItem>
-          <IconIconHugeiconsIcon icon={UserIcon} />
+          <IconUserFilled />
           Profile
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <IconIconHugeiconsIcon icon={CreditCardIcon} />
+          <IconCreditCardFilled />
           Billing
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <IconIconHugeiconsIcon icon={Settings01Icon} />
+          <IconSettingsFilled />
           Settings
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem variant="destructive">
-          <IconHugeiconsIcon icon={Logout01Icon} />
+          <IconWritingSignFilled />
           Log out
         </DropdownMenuItem>
       </DropdownMenuContent>
