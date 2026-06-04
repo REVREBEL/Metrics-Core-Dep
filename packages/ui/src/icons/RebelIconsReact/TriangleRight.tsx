@@ -1,4 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgTriangleRight = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 18 18" {...props}><path fillRule="evenodd" d="M7.112 5.124a.44.44 0 0 0-.112.3v7.15q0 .176.112.3A.37.37 0 0 0 7.4 13q.15-.001.225-.076l.05-.05 3.9-3.4q.224-.226.224-.474 0-.25-.224-.476l-3.9-3.4-.074-.05L7.4 5a.37.37 0 0 0-.288.124" /></svg>;
+
+const SvgTriangleRight = (props: SVGProps<SVGSVGElement>) => <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" {...props}><path fillRule="evenodd" d="M7.112 5.12373C7.03733 5.20693 7 5.30827 7 5.42453v7.14987c0 .117333.0373333.216533.112.299733C7.18667 12.9584 7.28373 13 7.4 13c.100267 0 .173867-.0266667.225067-.0757333L7.6752 12.8741 11.5749 9.4736c.149333-.1504.224-.308267.224-.4736 0-.167467-.0746666-.325333-.224-.475733L7.6752 5.12373 7.60053 5.07467 7.4 5c-.116267 0-.213333.0416-.288.123733Z"/></svg>;
+
 export default SvgTriangleRight;

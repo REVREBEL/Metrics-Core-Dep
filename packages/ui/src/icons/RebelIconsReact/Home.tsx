@@ -1,4 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgHome = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100" {...props}><path d="M83.505 37.85 51.013 12.688a2.51 2.51 0 0 0-3.1.025L16.46 37.874a2.5 2.5 0 0 0-.939 1.956v45.5a2.504 2.504 0 0 0 2.505 2.505h18.697a2.506 2.506 0 0 0 2.505-2.505V57.471h21.54V85.33a2.505 2.505 0 0 0 2.505 2.505h18.7a2.506 2.506 0 0 0 2.505-2.505v-45.5a2.5 2.5 0 0 0-.973-1.98" /></svg>;
+
+const SvgHome = (props: SVGProps<SVGSVGElement>) => <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" {...props}><path d="M83.505 37.85L51.013 12.688c-.915-.707-2.197-.698-3.1.025L16.46 37.874c-.592.474-.939 1.195-.939 1.956v45.5c0 1.385 1.121 2.505 2.505 2.505h18.697c1.382 0 2.505-1.121 2.505-2.505V57.471h21.54V85.33c0 1.385 1.123 2.505 2.505 2.505h18.7c1.382 0 2.505-1.121 2.505-2.505v-45.5c.001-.775-.359-1.506-.973-1.98Z"/></svg>;
+
 export default SvgHome;

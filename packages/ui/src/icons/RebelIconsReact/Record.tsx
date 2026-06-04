@@ -1,4 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgRecord = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100" {...props}><path fill="#231F20" d="M50 12.908c-20.485 0-37.092 16.606-37.092 37.092S29.514 87.092 50 87.092 87.092 70.486 87.092 50 70.485 12.908 50 12.908m0 49.283c-6.733 0-12.191-5.458-12.191-12.191S43.267 37.809 50 37.809 62.191 43.267 62.191 50 56.733 62.191 50 62.191" /></svg>;
+
+const SvgRecord = (props: SVGProps<SVGSVGElement>) => <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" {...props}><path fill="#231F20" d="M50 12.908c-20.485 0-37.092 16.606-37.092 37.092 0 20.485 16.606 37.092 37.092 37.092 20.485 0 37.092-16.606 37.092-37.092C87.092 29.515 70.485 12.908 50 12.908Zm0 49.283c-6.733 0-12.191-5.458-12.191-12.191 0-6.733 5.458-12.191 12.191-12.191 6.733 0 12.191 5.458 12.191 12.191 0 6.733-5.458 12.191-12.191 12.191Z"/></svg>;
+
 export default SvgRecord;

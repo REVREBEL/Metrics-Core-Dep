@@ -1,4 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgHamburgerMenuClose = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 30 30" {...props}><path fillRule="evenodd" d="M15 13.586 7.823 6.409 6.409 7.823 13.586 15l-7.177 7.177 1.414 1.414L15 16.414l7.177 7.177 1.414-1.414L16.414 15l7.177-7.177-1.414-1.414z" /></svg>;
+
+const SvgHamburgerMenuClose = (props: SVGProps<SVGSVGElement>) => <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" {...props}><path fillRule="evenodd" d="M15 13.5858L7.82294 6.40874l-1.4142 1.4142L13.5858 15 6.40874 22.1771l1.4142 1.4142L15 16.4142l7.17706 7.17706 1.4142-1.4142L16.4142 15l7.17706-7.17706 -1.4142-1.4142L15 13.5858Z"/></svg>;
+
 export default SvgHamburgerMenuClose;

@@ -1,4 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgCommunity = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 18 18" {...props}><path fillRule="evenodd" d="M9 0C4 0 0 4 0 9s4 9 9 9 9-4 9-9-4-9-9-9M6.3 5.6c.7 0 1.3.6 1.3 1.3S7 8.2 6.3 8.2 5 7.7 5 7c0-.8.6-1.4 1.3-1.4m6.5 5.9c-.5 1.7-2.1 2.8-3.8 2.8-1.8 0-3.3-1.1-3.8-2.8-.1-.4.1-.7.4-.8s.7.1.8.4C6.8 12.2 7.8 13 9 13s2.2-.8 2.5-1.9c.1-.4.5-.6.8-.4.4.1.6.4.5.8m-1.1-3.2c-.7 0-1.3-.6-1.3-1.3s.6-1.3 1.3-1.3S13 6.2 13 7c0 .7-.6 1.3-1.3 1.3" /></svg>;
+
+const SvgCommunity = (props: SVGProps<SVGSVGElement>) => <svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" {...props}><path fillRule="evenodd" d="M9 0C4 0 0 4 0 9c0 5 4 9 9 9s9-4 9-9 -4-9-9-9v0ZM6.3 5.6c.7 0 1.3.6 1.3 1.3 0 .7-.6 1.3-1.3 1.3C5.6 8.2 5 7.7 5 7c0-.8.6-1.4 1.3-1.4v0Zm6.5 5.9c-.5 1.7-2.1 2.8-3.8 2.8 -1.8 0-3.3-1.1-3.8-2.8 -.1-.4.1-.7.4-.8 .3-.1.7.1.8.4C6.8 12.2 7.8 13 9 13c1.2 0 2.2-.8 2.5-1.9 .1-.4.5-.6.8-.4 .4.1.6.4.5.8v0Zm-1.1-3.2c-.7 0-1.3-.6-1.3-1.3 0-.7.6-1.3 1.3-1.3 .7 0 1.3.5 1.3 1.3 0 .7-.6 1.3-1.3 1.3v0Z"/></svg>;
+
 export default SvgCommunity;

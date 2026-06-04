@@ -1,4 +1,6 @@
 import * as React from "react";
 import type { SVGProps } from "react";
-const SvgMobile = (props: SVGProps<SVGSVGElement>) => <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100" {...props}><path fill="#231F20" d="M69.328 17.517H30.567v.01a2.495 2.495 0 0 0-2.396 2.49v59.967a2.495 2.495 0 0 0 2.396 2.489v.011h38.761a2.5 2.5 0 0 0 2.5-2.5V20.017a2.5 2.5 0 0 0-2.5-2.5M50.059 79.9a2.45 2.45 0 1 1 0-4.9 2.45 2.45 0 0 1 0 4.9m11.813-7.395H38.128V27.473h23.743v45.032Z" /></svg>;
+
+const SvgMobile = (props: SVGProps<SVGSVGElement>) => <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" {...props}><path fill="#231F20" d="M69.328 17.517H30.567v.01c-1.331.056-2.396 1.144-2.396 2.49v59.967c0 1.345 1.065 2.433 2.396 2.489v.011h38.761c1.38 0 2.5-1.119 2.5-2.5V20.017c-1e-07-1.381-1.119-2.5-2.5-2.5ZM50.059 79.9c-1.353 0-2.45-1.097-2.45-2.45 0-1.354 1.097-2.451 2.45-2.451 1.353 0 2.45 1.097 2.45 2.451 0 1.353-1.097 2.45-2.45 2.45Zm11.813-7.395H38.128V27.473h23.743v45.032Z"/></svg>;
+
 export default SvgMobile;
