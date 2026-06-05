@@ -95,7 +95,6 @@ export function GrowthPlanHeader({
 
   const handleMemberSubmit = () => {
     // In a real app, this would add the member
-    console.log('[v0] Adding member with email:', memberEmail)
     setMemberEmail('')
     setAddMemberOpen(false)
   }
