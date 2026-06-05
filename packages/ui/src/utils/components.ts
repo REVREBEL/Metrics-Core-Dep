@@ -217,18 +217,18 @@ export async function getComponentItem(name: string) {
     return null
   }
 
-  const files: RegistryItem['files'] = []
+  const files: RegistryItem["files"] = await Promise.all(
+    (item.files ?? []).map(async (file) => {
+      const content = await getFileContent(file)
+      const relativePath = file.path.replace("src/", "")
 
-  for (const file of item.files ?? []) {
-    const content = await getFileContent(file)
-    const relativePath = file.path.replace('src/', '')
-
-    files.push({
-      ...file,
-      path: relativePath,
-      content
+      return {
+        ...file,
+        path: relativePath,
+        content
+      }
     })
-  }
+  )
 
   if (item.cssVars || item.css) {
     const stylesFile = getComponentStyles(item)
