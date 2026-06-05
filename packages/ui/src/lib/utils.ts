@@ -55,14 +55,16 @@ export function getPrompt() {
 export function escapeHtml(unsafe: string) {
   if (typeof unsafe !== "string") return unsafe;
   // Replace &, <, >, ", ' except if they are already part of an HTML entity to avoid double encoding.
-  return unsafe.replace(/&(?!#?[a-zA-Z0-9]+;)|[<>"']/g, (match) => {
-    const escapeMap: Record<string, string> = {
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#39;",
-    };
-    return escapeMap[match] || match;
-  });
+const escapeMap: Record<string, string> = {
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': "&quot;",
+  "'": "&#39;",
+};
+
+export function escapeHtml(unsafe: string) {
+  if (typeof unsafe !== "string") return unsafe;
+  return unsafe.replace(/&(?!#?[a-zA-Z0-9]+;)|[<>"']/g, (match) => escapeMap[match] || match);
+}
 }
