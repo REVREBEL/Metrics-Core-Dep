@@ -2,21 +2,14 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
-
-import {
-  Search01Icon,
-  FavouriteIcon,
-  Fire02Icon,
-  MultiplicationSignIcon,
-} from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
+import { IconX, IconSearch, IconFlame, IconHeart } from "@tabler/icons-react"
 
 // Change Here
 const TABS = [
   {
     id: "popular",
     label: "Popular",
-    icon: Fire02Icon,
+    icon: IconFlame,
     color: "text-red-500",
     fill: "fill-red-500",
     bg: "bg-red-50",
@@ -24,7 +17,7 @@ const TABS = [
   {
     id: "favorites",
     label: "Favorites",
-    icon: FavouriteIcon,
+    icon: IconHeart,
     color: "text-gray-900",
     fill: "fill-gray-900",
     bg: "bg-gray-100",
@@ -54,10 +47,8 @@ export default function DiscoverButton() {
         }`}
       >
         <div className="shrink-0">
-          <HugeiconsIcon
-            icon={Search01Icon}
-            className="w-6 h-6 text-gray-800"
-          />
+          <IconSearch className="w-6 h-6 text-gray-800"
+           />
         </div>
 
         <motion.div
@@ -144,12 +135,10 @@ export default function DiscoverButton() {
                       }}
                     />
                   )}
-                  <HugeiconsIcon
-                    icon={tab.icon}
-                    className={`w-5 h-5 relative z-10 ${
+                  <tab.icon className={`w-5 h-5 relative z-10 ${
                       activeTab === tab.id ? tab.fill : ""
                     }`}
-                  />
+                   />
                   <span className="font-semibold font-mono uppercase relative z-10">
                     {tab.label}
                   </span>
@@ -175,10 +164,8 @@ export default function DiscoverButton() {
               onClick={() => setIsSearchExpanded(false)}
               className="shrink-0 cursor-pointer"
             >
-              <HugeiconsIcon
-                icon={MultiplicationSignIcon}
-                className="w-6 h-6 text-gray-800"
-              />
+              <IconX className="w-6 h-6 text-gray-800"
+               />
             </button>
           </motion.div>
         </motion.div>

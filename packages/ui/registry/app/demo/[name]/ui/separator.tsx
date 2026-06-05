@@ -1,4 +1,4 @@
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@ui";
 
 export const separator = {
   name: "separator",

@@ -3,8 +3,8 @@
 import { Button } from "@buttons";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
-import { Tick02Icon } from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
+import { IconCheck } from "@tabler/icons-react";
+;
 import { useMemo, useState } from "react";
 
 export function SaveButton() {
@@ -131,7 +131,7 @@ export function SaveButton() {
                     transition={{ type: "spring", stiffness: 500, damping: 25 }}
                     className="absolute inset-0 flex items-center justify-center"
                   >
-                    <HugeiconsIcon icon={Tick02Icon} className="size-4" />
+                    <IconCheck className="size-4" />
                   </motion.div>
                 )}
               </AnimatePresence>

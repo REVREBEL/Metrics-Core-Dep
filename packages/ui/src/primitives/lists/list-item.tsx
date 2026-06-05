@@ -1,21 +1,9 @@
+import { IconBell, IconCalendarCheck, IconCalendarEvent, IconConfetti, IconFilter, IconMapPin, IconVideo } from "@tabler/icons-react"
 "use client";
 import { motion, MotionConfig } from "motion/react";
 import { type Dispatch, type SetStateAction, useState } from "react";
 import clsx from "clsx";
-
-import {
-  Appointment01Icon,
-  BalloonsIcon,
-  GoogleMapsIcon,
-  ZoomIcon,
-  ReminderIcon,
-  TaskDaily01Icon,
-  Tick02Icon,
-  FilterHorizontalIcon,
-} from "@hugeicons/core-free-icons";
-import { HugeiconsFreeIcons } from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
-
+;
 export type FilterKey = (typeof filterKeys)[number];
 
 // Change Here
@@ -23,37 +11,37 @@ export const filterKeys = [
   {
     name: "tasks",
     Icon: ({ size }: { size: number }) => (
-      <HugeiconsIcon icon={TaskDaily01Icon} size={size} />
+      <IconCalendarCheck size={size} />
     ),
   },
   {
     name: "events",
     Icon: ({ size }: { size: number }) => (
-      <HugeiconsIcon icon={GoogleMapsIcon} size={size} />
+      <IconMapPin size={size} />
     ),
   },
   {
     name: "reminders",
     Icon: ({ size }: { size: number }) => (
-      <HugeiconsIcon icon={ReminderIcon} size={size} />
+      <IconBell size={size} />
     ),
   },
   {
     name: "appointments",
     Icon: ({ size }: { size: number }) => (
-      <HugeiconsIcon icon={Appointment01Icon} size={size} />
+      <IconCalendarEvent size={size} />
     ),
   },
   {
     name: "meetings",
     Icon: ({ size }: { size: number }) => (
-      <HugeiconsIcon icon={ZoomIcon} size={size} />
+      <IconVideo size={size} />
     ),
   },
   {
     name: "celebrations",
     Icon: ({ size }: { size: number }) => (
-      <HugeiconsIcon icon={BalloonsIcon} size={size} />
+      <IconConfetti size={size} />
     ),
   },
 ];
@@ -110,7 +98,7 @@ function ListItem(props: {
       >
         {selectedFilterKey.name == filterKey.name && (
           <div className="absolute inset-0 bg-primary flex justify-center items-center text-primary-foreground">
-            <HugeiconsIcon icon={Tick02Icon} size={16} />
+            <IconCheck size={16} />
           </div>
         )}
       </div>
@@ -131,9 +119,7 @@ const FilterInteraction = () => {
           onClick={() => setIsOpened(true)}
           className="relative left-2.5 w-20 h-20 flex justify-center items-center"
         >
-          <HugeiconsIcon
-            icon={FilterHorizontalIcon}
-            className="text-foreground relative z-10 fill-none"
+          <IconFilter className="text-foreground relative z-10 fill-none"
             size={36}
           />
           <motion.div

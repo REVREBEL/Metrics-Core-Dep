@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation";
-
+import { Suspense } from "react";
 import { demos } from "./index";
-
-import { Renderer } from "./renderer";
 
 export async function generateStaticParams() {
   return Object.keys(demos).map((name) => ({
@@ -17,20 +15,16 @@ export default async function DemoPage({
 }) {
   const { name } = await params;
 
-  const demo = demos[name as keyof typeof demos];
-  if (!demo) {
+  const DemoComponent = demos[name as keyof typeof demos];
+  if (!DemoComponent) {
     notFound();
   }
-  const { components } = demo;
 
   return (
     <div className="flex h-[100vh] w-full flex-col gap-4 bg-card">
-      {components &&
-        Object.entries(components).map(([key, node]) => (
-          <div className="relative w-full" key={key}>
-            <Renderer>{node}</Renderer>
-          </div>
-        ))}
+      <Suspense fallback={<div className="flex h-screen items-center justify-center">Loading demo...</div>}>
+        <DemoComponent />
+      </Suspense>
     </div>
   );
 }

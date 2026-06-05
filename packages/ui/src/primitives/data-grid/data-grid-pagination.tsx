@@ -13,8 +13,8 @@ import {
   SelectValue,
 } from "@ui"
 import { Skeleton } from "@skeleton"
-import { HugeiconsIcon } from "@hugeicons/react"
-import { ArrowLeft01Icon, ArrowRight01Icon } from "@hugeicons/core-free-icons"
+
+import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react"
 
 interface DataGridPaginationProps {
   sizes?: number[]
@@ -196,7 +196,7 @@ function DataGridPagination(props: DataGridPaginationProps): React.JSX.Element {
                   <span className="sr-only">
                     {mergedProps.previousPageLabel}
                   </span>
-                  <HugeiconsIcon icon={ArrowLeft01Icon} strokeWidth={2} className="size-4" />
+                  <IconChevronLeft strokeWidth={2} className="size-4" />
                 </Button>
 
                 {renderEllipsisPrevButton()}
@@ -213,7 +213,7 @@ function DataGridPagination(props: DataGridPaginationProps): React.JSX.Element {
                   disabled={!table.getCanNextPage()}
                 >
                   <span className="sr-only">{mergedProps.nextPageLabel}</span>
-                  <HugeiconsIcon icon={ArrowRight01Icon} strokeWidth={2} className="size-4" />
+                  <IconChevronRight strokeWidth={2} className="size-4" />
                 </Button>
               </div>
             )}
