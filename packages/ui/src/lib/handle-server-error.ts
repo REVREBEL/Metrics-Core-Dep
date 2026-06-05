@@ -1,24 +1,23 @@
-import { AxiosError } from 'axios'
-import { toast } from 'sonner'
+import { AxiosError } from "axios";
+import { toast } from "sonner";
 
 export function handleServerError(error: unknown) {
-   
-  console.log(error)
+	console.error(error);
 
-  let errMsg = 'Something went wrong!'
+	let errMsg = "Something went wrong!";
 
-  if (
-    error &&
-    typeof error === 'object' &&
-    'status' in error &&
-    Number(error.status) === 204
-  ) {
-    errMsg = 'Content not found.'
-  }
+	if (
+		error &&
+		typeof error === "object" &&
+		"status" in error &&
+		Number(error.status) === 204
+	) {
+		errMsg = "Content not found.";
+	}
 
-  if (error instanceof AxiosError) {
-    errMsg = error.response?.data.title
-  }
+if (error instanceof AxiosError) {
+		errMsg = error.response?.data.title ?? errMsg;
+	}
 
-  toast.error(errMsg)
+	toast.error(errMsg);
 }

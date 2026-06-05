@@ -52,9 +52,6 @@ export function getPrompt() {
   return "Use this registry item as a production-ready starting point. Preserve the component structure, styling tokens, and accessibility behavior.";
 }
 
-export function escapeHtml(unsafe: string) {
-  if (typeof unsafe !== "string") return unsafe;
-  // Replace &, <, >, ", ' except if they are already part of an HTML entity to avoid double encoding.
 const escapeMap: Record<string, string> = {
   "&": "&amp;",
   "<": "&lt;",
@@ -63,8 +60,12 @@ const escapeMap: Record<string, string> = {
   "'": "&#39;",
 };
 
-export function escapeHtml(unsafe: string) {
-  if (typeof unsafe !== "string") return unsafe;
-  return unsafe.replace(/&(?!#?[a-zA-Z0-9]+;)|[<>"']/g, (match) => escapeMap[match] || match);
-}
+export function escapeHtml(unsafe: unknown): string {
+  if (typeof unsafe !== "string") return "";
+
+  // Avoid double-encoding existing entities while still escaping unsafe HTML.
+  return unsafe.replace(
+    /&(?!#?[a-zA-Z0-9]+;)|[<>"']/g,
+    (match) => escapeMap[match] ?? match,
+  );
 }

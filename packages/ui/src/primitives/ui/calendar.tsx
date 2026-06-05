@@ -9,6 +9,8 @@ type CalendarProps = Omit<React.ComponentProps<"div">, "onSelect"> & {
 	onSelect?: (date: Date | undefined) => void;
 	disabled?: boolean | ((date: Date) => boolean);
 	mode?: "single" | string;
+	defaultMonth?: Date;
+	initialFocus?: boolean;
 	captionLayout?: string;
 	showOutsideDays?: boolean;
 	classNames?: Record<string, string>;
@@ -41,6 +43,8 @@ function Calendar({
 	onSelect,
 	disabled,
 	mode: _mode,
+	defaultMonth: _defaultMonth,
+	initialFocus: _initialFocus,
 	captionLayout: _captionLayout,
 	showOutsideDays: _showOutsideDays,
 	classNames: _classNames,

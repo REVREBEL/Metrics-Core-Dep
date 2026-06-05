@@ -2,132 +2,170 @@
 
 /**
  * Sync Shadcn Components Script
- * 
+ *
  * This script fetches the latest component and block list from shadcn
  * and can scaffold new component definitions with auto-generated Zod schemas.
- * 
+ *
  * Usage:
  *   npx tsx scripts/sync-shadcn-components.ts [--scaffold] [--verbose]
- * 
+ *
  * Options:
  *   --scaffold  Generate scaffold code for missing components
  *   --verbose   Show detailed output
  */
 
-import { execSync } from 'child_process';
-import { existsSync, readFileSync, writeFileSync } from 'fs';
-import { join } from 'path';
+import { execSync } from "node:child_process";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
+import { join } from "node:path";
 
 // Colors for console output
 const colors = {
-    reset: '\x1b[0m',
-    red: '\x1b[31m',
-    green: '\x1b[32m',
-    yellow: '\x1b[33m',
-    blue: '\x1b[34m',
-    cyan: '\x1b[36m',
+	reset: "\x1b[0m",
+	red: "\x1b[31m",
+	green: "\x1b[32m",
+	yellow: "\x1b[33m",
+	blue: "\x1b[34m",
+	cyan: "\x1b[36m",
 };
 
 const log = {
-    info: (msg: string) => console.log(`${colors.blue}ℹ${colors.reset} ${msg}`),
-    success: (msg: string) => console.log(`${colors.green}✓${colors.reset} ${msg}`),
-    warning: (msg: string) => console.log(`${colors.yellow}⚠${colors.reset} ${msg}`),
-    error: (msg: string) => console.log(`${colors.red}✗${colors.reset} ${msg}`),
+	info: (msg: string) => console.log(`${colors.blue}ℹ${colors.reset} ${msg}`),
+	success: (msg: string) =>
+		console.log(`${colors.green}✓${colors.reset} ${msg}`),
+	warning: (msg: string) =>
+		console.log(`${colors.yellow}⚠${colors.reset} ${msg}`),
+	error: (msg: string) => console.log(`${colors.red}✗${colors.reset} ${msg}`),
 };
 
 interface ShadcnItem {
-    name: string;
-    type: string;
-    registry: string;
-    addCommandArgument: string;
+	name: string;
+	type: string;
+	registry: string;
+	addCommandArgument: string;
 }
 
 interface ShadcnListResponse {
-    pagination: {
-        total: number;
-        offset: number;
-        limit: number;
-        hasMore: boolean;
-    };
-    items: ShadcnItem[];
+	pagination: {
+		total: number;
+		offset: number;
+		limit: number;
+		hasMore: boolean;
+	};
+	items: ShadcnItem[];
 }
 
 /**
  * Fetch the list of components and blocks from shadcn
  */
 async function fetchShadcnList(): Promise<ShadcnListResponse> {
-    log.info('Fetching shadcn component and block list...');
-    
-    try {
-        const output = execSync('npx shadcn@latest list @shadcn --limit 500', {
-            encoding: 'utf-8',
-            stdio: ['pipe', 'pipe', 'pipe'],
-        });
-        
-        return JSON.parse(output);
-    } catch (error) {
-        log.error('Failed to fetch shadcn list');
-        throw error;
-    }
+	log.info("Fetching shadcn component and block list...");
+
+	try {
+		const output = execSync("npx shadcn@latest list @shadcn --limit 500", {
+			encoding: "utf-8",
+			stdio: ["pipe", "pipe", "pipe"],
+		});
+
+		return JSON.parse(output);
+	} catch (error) {
+		log.error("Failed to fetch shadcn list");
+		throw error;
+	}
 }
 
 /**
  * Get existing component definitions from our registry
  */
 function getExistingComponents(): Set<string> {
-    const shadcnDefsPath = join(process.cwd(), 'lib/ui-builder/registry/shadcn-component-definitions.ts');
-    
-    if (!existsSync(shadcnDefsPath)) {
-        return new Set();
-    }
-    
-    const content = readFileSync(shadcnDefsPath, 'utf-8');
-    const componentMatches = content.matchAll(/^\s{4}(\w+):\s*\{/gm);
-    
-    return new Set(Array.from(componentMatches).map(m => m[1]).filter((name): name is string => name !== undefined));
+	const shadcnDefsPath = join(
+		process.cwd(),
+		"lib/ui-builder/registry/shadcn-component-definitions.ts",
+	);
+
+	if (!existsSync(shadcnDefsPath)) {
+		return new Set();
+	}
+
+	const content = readFileSync(shadcnDefsPath, "utf-8");
+	const componentMatches = content.matchAll(/^\s{4}(\w+):\s*\{/gm);
+
+	return new Set(
+		Array.from(componentMatches)
+			.map((m) => m[1])
+			.filter((name): name is string => name !== undefined),
+	);
 }
 
 /**
  * Get existing block definitions from our registry
  */
 function getExistingBlocks(): Set<string> {
-    const blockDefsPath = join(process.cwd(), 'lib/ui-builder/registry/block-definitions.ts');
-    
-    if (!existsSync(blockDefsPath)) {
-        return new Set();
-    }
-    
-    const content = readFileSync(blockDefsPath, 'utf-8');
-    
-    // Match block names in the definitions
-    const blockMatches = content.matchAll(/name:\s*["']([^"']+)["']/g);
-    
-    return new Set(Array.from(blockMatches).map(m => m[1]).filter((name): name is string => name !== undefined));
+	const blockDefsPath = join(
+		process.cwd(),
+		"lib/ui-builder/registry/block-definitions.ts",
+	);
+
+	if (!existsSync(blockDefsPath)) {
+		return new Set();
+	}
+
+	const content = readFileSync(blockDefsPath, "utf-8");
+
+	// Match block names in the definitions
+	const blockMatches = content.matchAll(/name:\s*["']([^"']+)["']/g);
+
+	return new Set(
+		Array.from(blockMatches)
+			.map((m) => m[1])
+			.filter((name): name is string => name !== undefined),
+	);
 }
 
 /**
  * Convert a component name to PascalCase
  */
 function toPascalCase(str: string): string {
-    return str
-        .split('-')
-        .map(part => part.charAt(0).toUpperCase() + part.slice(1))
-        .join('');
+	return str
+		.split("-")
+		.map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+		.join("");
+}
+
+/**
+ * Convert a kebab-case or snake_case string to Title Case
+ */
+function toTitleCase(str: string): string {
+	return str.replace(/[-_]/g, " ").replace(/\b\w/g, (m) => m.toUpperCase());
+}
+
+const knownComponentExportNames: Record<string, string> = {
+    'input-otp': 'InputOTP',
+    sonner: 'Toaster',
+};
+
+/**
+ * Resolve shadcn registry names to actual exported component symbols.
+ * Falls back to PascalCase, but keeps known non-standard exports compile-safe.
+ */
+function getComponentExportName(name: string): string {
+    return knownComponentExportNames[name] ?? toPascalCase(name);
 }
 
 /**
  * Generate scaffold code for a missing component
  */
 function generateComponentScaffold(name: string): string {
-    const pascalName = toPascalCase(name);
+    const componentName = getComponentExportName(name);
     
     return `
-    ${pascalName}: {
-        component: ${pascalName},
+    ${componentName}: {
+        component: ${componentName},
         schema: z.object({
             className: z.string().optional(),
             children: z.any().optional(),
+            // Replace with z.enum([...]) when this component has constrained variants.
             variant: z.string().optional(),
+            // Replace with z.enum([...]) when this component has constrained sizes.
             size: z.string().optional(),
         }),
         from: "@/components/ui/${name}",
@@ -140,13 +178,13 @@ function generateComponentScaffold(name: string): string {
  * Generate scaffold code for a missing block
  */
 function generateBlockScaffold(name: string, category: string): string {
-    const id = name.replace(/-/g, '_');
-    
-    return `
+	const id = name.replace(/-/g, "_");
+
+	return `
     {
         name: "${name}",
         category: "${category}",
-        description: "TODO: Add description for ${name}",
+        description: "${toTitleCase(name)} block for the ${category} category.",
         requiredComponents: [],
         template: {
             id: "${id}-root",
@@ -164,11 +202,11 @@ function generateBlockScaffold(name: string, category: string): string {
 /**
  * Analyze and report on shadcn components and blocks
  */
-async function analyzeAndReport(verbose: boolean = false): Promise<{
-    missingComponents: string[];
-    missingBlocks: string[];
-    newComponents: string[];
-    newBlocks: string[];
+async function analyzeAndReport(verbose = false): Promise<{
+	missingComponents: string[];
+	missingBlocks: string[];
+	newComponents: string[];
+	newBlocks: string[];
 }> {
     const shadcnList = await fetchShadcnList();
     
@@ -187,14 +225,14 @@ async function analyzeAndReport(verbose: boolean = false): Promise<{
     const newComponents: string[] = [];
     
     for (const comp of uiComponents) {
-        const pascalName = toPascalCase(comp.name);
-        if (!existingComponents.has(pascalName)) {
+        const componentName = getComponentExportName(comp.name);
+        if (!existingComponents.has(componentName)) {
             missingComponents.push(comp.name);
         }
     }
     
     // Check for components in our registry that aren't in shadcn (custom additions)
-    const shadcnComponentNames = new Set(uiComponents.map(c => toPascalCase(c.name)));
+    const shadcnComponentNames = new Set(uiComponents.map(c => getComponentExportName(c.name)));
     for (const comp of Array.from(existingComponents)) {
         if (!shadcnComponentNames.has(comp)) {
             newComponents.push(comp);
@@ -267,26 +305,28 @@ async function analyzeAndReport(verbose: boolean = false): Promise<{
 /**
  * Generate scaffold files for missing components and blocks
  */
-async function generateScaffolds(verbose: boolean = false): Promise<void> {
-    const { missingComponents, missingBlocks } = await analyzeAndReport(verbose);
-    
-    if (missingComponents.length === 0 && missingBlocks.length === 0) {
-        log.success('Nothing to scaffold - all items are covered!');
-        return;
-    }
-    
-    const scaffoldPath = join(process.cwd(), 'scripts/generated');
-    
-    // Ensure scaffold directory exists
-    if (!existsSync(scaffoldPath)) {
-        execSync(`mkdir -p ${scaffoldPath}`);
-    }
-    
-    // Generate component scaffolds
-    if (missingComponents.length > 0) {
-        const componentScaffolds = missingComponents.map(c => generateComponentScaffold(c)).join('');
-        
-        const scaffoldContent = `/**
+async function generateScaffolds(verbose = false): Promise<void> {
+	const { missingComponents, missingBlocks } = await analyzeAndReport(verbose);
+
+	if (missingComponents.length === 0 && missingBlocks.length === 0) {
+		log.success("Nothing to scaffold - all items are covered!");
+		return;
+	}
+
+	const scaffoldPath = join(process.cwd(), "scripts/generated");
+
+	// Ensure scaffold directory exists
+	if (!existsSync(scaffoldPath)) {
+		execSync(`mkdir -p ${scaffoldPath}`);
+	}
+
+	// Generate component scaffolds
+	if (missingComponents.length > 0) {
+		const componentScaffolds = missingComponents
+			.map((c) => generateComponentScaffold(c))
+			.join("");
+
+		const scaffoldContent = `/**
  * Auto-generated component scaffolds
  * Generated at: ${new Date().toISOString()}
  * 
@@ -296,6 +336,7 @@ async function generateScaffolds(verbose: boolean = false): Promise<void> {
  * 1. Install the component: npx shadcn@latest add <component-name>
  * 2. Review the auto-generated imports and component definitions
  * 3. Update the Zod schema with the component's actual props if they differ from the defaults
+ * 4. Replace generic variant/size strings with z.enum([...]) for constrained props
  */
 
 import React from 'react';
@@ -303,7 +344,7 @@ import { z } from 'zod';
 import { ComponentRegistry } from '@/components/ui/ui-builder/types';
 import { commonFieldOverrides } from "@/lib/ui-builder/registry/form-field-overrides";
 
-${missingComponents.map(c => `import { ${toPascalCase(c)} } from "@/components/ui/${c}";`).join('\n')}
+${missingComponents.map(c => `import { ${getComponentExportName(c)} } from "@/components/ui/${c}";`).join('\n')}
 
 const scaffoldedComponents: ComponentRegistry = {
 ${componentScaffolds}
@@ -311,36 +352,38 @@ ${componentScaffolds}
 
 export { scaffoldedComponents };
 `;
-        
-        const outputPath = join(scaffoldPath, 'component-scaffolds.ts');
-        writeFileSync(outputPath, scaffoldContent);
-        log.success(`Generated component scaffolds: ${outputPath}`);
-    }
-    
-    // Generate block scaffolds
-    if (missingBlocks.length > 0) {
-        const blocksByCategory: Record<string, string[]> = {};
-        
-        for (const block of missingBlocks) {
-            const category = block.split('-')[0];
-            if (category) {
-                if (!blocksByCategory[category]) {
-                    blocksByCategory[category] = [];
-                }
-                const categoryBlocks = blocksByCategory[category];
-                if (categoryBlocks) {
-                    categoryBlocks.push(block);
-                }
-            }
-        }
-        
-        let blockScaffolds = '';
-        for (const [category, blocks] of Object.entries(blocksByCategory)) {
-            blockScaffolds += `\n// ${category.toUpperCase()} blocks\n`;
-            blockScaffolds += blocks.map(b => generateBlockScaffold(b, category)).join('');
-        }
-        
-        const scaffoldContent = `/**
+
+		const outputPath = join(scaffoldPath, "component-scaffolds.ts");
+		writeFileSync(outputPath, scaffoldContent);
+		log.success(`Generated component scaffolds: ${outputPath}`);
+	}
+
+	// Generate block scaffolds
+	if (missingBlocks.length > 0) {
+		const blocksByCategory: Record<string, string[]> = {};
+
+		for (const block of missingBlocks) {
+			const category = block.split("-")[0];
+			if (category) {
+				if (!blocksByCategory[category]) {
+					blocksByCategory[category] = [];
+				}
+				const categoryBlocks = blocksByCategory[category];
+				if (categoryBlocks) {
+					categoryBlocks.push(block);
+				}
+			}
+		}
+
+		let blockScaffolds = "";
+		for (const [category, blocks] of Object.entries(blocksByCategory)) {
+			blockScaffolds += `\n// ${category.toUpperCase()} blocks\n`;
+			blockScaffolds += blocks
+				.map((b) => generateBlockScaffold(b, category))
+				.join("");
+		}
+
+		const scaffoldContent = `/**
  * Auto-generated block scaffolds
  * Generated at: ${new Date().toISOString()}
  * 
@@ -355,34 +398,36 @@ const scaffoldedBlocks: BlockDefinition[] = [${blockScaffolds}
 
 export { scaffoldedBlocks };
 `;
-        
-        const outputPath = join(scaffoldPath, 'block-scaffolds.ts');
-        writeFileSync(outputPath, scaffoldContent);
-        log.success(`Generated block scaffolds: ${outputPath}`);
-    }
+
+		const outputPath = join(scaffoldPath, "block-scaffolds.ts");
+		writeFileSync(outputPath, scaffoldContent);
+		log.success(`Generated block scaffolds: ${outputPath}`);
+	}
 }
 
 /**
  * Main entry point
  */
 async function main(): Promise<void> {
-    const args = process.argv.slice(2);
-    const shouldScaffold = args.includes('--scaffold');
-    const verbose = args.includes('--verbose') || args.includes('-v');
-    
-    console.log('\n' + colors.cyan + '🔄 Shadcn Component Sync Tool' + colors.reset + '\n');
-    
-    try {
-        if (shouldScaffold) {
-            await generateScaffolds(verbose);
-        } else {
-            await analyzeAndReport(verbose);
-            console.log('Run with --scaffold to generate scaffold code for missing items.\n');
-        }
-    } catch (error) {
-        log.error(`Sync failed: ${error}`);
-        process.exit(1);
-    }
+	const args = process.argv.slice(2);
+	const shouldScaffold = args.includes("--scaffold");
+	const verbose = args.includes("--verbose") || args.includes("-v");
+
+	console.log(`\n${colors.cyan}🔄 Shadcn Component Sync Tool${colors.reset}\n`);
+
+	try {
+		if (shouldScaffold) {
+			await generateScaffolds(verbose);
+		} else {
+			await analyzeAndReport(verbose);
+			console.log(
+				"Run with --scaffold to generate scaffold code for missing items.\n",
+			);
+		}
+	} catch (error) {
+		log.error(`Sync failed: ${error}`);
+		process.exit(1);
+	}
 }
 
 main();

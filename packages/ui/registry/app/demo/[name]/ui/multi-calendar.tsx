@@ -1,9 +1,7 @@
 "use client";
 
 import * as React from "react";
-import type { DateRange } from "react-day-picker";
-
-import { Calendar } from "@ui";
+import { DayPicker, type DateRange } from "react-day-picker";
 
 export function MultiCalendar() {
   const [dateRange, setDateRange] = React.useState<DateRange | undefined>({
@@ -12,12 +10,12 @@ export function MultiCalendar() {
   });
 
   return (
-    <Calendar
+    <DayPicker
       mode="range"
       defaultMonth={dateRange?.from}
       selected={dateRange}
       onSelect={setDateRange}
-      className="rounded-lg border shadow-sm"
+      className="rounded-lg border p-3 shadow-sm"
     />
   );
 }

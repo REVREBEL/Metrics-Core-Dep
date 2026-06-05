@@ -1,5 +1,6 @@
-import { IconChevronDown } from "@tabler/icons-react"
 "use client"
+
+import { IconChevronDown, IconDots } from "@tabler/icons-react"
 
 import {
   DropdownMenu,
