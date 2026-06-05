@@ -211,7 +211,7 @@ const extractBasicShadowProperties = (cssContent: string, target: ThemeStyleProp
     const colorPart = parts.slice(4).join(' ')
 
     // Use a combined regex pattern for all color formats
-    const colorRegex = /(?:hsla?|rgba?|oklch)\(([^/]+)(?:\/\s*([^)]+))?\)/
+const colorRegex = /(?:hsla?|rgba?|oklch)\(([^/]+)(?:\/\s*([^)]+))?\)/i
     const colorMatch = colorPart.match(colorRegex)
 
     if (colorMatch) {
