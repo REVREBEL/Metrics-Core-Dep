@@ -11,8 +11,7 @@ import {
   DropdownMenuRadioItem,
   DropdownMenuTrigger,
 } from "./dropdown-menu"
-import { Building02Icon, CreditCardIcon, Wallet01Icon } from "@hugeicons/core-free-icons"
-import { HugeiconsIcon } from "@hugeicons/react"
+import { IconBuilding, IconCreditCard, IconWallet } from "@tabler/icons-react"
 
 export function DropdownMenuRadioIcons() {
   const [paymentMethod, setPaymentMethod] = React.useState("card")
@@ -30,15 +29,15 @@ export function DropdownMenuRadioIcons() {
             onValueChange={setPaymentMethod}
           >
             <DropdownMenuRadioItem value="card">
-              <HugeiconsIcon icon={CreditCardIcon} />
+              <IconCreditCard />
               Credit Card
             </DropdownMenuRadioItem>
             <DropdownMenuRadioItem value="paypal">
-              <HugeiconsIcon icon={Wallet01Icon} />
+              <IconWallet />
               PayPal
             </DropdownMenuRadioItem>
             <DropdownMenuRadioItem value="bank">
-              <HugeiconsIcon icon={Building02Icon} />
+              <IconBuilding />
               Bank Transfer
             </DropdownMenuRadioItem>
           </DropdownMenuRadioGroup>

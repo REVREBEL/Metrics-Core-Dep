@@ -1,4 +1,4 @@
-import { Progress } from "@/components/ui/progress";
+import { Progress } from "@ui";
 
 export const progress = {
   name: "progress",

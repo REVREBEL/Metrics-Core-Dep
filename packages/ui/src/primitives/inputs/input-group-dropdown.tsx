@@ -1,3 +1,4 @@
+import { IconChevronDown } from "@tabler/icons-react"
 "use client"
 
 import {
@@ -13,8 +14,6 @@ import {
   InputGroupButton,
   InputGroupInput,
 } from "./input-group"
-import {ChevronDown, MoreHorizontalIcon} from "@hugeicons/core-free-icons"
-import { HugeiconsIcon } from "@hugeicons/react"
 
 export function InputGroupDropdown() {
   return (
@@ -25,7 +24,7 @@ export function InputGroupDropdown() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <InputGroupButton variant="ghost" aria-label="More" size="icon-xs">
-                <HugeiconsIcon icon={MoreHorizontalIcon} />
+                <IconDots />
               </InputGroupButton>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" sideOffset={8} alignOffset={-4}>
@@ -44,7 +43,7 @@ export function InputGroupDropdown() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <InputGroupButton variant="ghost" className="pr-1.5! text-xs">
-                Search In... <HugeiconsIcon icon={ChevronDown} className="size-3" />
+                Search In... <IconChevronDown className="size-3" />
               </InputGroupButton>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" sideOffset={8} alignOffset={-4}>

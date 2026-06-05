@@ -1,43 +1,46 @@
-import { IconArrowDownAZ, IconArrowUpAZ } from "@tabler/icons-react";
+import { IconArrowDown, IconArrowUp } from "@tabler/icons-react";
+import type * as React from "react";
 
 import { cn } from "@/lib/utils";
+import { TableHead } from "@tables";
 
-import { TableHead } from "./table";
-
-type SortDirection = "asc" | "desc";
-
-type SortableTableHeadProps = {
-	active?: boolean;
-	children: React.ReactNode;
-	className?: string;
-	direction?: SortDirection;
-	onClick: () => void;
-};
+interface SortableTableHeadProps extends React.ComponentProps<typeof TableHead> {
+	isSorted?: boolean;
+	isSortedDesc?: boolean;
+	onSort?: () => void;
+}
 
 export function SortableTableHead({
-	active = false,
 	children,
 	className,
-	direction = "asc",
-	onClick,
+	isSorted,
+	isSortedDesc,
+	onSort,
+	...props
 }: SortableTableHeadProps) {
 	return (
-		<TableHead className={className}>
-			<button
-				type="button"
-				onClick={onClick}
-				className={cn(
-					"inline-flex items-center gap-1",
-					active && "text-primary",
-				)}
-			>
+		<TableHead
+			className={cn(
+				"group cursor-pointer select-none whitespace-nowrap",
+				className,
+			)}
+			onClick={onSort}
+			{...props}
+		>
+			<div className="flex items-center gap-1">
 				{children}
-				{direction === "asc" ? (
-					<IconArrowDownAZ className="size-3" aria-hidden="true" />
-				) : (
-					<IconArrowUpAZ className="size-3" aria-hidden="true" />
-				)}
-			</button>
+				<div className="flex h-4 w-4 items-center justify-center opacity-0 group-hover:opacity-100">
+					{isSorted ? (
+						isSortedDesc ? (
+							<IconArrowDown className="h-3 w-3" />
+						) : (
+							<IconArrowUp className="h-3 w-3" />
+						)
+					) : (
+						<IconArrowUp className="h-3 w-3 text-muted-foreground/50" />
+					)}
+				</div>
+			</div>
 		</TableHead>
 	);
 }

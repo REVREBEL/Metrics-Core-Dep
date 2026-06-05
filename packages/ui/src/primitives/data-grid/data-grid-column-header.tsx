@@ -19,8 +19,8 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@dropdowns"
-import { HugeiconsIcon } from "@hugeicons/react"
-import { ArrowDown02Icon, ArrowUp02Icon, UnfoldMoreIcon, Tick02Icon, ArrowLeft03Icon, ArrowRight03Icon, ArrowLeft02Icon, ArrowRight02Icon, SlidersHorizontalIcon, PinOffIcon } from "@hugeicons/core-free-icons"
+
+import { IconAdjustmentsHorizontal, IconArrowNarrowLeft, IconArrowNarrowRight, IconCheck, IconChevronDown, IconChevronLeft, IconChevronRight, IconChevronUp, IconPinOff, IconSelector } from "@tabler/icons-react"
 
 interface DataGridColumnHeaderProps<
   TData,
@@ -79,11 +79,11 @@ function DataGridColumnHeaderInner<TData, TValue>({
   const sortIcon =
     canSort &&
     (isSorted === "desc" ? (
-      <HugeiconsIcon icon={ArrowDown02Icon} strokeWidth={2} className="size-3.25" />
+      <IconChevronDown strokeWidth={2} className="size-3.25" />
     ) : isSorted === "asc" ? (
-      <HugeiconsIcon icon={ArrowUp02Icon} strokeWidth={2} className="size-3.25" />
+      <IconChevronUp strokeWidth={2} className="size-3.25" />
     ) : (
-      <HugeiconsIcon icon={UnfoldMoreIcon} strokeWidth={2} className="mt-px size-3.25" />
+      <IconSelector strokeWidth={2} className="mt-px size-3.25" />
     ))
 
   const hasControls =
@@ -123,10 +123,10 @@ function DataGridColumnHeaderInner<TData, TValue>({
           }}
           disabled={!canSort}
         >
-          <HugeiconsIcon icon={ArrowUp02Icon} strokeWidth={2} className="size-3.5!" />
+          <IconChevronUp strokeWidth={2} className="size-3.5!" />
           <span className="grow">Asc</span>
           {isSorted === "asc" && (
-            <HugeiconsIcon icon={Tick02Icon} strokeWidth={2} className="text-primary size-4 opacity-100!" />
+            <IconCheck strokeWidth={2} className="text-primary size-4 opacity-100!" />
           )}
         </DropdownMenuItem>,
         <DropdownMenuItem
@@ -140,10 +140,10 @@ function DataGridColumnHeaderInner<TData, TValue>({
           }}
           disabled={!canSort}
         >
-          <HugeiconsIcon icon={ArrowDown02Icon} strokeWidth={2} className="size-3.5!" />
+          <IconChevronDown strokeWidth={2} className="size-3.5!" />
           <span className="grow">Desc</span>
           {isSorted === "desc" && (
-            <HugeiconsIcon icon={Tick02Icon} strokeWidth={2} className="text-primary size-4 opacity-100!" />
+            <IconCheck strokeWidth={2} className="text-primary size-4 opacity-100!" />
           )}
         </DropdownMenuItem>
       )
@@ -160,20 +160,20 @@ function DataGridColumnHeaderInner<TData, TValue>({
           key="pin-left"
           onClick={() => column.pin(isPinned === "left" ? false : "left")}
         >
-          <HugeiconsIcon icon={ArrowLeft03Icon} strokeWidth={2} className="size-3.5!" aria-hidden="true" />
+          <IconArrowNarrowLeft strokeWidth={2} className="size-3.5!" aria-hidden="true" />
           <span className="grow">Pin to left</span>
           {isPinned === "left" && (
-            <HugeiconsIcon icon={Tick02Icon} strokeWidth={2} className="text-primary size-4 opacity-100!" />
+            <IconCheck strokeWidth={2} className="text-primary size-4 opacity-100!" />
           )}
         </DropdownMenuItem>,
         <DropdownMenuItem
           key="pin-right"
           onClick={() => column.pin(isPinned === "right" ? false : "right")}
         >
-          <HugeiconsIcon icon={ArrowRight03Icon} strokeWidth={2} className="size-3.5!" aria-hidden="true" />
+          <IconArrowNarrowRight strokeWidth={2} className="size-3.5!" aria-hidden="true" />
           <span className="grow">Pin to right</span>
           {isPinned === "right" && (
-            <HugeiconsIcon icon={Tick02Icon} strokeWidth={2} className="text-primary size-4 opacity-100!" />
+            <IconCheck strokeWidth={2} className="text-primary size-4 opacity-100!" />
           )}
         </DropdownMenuItem>
       )
@@ -198,7 +198,7 @@ function DataGridColumnHeaderInner<TData, TValue>({
           }}
           disabled={!canMoveLeft || isPinned !== false}
         >
-          <HugeiconsIcon icon={ArrowLeft02Icon} strokeWidth={2} className="size-3.5!" aria-hidden="true" />
+          <IconChevronLeft strokeWidth={2} className="size-3.5!" aria-hidden="true" />
           <span>Move to Left</span>
         </DropdownMenuItem>,
         <DropdownMenuItem
@@ -213,7 +213,7 @@ function DataGridColumnHeaderInner<TData, TValue>({
           }}
           disabled={!canMoveRight || isPinned !== false}
         >
-          <HugeiconsIcon icon={ArrowRight02Icon} strokeWidth={2} className="size-3.5!" aria-hidden="true" />
+          <IconChevronRight strokeWidth={2} className="size-3.5!" aria-hidden="true" />
           <span>Move to Right</span>
         </DropdownMenuItem>
       )
@@ -228,7 +228,7 @@ function DataGridColumnHeaderInner<TData, TValue>({
       items.push(
         <DropdownMenuSub key="visibility">
           <DropdownMenuSubTrigger>
-            <HugeiconsIcon icon={SlidersHorizontalIcon} strokeWidth={2} className="size-3.5!" />
+            <IconAdjustmentsHorizontal strokeWidth={2} className="size-3.5!" />
             <span>Columns</span>
           </DropdownMenuSubTrigger>
           <DropdownMenuSubContent side="right">
@@ -303,7 +303,7 @@ function DataGridColumnHeaderInner<TData, TValue>({
             aria-label={`Unpin ${title} column`}
             title={`Unpin ${title} column`}
           >
-            <HugeiconsIcon icon={PinOffIcon} strokeWidth={2} className="size-3.5! opacity-50!" aria-hidden="true" />
+            <IconPinOff strokeWidth={2} className="size-3.5! opacity-50!" aria-hidden="true" />
           </Button>
         )}
       </div>

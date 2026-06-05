@@ -4,8 +4,8 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Card, CardContent } from "@/components/ui/card";
+} from "@ui";
+import { Card, CardContent } from "@ui";
 
 export const carousel = {
   name: "carousel",

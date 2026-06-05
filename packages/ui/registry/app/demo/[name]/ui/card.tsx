@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@buttons";
 import {
   Card,
   CardContent,
@@ -6,7 +6,7 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
+} from "@ui";
 
 export const card = {
   name: "card",

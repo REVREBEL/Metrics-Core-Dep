@@ -5,7 +5,7 @@ import {
   ContextMenuTrigger,
   ContextMenuSeparator,
   ContextMenuShortcut,
-} from "@/components/ui/context-menu";
+} from "@ui";
 
 export const contextMenu = {
   name: "context-menu",

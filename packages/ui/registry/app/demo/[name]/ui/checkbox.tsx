@@ -1,4 +1,4 @@
-import { Checkbox } from "@/components/ui/checkbox";
+import { Checkbox } from "@ui";
 
 export const checkbox = {
   name: "checkbox",

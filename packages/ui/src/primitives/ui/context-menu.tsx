@@ -1,9 +1,8 @@
 "use client";
 
+import * as React from "react";
 import { ContextMenu as ContextMenuPrimitive } from "radix-ui";
-import type * as React from "react";
-
-import { IconSquareRoundedArrowRightFilled, IconSquareRoundedCheckFilled } from '@tabler/icons-react';
+import { IconCheck, IconChevronRight } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
 function ContextMenu({
@@ -120,7 +119,7 @@ function ContextMenuSubTrigger({
 			{...props}
 		>
 			{children}
-			<IconSquareRoundedArrowRightFilled
+			<IconChevronRight
 				className="ml-auto"
 			/>
 		</ContextMenuPrimitive.SubTrigger>
@@ -165,7 +164,7 @@ function ContextMenuCheckboxItem({
 		>
 			<span className="pointer-events-none absolute right-2">
 				<ContextMenuPrimitive.ItemIndicator>
-					<IconSquareRoundedCheckFilled />
+					<IconCheck />
 				</ContextMenuPrimitive.ItemIndicator>
 			</span>
 			{children}
@@ -193,7 +192,7 @@ function ContextMenuRadioItem({
 		>
 			<span className="pointer-events-none absolute right-2">
 				<ContextMenuPrimitive.ItemIndicator>
-					<IconHugeiconsIcon icon={Tick02Icon} strokeWidth={2} />
+					<IconCheck />
 				</ContextMenuPrimitive.ItemIndicator>
 			</span>
 			{children}

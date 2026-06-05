@@ -7,7 +7,7 @@ import * as React from "react";
 
 import { Button } from "@buttons";
 import { cn } from "@/lib/utils";
-import { IconSquareRoundedArrowLeftFilled, IconSquareRoundedArrowRightFilled, IconPointFilled } from '@tabler/icons-react';
+import { IconSquareRoundedArrowLeftFilled, IconSquareRoundedArrowRightFilled } from '@tabler/icons-react';
 
 type CarouselApi = UseEmblaCarouselType[1];
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
@@ -77,10 +77,10 @@ function Carousel({
 
 	const handleKeyDown = React.useCallback(
 		(event: React.KeyboardEvent<HTMLDivElement>) => {
-			if (event.key === "IconSquareRoundedArrowLeftFilled") {
+			if (event.key === "ArrowLeft") {
 				event.preventDefault();
 				scrollPrev();
-			} else if (event.key === "IconSquareRoundedArrowRightFilled") {
+			} else if (event.key === "ArrowRight") {
 				event.preventDefault();
 				scrollNext();
 			}
@@ -196,7 +196,7 @@ function CarouselPrevious({
 			onClick={scrollPrev}
 			{...props}
 		>
-			<IconPointFilled icon={IconSquareRoundedArrowLeftFilled} strokeWidth={2} />
+			<IconSquareRoundedArrowLeftFilled />
 			<span className="sr-only">Previous slide</span>
 		</Button>
 	);
@@ -226,7 +226,7 @@ function CarouselNext({
 			onClick={scrollNext}
 			{...props}
 		>
-			<IconPointFilled icon={IconSquareRoundedArrowRightFilled} strokeWidth={2} />
+			<IconSquareRoundedArrowRightFilled />
 			<span className="sr-only">Next slide</span>
 		</Button>
 	);

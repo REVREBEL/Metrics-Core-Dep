@@ -1,10 +1,6 @@
 "use client";
-import {
-  Tick02Icon,
-  CodeIcon,
-  UnfoldMoreIcon,
-} from "@hugeicons/core-free-icons";
-import { HugeiconsIcon } from "@hugeicons/react";
+import { IconCheck, IconCode, IconSelector,  } from "@tabler/icons-react";
+;
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
@@ -115,7 +111,7 @@ export default function TwentyThreeFour() {
                   style={{ borderRadius: 24 }}
                   className="bg-primary px-[10px] justify-center text-primary-foreground flex h-full items-center cursor-pointer"
                 >
-                  <HugeiconsIcon icon={Tick02Icon} size={16} />
+                  <IconCheck size={16}  />
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -143,11 +139,9 @@ export default function TwentyThreeFour() {
                   layoutId="button"
                   className="text-muted-foreground justify-center flex items-center w-fit h-fit px-3 pl-2 py-[10px]"
                 >
-                  <HugeiconsIcon
-                    icon={UnfoldMoreIcon}
-                    size={14}
+                  <IconSelector size={14}
                     className="-rotate-90"
-                  />
+                   />
                 </motion.div>
               </AnimatePresence>
             </motion.div>

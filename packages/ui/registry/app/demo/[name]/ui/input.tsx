@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import { Button } from "@buttons";
+import { Input } from "@inputs";
+import { Label } from "@ui";
 
 export const input = {
   name: "input",

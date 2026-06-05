@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@ui";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 

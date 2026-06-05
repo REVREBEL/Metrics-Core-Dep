@@ -7,9 +7,7 @@ import {
 	SelectItem,
 	SelectTrigger,
 } from "@ui";
-import { ArrowRight01Icon } from "@hugeicons/core-free-icons";
 import { Input } from "@inputs";
-import { IconHugeiconsIcon } from "@tabler/icons-react";
 import * as React from "react";
 import { Button } from "./button";
 import { ButtonGroup } from "./button-group";
@@ -46,7 +44,7 @@ export default function ButtonGroupSelect() {
 			</ButtonGroup>
 			<ButtonGroup>
 				<Button aria-label="Send" size="icon" variant="outline">
-					<IconHugeiconsIcon icon={ArrowRight01Icon} />
+					<IconChevronRight />
 				</Button>
 			</ButtonGroup>
 		</ButtonGroup>
