@@ -3,7 +3,6 @@
 import type React from "react";
 import { createContext, useContext, useEffect, useRef, useState } from "react";
 import { Classes } from "@/constants/selectors";
-import { useIsDarkTheme } from "@/hooks/use-is-dark-theme";
 import { CheckIcon } from "@/icons";
 import { cn } from "@/utils/cn";
 import { copyToClipboard } from "@/utils/copy-to-clipboard";
@@ -74,18 +73,14 @@ const ColorRow = ({ children, title }: ColorRowProps) => {
   );
 };
 
-/** @deprecated Use a single string value instead */
-type ColorItemValueLegacy = { light: string; dark: string };
-
 type ColorItemProps = {
-  value: string | ColorItemValueLegacy;
+  value: string;
   name?: string;
 };
 
 const ColorItem = ({ name, value }: ColorItemProps) => {
   const [state, setState] = useState<"idle" | "copied">("idle");
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const { isDarkTheme } = useIsDarkTheme();
   const variant = useContext(ColorContext);
 
   useEffect(() => {
@@ -96,17 +91,7 @@ const ColorItem = ({ name, value }: ColorItemProps) => {
     };
   }, []);
 
-  const getCurrentColor = (): string => {
-    if (typeof value === "string") {
-      return value;
-    }
-
-    const theme = isDarkTheme ? "dark" : "light";
-
-    return value[theme];
-  };
-
-  const currentColor = getCurrentColor();
+  const currentColor = value;
 
   const handleCopy = async () => {
     const result = await copyToClipboard(currentColor);
