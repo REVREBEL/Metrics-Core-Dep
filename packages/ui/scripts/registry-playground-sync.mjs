@@ -37,6 +37,7 @@ const primitiveFiles = (await walk(SRC_PRIMITIVES))
   .map((abs) => toPosix(path.relative(ROOT, abs)))
   .filter((rel) => rel.endsWith(".tsx"))
   .filter((rel) => !rel.endsWith("/index.tsx"))
+  .filter((rel) => !/\.(test|spec)\.tsx$/.test(rel))
   .filter((rel) => !rel.includes(".stories."))
 
 const entries = primitiveFiles

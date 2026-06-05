@@ -138,19 +138,34 @@ function toTitleCase(str: string): string {
 	return str.replace(/[-_]/g, " ").replace(/\b\w/g, (m) => m.toUpperCase());
 }
 
+const knownComponentExportNames: Record<string, string> = {
+    'input-otp': 'InputOTP',
+    sonner: 'Toaster',
+};
+
+/**
+ * Resolve shadcn registry names to actual exported component symbols.
+ * Falls back to PascalCase, but keeps known non-standard exports compile-safe.
+ */
+function getComponentExportName(name: string): string {
+    return knownComponentExportNames[name] ?? toPascalCase(name);
+}
+
 /**
  * Generate scaffold code for a missing component
  */
 function generateComponentScaffold(name: string): string {
-	const pascalName = toPascalCase(name);
-
-	return `
-    ${pascalName}: {
-        component: ${pascalName},
+    const componentName = getComponentExportName(name);
+    
+    return `
+    ${componentName}: {
+        component: ${componentName},
         schema: z.object({
             className: z.string().optional(),
             children: z.any().optional(),
+            // Replace with z.enum([...]) when this component has constrained variants.
             variant: z.string().optional(),
+            // Replace with z.enum([...]) when this component has constrained sizes.
             size: z.string().optional(),
         }),
         from: "@/components/ui/${name}",
@@ -193,120 +208,98 @@ async function analyzeAndReport(verbose = false): Promise<{
 	newComponents: string[];
 	newBlocks: string[];
 }> {
-	const shadcnList = await fetchShadcnList();
-
-	const uiComponents = shadcnList.items.filter(
-		(item) => item.type === "registry:ui",
-	);
-	const blocks = shadcnList.items.filter(
-		(item) => item.type === "registry:block",
-	);
-
-	log.info(
-		`Found ${uiComponents.length} UI components and ${blocks.length} blocks in shadcn registry`,
-	);
-
-	const existingComponents = getExistingComponents();
-	const existingBlocks = getExistingBlocks();
-
-	log.info(
-		`Our registry has ${existingComponents.size} components and ${existingBlocks.size} blocks`,
-	);
-
-	// Find missing items
-	const missingComponents: string[] = [];
-	const newComponents: string[] = [];
-
-	for (const comp of uiComponents) {
-		const pascalName = toPascalCase(comp.name);
-		if (!existingComponents.has(pascalName)) {
-			missingComponents.push(comp.name);
-		}
-	}
-
-	// Check for components in our registry that aren't in shadcn (custom additions)
-	const shadcnComponentNames = new Set(
-		uiComponents.map((c) => toPascalCase(c.name)),
-	);
-	for (const comp of Array.from(existingComponents)) {
-		if (!shadcnComponentNames.has(comp)) {
-			newComponents.push(comp);
-		}
-	}
-
-	const missingBlocks: string[] = [];
-	const newBlocks: string[] = [];
-
-	for (const block of blocks) {
-		if (!existingBlocks.has(block.name)) {
-			missingBlocks.push(block.name);
-		}
-	}
-
-	// Check for blocks in our registry that aren't in shadcn
-	const shadcnBlockNames = new Set(blocks.map((b) => b.name));
-	for (const block of Array.from(existingBlocks)) {
-		if (!shadcnBlockNames.has(block)) {
-			newBlocks.push(block);
-		}
-	}
-
-	// Report
-	console.log(`\n${"=".repeat(60)}`);
-	console.log("SYNC REPORT");
-	console.log("=".repeat(60));
-
-	if (missingComponents.length > 0) {
-		log.warning(`Missing ${missingComponents.length} components from shadcn:`);
-		if (verbose) {
-			for (const c of missingComponents) {
-				console.log(`  - ${c}`);
-			}
-		} else {
-			console.log(
-				`  ${missingComponents.slice(0, 5).join(", ")}${missingComponents.length > 5 ? `, ... and ${missingComponents.length - 5} more` : ""}`,
-			);
-		}
-	} else {
-		log.success("All shadcn UI components are covered!");
-	}
-
-	if (newComponents.length > 0) {
-		log.info(`Custom components (not in shadcn): ${newComponents.length}`);
-		if (verbose) {
-			for (const c of newComponents) {
-				console.log(`  + ${c}`);
-			}
-		}
-	}
-
-	if (missingBlocks.length > 0) {
-		log.warning(`Missing ${missingBlocks.length} blocks from shadcn:`);
-		if (verbose) {
-			for (const b of missingBlocks) {
-				console.log(`  - ${b}`);
-			}
-		} else {
-			console.log(
-				`  ${missingBlocks.slice(0, 5).join(", ")}${missingBlocks.length > 5 ? `, ... and ${missingBlocks.length - 5} more` : ""}`,
-			);
-		}
-	} else {
-		log.success("All shadcn blocks are covered!");
-	}
-
-	if (newBlocks.length > 0) {
-		log.info(`Custom blocks (not in shadcn): ${newBlocks.length}`);
-		if (verbose) {
-			for (const b of newBlocks) {
-				console.log(`  + ${b}`);
-			}
-		}
-	}
-
-	console.log(`${"=".repeat(60)}\n`);
-
-	return { missingComponents, missingBlocks, newComponents, newBlocks };
+    const shadcnList = await fetchShadcnList();
+    
+    const uiComponents = shadcnList.items.filter(item => item.type === 'registry:ui');
+    const blocks = shadcnList.items.filter(item => item.type === 'registry:block');
+    
+    log.info(`Found ${uiComponents.length} UI components and ${blocks.length} blocks in shadcn registry`);
+    
+    const existingComponents = getExistingComponents();
+    const existingBlocks = getExistingBlocks();
+    
+    log.info(`Our registry has ${existingComponents.size} components and ${existingBlocks.size} blocks`);
+    
+    // Find missing items
+    const missingComponents: string[] = [];
+    const newComponents: string[] = [];
+    
+    for (const comp of uiComponents) {
+        const componentName = getComponentExportName(comp.name);
+        if (!existingComponents.has(componentName)) {
+            missingComponents.push(comp.name);
+        }
+    }
+    
+    // Check for components in our registry that aren't in shadcn (custom additions)
+    const shadcnComponentNames = new Set(uiComponents.map(c => getComponentExportName(c.name)));
+    for (const comp of Array.from(existingComponents)) {
+        if (!shadcnComponentNames.has(comp)) {
+            newComponents.push(comp);
+        }
+    }
+    
+    const missingBlocks: string[] = [];
+    const newBlocks: string[] = [];
+    
+    for (const block of blocks) {
+        if (!existingBlocks.has(block.name)) {
+            missingBlocks.push(block.name);
+        }
+    }
+    
+    // Check for blocks in our registry that aren't in shadcn
+    const shadcnBlockNames = new Set(blocks.map(b => b.name));
+    for (const block of Array.from(existingBlocks)) {
+        if (!shadcnBlockNames.has(block)) {
+            newBlocks.push(block);
+        }
+    }
+    
+    // Report
+    console.log('\n' + '='.repeat(60));
+    console.log('SYNC REPORT');
+    console.log('='.repeat(60));
+    
+    if (missingComponents.length > 0) {
+        log.warning(`Missing ${missingComponents.length} components from shadcn:`);
+        if (verbose) {
+            missingComponents.forEach(c => console.log(`  - ${c}`));
+        } else {
+            console.log(`  ${missingComponents.slice(0, 5).join(', ')}${missingComponents.length > 5 ? `, ... and ${missingComponents.length - 5} more` : ''}`);
+        }
+    } else {
+        log.success('All shadcn UI components are covered!');
+    }
+    
+    if (newComponents.length > 0) {
+        log.info(`Custom components (not in shadcn): ${newComponents.length}`);
+        if (verbose) {
+            newComponents.forEach(c => console.log(`  + ${c}`));
+        }
+    }
+    
+    if (missingBlocks.length > 0) {
+        log.warning(`Missing ${missingBlocks.length} blocks from shadcn:`);
+        if (verbose) {
+            missingBlocks.forEach(b => console.log(`  - ${b}`));
+        } else {
+            console.log(`  ${missingBlocks.slice(0, 5).join(', ')}${missingBlocks.length > 5 ? `, ... and ${missingBlocks.length - 5} more` : ''}`);
+        }
+    } else {
+        log.success('All shadcn blocks are covered!');
+    }
+    
+    if (newBlocks.length > 0) {
+        log.info(`Custom blocks (not in shadcn): ${newBlocks.length}`);
+        if (verbose) {
+            newBlocks.forEach(b => console.log(`  + ${b}`));
+        }
+    }
+    
+    console.log('='.repeat(60) + '\n');
+    
+    return { missingComponents, missingBlocks, newComponents, newBlocks };
 }
 
 /**
@@ -343,6 +336,7 @@ async function generateScaffolds(verbose = false): Promise<void> {
  * 1. Install the component: npx shadcn@latest add <component-name>
  * 2. Review the auto-generated imports and component definitions
  * 3. Update the Zod schema with the component's actual props if they differ from the defaults
+ * 4. Replace generic variant/size strings with z.enum([...]) for constrained props
  */
 
 import React from 'react';
@@ -350,7 +344,7 @@ import { z } from 'zod';
 import { ComponentRegistry } from '@/components/ui/ui-builder/types';
 import { commonFieldOverrides } from "@/lib/ui-builder/registry/form-field-overrides";
 
-${missingComponents.map((c) => `import { ${toPascalCase(c)} } from "@/components/ui/${c}";`).join("\n")}
+${missingComponents.map(c => `import { ${getComponentExportName(c)} } from "@/components/ui/${c}";`).join('\n')}
 
 const scaffoldedComponents: ComponentRegistry = {
 ${componentScaffolds}

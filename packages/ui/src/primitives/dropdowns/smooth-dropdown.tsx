@@ -1,19 +1,28 @@
-import { iconRef } from "@tabler/icons-react"
 "use client";
 
+import {
+  IconCreditCard,
+  IconDots,
+  IconFileText,
+  IconFolder,
+  IconHelpCircle,
+  IconLogout,
+  IconSettings,
+  IconUser,
+} from "@tabler/icons-react";
 import { useState, useRef, useEffect } from "react";
 import { motion } from "motion/react";
 import useMeasure from "react-use-measure";
 // Change Here
 const menuItems = [
-  { id: "profile", label: "Profile", icon: UserIcon },
-  { id: "upgrade", label: "Upgrade", icon: CreditCardIcon },
-  { id: "projects", label: "Projects", icon: FolderIcon },
-  { id: "documentation", label: "Documentation", icon: File01Icon },
+  { id: "profile", label: "Profile", icon: IconUser },
+  { id: "upgrade", label: "Upgrade", icon: IconCreditCard },
+  { id: "projects", label: "Projects", icon: IconFolder },
+  { id: "documentation", label: "Documentation", icon: IconFileText },
   { id: "divider", label: "", icon: null },
-  { id: "settings", label: "Settings", icon: SettingsIcon },
-  { id: "help", label: "Get Help", icon: HelpCircleIcon },
-  { id: "logout", label: "Logout", icon: LogoutIcon },
+  { id: "settings", label: "Settings", icon: IconSettings },
+  { id: "help", label: "Get Help", icon: IconHelpCircle },
+  { id: "logout", label: "Logout", icon: IconLogout },
 ];
 
 const easeOutQuint: [number, number, number, number] = [0.23, 1, 0.32, 1];
@@ -75,8 +84,7 @@ export default function TwentyTwelveOne() {
             willChange: "transform",
           }}
         >
-          <IconDots className="w-6 h-6 text-muted-foreground"
-          />
+          <IconDots className="w-6 h-6 text-muted-foreground" />
         </motion.div>
 
         {/* Menu Content - visible when open */}
@@ -111,7 +119,7 @@ export default function TwentyTwelveOne() {
                   );
                 }
 
-                const iconRef = item.icon!;
+                const Icon = item.icon!;
                 const isActive = activeItem === item.id;
                 const isLogout = item.id === "logout";
                 const showIndicator = hoveredItem
@@ -182,8 +190,7 @@ export default function TwentyTwelveOne() {
                         }}
                       />
                     )}
-                    <iconRef className="w-[18px] h-[18px] relative z-10"
-                     />
+                    <Icon className="w-[18px] h-[18px] relative z-10" />
                     <span className="font-medium relative z-10">
                       {item.label}
                     </span>
