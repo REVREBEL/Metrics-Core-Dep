@@ -15,8 +15,8 @@ export function handleServerError(error: unknown) {
 		errMsg = "Content not found.";
 	}
 
-	if (error instanceof AxiosError) {
-		errMsg = error.response?.data.title;
+if (error instanceof AxiosError) {
+		errMsg = error.response?.data.title ?? errMsg;
 	}
 
 	toast.error(errMsg);
