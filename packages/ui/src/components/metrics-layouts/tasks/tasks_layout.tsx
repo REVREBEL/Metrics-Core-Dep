@@ -60,7 +60,6 @@ export default function GrowthPlanPage() {
   }
 
   const handleCreateTask = () => {
-    console.log('[v0] Create task clicked')
   }
 
   const handleInitiativeClick = (initiative: Initiative) => {
@@ -68,7 +67,6 @@ export default function GrowthPlanPage() {
   }
 
   const handleTaskClick = (task: Task) => {
-    console.log('[v0] Task clicked:', task.id)
   }
 
   const handleTabChange = (tab: HeaderTab) => {
@@ -103,7 +101,6 @@ export default function GrowthPlanPage() {
 
   const handleInitiativeSubmit = () => {
     // In a real app, this would create the initiative
-    console.log('[v0] Creating new initiative:', newInitiative)
     setNewInitiative({
       title: '',
       objective: '',
