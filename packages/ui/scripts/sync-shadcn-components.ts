@@ -115,19 +115,34 @@ function toPascalCase(str: string): string {
         .join('');
 }
 
+const knownComponentExportNames: Record<string, string> = {
+    'input-otp': 'InputOTP',
+    sonner: 'Toaster',
+};
+
+/**
+ * Resolve shadcn registry names to actual exported component symbols.
+ * Falls back to PascalCase, but keeps known non-standard exports compile-safe.
+ */
+function getComponentExportName(name: string): string {
+    return knownComponentExportNames[name] ?? toPascalCase(name);
+}
+
 /**
  * Generate scaffold code for a missing component
  */
 function generateComponentScaffold(name: string): string {
-    const pascalName = toPascalCase(name);
+    const componentName = getComponentExportName(name);
     
     return `
-    ${pascalName}: {
-        component: ${pascalName},
+    ${componentName}: {
+        component: ${componentName},
         schema: z.object({
             className: z.string().optional(),
             children: z.any().optional(),
+            // Replace with z.enum([...]) when this component has constrained variants.
             variant: z.string().optional(),
+            // Replace with z.enum([...]) when this component has constrained sizes.
             size: z.string().optional(),
         }),
         from: "@/components/ui/${name}",
@@ -187,14 +202,14 @@ async function analyzeAndReport(verbose: boolean = false): Promise<{
     const newComponents: string[] = [];
     
     for (const comp of uiComponents) {
-        const pascalName = toPascalCase(comp.name);
-        if (!existingComponents.has(pascalName)) {
+        const componentName = getComponentExportName(comp.name);
+        if (!existingComponents.has(componentName)) {
             missingComponents.push(comp.name);
         }
     }
     
     // Check for components in our registry that aren't in shadcn (custom additions)
-    const shadcnComponentNames = new Set(uiComponents.map(c => toPascalCase(c.name)));
+    const shadcnComponentNames = new Set(uiComponents.map(c => getComponentExportName(c.name)));
     for (const comp of Array.from(existingComponents)) {
         if (!shadcnComponentNames.has(comp)) {
             newComponents.push(comp);
@@ -296,6 +311,7 @@ async function generateScaffolds(verbose: boolean = false): Promise<void> {
  * 1. Install the component: npx shadcn@latest add <component-name>
  * 2. Review the auto-generated imports and component definitions
  * 3. Update the Zod schema with the component's actual props if they differ from the defaults
+ * 4. Replace generic variant/size strings with z.enum([...]) for constrained props
  */
 
 import React from 'react';
@@ -303,7 +319,7 @@ import { z } from 'zod';
 import { ComponentRegistry } from '@/components/ui/ui-builder/types';
 import { commonFieldOverrides } from "@/lib/ui-builder/registry/form-field-overrides";
 
-${missingComponents.map(c => `import { ${toPascalCase(c)} } from "@/components/ui/${c}";`).join('\n')}
+${missingComponents.map(c => `import { ${getComponentExportName(c)} } from "@/components/ui/${c}";`).join('\n')}
 
 const scaffoldedComponents: ComponentRegistry = {
 ${componentScaffolds}

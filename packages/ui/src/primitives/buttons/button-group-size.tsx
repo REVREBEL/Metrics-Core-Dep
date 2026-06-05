@@ -1,4 +1,4 @@
-import { Plus as PlusIcon } from "@tabler/icons-react";
+import { IconPlus as PlusIcon } from "@tabler/icons-react";
 import { Button } from "./button";
 import { ButtonGroup } from "./button-group";
 

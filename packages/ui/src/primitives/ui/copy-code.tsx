@@ -49,8 +49,8 @@ function CopyCode({ code = "" }: CopyCodeProps) {
 
     // 1. Strings (blue) - process first to protect content
     result = result.replace(
-      /"([^"]*)"/g,
-      '<span class="text-blue-600 dark:text-blue-400">"$1"</span>',
+      /&quot;([^&]*)&quot;/g,
+      '<span class="text-blue-600 dark:text-blue-400">&quot;$1&quot;</span>',
     );
     result = result.replace(
       /\b(agent)\b/g,

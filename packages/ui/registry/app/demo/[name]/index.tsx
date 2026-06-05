@@ -1,877 +1,99 @@
+"use client";
+
 import dynamic from "next/dynamic";
-"use client"
-import { useEffect, type ReactNode } from "react";
+import type { ComponentType, ReactNode } from "react";
 import { Renderer } from "./renderer";
 
-export const demos: { [name: string]: any } = {
-  "blank": dynamic(() => import("./blocks/blank").then((mod) => {
-    const demo = mod.blank;
+type Demo = {
+  name?: string;
+  components?: Record<string, ReactNode>;
+};
+
+type DemoModule = Record<string, Demo>;
+type DemoComponent = ComponentType;
+
+function DemoRenderer({ demo }: { demo: Demo }) {
+  if (!demo.components) return null;
+
+  return (
+    <>
+      {Object.entries(demo.components).map(([key, node]) => (
+        <div className="relative w-full" key={key}>
+          <Renderer>{node}</Renderer>
+        </div>
+      ))}
+    </>
+  );
+}
+
+function makeDemo(loader: () => Promise<unknown>, exportName: string): DemoComponent {
+  return dynamic(async () => {
+    const mod = (await loader()) as DemoModule;
+    const demo = mod[exportName];
+
     return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
+      return demo ? <DemoRenderer demo={demo} /> : null;
     };
-  })),
-  "store": dynamic(() => import("./blocks/store").then((mod) => {
-    const demo = mod.store;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "dashboard": dynamic(() => import("./blocks/dashboard").then((mod) => {
-    const demo = mod.dashboard;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "hero": dynamic(() => import("./components/hero").then((mod) => {
-    const demo = mod.hero;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "login": dynamic(() => import("./components/login").then((mod) => {
-    const demo = mod.login;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "promo": dynamic(() => import("./components/promo").then((mod) => {
-    const demo = mod.promo;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "logo": dynamic(() => import("./components/logo").then((mod) => {
-    const demo = mod.logo;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "accordion": dynamic(() => import("./ui/accordion").then((mod) => {
-    const demo = mod.accordion;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "alert": dynamic(() => import("./ui/alert").then((mod) => {
-    const demo = mod.alert;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "avatar": dynamic(() => import("./ui/avatar").then((mod) => {
-    const demo = mod.avatar;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "badge": dynamic(() => import("./ui/badge").then((mod) => {
-    const demo = mod.badge;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "breadcrumb": dynamic(() => import("./ui/breadcrumb").then((mod) => {
-    const demo = mod.breadcrumb;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "button": dynamic(() => import("./ui/button").then((mod) => {
-    const demo = mod.button;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "calendar": dynamic(() => import("./ui/calendar").then((mod) => {
-    const demo = mod.calendar;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "card": dynamic(() => import("./ui/card").then((mod) => {
-    const demo = mod.card;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "carousel": dynamic(() => import("./ui/carousel").then((mod) => {
-    const demo = mod.carousel;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "chart": dynamic(() => import("./ui/chart").then((mod) => {
-    const demo = mod.chart;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "checkbox": dynamic(() => import("./ui/checkbox").then((mod) => {
-    const demo = mod.checkbox;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "collapsible": dynamic(() => import("./ui/collapsible").then((mod) => {
-    const demo = mod.collapsible;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "command": dynamic(() => import("./ui/command").then((mod) => {
-    const demo = mod.command;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "dialog": dynamic(() => import("./ui/dialog").then((mod) => {
-    const demo = mod.dialog;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "drawer": dynamic(() => import("./ui/drawer").then((mod) => {
-    const demo = mod.drawer;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "form": dynamic(() => import("./ui/form").then((mod) => {
-    const demo = mod.form;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "input": dynamic(() => import("./ui/input").then((mod) => {
-    const demo = mod.input;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "label": dynamic(() => import("./ui/label").then((mod) => {
-    const demo = mod.label;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "menubar": dynamic(() => import("./ui/menubar").then((mod) => {
-    const demo = mod.menubar;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "pagination": dynamic(() => import("./ui/pagination").then((mod) => {
-    const demo = mod.pagination;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "popover": dynamic(() => import("./ui/popover").then((mod) => {
-    const demo = mod.popover;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "progress": dynamic(() => import("./ui/progress").then((mod) => {
-    const demo = mod.progress;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "resizable": dynamic(() => import("./ui/resizable").then((mod) => {
-    const demo = mod.resizable;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "select": dynamic(() => import("./ui/select").then((mod) => {
-    const demo = mod.select;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "separator": dynamic(() => import("./ui/separator").then((mod) => {
-    const demo = mod.separator;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "sheet": dynamic(() => import("./ui/sheet").then((mod) => {
-    const demo = mod.sheet;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "sidebar": dynamic(() => import("./ui/sidebar").then((mod) => {
-    const demo = mod.sidebar;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "skeleton": dynamic(() => import("./ui/skeleton").then((mod) => {
-    const demo = mod.skeleton;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "slider": dynamic(() => import("./ui/slider").then((mod) => {
-    const demo = mod.slider;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "sonner": dynamic(() => import("./ui/sonner").then((mod) => {
-    const demo = mod.sonner;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "switch": dynamic(() => import("./ui/switch").then((mod) => {
-    const demo = mod.switchComponent;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "table": dynamic(() => import("./ui/table").then((mod) => {
-    const demo = mod.table;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "tabs": dynamic(() => import("./ui/tabs").then((mod) => {
-    const demo = mod.tabs;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "textarea": dynamic(() => import("./ui/textarea").then((mod) => {
-    const demo = mod.textarea;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "toggle": dynamic(() => import("./ui/toggle").then((mod) => {
-    const demo = mod.toggle;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "tooltip": dynamic(() => import("./ui/tooltip").then((mod) => {
-    const demo = mod.tooltip;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "brand-header": dynamic(() => import("./components/brand-header").then((mod) => {
-    const demo = mod.brandHeader;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "brand-sidebar": dynamic(() => import("./components/brand-sidebar").then((mod) => {
-    const demo = mod.brandSidebar;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "product-grid": dynamic(() => import("./components/product-grid").then((mod) => {
-    const demo = mod.productGrid;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "alert-dialog": dynamic(() => import("./ui/alert-dialog").then((mod) => {
-    const demo = mod.alertDialog;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "aspect-ratio": dynamic(() => import("./ui/aspect-ratio").then((mod) => {
-    const demo = mod.aspectRatio;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "context-menu": dynamic(() => import("./ui/context-menu").then((mod) => {
-    const demo = mod.contextMenu;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "data-table": dynamic(() => import("./ui/data-table").then((mod) => {
-    const demo = mod.dataTable;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "date-picker": dynamic(() => import("./ui/date-picker").then((mod) => {
-    const demo = mod.datePicker;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "dropdown-menu": dynamic(() => import("./ui/dropdown-menu").then((mod) => {
-    const demo = mod.dropdownMenu;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "hover-card": dynamic(() => import("./ui/hover-card").then((mod) => {
-    const demo = mod.hoverCard;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "input-otp": dynamic(() => import("./ui/input-otp").then((mod) => {
-    const demo = mod.inputOtp;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "navigation-menu": dynamic(() => import("./ui/navigation-menu").then((mod) => {
-    const demo = mod.navigationMenu;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "radio-group": dynamic(() => import("./ui/radio-group").then((mod) => {
-    const demo = mod.radioGroup;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "scroll-area": dynamic(() => import("./ui/scroll-area").then((mod) => {
-    const demo = mod.scrollArea;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
-  "toggle-group": dynamic(() => import("./ui/toggle-group").then((mod) => {
-    const demo = mod.toggleGroup;
-    return function DemoWrapper() {
-      return (
-        <>
-          {demo.components &&
-            Object.entries(demo.components).map(([key, node]) => (
-              <div className="relative w-full" key={key}>
-                <Renderer>{node as any}</Renderer>
-              </div>
-            ))}
-        </>
-      );
-    };
-  })),
+  });
+}
+
+export const demos: Record<string, DemoComponent> = {
+  "blank": makeDemo(() => import("./blocks/blank"), "blank"),
+  "store": makeDemo(() => import("./blocks/store"), "store"),
+  "dashboard": makeDemo(() => import("./blocks/dashboard"), "dashboard"),
+  "hero": makeDemo(() => import("./components/hero"), "hero"),
+  "login": makeDemo(() => import("./components/login"), "login"),
+  "promo": makeDemo(() => import("./components/promo"), "promo"),
+  "logo": makeDemo(() => import("./components/logo"), "logo"),
+  "accordion": makeDemo(() => import("./ui/accordion"), "accordion"),
+  "alert": makeDemo(() => import("./ui/alert"), "alert"),
+  "avatar": makeDemo(() => import("./ui/avatar"), "avatar"),
+  "badge": makeDemo(() => import("./ui/badge"), "badge"),
+  "breadcrumb": makeDemo(() => import("./ui/breadcrumb"), "breadcrumb"),
+  "button": makeDemo(() => import("./ui/button"), "button"),
+  "calendar": makeDemo(() => import("./ui/calendar"), "calendar"),
+  "card": makeDemo(() => import("./ui/card"), "card"),
+  "carousel": makeDemo(() => import("./ui/carousel"), "carousel"),
+  "chart": makeDemo(() => import("./ui/chart"), "chart"),
+  "checkbox": makeDemo(() => import("./ui/checkbox"), "checkbox"),
+  "collapsible": makeDemo(() => import("./ui/collapsible"), "collapsible"),
+  "command": makeDemo(() => import("./ui/command"), "command"),
+  "dialog": makeDemo(() => import("./ui/dialog"), "dialog"),
+  "drawer": makeDemo(() => import("./ui/drawer"), "drawer"),
+  "form": makeDemo(() => import("./ui/form"), "form"),
+  "input": makeDemo(() => import("./ui/input"), "input"),
+  "label": makeDemo(() => import("./ui/label"), "label"),
+  "menubar": makeDemo(() => import("./ui/menubar"), "menubar"),
+  "pagination": makeDemo(() => import("./ui/pagination"), "pagination"),
+  "popover": makeDemo(() => import("./ui/popover"), "popover"),
+  "progress": makeDemo(() => import("./ui/progress"), "progress"),
+  "resizable": makeDemo(() => import("./ui/resizable"), "resizable"),
+  "select": makeDemo(() => import("./ui/select"), "select"),
+  "separator": makeDemo(() => import("./ui/separator"), "separator"),
+  "sheet": makeDemo(() => import("./ui/sheet"), "sheet"),
+  "sidebar": makeDemo(() => import("./ui/sidebar"), "sidebar"),
+  "skeleton": makeDemo(() => import("./ui/skeleton"), "skeleton"),
+  "slider": makeDemo(() => import("./ui/slider"), "slider"),
+  "sonner": makeDemo(() => import("./ui/sonner"), "sonner"),
+  "switch": makeDemo(() => import("./ui/switch"), "switchComponent"),
+  "table": makeDemo(() => import("./ui/table"), "table"),
+  "tabs": makeDemo(() => import("./ui/tabs"), "tabs"),
+  "textarea": makeDemo(() => import("./ui/textarea"), "textarea"),
+  "toggle": makeDemo(() => import("./ui/toggle"), "toggle"),
+  "tooltip": makeDemo(() => import("./ui/tooltip"), "tooltip"),
+  "brand-header": makeDemo(() => import("./components/brand-header"), "brandHeader"),
+  "brand-sidebar": makeDemo(() => import("./components/brand-sidebar"), "brandSidebar"),
+  "product-grid": makeDemo(() => import("./components/product-grid"), "productGrid"),
+  "alert-dialog": makeDemo(() => import("./ui/alert-dialog"), "alertDialog"),
+  "aspect-ratio": makeDemo(() => import("./ui/aspect-ratio"), "aspectRatio"),
+  "context-menu": makeDemo(() => import("./ui/context-menu"), "contextMenu"),
+  "data-table": makeDemo(() => import("./ui/data-table"), "dataTable"),
+  "date-picker": makeDemo(() => import("./ui/date-picker"), "datePicker"),
+  "dropdown-menu": makeDemo(() => import("./ui/dropdown-menu"), "dropdownMenu"),
+  "hover-card": makeDemo(() => import("./ui/hover-card"), "hoverCard"),
+  "input-otp": makeDemo(() => import("./ui/input-otp"), "inputOtp"),
+  "navigation-menu": makeDemo(() => import("./ui/navigation-menu"), "navigationMenu"),
+  "radio-group": makeDemo(() => import("./ui/radio-group"), "radioGroup"),
+  "scroll-area": makeDemo(() => import("./ui/scroll-area"), "scrollArea"),
+  "toggle-group": makeDemo(() => import("./ui/toggle-group"), "toggleGroup"),
 };

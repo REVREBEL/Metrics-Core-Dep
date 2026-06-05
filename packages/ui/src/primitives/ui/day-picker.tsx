@@ -1,6 +1,5 @@
 "use client";
-import { IconCheck, IconCode, IconSelector,  } from "@tabler/icons-react";
-;
+import { IconCheck, IconSelector } from "@tabler/icons-react";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
