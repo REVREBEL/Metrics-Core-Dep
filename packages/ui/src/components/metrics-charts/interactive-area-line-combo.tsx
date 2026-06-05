@@ -1,12 +1,8 @@
 "use client";
 
-import { Skeleton } from "@skeleton";
-import { ToggleGroup, ToggleGroupItem } from "@ui";
-import { useDuckDb } from "@hooks";
-import { ArrowCircleDown, ArrowCircleUp } from "@icons";
 import { TrendingUp } from "lucide-react";
 import * as React from "react";
-import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
+import { Area, CartesianGrid, ComposedChart, Line, XAxis } from "recharts";
 
 import {
   Card,
@@ -25,9 +21,7 @@ import {
   ChartTooltipContent,
 } from "@charts";
 
-const description = "Area Line Combo Chart";
-
-const chartLineData = [
+const chartData = [
   { date: "2024-04-01", desktop: 222, mobile: 150 },
   { date: "2024-04-02", desktop: 97, mobile: 180 },
   { date: "2024-04-03", desktop: 167, mobile: 120 },
@@ -121,15 +115,6 @@ const chartLineData = [
   { date: "2024-06-30", desktop: 446, mobile: 400 },
 ];
 
-const chartAreaData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-];
-
 const chartConfig = {
   desktop: {
     label: "Desktop",
@@ -145,39 +130,22 @@ export function InteractiveAreaLineCombo() {
   const [activeChart, setActiveChart] = React.useState<keyof typeof chartConfig>(
     "desktop",
   );
-  const { execute, isInitializing, error } = useDuckDb();
-  const [data, setData] = React.useState(chartLineData);
-
-  React.useEffect(() => {
-    if (isInitializing) return;
-    async function fetchData() {
-      try {
-        const res = await execute(
-          "SELECT * FROM 'ga4_TrafficAcquisition_281286275.parquet' LIMIT 10",
-        );
-        console.log(res);
-      } catch (err) {
-        console.error(err);
-      }
-    }
-    fetchData();
-  }, [execute, isInitializing]);
-
-  if (isInitializing) return <Skeleton className="h-[400px] w-full" />;
 
   const total = React.useMemo(
     () => ({
-      desktop: chartLineData.reduce((acc, curr) => acc + curr.desktop, 0),
-      mobile: chartLineData.reduce((acc, curr) => acc + curr.mobile, 0),
+      desktop: chartData.reduce((acc, curr) => acc + curr.desktop, 0),
+      mobile: chartData.reduce((acc, curr) => acc + curr.mobile, 0),
     }),
     [],
   );
 
   return (
-    <Card>
-      <CardHeader className="flex flex-col items-stretch space-y-0 border-b p-0 sm:flex-row">
+    <Card className="py-4 sm:py-0">
+      <CardHeader className="flex flex-col items-stretch border-b p-0 sm:flex-row">
         <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6">
-          <CardTitle>Area Chart - Interactive</CardTitle>
+          <CardTitle className="font-bold font-display text-dark-blue uppercase tracking-widest">
+            Area Line Combo - Interactive
+          </CardTitle>
           <CardDescription>
             Showing total visitors for the last 3 months
           </CardDescription>
@@ -190,10 +158,10 @@ export function InteractiveAreaLineCombo() {
                 key={chart}
                 type="button"
                 data-active={activeChart === chart}
-                className="relative z-30 flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-muted/50 sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
+                className="flex flex-1 flex-col justify-center gap-1 border-t px-6 py-4 text-left even:border-l data-[active=true]:bg-muted/50 sm:border-l sm:border-t-0 sm:px-8 sm:py-6"
                 onClick={() => setActiveChart(chart)}
               >
-                <span className="text-muted-foreground text-xs uppercase">
+                <span className="font-bold font-display text-[10px] text-muted-foreground uppercase tracking-widest">
                   {chartConfig[chart].label}
                 </span>
                 <span className="font-bold text-lg leading-none sm:text-3xl">
@@ -209,14 +177,40 @@ export function InteractiveAreaLineCombo() {
           config={chartConfig}
           className="aspect-auto h-[250px] w-full"
         >
-          <LineChart
+          <ComposedChart
             accessibilityLayer
-            data={chartLineData}
+            data={chartData}
             margin={{
               left: 12,
               right: 12,
             }}
           >
+            <defs>
+              <linearGradient id="fillDesktop" x1="0" y1="0" x2="0" y2="1">
+                <stop
+                  offset="5%"
+                  stopColor="var(--color-desktop)"
+                  stopOpacity={0.8}
+                />
+                <stop
+                  offset="95%"
+                  stopColor="var(--color-desktop)"
+                  stopOpacity={0.1}
+                />
+              </linearGradient>
+              <linearGradient id="fillMobile" x1="0" y1="0" x2="0" y2="1">
+                <stop
+                  offset="5%"
+                  stopColor="var(--color-mobile)"
+                  stopOpacity={0.8}
+                />
+                <stop
+                  offset="95%"
+                  stopColor="var(--color-mobile)"
+                  stopOpacity={0.1}
+                />
+              </linearGradient>
+            </defs>
             <CartesianGrid vertical={false} />
             <XAxis
               dataKey="date"
@@ -236,7 +230,6 @@ export function InteractiveAreaLineCombo() {
               content={
                 <ChartTooltipContent
                   className="w-[150px]"
-                  nameKey="views"
                   labelFormatter={(value) => {
                     return new Date(value).toLocaleDateString("en-US", {
                       month: "short",
@@ -246,14 +239,24 @@ export function InteractiveAreaLineCombo() {
                 />
               }
             />
+            <Area
+              dataKey="desktop"
+              type="natural"
+              fill="url(#fillDesktop)"
+              stroke="var(--color-desktop)"
+              strokeWidth={2}
+              hide={activeChart !== "desktop"}
+            />
             <Line
-              dataKey={activeChart}
-              type="monotone"
-              stroke={chartConfig[activeChart].color}
+              dataKey="mobile"
+              type="natural"
+              stroke="var(--color-mobile)"
               strokeWidth={2}
               dot={false}
+              hide={activeChart !== "mobile"}
             />
-          </LineChart>
+            <ChartLegend content={<ChartLegendContent />} />
+          </ComposedChart>
         </ChartContainer>
       </CardContent>
       <CardFooter>
@@ -271,3 +274,5 @@ export function InteractiveAreaLineCombo() {
     </Card>
   );
 }
+
+export default InteractiveAreaLineCombo;

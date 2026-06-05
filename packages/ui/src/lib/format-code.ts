@@ -95,14 +95,16 @@ export async function formatCode(code: string, styleName: string) {
     })
 
     const transformers = [transformIcons, transformMenu, transformRender]
-    for (const transformer of transformers) {
-      await transformer({
-        filename: "component.tsx",
-        raw: transformed,
-        sourceFile,
-        config,
-      })
-    }
+    await Promise.all(
+      transformers.map((transformer) =>
+        transformer({
+          filename: "component.tsx",
+          raw: transformed,
+          sourceFile,
+          config,
+        })
+      )
+    )
 
     return sourceFile.getText()
   } catch (error) {

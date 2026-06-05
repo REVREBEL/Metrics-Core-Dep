@@ -1,7 +1,6 @@
-
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest"
 
-import { cn, sleep } from "./utils"
+import { cn, sleep, escapeHtml } from "./utils"
 
 
 describe("cn utility", () => {
@@ -88,3 +87,28 @@ describe('sleep', () => {
   })
 })
 
+describe("escapeHtml utility", () => {
+  it("escapes &, <, >, single and double quotes", () => {
+    expect(escapeHtml("<script>alert('xss')&</script>")).toBe(
+      "&lt;script&gt;alert(&#39;xss&#39;)&amp;&lt;/script&gt;",
+    );
+  });
+
+  it("escapes double quotes", () => {
+    expect(escapeHtml('<img src="x" onerror="alert(1)">')).toBe(
+      "&lt;img src=&quot;x&quot; onerror=&quot;alert(1)&quot;&gt;",
+    );
+  });
+
+  it("escapes single quotes", () => {
+    expect(escapeHtml("<img src='x' onerror='alert(1)'>")).toBe(
+      "&lt;img src=&#39;x&#39; onerror=&#39;alert(1)&#39;&gt;",
+    );
+  });
+
+  it("does not double escape existing entities", () => {
+    expect(escapeHtml("&amp; &lt; &gt; &quot; &#39;")).toBe(
+      "&amp; &lt; &gt; &quot; &#39;",
+    );
+  });
+});

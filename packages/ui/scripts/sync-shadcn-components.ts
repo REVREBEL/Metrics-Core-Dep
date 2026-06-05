@@ -122,12 +122,13 @@ function generateComponentScaffold(name: string): string {
     const pascalName = toPascalCase(name);
     
     return `
-    // TODO: Import actual component and update schema with real props
     ${pascalName}: {
-        component: null as unknown as React.ComponentType<any>, // Replace with: ${pascalName}
+        component: ${pascalName},
         schema: z.object({
             className: z.string().optional(),
             children: z.any().optional(),
+            variant: z.string().optional(),
+            size: z.string().optional(),
         }),
         from: "@/components/ui/${name}",
         fieldOverrides: commonFieldOverrides()
@@ -293,9 +294,8 @@ async function generateScaffolds(verbose: boolean = false): Promise<void> {
  * 
  * For each component:
  * 1. Install the component: npx shadcn@latest add <component-name>
- * 2. Import the actual component at the top of the file
- * 3. Replace "null as unknown as React.ComponentType<any>" with the real component
- * 4. Update the Zod schema with the component's actual props
+ * 2. Review the auto-generated imports and component definitions
+ * 3. Update the Zod schema with the component's actual props if they differ from the defaults
  */
 
 import React from 'react';
@@ -303,8 +303,7 @@ import { z } from 'zod';
 import { ComponentRegistry } from '@/components/ui/ui-builder/types';
 import { commonFieldOverrides } from "@/lib/ui-builder/registry/form-field-overrides";
 
-// TODO: Add actual component imports here, e.g.:
-// import { ${missingComponents.map(c => toPascalCase(c)).join(', ')} } from "@/components/ui/...";
+${missingComponents.map(c => `import { ${toPascalCase(c)} } from "@/components/ui/${c}";`).join('\n')}
 
 const scaffoldedComponents: ComponentRegistry = {
 ${componentScaffolds}
