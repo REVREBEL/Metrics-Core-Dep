@@ -160,9 +160,13 @@ const extractBasicShadowProperties = (cssContent: string, target: ThemeStyleProp
 
   // Collect all shadow values
   while ((match = shadowRegex.exec(cssContent)) !== null) {
+    const value = match[1];
+    // Check for commas that are not inside parentheses (to ignore commas in colors)
+    const hasMultipleLayers = value.split(/,(?![^(]*\))/).length > 1;
+
     shadowValues.push({
-      value: match[1],
-      hasComma: match[1].includes(','),
+      value: value,
+      hasComma: hasMultipleLayers,
       name: match[0].match(/--([^:]+):/)?.[1] || ''
     })
   }
@@ -193,7 +197,8 @@ const extractBasicShadowProperties = (cssContent: string, target: ThemeStyleProp
   if (!bestShadow) return
 
   // Process the selected shadow
-  const parts = bestShadow.value.split(',')[0].trim().split(/\s+/)
+  const firstLayer = bestShadow.value.split(/,(?![^(]*\))/)[0].trim()
+  const parts = firstLayer.split(/\s+/)
 
   if (parts.length >= 5) {
     // Extract the basic shadow properties
@@ -206,14 +211,14 @@ const extractBasicShadowProperties = (cssContent: string, target: ThemeStyleProp
     const colorPart = parts.slice(4).join(' ')
 
     // Use a combined regex pattern for all color formats
-    const colorRegex = /(?:hsl|rgb|oklch)\(([^/]+)(?:\/\s*([^)]+))?\)/
+    const colorRegex = /(?:hsla?|rgba?|oklch)\(([^/]+)(?:\/\s*([^)]+))?\)/
     const colorMatch = colorPart.match(colorRegex)
 
     if (colorMatch) {
       const [, colorValues, opacity] = colorMatch
-      const colorType = colorPart.substring(0, 3) // "hsl", "rgb", or "okl"(ch)
+      const colorType = colorMatch[0].split('(')[0]
 
-      target['shadow-color'] = `${colorType}${colorType === 'okl' ? 'ch' : ''}(${colorValues})`
+      target['shadow-color'] = `${colorType}(${colorValues.trim()})`
 
       if (opacity) {
         target['shadow-opacity'] = formatOpacity(opacity)
