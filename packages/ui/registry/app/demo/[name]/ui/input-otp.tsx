@@ -3,7 +3,7 @@ import {
   InputOTPGroup,
   InputOTPSlot,
   InputOTPSeparator,
-} from "@/components/ui/input-otp";
+} from "@inputs";
 
 export const inputOtp = {
   name: "input-otp",

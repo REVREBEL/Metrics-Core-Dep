@@ -1,5 +1,5 @@
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator";
+import { ScrollArea } from "@ui";
+import { Separator } from "@ui";
 
 const tags = Array.from({ length: 50 }).map((_, i) => `v1.2.0-beta.${i}`);
 

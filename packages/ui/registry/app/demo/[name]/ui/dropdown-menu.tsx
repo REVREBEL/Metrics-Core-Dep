@@ -14,7 +14,7 @@ import {
   Users,
 } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
+import { Button } from "@buttons";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,7 +28,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@dropdowns";
 
 export const dropdownMenu = {
   name: "dropdown-menu",

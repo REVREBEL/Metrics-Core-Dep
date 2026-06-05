@@ -1,10 +1,9 @@
 "use client";
 
 import { Accordion as AccordionPrimitive } from "radix-ui";
-import type * as React from "react";
-import { IconSquareRoundedDownUpFilled, IconSquareRoundedArrowUpFilled } from "@tabler/icons-react";
+import * as React from "react";
+import { IconSquareRoundedChevronDownFilled, IconSquareRoundedChevronUpFilled } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
-
 
 function Accordion({
 	className,
@@ -48,11 +47,11 @@ function AccordionTrigger({
 				{...props}
 			>
 				{children}
-			"@tabler/icons-react";
-			<IconSquareRoundedChevronDownFilled data-slot="accordion-trigger-icon"
+				<IconSquareRoundedChevronDownFilled
+					data-slot="accordion-trigger-icon"
 					className="pointer-events-none shrink-0 group-aria-expanded/accordion-trigger:hidden"
 				/>
-				<IconSquareRoundedArrowUpFilled
+				<IconSquareRoundedChevronUpFilled
 					data-slot="accordion-trigger-icon"
 					className="pointer-events-none hidden shrink-0 group-aria-expanded/accordion-trigger:inline"
 				/>

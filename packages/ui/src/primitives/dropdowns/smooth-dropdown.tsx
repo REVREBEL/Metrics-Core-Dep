@@ -1,20 +1,9 @@
+import { iconRef } from "@tabler/icons-react"
 "use client";
 
 import { useState, useRef, useEffect } from "react";
 import { motion } from "motion/react";
-import { HugeiconsIcon } from "@hugeicons/react";
 import useMeasure from "react-use-measure";
-import {
-  UserIcon,
-  CreditCardIcon,
-  FolderIcon,
-  File01Icon,
-  SettingsIcon,
-  HelpCircleIcon,
-  LogoutIcon,
-  MoreHorizontalCircle01Icon,
-} from "@hugeicons/core-free-icons";
-
 // Change Here
 const menuItems = [
   { id: "profile", label: "Profile", icon: UserIcon },
@@ -86,9 +75,7 @@ export default function TwentyTwelveOne() {
             willChange: "transform",
           }}
         >
-          <HugeiconsIcon
-            icon={MoreHorizontalCircle01Icon}
-            className="w-6 h-6 text-muted-foreground"
+          <IconDots className="w-6 h-6 text-muted-foreground"
           />
         </motion.div>
 
@@ -195,10 +182,8 @@ export default function TwentyTwelveOne() {
                         }}
                       />
                     )}
-                    <HugeiconsIcon
-                      icon={iconRef}
-                      className="w-[18px] h-[18px] relative z-10"
-                    />
+                    <iconRef className="w-[18px] h-[18px] relative z-10"
+                     />
                     <span className="font-medium relative z-10">
                       {item.label}
                     </span>

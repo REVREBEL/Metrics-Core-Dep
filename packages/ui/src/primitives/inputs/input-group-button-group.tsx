@@ -5,8 +5,7 @@ import {
   InputGroupInput,
 } from "./input-group"
 import { Label } from "@ui"
-import {Link02Icon} from "@hugeicons/core-free-icons"
-import { HugeiconsIcon } from "@hugeicons/react"
+import { IconLink } from "@tabler/icons-react"
 
 export default function InputGroupButtonGroup() {
   return (
@@ -18,7 +17,7 @@ export default function InputGroupButtonGroup() {
         <InputGroup>
           <InputGroupInput id="url" />
           <InputGroupAddon align="inline-end">
-            <HugeiconsIcon icon={Link02Icon} />
+            <IconLink />
           </InputGroupAddon>
         </InputGroup>
         <ButtonGroupText>.com</ButtonGroupText>

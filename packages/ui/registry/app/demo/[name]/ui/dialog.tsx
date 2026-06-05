@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@buttons";
 import {
   Dialog,
   DialogContent,
@@ -7,9 +7,9 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+} from "@ui";
+import { Input } from "@inputs";
+import { Label } from "@ui";
 
 export const dialog = {
   name: "dialog",

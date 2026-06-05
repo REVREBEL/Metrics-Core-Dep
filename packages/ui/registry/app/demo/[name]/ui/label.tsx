@@ -1,5 +1,5 @@
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
+import { Label } from "@ui";
+import { Input } from "@inputs";
 
 export const label = {
   name: "label",

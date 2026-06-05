@@ -6966,6 +6966,16 @@ export const PLAYGROUND_REGISTRY: Record<string, any> = {
     })),
     metadata: null,
   },
+  ui_resizable: {
+    name: "resizable",
+    type: "ui-primitive",
+    component: dynamic(() => import("@/primitives/ui/resizable").then((mod) => {
+      const m = mod as Record<string, unknown>
+      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
+      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
+    })),
+    metadata: null,
+  },
   ui_resizable_handle: {
     name: "resizable-handle",
     type: "ui-primitive",
