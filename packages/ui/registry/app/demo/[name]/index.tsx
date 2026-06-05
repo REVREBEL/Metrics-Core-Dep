@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 "use client"
 import { useEffect, type ReactNode } from "react";
-// ... rest of component
+import { Renderer } from "./renderer";
 
 export const demos: { [name: string]: any } = {
   "blank": dynamic(() => import("./blocks/blank").then((mod) => {
