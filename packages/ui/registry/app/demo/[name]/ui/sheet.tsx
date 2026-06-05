@@ -7,10 +7,10 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+} from "@ui";
+import { Button } from "@buttons";
+import { Input } from "@inputs";
+import { Label } from "@ui";
 
 export const sheet = {
   name: "sheet",

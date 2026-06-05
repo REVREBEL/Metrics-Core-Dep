@@ -1,4 +1,4 @@
-import { Toggle } from "@/components/ui/toggle";
+import { Toggle } from "@ui";
 import { Bold, Italic, Underline } from "lucide-react";
 
 export const toggle = {

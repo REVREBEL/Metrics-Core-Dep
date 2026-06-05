@@ -8,7 +8,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarProvider,
-} from "@/components/ui/sidebar";
+} from "@ui";
 import { Calendar, Home, Inbox, Search, Settings } from "lucide-react";
 
 const items = [

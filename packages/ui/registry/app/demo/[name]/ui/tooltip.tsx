@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@buttons";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from "@ui";
 
 export const tooltip = {
   name: "tooltip",

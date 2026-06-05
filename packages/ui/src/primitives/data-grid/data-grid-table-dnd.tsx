@@ -43,8 +43,8 @@ import {
 } from "@tanstack/react-table"
 
 import { Button } from "@buttons"
-import { HugeiconsIcon } from "@hugeicons/react"
-import { DragDropVerticalIcon } from "@hugeicons/core-free-icons"
+
+import { IconGripVertical } from "@tabler/icons-react"
 
 function DataGridTableDndHeader<TData>({
   header,
@@ -96,7 +96,7 @@ function DataGridTableDndHeader<TData>({
             {...listeners}
             aria-label="Drag to reorder"
           >
-            <HugeiconsIcon icon={DragDropVerticalIcon} strokeWidth={2} className="opacity-60 hover:opacity-100" aria-hidden="true" />
+            <IconGripVertical strokeWidth={2} className="opacity-60 hover:opacity-100" aria-hidden="true" />
           </Button>
         )}
         <span className="grow truncate">
