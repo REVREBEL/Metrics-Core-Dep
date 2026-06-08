@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 import { IconCheck, IconCopy } from "@tabler/icons-react";
-import { escapeHtml } from "@lib";
+import { escapeHtml } from "@/lib/utils";
 
 type CopyCodeProps = {
   code: string;

@@ -1,16 +1,18 @@
 "use client";
 
-import { Blocks, Component, Home, Search, ToyBrick } from "lucide-react";
+import { Folder, Home, Search } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import type { ReactNode } from "react";
 import { useMemo, useState } from "react";
-import registryManifest from "@/registry";
+import { PLAYGROUND_REGISTRY } from "@/lib/registry";
 
-type RegistryItem = {
+type PlaygroundEntry = {
   name: string;
   type: string;
-  title?: string;
+  metadata?: {
+    sourcePath?: string;
+  };
 };
 
 type NavItem = {
@@ -19,28 +21,64 @@ type NavItem = {
   path: string;
 };
 
-const allRegistryItems = ((registryManifest as { items?: RegistryItem[] }).items ??
-  []) as RegistryItem[];
-
 export const gettingStartedItems: NavItem[] = [
   { name: "home", title: "Home", path: "/" },
   { name: "tokens", title: "Design Tokens", path: "/tokens" },
   { name: "catalog", title: "Component Catalog", path: "/catalog" },
 ];
 
-function registryItemsByType(type: string): NavItem[] {
-  return allRegistryItems
-    .filter((item) => item.type === type)
-    .map((item) => ({
-      name: item.name,
-      title: item.title ?? item.name,
-      path: `/registry/${item.name}`,
-    }));
+type FolderGroup = {
+  folder: string;
+  items: NavItem[];
+};
+
+function toTitle(value: string) {
+  return value
+    .split(/[-_\s/]+/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 }
 
-const blockItems = registryItemsByType("registry:block");
-const componentItems = registryItemsByType("registry:component");
-const uiItems = registryItemsByType("registry:ui");
+function getFolderFromSourcePath(sourcePath: string | undefined) {
+  if (!sourcePath) return "unknown";
+
+  const withoutFile = sourcePath.replace(/\/[^/]+$/, "");
+  return withoutFile.replace(/^src\//, "");
+}
+
+function folderHref(folder: string) {
+  return `/catalog/folder/${folder
+    .split("/")
+    .map((part) => encodeURIComponent(part))
+    .join("/")}`;
+}
+
+const sourceFolderGroups: FolderGroup[] = Object.entries(
+  PLAYGROUND_REGISTRY as Record<string, PlaygroundEntry>,
+).reduce<FolderGroup[]>((groups, [id, entry]) => {
+  if (!entry || typeof entry !== "object") return groups;
+
+  const folder = getFolderFromSourcePath(entry.metadata?.sourcePath);
+  let group = groups.find((candidate) => candidate.folder === folder);
+  if (!group) {
+    group = { folder, items: [] };
+    groups.push(group);
+  }
+
+  group.items.push({
+    name: id,
+    title: toTitle(entry.name ?? id),
+    path: `${folderHref(folder)}#${id}`,
+  });
+
+  return groups;
+}, [])
+  .map((group) => ({
+    ...group,
+    items: group.items.sort((a, b) => a.title.localeCompare(b.title)),
+  }))
+  .sort((a, b) => a.folder.localeCompare(b.folder));
 
 function MobileSidebarTrigger() {
   return null;
@@ -65,7 +103,7 @@ function RegistrySection({
       </div>
       <nav className="grid gap-1">
         {items.map((item) => {
-          const isActive = pathname === item.path;
+          const isActive = pathname === item.path.split("#")[0];
           return (
             <Link
               className={[
@@ -86,18 +124,83 @@ function RegistrySection({
   );
 }
 
+function SourceFolderSection({
+  groups,
+  pathname,
+}: {
+  groups: FolderGroup[];
+  pathname: string;
+}) {
+  return (
+    <section className="border-b px-3 py-3">
+      <div className="mb-2 flex items-center gap-2 font-medium text-muted-foreground text-xs uppercase tracking-wide">
+        <Folder className="size-4" />
+        Source Folders
+      </div>
+      <div className="space-y-1">
+        {groups.map((group) => (
+          <details key={group.folder} className="group" open={group.items.length < 12}>
+            <summary className="cursor-pointer truncate rounded-md px-2 py-1.5 font-medium text-muted-foreground text-xs hover:bg-muted hover:text-foreground">
+              {group.folder}
+              <span className="ml-1 text-muted-foreground/70">
+                ({group.items.length})
+              </span>
+            </summary>
+            <nav className="mt-1 grid gap-1 pl-3">
+              <Link
+                className={[
+                  "truncate rounded-md px-2 py-1.5 text-xs transition-colors",
+                  pathname === folderHref(group.folder)
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:bg-muted hover:text-foreground",
+                ].join(" ")}
+                href={folderHref(group.folder)}
+              >
+                View folder
+              </Link>
+              {group.items.map((item) => {
+                const isActive = pathname === item.path.split("#")[0];
+                return (
+                  <Link
+                    className={[
+                      "truncate rounded-md px-2 py-1.5 text-sm transition-colors",
+                      isActive
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted-foreground hover:bg-muted hover:text-foreground",
+                    ].join(" ")}
+                    href={item.path}
+                    key={item.name}
+                  >
+                    {item.title}
+                  </Link>
+                );
+              })}
+            </nav>
+          </details>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function RegistrySidebar() {
   const pathname = usePathname();
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filterItems = useMemo(() => {
+  const filteredFolderGroups = useMemo(() => {
     const term = searchTerm.trim().toLowerCase();
-    if (!term) {
-      return (items: NavItem[]) => items;
-    }
+    if (!term) return sourceFolderGroups;
 
-    return (items: NavItem[]) =>
-      items.filter((item) => item.title.toLowerCase().includes(term));
+    return sourceFolderGroups
+      .map((group) => ({
+        ...group,
+        items: group.items.filter(
+          (item) =>
+            item.title.toLowerCase().includes(term) ||
+            group.folder.toLowerCase().includes(term),
+        ),
+      }))
+      .filter((group) => group.items.length > 0);
   }, [searchTerm]);
 
   return (
@@ -129,23 +232,9 @@ function RegistrySidebar() {
             pathname={pathname}
             title="Getting Started"
           />
-          <RegistrySection
-            icon={<Blocks className="size-4" />}
-            items={filterItems(blockItems)}
+          <SourceFolderSection
+            groups={filteredFolderGroups}
             pathname={pathname}
-            title="Blocks"
-          />
-          <RegistrySection
-            icon={<Component className="size-4" />}
-            items={filterItems(componentItems)}
-            pathname={pathname}
-            title="Components"
-          />
-          <RegistrySection
-            icon={<ToyBrick className="size-4" />}
-            items={filterItems(uiItems)}
-            pathname={pathname}
-            title="UI Primitives"
           />
         </div>
       </div>

@@ -2,7 +2,10 @@ import { promises as fs } from "node:fs"
 import path from "node:path"
 
 const ROOT = process.cwd()
-const SRC_PRIMITIVES = path.join(ROOT, "src/primitives")
+const SOURCE_ROOTS = [
+  { root: path.join(ROOT, "src/primitives"), type: "ui-primitive" },
+  { root: path.join(ROOT, "src/components"), type: "component" },
+]
 const OUT = path.join(ROOT, "src/lib/registry.ts")
 
 async function walk(dir) {
@@ -33,21 +36,34 @@ const registryJson = JSON.parse(registryRaw)
 
 const registryItems = (registryJson.items || []).filter((i) => i && i.name)
 
-const primitiveFiles = (await walk(SRC_PRIMITIVES))
-  .map((abs) => toPosix(path.relative(ROOT, abs)))
-  .filter((rel) => rel.endsWith(".tsx"))
-  .filter((rel) => !rel.endsWith("/index.tsx"))
-  .filter((rel) => !/\.(test|spec)\.tsx$/.test(rel))
-  .filter((rel) => !rel.includes(".stories."))
+const sourceFiles = (
+  await Promise.all(
+    SOURCE_ROOTS.map(async ({ root, type }) => {
+      try {
+        return (await walk(root)).map((abs) => ({
+          rel: toPosix(path.relative(ROOT, abs)),
+          type,
+        }))
+      } catch {
+        return []
+      }
+    })
+  )
+).flat()
+  .filter(({ rel }) => rel.endsWith(".tsx"))
+  .filter(({ rel }) => !rel.endsWith("/index.tsx"))
+  .filter(({ rel }) => !/\.(test|spec)\.tsx$/.test(rel))
+  .filter(({ rel }) => !rel.includes(".stories."))
 
-const entries = primitiveFiles
-  .map((rel) => {
+const entries = sourceFiles
+  .map(({ rel, type }) => {
     const importPath = `@/${rel.replace(/^src\//, "").replace(/\.tsx$/, "")}`
     const name = toKebabFromFile(rel)
-    const id = toId(name)
-    return { id, name, type: "ui-primitive", importPath }
+    const id = toId(rel.replace(/^src\//, "").replace(/\.tsx$/, ""))
+    const metadataKey = rel.replace(/^src\//, "").replace(/\.tsx$/, "")
+    return { id, name, type, importPath, sourcePath: rel, metadataKey }
   })
-  .sort((a, b) => a.name.localeCompare(b.name))
+  .sort((a, b) => a.sourcePath.localeCompare(b.sourcePath))
 
 const registryItemsBlock = `const REGISTRY_ITEMS: Component[] = ${JSON.stringify(registryItems, null, 2)} as Component[]\n`
 
@@ -56,19 +72,16 @@ const playgroundEntries = entries
     (e) => `  ${e.id}: {
     name: ${JSON.stringify(e.name)},
     type: ${JSON.stringify(e.type)},
-    component: dynamic(() => import(${JSON.stringify(e.importPath)}).then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: ${JSON.stringify(e.sourcePath)},
+      metadataKey: ${JSON.stringify(e.metadataKey)},
+    },
   }`
   )
   .join(",\n")
 
 const content = `/* eslint-disable @typescript-eslint/no-explicit-any */
 // AUTOMATICALLY GENERATED - DO NOT EDIT
-import dynamic from "next/dynamic"
 
 export type Component = {
   name: string

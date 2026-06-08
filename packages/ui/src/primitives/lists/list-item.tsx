@@ -1,9 +1,10 @@
-import { IconBell, IconCalendarCheck, IconCalendarEvent, IconConfetti, IconFilter, IconMapPin, IconVideo } from "@tabler/icons-react"
 "use client";
+
+import { IconBell, IconCalendarCheck, IconCalendarEvent, IconConfetti, IconFilter, IconMapPin, IconVideo } from "@tabler/icons-react"
 import { motion, MotionConfig } from "motion/react";
 import { type Dispatch, type SetStateAction, useState } from "react";
 import clsx from "clsx";
-;
+
 export type FilterKey = (typeof filterKeys)[number];
 
 // Change Here

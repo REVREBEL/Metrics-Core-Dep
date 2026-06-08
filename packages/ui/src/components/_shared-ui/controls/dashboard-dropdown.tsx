@@ -1,6 +1,6 @@
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
+import { Avatar, AvatarFallback, AvatarImage } from "@/primitives/ui/avatar"
 
-import ProfileDropdown from '@/components/shadcn-studio/blocks/dropdown-profile'
+import ProfileDropdown from "@/primitives/dropdowns/dropdown-profile"
 
 const DropdownPage = () => {
   return (

@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 // AUTOMATICALLY GENERATED - DO NOT EDIT
-import dynamic from "next/dynamic"
 
 export type Component = {
   name: string
@@ -584,7 +583,110 @@ const REGISTRY_ITEMS: Component[] = [
         "base-grey-d500": "oklch(40.0% 0.002 254)",
         "base-grey-d600": "oklch(35.0% 0.003 254)",
         "base-grey-d700": "oklch(40.0% 0.004 254)",
-        "base-grey-d800": "oklch(45.0% 0.005 254)"
+        "base-grey-d800": "oklch(45.0% 0.005 254)",
+        "color-indicator-positive-normal": "var(--color-green)",
+        "color-indicator-positive-inverse": "var(--color-green-inverse)",
+        "color-indicator-positive-var": "var(--color-green)",
+        "color-indicator-negative-normal": "var(--color-red)",
+        "color-indicator-negative-inverse": "var(--color-red-inverse)",
+        "color-indicator-negative-var": "var(--color-red)",
+        "color-indicator-total-normal": "var(--color-dark-blue)",
+        "color-indicator-total-inverse": "var(--color-dark-blue-inverse)",
+        "color-indicator-total-var": "var(--color-dark-blue-inverse)",
+        "color-segment-total-normal": "var(--color-indicator-total-normal)",
+        "color-segment-total-inverse": "var(--color-indicator-total-inverse)",
+        "color-segment-total-var": "var(--color-indicator-total-var)",
+        "color-segment-transient-normal": "var(--color-light-blue)",
+        "color-segment-transient-inverse": "var(--color-yellow)",
+        "color-segment-transient-var": "var(--color-yellow)",
+        "color-segment-group-normal": "var(--color-light-green)",
+        "color-segment-group-inverse": "var(--color-orange)",
+        "color-segment-group-var": "var(--color-orange)",
+        "color-segment-crew-normal": "var(--color-yellow)",
+        "color-segment-crew-inverse": "var(--color-purple)",
+        "color-segment-crew-var": "var(--color-purple)",
+        "color-segment-complimentary-normal": "var(--base-grey-l700)",
+        "color-segment-complimentary-inverse": "var(--base-grey-l400)",
+        "color-segment-complimentary-var": "var(--base-grey-l400)",
+        "color-segment-other-normal": "var(--color-grey-550)",
+        "color-segment-other-inverse": "var(--color-grey-250)",
+        "color-segment-other-var": "var(--color-grey-250)",
+        "color-channel-expedia-normal": "var(--color-yellow)",
+        "color-channel-expedia-inverse": "var(--color-yellow-inverse)",
+        "color-channel-expedia-var": "var(--color-yellow)",
+        "color-channel-booking-normal": "var(--color-light-blue)",
+        "color-channel-booking-inverse": "var(--color-light-blue-inverse)",
+        "color-channel-booking-var": "var(--color-light-blue)",
+        "color-channel-agoda-normal": "var(--color-dark-blue-700)",
+        "color-channel-agoda-inverse": "var(--color-dark-blue-700-inverse)",
+        "color-channel-agoda-var": "var(--color-dark-blue-700)",
+        "color-channel-hopper-normal": "var(--color-red-600)",
+        "color-channel-hopper-inverse": "var(--color-red-600-inverse)",
+        "color-channel-hopper-var": "var(--color-red-600)",
+        "color-channel-hoteltonight-normal": "var(--color-purple-700)",
+        "color-channel-hoteltonight-inverse": "var(--color-purple-700-inverse)",
+        "color-channel-hoteltonight-var": "var(--color-purple-700)",
+        "color-channel-hotelbeds-normal": "var(--color-purple-700)",
+        "color-channel-hotelbeds-inverse": "var(--color-purple-700-inverse)",
+        "color-channel-hotelbeds-var": "var(--color-purple-700)",
+        "color-channel-priceline-normal": "var(--color-dark-blue-500)",
+        "color-channel-priceline-inverse": "var(--color-dark-blue-500-inverse)",
+        "color-channel-priceline-var": "var(--color-dark-blue-500)",
+        "color-channel-airbnb-normal": "var(--color-red-200)",
+        "color-channel-airbnb-inverse": "var(--color-red-200-inverse)",
+        "color-channel-airbnb-var": "var(--color-red-200)",
+        "color-channel-hotwire-normal": "var(--color-red)",
+        "color-channel-hotwire-inverse": "var(--color-red-inverse)",
+        "color-channel-hotwire-var": "var(--color-red)",
+        "color-social-facebook-normal": "var(--color-purple)",
+        "color-social-facebook-inverse": "var(--color-purple-inverse)",
+        "color-social-facebook-var": "var(--color-purple)",
+        "color-social-instagram-normal": "var(--color-red)",
+        "color-social-instagram-inverse": "var(--color-red-inverse)",
+        "color-social-instagram-var": "var(--color-red)",
+        "color-social-x-normal": "var(--color-light-green)",
+        "color-social-x-inverse": "var(--color-light-green-inverse)",
+        "color-social-x-var": "var(--color-light-green)",
+        "color-social-linkedin-normal": "var(--color-green)",
+        "color-social-linkedin-inverse": "var(--color-green-inverse)",
+        "color-social-linkedin-var": "var(--color-green)",
+        "color-social-tiktok-normal": "var(--color-light-green-100)",
+        "color-social-tiktok-inverse": "var(--color-light-green-100-inverse)",
+        "color-social-tiktok-var": "var(--color-light-green-100)",
+        "color-social-blog-normal": "var(--color-yellow)",
+        "color-social-blog-inverse": "var(--color-yellow-inverse)",
+        "color-social-blog-var": "var(--color-yellow)",
+        "color-social-telegram-normal": "var(--color-light-blue)",
+        "color-social-telegram-inverse": "var(--color-light-blue-inverse)",
+        "color-social-telegram-var": "var(--color-light-blue)",
+        "color-social-slack-normal": "var(--color-orange)",
+        "color-social-slack-inverse": "var(--color-orange-inverse)",
+        "color-social-slack-var": "var(--color-orange)",
+        "color-social-youtube-normal": "var(--color-red-600)",
+        "color-social-youtube-inverse": "var(--color-red-600-inverse)",
+        "color-social-youtube-var": "var(--color-red-600)",
+        "color-social-pinterest-normal": "var(--color-red-200)",
+        "color-social-pinterest-inverse": "var(--color-red-200-inverse)",
+        "color-social-pinterest-var": "var(--color-red-200)",
+        "color-social-github-normal": "var(--color-grey-650)",
+        "color-social-github-inverse": "var(--color-grey-250)",
+        "color-social-github-var": "var(--color-grey-650)",
+        "color-review-yelp-normal": "var(--color-red-700)",
+        "color-review-yelp-inverse": "var(--color-red-700-inverse, var(--background))",
+        "color-review-yelp-var": "var(--color-red-700)",
+        "color-review-tripadvisor-normal": "var(--color-dark-green-700)",
+        "color-review-tripadvisor-inverse": "var(--color-dark-green-700-inverse, var(--background))",
+        "color-review-tripadvisor-var": "var(--color-dark-green-700)",
+        "color-review-expedia-normal": "var(--color-channel-expedia-normal)",
+        "color-review-expedia-inverse": "var(--color-channel-expedia-inverse)",
+        "color-review-expedia-var": "var(--color-channel-expedia-var)",
+        "color-review-booking-normal": "var(--color-channel-booking-normal)",
+        "color-review-booking-inverse": "var(--color-channel-booking-inverse)",
+        "color-review-booking-var": "var(--color-channel-booking-var)",
+        "color-positive": "var(--color-indicator-positive-normal)",
+        "color-positive-inverse": "var(--color-indicator-positive-inverse)",
+        "color-negative": "var(--color-indicator-negative-normal)",
+        "color-negative-inverse": "var(--color-indicator-negative-inverse)"
       },
       "dark": {
         "background": "oklch(0.2228 0.0519 258.36)",
@@ -1152,7 +1254,110 @@ const REGISTRY_ITEMS: Component[] = [
         "base-grey-d500": "oklch(40.0% 0.002 254)",
         "base-grey-d600": "oklch(35.0% 0.003 254)",
         "base-grey-d700": "oklch(40.0% 0.004 254)",
-        "base-grey-d800": "oklch(45.0% 0.005 254)"
+        "base-grey-d800": "oklch(45.0% 0.005 254)",
+        "color-indicator-positive-normal": "var(--color-green)",
+        "color-indicator-positive-inverse": "var(--color-green-inverse)",
+        "color-indicator-positive-var": "var(--color-green)",
+        "color-indicator-negative-normal": "var(--color-red)",
+        "color-indicator-negative-inverse": "var(--color-red-inverse)",
+        "color-indicator-negative-var": "var(--color-red)",
+        "color-indicator-total-normal": "var(--color-dark-blue)",
+        "color-indicator-total-inverse": "var(--color-dark-blue-inverse)",
+        "color-indicator-total-var": "var(--color-dark-blue-inverse)",
+        "color-segment-total-normal": "var(--color-indicator-total-normal)",
+        "color-segment-total-inverse": "var(--color-indicator-total-inverse)",
+        "color-segment-total-var": "var(--color-indicator-total-var)",
+        "color-segment-transient-normal": "var(--color-light-blue)",
+        "color-segment-transient-inverse": "var(--color-yellow)",
+        "color-segment-transient-var": "var(--color-yellow)",
+        "color-segment-group-normal": "var(--color-light-green)",
+        "color-segment-group-inverse": "var(--color-orange)",
+        "color-segment-group-var": "var(--color-orange)",
+        "color-segment-crew-normal": "var(--color-yellow)",
+        "color-segment-crew-inverse": "var(--color-purple)",
+        "color-segment-crew-var": "var(--color-purple)",
+        "color-segment-complimentary-normal": "var(--base-grey-l700)",
+        "color-segment-complimentary-inverse": "var(--base-grey-l400)",
+        "color-segment-complimentary-var": "var(--base-grey-l400)",
+        "color-segment-other-normal": "var(--color-grey-550)",
+        "color-segment-other-inverse": "var(--color-grey-250)",
+        "color-segment-other-var": "var(--color-grey-250)",
+        "color-channel-expedia-normal": "var(--color-yellow)",
+        "color-channel-expedia-inverse": "var(--color-yellow-inverse)",
+        "color-channel-expedia-var": "var(--color-yellow)",
+        "color-channel-booking-normal": "var(--color-light-blue)",
+        "color-channel-booking-inverse": "var(--color-light-blue-inverse)",
+        "color-channel-booking-var": "var(--color-light-blue)",
+        "color-channel-agoda-normal": "var(--color-dark-blue-700)",
+        "color-channel-agoda-inverse": "var(--color-dark-blue-700-inverse)",
+        "color-channel-agoda-var": "var(--color-dark-blue-700)",
+        "color-channel-hopper-normal": "var(--color-red-600)",
+        "color-channel-hopper-inverse": "var(--color-red-600-inverse)",
+        "color-channel-hopper-var": "var(--color-red-600)",
+        "color-channel-hoteltonight-normal": "var(--color-purple-700)",
+        "color-channel-hoteltonight-inverse": "var(--color-purple-700-inverse)",
+        "color-channel-hoteltonight-var": "var(--color-purple-700)",
+        "color-channel-hotelbeds-normal": "var(--color-purple-700)",
+        "color-channel-hotelbeds-inverse": "var(--color-purple-700-inverse)",
+        "color-channel-hotelbeds-var": "var(--color-purple-700)",
+        "color-channel-priceline-normal": "var(--color-dark-blue-500)",
+        "color-channel-priceline-inverse": "var(--color-dark-blue-500-inverse)",
+        "color-channel-priceline-var": "var(--color-dark-blue-500)",
+        "color-channel-airbnb-normal": "var(--color-red-200)",
+        "color-channel-airbnb-inverse": "var(--color-red-200-inverse)",
+        "color-channel-airbnb-var": "var(--color-red-200)",
+        "color-channel-hotwire-normal": "var(--color-red)",
+        "color-channel-hotwire-inverse": "var(--color-red-inverse)",
+        "color-channel-hotwire-var": "var(--color-red)",
+        "color-social-facebook-normal": "var(--color-purple)",
+        "color-social-facebook-inverse": "var(--color-purple-inverse)",
+        "color-social-facebook-var": "var(--color-purple)",
+        "color-social-instagram-normal": "var(--color-red)",
+        "color-social-instagram-inverse": "var(--color-red-inverse)",
+        "color-social-instagram-var": "var(--color-red)",
+        "color-social-x-normal": "var(--color-light-green)",
+        "color-social-x-inverse": "var(--color-light-green-inverse)",
+        "color-social-x-var": "var(--color-light-green)",
+        "color-social-linkedin-normal": "var(--color-green)",
+        "color-social-linkedin-inverse": "var(--color-green-inverse)",
+        "color-social-linkedin-var": "var(--color-green)",
+        "color-social-tiktok-normal": "var(--color-light-green-100)",
+        "color-social-tiktok-inverse": "var(--color-light-green-100-inverse)",
+        "color-social-tiktok-var": "var(--color-light-green-100)",
+        "color-social-blog-normal": "var(--color-yellow)",
+        "color-social-blog-inverse": "var(--color-yellow-inverse)",
+        "color-social-blog-var": "var(--color-yellow)",
+        "color-social-telegram-normal": "var(--color-light-blue)",
+        "color-social-telegram-inverse": "var(--color-light-blue-inverse)",
+        "color-social-telegram-var": "var(--color-light-blue)",
+        "color-social-slack-normal": "var(--color-orange)",
+        "color-social-slack-inverse": "var(--color-orange-inverse)",
+        "color-social-slack-var": "var(--color-orange)",
+        "color-social-youtube-normal": "var(--color-red-600)",
+        "color-social-youtube-inverse": "var(--color-red-600-inverse)",
+        "color-social-youtube-var": "var(--color-red-600)",
+        "color-social-pinterest-normal": "var(--color-red-200)",
+        "color-social-pinterest-inverse": "var(--color-red-200-inverse)",
+        "color-social-pinterest-var": "var(--color-red-200)",
+        "color-social-github-normal": "var(--color-grey-650)",
+        "color-social-github-inverse": "var(--color-grey-250)",
+        "color-social-github-var": "var(--color-grey-650)",
+        "color-review-yelp-normal": "var(--color-red-700)",
+        "color-review-yelp-inverse": "var(--color-red-700-inverse, var(--background))",
+        "color-review-yelp-var": "var(--color-red-700)",
+        "color-review-tripadvisor-normal": "var(--color-dark-green-700)",
+        "color-review-tripadvisor-inverse": "var(--color-dark-green-700-inverse, var(--background))",
+        "color-review-tripadvisor-var": "var(--color-dark-green-700)",
+        "color-review-expedia-normal": "var(--color-channel-expedia-normal)",
+        "color-review-expedia-inverse": "var(--color-channel-expedia-inverse)",
+        "color-review-expedia-var": "var(--color-channel-expedia-var)",
+        "color-review-booking-normal": "var(--color-channel-booking-normal)",
+        "color-review-booking-inverse": "var(--color-channel-booking-inverse)",
+        "color-review-booking-var": "var(--color-channel-booking-var)",
+        "color-positive": "var(--color-indicator-positive-normal)",
+        "color-positive-inverse": "var(--color-indicator-positive-inverse)",
+        "color-negative": "var(--color-indicator-negative-normal)",
+        "color-negative-inverse": "var(--color-indicator-negative-inverse)"
       }
     },
     "dependencies": [
@@ -4886,2875 +5091,3541 @@ const REGISTRY_ITEMS: Component[] = [
 
 
 export const PLAYGROUND_REGISTRY: Record<string, any> = {
-  ui_accordion: {
-    name: "accordion",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/accordion").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+  ui_components_shared_ui_config_drawer: {
+    name: "config-drawer",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/_shared-ui/config-drawer.tsx",
+      metadataKey: "components/_shared-ui/config-drawer",
+    },
   },
-  ui_account_settings: {
-    name: "account-settings",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/account-settings").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+  ui_components_shared_ui_controls_dashboard_dropdown: {
+    name: "dashboard-dropdown",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/_shared-ui/controls/dashboard-dropdown.tsx",
+      metadataKey: "components/_shared-ui/controls/dashboard-dropdown",
+    },
   },
-  ui_add_to_cursor: {
-    name: "add-to-cursor",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/registry/add-to-cursor").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+  ui_components_shared_ui_controls_year_month_selector: {
+    name: "year-month-selector",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/_shared-ui/controls/year-month-selector.tsx",
+      metadataKey: "components/_shared-ui/controls/year-month-selector",
+    },
   },
-  ui_alert: {
-    name: "alert",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/alert").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+  ui_components_shared_ui_dashboard_tabs: {
+    name: "dashboard-tabs",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/_shared-ui/dashboard-tabs.tsx",
+      metadataKey: "components/_shared-ui/dashboard-tabs",
+    },
   },
-  ui_alert_dialog: {
-    name: "alert-dialog",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/alert-dialog").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+  ui_components_shared_ui_metric_card_shell: {
+    name: "metric-card-shell",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/_shared-ui/metric-card-shell.tsx",
+      metadataKey: "components/_shared-ui/metric-card-shell",
+    },
   },
-  ui_array: {
+  ui_components_shared_ui_metric_card_tabs: {
+    name: "metric-card-tabs",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/_shared-ui/metric-card-tabs.tsx",
+      metadataKey: "components/_shared-ui/metric-card-tabs",
+    },
+  },
+  ui_components_shared_ui_metric_card: {
+    name: "metric-card",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/_shared-ui/metric-card.tsx",
+      metadataKey: "components/_shared-ui/metric-card",
+    },
+  },
+  ui_components_shared_ui_metric_layout: {
+    name: "metric-layout",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/_shared-ui/metric-layout.tsx",
+      metadataKey: "components/_shared-ui/metric-layout",
+    },
+  },
+  ui_components_shared_ui_metric_trend_icon: {
+    name: "metric-trend-icon",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/_shared-ui/metric-trend-icon.tsx",
+      metadataKey: "components/_shared-ui/metric-trend-icon",
+    },
+  },
+  ui_components_shared_ui_popover: {
+    name: "popover",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/_shared-ui/popover.tsx",
+      metadataKey: "components/_shared-ui/popover",
+    },
+  },
+  ui_components_metrics_charts_analytics_chart: {
+    name: "analytics-chart",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/analytics-chart.tsx",
+      metadataKey: "components/metrics-charts/analytics-chart",
+    },
+  },
+  ui_components_metrics_charts_analytics: {
+    name: "analytics",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/analytics.tsx",
+      metadataKey: "components/metrics-charts/analytics",
+    },
+  },
+  ui_components_metrics_charts_area_chart_interactive: {
+    name: "area-chart-interactive",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/area-chart-interactive.tsx",
+      metadataKey: "components/metrics-charts/area-chart-interactive",
+    },
+  },
+  ui_components_metrics_charts_bar_chart_interactive: {
+    name: "bar-chart-interactive",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/bar-chart-interactive.tsx",
+      metadataKey: "components/metrics-charts/bar-chart-interactive",
+    },
+  },
+  ui_components_metrics_charts_bar_with_label_custom: {
+    name: "bar-with-label-custom",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/bar-with-label-custom.tsx",
+      metadataKey: "components/metrics-charts/bar-with-label-custom",
+    },
+  },
+  ui_components_metrics_charts_calendar_heatmap: {
+    name: "calendar-heatmap",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/calendar-heatmap.tsx",
+      metadataKey: "components/metrics-charts/calendar-heatmap",
+    },
+  },
+  ui_components_metrics_charts_interactive_area_line_combo: {
+    name: "interactive-area-line-combo",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/interactive-area-line-combo.tsx",
+      metadataKey: "components/metrics-charts/interactive-area-line-combo",
+    },
+  },
+  ui_components_metrics_charts_line_chart_interactive: {
+    name: "line-chart-interactive",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/line-chart-interactive.tsx",
+      metadataKey: "components/metrics-charts/line-chart-interactive",
+    },
+  },
+  ui_components_metrics_charts_otb_stacked_bar_chart: {
+    name: "otb-stacked-bar-chart",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/otb-stacked-bar-chart.tsx",
+      metadataKey: "components/metrics-charts/otb-stacked-bar-chart",
+    },
+  },
+  ui_components_metrics_charts_overview: {
+    name: "overview",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/overview.tsx",
+      metadataKey: "components/metrics-charts/overview",
+    },
+  },
+  ui_components_metrics_charts_pie_chart_donut_center_text: {
+    name: "pie-chart-donut-center-text",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/pie-chart-donut-center-text.tsx",
+      metadataKey: "components/metrics-charts/pie-chart-donut-center-text",
+    },
+  },
+  ui_components_metrics_charts_pie_chart_interactive: {
+    name: "pie-chart-interactive",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/pie-chart-interactive.tsx",
+      metadataKey: "components/metrics-charts/pie-chart-interactive",
+    },
+  },
+  ui_components_metrics_charts_pie_donut_chart_active: {
+    name: "pie-donut-chart-active",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/pie-donut-chart-active.tsx",
+      metadataKey: "components/metrics-charts/pie-donut-chart-active",
+    },
+  },
+  ui_components_metrics_charts_radial_ring_chart_with_label: {
+    name: "radial-ring-chart-with-label",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/radial-ring-chart-with-label.tsx",
+      metadataKey: "components/metrics-charts/radial-ring-chart-with-label",
+    },
+  },
+  ui_components_metrics_charts_recent_sales: {
+    name: "recent-sales",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/recent-sales.tsx",
+      metadataKey: "components/metrics-charts/recent-sales",
+    },
+  },
+  ui_components_metrics_charts_top_channels_chart: {
+    name: "top-channels-chart",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/top-channels-chart.tsx",
+      metadataKey: "components/metrics-charts/top-channels-chart",
+    },
+  },
+  ui_components_metrics_charts_top_services_bar_chart: {
+    name: "top-services-bar-chart",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/top-services-bar-chart.tsx",
+      metadataKey: "components/metrics-charts/top-services-bar-chart",
+    },
+  },
+  ui_components_metrics_charts_top_services_chart: {
+    name: "top-services-chart",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-charts/top-services-chart.tsx",
+      metadataKey: "components/metrics-charts/top-services-chart",
+    },
+  },
+  ui_components_metrics_core_browser_stats_card: {
+    name: "browser-stats-card",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/browser-stats-card.tsx",
+      metadataKey: "components/metrics-core/browser-stats-card",
+    },
+  },
+  ui_components_metrics_core_budget_snapshot_card: {
+    name: "budget-snapshot-card",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/budget-snapshot-card.tsx",
+      metadataKey: "components/metrics-core/budget-snapshot-card",
+    },
+  },
+  ui_components_metrics_core_conversion_card: {
+    name: "conversion-card",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/conversion-card.tsx",
+      metadataKey: "components/metrics-core/conversion-card",
+    },
+  },
+  ui_components_metrics_core_metric_dashboard_card: {
+    name: "metric-dashboard-card",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/metric-dashboard-card.tsx",
+      metadataKey: "components/metrics-core/metric-dashboard-card",
+    },
+  },
+  ui_components_metrics_core_model_comparison_card: {
+    name: "model-comparison-card",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/model-comparison-card.tsx",
+      metadataKey: "components/metrics-core/model-comparison-card",
+    },
+  },
+  ui_components_metrics_core_performance_card_other: {
+    name: "performance-card-other",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/performance-card-other.tsx",
+      metadataKey: "components/metrics-core/performance-card-other",
+    },
+  },
+  ui_components_metrics_core_performance_card: {
+    name: "performance-card",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/performance-card.tsx",
+      metadataKey: "components/metrics-core/performance-card",
+    },
+  },
+  ui_components_metrics_core_sales_metrics_card: {
+    name: "sales-metrics-card",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/sales-metrics-card.tsx",
+      metadataKey: "components/metrics-core/sales-metrics-card",
+    },
+  },
+  ui_components_metrics_core_simple_kpi_cards: {
+    name: "simple-kpi-cards",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/simple-kpi-cards.tsx",
+      metadataKey: "components/metrics-core/simple-kpi-cards",
+    },
+  },
+  ui_components_metrics_core_simple_statistics_cards: {
+    name: "simple-statistics-cards",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/simple-statistics-cards.tsx",
+      metadataKey: "components/metrics-core/simple-statistics-cards",
+    },
+  },
+  ui_components_metrics_core_social_visits_card: {
+    name: "social-visits-card",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/social-visits-card.tsx",
+      metadataKey: "components/metrics-core/social-visits-card",
+    },
+  },
+  ui_components_metrics_core_stat_card: {
+    name: "stat-card",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/stat-card.tsx",
+      metadataKey: "components/metrics-core/stat-card",
+    },
+  },
+  ui_components_metrics_core_statistics_card_fin: {
+    name: "statistics-card-fin",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/statistics-card-fin.tsx",
+      metadataKey: "components/metrics-core/statistics-card-fin",
+    },
+  },
+  ui_components_metrics_core_total_earning_card: {
+    name: "total-earning-card",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/total-earning-card.tsx",
+      metadataKey: "components/metrics-core/total-earning-card",
+    },
+  },
+  ui_components_metrics_core_total_stats_card: {
+    name: "total-stats-card",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-core/total-stats-card.tsx",
+      metadataKey: "components/metrics-core/total-stats-card",
+    },
+  },
+  ui_components_metrics_errors_forbidden: {
+    name: "forbidden",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-errors/forbidden.tsx",
+      metadataKey: "components/metrics-errors/forbidden",
+    },
+  },
+  ui_components_metrics_errors_general_error: {
+    name: "general-error",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-errors/general-error.tsx",
+      metadataKey: "components/metrics-errors/general-error",
+    },
+  },
+  ui_components_metrics_errors_maintenance_error: {
+    name: "maintenance-error",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-errors/maintenance-error.tsx",
+      metadataKey: "components/metrics-errors/maintenance-error",
+    },
+  },
+  ui_components_metrics_errors_not_found_error: {
+    name: "not-found-error",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-errors/not-found-error.tsx",
+      metadataKey: "components/metrics-errors/not-found-error",
+    },
+  },
+  ui_components_metrics_errors_unauthorized_error: {
+    name: "unauthorized-error",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-errors/unauthorized-error.tsx",
+      metadataKey: "components/metrics-errors/unauthorized-error",
+    },
+  },
+  ui_components_metrics_feedback_empty_state: {
+    name: "empty-state",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-feedback/empty-state.tsx",
+      metadataKey: "components/metrics-feedback/empty-state",
+    },
+  },
+  ui_components_metrics_layouts_campaigns_active_page: {
+    name: "active_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/campaigns/active_page.tsx",
+      metadataKey: "components/metrics-layouts/campaigns/active_page",
+    },
+  },
+  ui_components_metrics_layouts_campaigns_campaigns_layout: {
+    name: "campaigns_layout",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/campaigns/campaigns_layout.tsx",
+      metadataKey: "components/metrics-layouts/campaigns/campaigns_layout",
+    },
+  },
+  ui_components_metrics_layouts_campaigns_performance_page: {
+    name: "performance_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/campaigns/performance_page.tsx",
+      metadataKey: "components/metrics-layouts/campaigns/performance_page",
+    },
+  },
+  ui_components_metrics_layouts_campaigns_setup_page: {
+    name: "setup_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/campaigns/setup_page.tsx",
+      metadataKey: "components/metrics-layouts/campaigns/setup_page",
+    },
+  },
+  ui_components_metrics_layouts_chats_chat_assistant_page: {
+    name: "chat-assistant_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/chats/chat-assistant_page.tsx",
+      metadataKey: "components/metrics-layouts/chats/chat-assistant_page",
+    },
+  },
+  ui_components_metrics_layouts_chats_chats_layout: {
+    name: "chats_layout",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/chats/chats_layout.tsx",
+      metadataKey: "components/metrics-layouts/chats/chats_layout",
+    },
+  },
+  ui_components_metrics_layouts_chats_new_page: {
+    name: "new_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/chats/new_page.tsx",
+      metadataKey: "components/metrics-layouts/chats/new_page",
+    },
+  },
+  ui_components_metrics_layouts_dashboard_channels_page: {
+    name: "channels_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/dashboard/channels_page.tsx",
+      metadataKey: "components/metrics-layouts/dashboard/channels_page",
+    },
+  },
+  ui_components_metrics_layouts_dashboard_dashboard_homepage: {
+    name: "dashboard_homepage",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/dashboard/dashboard_homepage.tsx",
+      metadataKey: "components/metrics-layouts/dashboard/dashboard_homepage",
+    },
+  },
+  ui_components_metrics_layouts_dashboard_dashboard_layout: {
+    name: "dashboard_layout",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/dashboard/dashboard_layout.tsx",
+      metadataKey: "components/metrics-layouts/dashboard/dashboard_layout",
+    },
+  },
+  ui_components_metrics_layouts_dashboard_demand_page: {
+    name: "demand_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/dashboard/demand_page.tsx",
+      metadataKey: "components/metrics-layouts/dashboard/demand_page",
+    },
+  },
+  ui_components_metrics_layouts_dashboard_roomtypes_page: {
+    name: "roomtypes_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/dashboard/roomtypes_page.tsx",
+      metadataKey: "components/metrics-layouts/dashboard/roomtypes_page",
+    },
+  },
+  ui_components_metrics_layouts_dashboard_segments_page: {
+    name: "segments_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/dashboard/segments_page.tsx",
+      metadataKey: "components/metrics-layouts/dashboard/segments_page",
+    },
+  },
+  ui_components_metrics_layouts_dashboard_website_page: {
+    name: "website_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/dashboard/website_page.tsx",
+      metadataKey: "components/metrics-layouts/dashboard/website_page",
+    },
+  },
+  ui_components_metrics_layouts_data_library_data_health_page: {
+    name: "data-health_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/data-library/data-health_page.tsx",
+      metadataKey: "components/metrics-layouts/data-library/data-health_page",
+    },
+  },
+  ui_components_metrics_layouts_data_library_data_library_layout: {
+    name: "data-library_layout",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/data-library/data-library_layout.tsx",
+      metadataKey: "components/metrics-layouts/data-library/data-library_layout",
+    },
+  },
+  ui_components_metrics_layouts_data_library_lookups_page: {
+    name: "lookups_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/data-library/lookups_page.tsx",
+      metadataKey: "components/metrics-layouts/data-library/lookups_page",
+    },
+  },
+  ui_components_metrics_layouts_data_library_lookups_manager_table_row: {
+    name: "lookups-manager_table-row",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/data-library/lookups-manager_table-row.tsx",
+      metadataKey: "components/metrics-layouts/data-library/lookups-manager_table-row",
+    },
+  },
+  ui_components_metrics_layouts_data_library_lookups_manager_table: {
+    name: "lookups-manager_table",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/data-library/lookups-manager_table.tsx",
+      metadataKey: "components/metrics-layouts/data-library/lookups-manager_table",
+    },
+  },
+  ui_components_metrics_layouts_data_library_mapping_manager_table: {
+    name: "mapping-manager_table",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/data-library/mapping-manager_table.tsx",
+      metadataKey: "components/metrics-layouts/data-library/mapping-manager_table",
+    },
+  },
+  ui_components_metrics_layouts_data_library_mapping_row_edit_drawer: {
+    name: "mapping-row-edit_drawer",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/data-library/mapping-row-edit_drawer.tsx",
+      metadataKey: "components/metrics-layouts/data-library/mapping-row-edit_drawer",
+    },
+  },
+  ui_components_metrics_layouts_data_library_mappings_page: {
+    name: "mappings_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/data-library/mappings_page.tsx",
+      metadataKey: "components/metrics-layouts/data-library/mappings_page",
+    },
+  },
+  ui_components_metrics_layouts_data_library_unmapped_codes_page: {
+    name: "unmapped-codes_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/data-library/unmapped-codes_page.tsx",
+      metadataKey: "components/metrics-layouts/data-library/unmapped-codes_page",
+    },
+  },
+  ui_components_metrics_layouts_help_desk_documentation_page: {
+    name: "documentation_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/help-desk/documentation_page.tsx",
+      metadataKey: "components/metrics-layouts/help-desk/documentation_page",
+    },
+  },
+  ui_components_metrics_layouts_help_desk_helpdesk_layout: {
+    name: "helpdesk_layout",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/help-desk/helpdesk_layout.tsx",
+      metadataKey: "components/metrics-layouts/help-desk/helpdesk_layout",
+    },
+  },
+  ui_components_metrics_layouts_help_desk_helpdesk_page: {
+    name: "helpdesk_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/help-desk/helpdesk_page.tsx",
+      metadataKey: "components/metrics-layouts/help-desk/helpdesk_page",
+    },
+  },
+  ui_components_metrics_layouts_metric_library_base_page: {
+    name: "base_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/metric-library/base_page.tsx",
+      metadataKey: "components/metrics-layouts/metric-library/base_page",
+    },
+  },
+  ui_components_metrics_layouts_metric_library_calculated_page: {
+    name: "calculated_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/metric-library/calculated_page.tsx",
+      metadataKey: "components/metrics-layouts/metric-library/calculated_page",
+    },
+  },
+  ui_components_metrics_layouts_metric_library_metric_library_layout: {
+    name: "metric-library_layout",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/metric-library/metric-library_layout.tsx",
+      metadataKey: "components/metrics-layouts/metric-library/metric-library_layout",
+    },
+  },
+  ui_components_metrics_layouts_properties_events_page: {
+    name: "events_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/properties/events_page.tsx",
+      metadataKey: "components/metrics-layouts/properties/events_page",
+    },
+  },
+  ui_components_metrics_layouts_properties_lookups_page: {
+    name: "lookups_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/properties/lookups_page.tsx",
+      metadataKey: "components/metrics-layouts/properties/lookups_page",
+    },
+  },
+  ui_components_metrics_layouts_properties_notes_page: {
+    name: "notes_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/properties/notes_page.tsx",
+      metadataKey: "components/metrics-layouts/properties/notes_page",
+    },
+  },
+  ui_components_metrics_layouts_properties_page: {
+    name: "page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/properties/page.tsx",
+      metadataKey: "components/metrics-layouts/properties/page",
+    },
+  },
+  ui_components_metrics_layouts_properties_properties_layout: {
+    name: "properties_layout",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/properties/properties_layout.tsx",
+      metadataKey: "components/metrics-layouts/properties/properties_layout",
+    },
+  },
+  ui_components_metrics_layouts_properties_strategies_page: {
+    name: "strategies_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/properties/strategies_page.tsx",
+      metadataKey: "components/metrics-layouts/properties/strategies_page",
+    },
+  },
+  ui_components_metrics_layouts_properties_tasks_page: {
+    name: "tasks_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/properties/tasks_page.tsx",
+      metadataKey: "components/metrics-layouts/properties/tasks_page",
+    },
+  },
+  ui_components_metrics_layouts_settings_account_form: {
+    name: "account_form",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/account_form.tsx",
+      metadataKey: "components/metrics-layouts/settings/account_form",
+    },
+  },
+  ui_components_metrics_layouts_settings_account_page: {
+    name: "account_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/account_page.tsx",
+      metadataKey: "components/metrics-layouts/settings/account_page",
+    },
+  },
+  ui_components_metrics_layouts_settings_account_settings_page: {
+    name: "account-settings_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/account-settings_page.tsx",
+      metadataKey: "components/metrics-layouts/settings/account-settings_page",
+    },
+  },
+  ui_components_metrics_layouts_settings_content_section_page: {
+    name: "content-section_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/content-section_page.tsx",
+      metadataKey: "components/metrics-layouts/settings/content-section_page",
+    },
+  },
+  ui_components_metrics_layouts_settings_display_form: {
+    name: "display_form",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/display_form.tsx",
+      metadataKey: "components/metrics-layouts/settings/display_form",
+    },
+  },
+  ui_components_metrics_layouts_settings_display_page: {
+    name: "display_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/display_page.tsx",
+      metadataKey: "components/metrics-layouts/settings/display_page",
+    },
+  },
+  ui_components_metrics_layouts_settings_forgot_password_page: {
+    name: "forgot-password_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/forgot-password_page.tsx",
+      metadataKey: "components/metrics-layouts/settings/forgot-password_page",
+    },
+  },
+  ui_components_metrics_layouts_settings_login_page: {
+    name: "login_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/login_page.tsx",
+      metadataKey: "components/metrics-layouts/settings/login_page",
+    },
+  },
+  ui_components_metrics_layouts_settings_notifications_form: {
+    name: "notifications_form",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/notifications_form.tsx",
+      metadataKey: "components/metrics-layouts/settings/notifications_form",
+    },
+  },
+  ui_components_metrics_layouts_settings_notifications_page: {
+    name: "notifications_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/notifications_page.tsx",
+      metadataKey: "components/metrics-layouts/settings/notifications_page",
+    },
+  },
+  ui_components_metrics_layouts_settings_profile_form: {
+    name: "profile_form",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/profile_form.tsx",
+      metadataKey: "components/metrics-layouts/settings/profile_form",
+    },
+  },
+  ui_components_metrics_layouts_settings_profile_page: {
+    name: "profile_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/profile_page.tsx",
+      metadataKey: "components/metrics-layouts/settings/profile_page",
+    },
+  },
+  ui_components_metrics_layouts_settings_register_page: {
+    name: "register_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/register_page.tsx",
+      metadataKey: "components/metrics-layouts/settings/register_page",
+    },
+  },
+  ui_components_metrics_layouts_settings_settings_layout: {
+    name: "settings_layout",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/settings_layout.tsx",
+      metadataKey: "components/metrics-layouts/settings/settings_layout",
+    },
+  },
+  ui_components_metrics_layouts_settings_settings_sidebar_nav: {
+    name: "settings_sidebar-nav",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/settings_sidebar-nav.tsx",
+      metadataKey: "components/metrics-layouts/settings/settings_sidebar-nav",
+    },
+  },
+  ui_components_metrics_layouts_settings_users_invite_dialog: {
+    name: "users-invite_dialog",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/settings/users-invite_dialog.tsx",
+      metadataKey: "components/metrics-layouts/settings/users-invite_dialog",
+    },
+  },
+  ui_components_metrics_layouts_strategies_playbooks_page: {
+    name: "playbooks_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/strategies/playbooks_page.tsx",
+      metadataKey: "components/metrics-layouts/strategies/playbooks_page",
+    },
+  },
+  ui_components_metrics_layouts_strategies_recommended_actions_page: {
+    name: "recommended-actions_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/strategies/recommended-actions_page.tsx",
+      metadataKey: "components/metrics-layouts/strategies/recommended-actions_page",
+    },
+  },
+  ui_components_metrics_layouts_strategies_strategies_layout: {
+    name: "strategies_layout",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/strategies/strategies_layout.tsx",
+      metadataKey: "components/metrics-layouts/strategies/strategies_layout",
+    },
+  },
+  ui_components_metrics_layouts_strategies_triggers_page: {
+    name: "triggers_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/strategies/triggers_page.tsx",
+      metadataKey: "components/metrics-layouts/strategies/triggers_page",
+    },
+  },
+  ui_components_metrics_layouts_tasks_calendar_view_page: {
+    name: "calendar-view_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/calendar-view_page.tsx",
+      metadataKey: "components/metrics-layouts/tasks/calendar-view_page",
+    },
+  },
+  ui_components_metrics_layouts_tasks_data_actions_table_row: {
+    name: "data-actions_table-row",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/data-actions_table-row.tsx",
+      metadataKey: "components/metrics-layouts/tasks/data-actions_table-row",
+    },
+  },
+  ui_components_metrics_layouts_tasks_data_bulk_actions_table: {
+    name: "data-bulk-actions_table",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/data-bulk-actions_table.tsx",
+      metadataKey: "components/metrics-layouts/tasks/data-bulk-actions_table",
+    },
+  },
+  ui_components_metrics_layouts_tasks_data_data: {
+    name: "data",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/data/data.tsx",
+      metadataKey: "components/metrics-layouts/tasks/data/data",
+    },
+  },
+  ui_components_metrics_layouts_tasks_group_views: {
+    name: "group-views",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/group-views.tsx",
+      metadataKey: "components/metrics-layouts/tasks/group-views",
+    },
+  },
+  ui_components_metrics_layouts_tasks_growth_plan_header: {
+    name: "growth-plan_header",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/growth-plan_header.tsx",
+      metadataKey: "components/metrics-layouts/tasks/growth-plan_header",
+    },
+  },
+  ui_components_metrics_layouts_tasks_growth_plan_sidebar: {
+    name: "growth-plan_sidebar",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/growth-plan_sidebar.tsx",
+      metadataKey: "components/metrics-layouts/tasks/growth-plan_sidebar",
+    },
+  },
+  ui_components_metrics_layouts_tasks_growth_plan_states: {
+    name: "growth-plan_states",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/growth-plan_states.tsx",
+      metadataKey: "components/metrics-layouts/tasks/growth-plan_states",
+    },
+  },
+  ui_components_metrics_layouts_tasks_growth_plan_view_switcher: {
+    name: "growth-plan-view_switcher",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/growth-plan-view_switcher.tsx",
+      metadataKey: "components/metrics-layouts/tasks/growth-plan-view_switcher",
+    },
+  },
+  ui_components_metrics_layouts_tasks_kanban_page: {
+    name: "kanban_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/kanban_page.tsx",
+      metadataKey: "components/metrics-layouts/tasks/kanban_page",
+    },
+  },
+  ui_components_metrics_layouts_tasks_meeting_recap_page: {
+    name: "meeting-recap_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/meeting-recap_page.tsx",
+      metadataKey: "components/metrics-layouts/tasks/meeting-recap_page",
+    },
+  },
+  ui_components_metrics_layouts_tasks_owner_rollup_page: {
+    name: "owner-rollup_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/owner-rollup_page.tsx",
+      metadataKey: "components/metrics-layouts/tasks/owner-rollup_page",
+    },
+  },
+  ui_components_metrics_layouts_tasks_tasks_dialogs: {
+    name: "tasks_dialogs",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/tasks_dialogs.tsx",
+      metadataKey: "components/metrics-layouts/tasks/tasks_dialogs",
+    },
+  },
+  ui_components_metrics_layouts_tasks_tasks_layout: {
+    name: "tasks_layout",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/tasks_layout.tsx",
+      metadataKey: "components/metrics-layouts/tasks/tasks_layout",
+    },
+  },
+  ui_components_metrics_layouts_tasks_tasks_provider: {
+    name: "tasks_provider",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/tasks_provider.tsx",
+      metadataKey: "components/metrics-layouts/tasks/tasks_provider",
+    },
+  },
+  ui_components_metrics_layouts_tasks_tasks_table: {
+    name: "tasks_table",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/tasks_table.tsx",
+      metadataKey: "components/metrics-layouts/tasks/tasks_table",
+    },
+  },
+  ui_components_metrics_layouts_tasks_tasks_columns: {
+    name: "tasks-columns",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/tasks-columns.tsx",
+      metadataKey: "components/metrics-layouts/tasks/tasks-columns",
+    },
+  },
+  ui_components_metrics_layouts_tasks_tasks_import_dialog: {
+    name: "tasks-import_dialog",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/tasks-import_dialog.tsx",
+      metadataKey: "components/metrics-layouts/tasks/tasks-import_dialog",
+    },
+  },
+  ui_components_metrics_layouts_tasks_tasks_multi_delete_dialog: {
+    name: "tasks-multi-delete_dialog",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/tasks-multi-delete_dialog.tsx",
+      metadataKey: "components/metrics-layouts/tasks/tasks-multi-delete_dialog",
+    },
+  },
+  ui_components_metrics_layouts_tasks_tasks_mutate_drawer: {
+    name: "tasks-mutate_drawer",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/tasks-mutate_drawer.tsx",
+      metadataKey: "components/metrics-layouts/tasks/tasks-mutate_drawer",
+    },
+  },
+  ui_components_metrics_layouts_tasks_tasks_primary_buttons: {
+    name: "tasks-primary-buttons",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/tasks-primary-buttons.tsx",
+      metadataKey: "components/metrics-layouts/tasks/tasks-primary-buttons",
+    },
+  },
+  ui_components_metrics_layouts_tasks_workstream_mutate_drawer: {
+    name: "workstream-mutate_drawer",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/workstream-mutate_drawer.tsx",
+      metadataKey: "components/metrics-layouts/tasks/workstream-mutate_drawer",
+    },
+  },
+  ui_components_metrics_layouts_tasks_workstreams_section: {
+    name: "workstreams_section",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/tasks/workstreams_section.tsx",
+      metadataKey: "components/metrics-layouts/tasks/workstreams_section",
+    },
+  },
+  ui_components_metrics_layouts_users_data_bulk_actions_table: {
+    name: "data-bulk-actions_table",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/data-bulk-actions_table.tsx",
+      metadataKey: "components/metrics-layouts/users/data-bulk-actions_table",
+    },
+  },
+  ui_components_metrics_layouts_users_data_row_actions_table_row: {
+    name: "data-row-actions_table_row",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/data-row-actions_table_row.tsx",
+      metadataKey: "components/metrics-layouts/users/data-row-actions_table_row",
+    },
+  },
+  ui_components_metrics_layouts_users_page: {
+    name: "page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/page.tsx",
+      metadataKey: "components/metrics-layouts/users/page",
+    },
+  },
+  ui_components_metrics_layouts_users_permissions_panel_page: {
+    name: "permissions-panel_page",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/permissions-panel_page.tsx",
+      metadataKey: "components/metrics-layouts/users/permissions-panel_page",
+    },
+  },
+  ui_components_metrics_layouts_users_users_columns: {
+    name: "users_columns",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/users_columns.tsx",
+      metadataKey: "components/metrics-layouts/users/users_columns",
+    },
+  },
+  ui_components_metrics_layouts_users_users_dialogs: {
+    name: "users_dialogs",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/users_dialogs.tsx",
+      metadataKey: "components/metrics-layouts/users/users_dialogs",
+    },
+  },
+  ui_components_metrics_layouts_users_users_provider: {
+    name: "users_provider",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/users_provider.tsx",
+      metadataKey: "components/metrics-layouts/users/users_provider",
+    },
+  },
+  ui_components_metrics_layouts_users_users_table: {
+    name: "users_table",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/users_table.tsx",
+      metadataKey: "components/metrics-layouts/users/users_table",
+    },
+  },
+  ui_components_metrics_layouts_users_users_action_dialog: {
+    name: "users-action_dialog",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/users-action_dialog.tsx",
+      metadataKey: "components/metrics-layouts/users/users-action_dialog",
+    },
+  },
+  ui_components_metrics_layouts_users_users_delete_dialog: {
+    name: "users-delete_dialog",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/users-delete_dialog.tsx",
+      metadataKey: "components/metrics-layouts/users/users-delete_dialog",
+    },
+  },
+  ui_components_metrics_layouts_users_users_invite_dialog: {
+    name: "users-invite_dialog",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/users-invite_dialog.tsx",
+      metadataKey: "components/metrics-layouts/users/users-invite_dialog",
+    },
+  },
+  ui_components_metrics_layouts_users_users_multi_delete_dialog: {
+    name: "users-multi-delete_dialog",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/users-multi-delete_dialog.tsx",
+      metadataKey: "components/metrics-layouts/users/users-multi-delete_dialog",
+    },
+  },
+  ui_components_metrics_layouts_users_users_primary_buttons: {
+    name: "users-primary-buttons",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/users-primary-buttons.tsx",
+      metadataKey: "components/metrics-layouts/users/users-primary-buttons",
+    },
+  },
+  ui_components_metrics_layouts_users_verify_email: {
+    name: "verify-email",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-layouts/users/verify-email.tsx",
+      metadataKey: "components/metrics-layouts/users/verify-email",
+    },
+  },
+  ui_components_metrics_sections_analytics_overview: {
+    name: "analytics-overview",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-sections/analytics-overview.tsx",
+      metadataKey: "components/metrics-sections/analytics-overview",
+    },
+  },
+  ui_components_metrics_sections_analytics_section: {
+    name: "analytics-section",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-sections/analytics-section.tsx",
+      metadataKey: "components/metrics-sections/analytics-section",
+    },
+  },
+  ui_components_metrics_sections_campaigns_section: {
+    name: "campaigns-section",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-sections/campaigns-section.tsx",
+      metadataKey: "components/metrics-sections/campaigns-section",
+    },
+  },
+  ui_components_metrics_sections_charts_grid: {
+    name: "charts-grid",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-sections/charts-grid.tsx",
+      metadataKey: "components/metrics-sections/charts-grid",
+    },
+  },
+  ui_components_metrics_sections_dashboard_section: {
+    name: "dashboard-section",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-sections/dashboard-section.tsx",
+      metadataKey: "components/metrics-sections/dashboard-section",
+    },
+  },
+  ui_components_metrics_sections_overview_section: {
+    name: "overview-section",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-sections/overview-section.tsx",
+      metadataKey: "components/metrics-sections/overview-section",
+    },
+  },
+  ui_components_metrics_sections_posts_section: {
+    name: "posts-section",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-sections/posts-section.tsx",
+      metadataKey: "components/metrics-sections/posts-section",
+    },
+  },
+  ui_components_metrics_sections_sales_metrics: {
+    name: "sales-metrics",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-sections/sales-metrics.tsx",
+      metadataKey: "components/metrics-sections/sales-metrics",
+    },
+  },
+  ui_components_metrics_tables_daily_pickup_table: {
+    name: "daily-pickup-table",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-tables/daily-pickup-table.tsx",
+      metadataKey: "components/metrics-tables/daily-pickup-table",
+    },
+  },
+  ui_components_metrics_tables_data_table: {
+    name: "data-table",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-tables/data-table.tsx",
+      metadataKey: "components/metrics-tables/data-table",
+    },
+  },
+  ui_components_metrics_tables_market_segment_group_rooms_table: {
+    name: "market-segment-group-rooms-table",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-tables/market-segment-group-rooms-table.tsx",
+      metadataKey: "components/metrics-tables/market-segment-group-rooms-table",
+    },
+  },
+  ui_components_metrics_tables_market_segment_transient_rooms_table: {
+    name: "market-segment-transient-rooms-table",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-tables/market-segment-transient-rooms-table.tsx",
+      metadataKey: "components/metrics-tables/market-segment-transient-rooms-table",
+    },
+  },
+  ui_components_metrics_timeline_timeline_component: {
+    name: "timeline-component",
+    type: "component",
+    metadata: {
+      sourcePath: "src/components/metrics-timeline/timeline-component.tsx",
+      metadataKey: "components/metrics-timeline/timeline-component",
+    },
+  },
+  ui_primitives_auto_form_common_label: {
+    name: "label",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/auto-form/common/label.tsx",
+      metadataKey: "primitives/auto-form/common/label",
+    },
+  },
+  ui_primitives_auto_form_common_tooltip: {
+    name: "tooltip",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/auto-form/common/tooltip.tsx",
+      metadataKey: "primitives/auto-form/common/tooltip",
+    },
+  },
+  ui_primitives_auto_form_fields_array: {
     name: "array",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/fields/array").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/fields/array.tsx",
+      metadataKey: "primitives/auto-form/fields/array",
+    },
   },
-  ui_aspect_ratio: {
-    name: "aspect-ratio",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/aspect-ratio").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_avatar: {
-    name: "avatar",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/avatar").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_badge: {
-    name: "badge",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/badge").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_brand_header: {
-    name: "brand-header",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/brand-header").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_brand_sidebar: {
-    name: "brand-sidebar",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/brand-sidebar").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_breadcrumb: {
-    name: "breadcrumb",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/breadcrumb").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button: {
-    name: "button",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_default: {
-    name: "button-default",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-default").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_destructive: {
-    name: "button-destructive",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-destructive").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_ghost: {
-    name: "button-ghost",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-ghost").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_group: {
-    name: "button-group",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-group").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_group_dropdown: {
-    name: "button-group-dropdown",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-group-dropdown").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_group_input: {
-    name: "button-group-input",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-group-input").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_group_input_group: {
-    name: "button-group-input-group",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-group-input-group").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_group_nested: {
-    name: "button-group-nested",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-group-nested").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_group_orientation: {
-    name: "button-group-orientation",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-group-orientation").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_group_popover: {
-    name: "button-group-popover",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-group-popover").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_group_select: {
-    name: "button-group-select",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-group-select").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_group_separator: {
-    name: "button-group-separator",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-group-separator").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_group_size: {
-    name: "button-group-size",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-group-size").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_group_split: {
-    name: "button-group-split",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-group-split").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_icon: {
-    name: "button-icon",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-icon").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_link: {
-    name: "button-link",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-link").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_outline: {
-    name: "button-outline",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-outline").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_render: {
-    name: "button-render",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-render").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_rounded: {
-    name: "button-rounded",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-rounded").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_secondary: {
-    name: "button-secondary",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-secondary").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_size: {
-    name: "button-size",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-size").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_spinner: {
-    name: "button-spinner",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-spinner").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_button_with_icon: {
-    name: "button-with-icon",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/button-with-icon").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_calendar: {
-    name: "calendar",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/calendar").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_card: {
-    name: "card",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/card").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_carousel: {
-    name: "carousel",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/carousel").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_chart: {
-    name: "chart",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/charts/chart").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_chart_demos: {
-    name: "chart-demos",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/charts/chart-demos").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_chart_sales_metrics: {
-    name: "chart-sales-metrics",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/charts/chart-sales-metrics").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_checkbox: {
+  ui_primitives_auto_form_fields_checkbox: {
     name: "checkbox",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/fields/checkbox").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/fields/checkbox.tsx",
+      metadataKey: "primitives/auto-form/fields/checkbox",
+    },
   },
-  ui_checkbox: {
-    name: "checkbox",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/checkbox").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_collapsible: {
-    name: "collapsible",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/collapsible").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_combobox: {
-    name: "combobox",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/combobox").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_combobox: {
-    name: "combobox",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/combobox").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_combobox_option: {
-    name: "combobox-option",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/combobox-option").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_coming_soon: {
-    name: "coming-soon",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/coming-soon").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_command: {
-    name: "command",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/command").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_command_menu: {
-    name: "command-menu",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/command-menu").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_component_card: {
-    name: "component-card",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/registry/component-card").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_config_drawer: {
-    name: "config-drawer",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/config-drawer").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_connect_account: {
-    name: "connect-account",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/connect-account").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_context_menu: {
-    name: "context-menu",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/context-menu").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_copy_code: {
-    name: "copy-code",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/copy-code").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_danger_zone: {
-    name: "danger-zone",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/danger-zone").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_data_grid: {
-    name: "data-grid",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/data-grid/data-grid").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_data_grid_column_filter: {
-    name: "data-grid-column-filter",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/data-grid/data-grid-column-filter").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_data_grid_column_header: {
-    name: "data-grid-column-header",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/data-grid/data-grid-column-header").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_data_grid_column_visibility: {
-    name: "data-grid-column-visibility",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/data-grid/data-grid-column-visibility").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_data_grid_pagination: {
-    name: "data-grid-pagination",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/data-grid/data-grid-pagination").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_data_grid_table: {
-    name: "data-grid-table",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/data-grid/data-grid-table").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_data_grid_table_dnd: {
-    name: "data-grid-table-dnd",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/data-grid/data-grid-table-dnd").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_data_grid_table_dnd_rows: {
-    name: "data-grid-table-dnd-rows",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/data-grid/data-grid-table-dnd-rows").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_datatable_transaction: {
-    name: "datatable-transaction",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/tables/datatable-transaction").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_date: {
+  ui_primitives_auto_form_fields_date: {
     name: "date",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/fields/date").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/fields/date.tsx",
+      metadataKey: "primitives/auto-form/fields/date",
+    },
   },
-  ui_date_picker: {
-    name: "date-picker",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/date-picker").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_day_picker: {
-    name: "day-picker",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/day-picker").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dialog: {
-    name: "dialog",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/dialog").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_direction: {
-    name: "direction",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/direction").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_discover_button: {
-    name: "discover-button",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/discover-button").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_discrete_tabs: {
-    name: "discrete-tabs",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/tabs/discrete-tabs").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_drawer: {
-    name: "drawer",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/drawer").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dropdown_language: {
-    name: "dropdown-language",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/dropdown-language").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dropdown_menu: {
-    name: "dropdown-menu",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/dropdown-menu").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dropdown_menu_avatar: {
-    name: "dropdown-menu-avatar",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/dropdown-menu-avatar").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dropdown_menu_basic: {
-    name: "dropdown-menu-basic",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/dropdown-menu-basic").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dropdown_menu_checkboxes: {
-    name: "dropdown-menu-checkboxes",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/dropdown-menu-checkboxes").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dropdown_menu_checkboxes_icons: {
-    name: "dropdown-menu-checkboxes-icons",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/dropdown-menu-checkboxes-icons").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dropdown_menu_destructive: {
-    name: "dropdown-menu-destructive",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/dropdown-menu-destructive").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dropdown_menu_icons: {
-    name: "dropdown-menu-icons",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/dropdown-menu-icons").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dropdown_menu_radio_group: {
-    name: "dropdown-menu-radio-group",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/dropdown-menu-radio-group").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dropdown_menu_radio_icons: {
-    name: "dropdown-menu-radio-icons",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/dropdown-menu-radio-icons").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dropdown_menu_shortcuts: {
-    name: "dropdown-menu-shortcuts",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/dropdown-menu-shortcuts").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dropdown_menu_submenu: {
-    name: "dropdown-menu-submenu",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/dropdown-menu-submenu").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_dropdown_profile: {
-    name: "dropdown-profile",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/dropdown-profile").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_edit_switch: {
-    name: "edit-switch",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/edit-switch").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_email_password: {
-    name: "email-password",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/email-password").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_empty: {
-    name: "empty",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/empty").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_empty_state: {
-    name: "empty-state",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/skeleton/empty-state").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_enum: {
+  ui_primitives_auto_form_fields_enum: {
     name: "enum",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/fields/enum").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/fields/enum.tsx",
+      metadataKey: "primitives/auto-form/fields/enum",
+    },
   },
-  ui_field: {
-    name: "field",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/fields/field").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_field_group: {
+  ui_primitives_auto_form_fields_field_group: {
     name: "field-group",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/fields/field-group").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/fields/field-group.tsx",
+      metadataKey: "primitives/auto-form/fields/field-group",
+    },
   },
-  ui_filters: {
-    name: "filters",
+  ui_primitives_auto_form_fields_field: {
+    name: "field",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/filters").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/fields/field.tsx",
+      metadataKey: "primitives/auto-form/fields/field",
+    },
   },
-  ui_five: {
-    name: "five",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/sections/five").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_forgot_password: {
-    name: "forgot-password",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/forgot-password").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_forgot_password_form: {
-    name: "forgot-password-form",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/forgot-password-form").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_form: {
+  ui_primitives_auto_form_fields_form: {
     name: "form",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/fields/form").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/fields/form.tsx",
+      metadataKey: "primitives/auto-form/fields/form",
+    },
   },
-  ui_form: {
-    name: "form",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/form").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_four: {
-    name: "four",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/sections/four").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_group: {
-    name: "group",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/group").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_helpers: {
-    name: "helpers",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/helpers").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_hero: {
-    name: "hero",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/hero").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_hover_card: {
-    name: "hover-card",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/hover-card").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_hover_card_sides: {
-    name: "hover-card-sides",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/hover-card-sides").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_image_edit_block: {
-    name: "image-edit-block",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/image-blocks/image-edit-block").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_image_edit_dialog: {
-    name: "image-edit-dialog",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/image-blocks/image-edit-dialog").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input: {
+  ui_primitives_auto_form_fields_input: {
     name: "input",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/fields/input").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input: {
-    name: "input",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_badge: {
-    name: "input-badge",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-badge").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_basic: {
-    name: "input-basic",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-basic").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_button_group: {
-    name: "input-button-group",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-button-group").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_disabled: {
-    name: "input-disabled",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-disabled").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_field: {
-    name: "input-field",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-field").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_fieldgroup: {
-    name: "input-fieldgroup",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-fieldgroup").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_file: {
-    name: "input-file",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-file").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_form: {
-    name: "input-form",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-form").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_grid: {
-    name: "input-grid",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-grid").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group: {
-    name: "input-group",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_basic: {
-    name: "input-group-basic",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-basic").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_block_end: {
-    name: "input-group-block-end",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-block-end").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_block_start: {
-    name: "input-group-block-start",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-block-start").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_button: {
-    name: "input-group-button",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-button").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_button_group: {
-    name: "input-group-button-group",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-button-group").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_custom: {
-    name: "input-group-custom",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-custom").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_dropdown: {
-    name: "input-group-dropdown",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-dropdown").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_icon: {
-    name: "input-group-icon",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-icon").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_in_card: {
-    name: "input-group-in-card",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-in-card").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_inline_end: {
-    name: "input-group-inline-end",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-inline-end").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_inline_start: {
-    name: "input-group-inline-start",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-inline-start").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_kbd: {
-    name: "input-group-kbd",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-kbd").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_label: {
-    name: "input-group-label",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-label").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_spinner: {
-    name: "input-group-spinner",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-spinner").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_text: {
-    name: "input-group-text",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-text").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_textarea: {
-    name: "input-group-textarea",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-textarea").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_textarea_examples: {
-    name: "input-group-textarea-examples",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-textarea-examples").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_tooltip: {
-    name: "input-group-tooltip",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-tooltip").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_with_addons: {
-    name: "input-group-with-addons",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-with-addons").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_with_buttons: {
-    name: "input-group-with-buttons",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-with-buttons").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_with_kbd: {
-    name: "input-group-with-kbd",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-with-kbd").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_group_with_tooltip: {
-    name: "input-group-with-tooltip",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-group-with-tooltip").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_inline: {
-    name: "input-inline",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-inline").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_input_group: {
-    name: "input-input-group",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-input-group").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_invalid: {
-    name: "input-invalid",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-invalid").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_otp: {
-    name: "input-otp",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-otp").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_otp_alphanumeric: {
-    name: "input-otp-alphanumeric",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-otp-alphanumeric").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_otp_controlled: {
-    name: "input-otp-controlled",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-otp-controlled").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_otp_disabled: {
-    name: "input-otp-disabled",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-otp-disabled").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_otp_form: {
-    name: "input-otp-form",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-otp-form").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_otp_four_digits: {
-    name: "input-otp-four-digits",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-otp-four-digits").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_otp_invalid: {
-    name: "input-otp-invalid",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-otp-invalid").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_otp_pattern: {
-    name: "input-otp-pattern",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-otp-pattern").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_input_otp_separator: {
-    name: "input-otp-separator",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/inputs/input-otp-separator").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_item: {
-    name: "item",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/item").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_kbd: {
-    name: "kbd",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/kbd").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_label: {
-    name: "label",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/common/label").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_label: {
-    name: "label",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/label").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_line_chart: {
-    name: "line-chart",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/charts/line-chart").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_link_bubble_menu: {
-    name: "link-bubble-menu",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/links/link-bubble-menu").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_link_edit_block: {
-    name: "link-edit-block",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/links/link-edit-block").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_link_edit_popover: {
-    name: "link-edit-popover",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/links/link-edit-popover").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_link_popover_block: {
-    name: "link-popover-block",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/links/link-popover-block").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_list_item: {
-    name: "list-item",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/lists/list-item").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_login: {
-    name: "login",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/login").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_login_form: {
-    name: "login-form",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/login-form").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_login_page: {
-    name: "login-page",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/login-page").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_logo: {
-    name: "logo",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/logo").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_long_text: {
-    name: "long-text",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/textarea/long-text").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_mcp_tabs: {
-    name: "mcp-tabs",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/registry/mcp-tabs").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_measured_container: {
-    name: "measured-container",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/measured-container").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_menu: {
-    name: "menu",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/menus/menu").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_menu_option: {
-    name: "menu-option",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/menus/menu-option").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_menu_other: {
-    name: "menu-other",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/menus/menu-other").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_menubar: {
-    name: "menubar",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/menus/menubar").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_menubar_checkbox: {
-    name: "menubar-checkbox",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/menus/menubar-checkbox").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_menubar_icons: {
-    name: "menubar-icons",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/menus/menubar-icons").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_menubar_radio: {
-    name: "menubar-radio",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/menus/menubar-radio").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_menubar_submenu: {
-    name: "menubar-submenu",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/menus/menubar-submenu").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_native_select: {
-    name: "native-select",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/native-select").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_navigation_menu: {
-    name: "navigation-menu",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/navigation-menu").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_navigation_menu: {
-    name: "navigation-menu",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/menus/navigation-menu").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_navigation_menu: {
-    name: "navigation-menu",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/navigation-menu").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_navigation_progress: {
-    name: "navigation-progress",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/navigation-progress").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_number: {
+    metadata: {
+      sourcePath: "src/primitives/auto-form/fields/input.tsx",
+      metadataKey: "primitives/auto-form/fields/input",
+    },
+  },
+  ui_primitives_auto_form_fields_number: {
     name: "number",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/fields/number").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/fields/number.tsx",
+      metadataKey: "primitives/auto-form/fields/number",
+    },
   },
-  ui_number_field: {
-    name: "number-field",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/number-field").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_object: {
+  ui_primitives_auto_form_fields_object: {
     name: "object",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/fields/object").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/fields/object.tsx",
+      metadataKey: "primitives/auto-form/fields/object",
+    },
   },
-  ui_one: {
-    name: "one",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/sections/one").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_open_in_v0: {
-    name: "open-in-v0",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/registry/open-in-v0").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_pagination: {
-    name: "pagination",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/pagination").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_password_input: {
-    name: "password-input",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/password-input").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_personal_info: {
-    name: "personal-info",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/personal-info").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_popover: {
-    name: "popover",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/popovers/popover").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_popover_alignments: {
-    name: "popover-alignments",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/popovers/popover-alignments").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_popover_basic: {
-    name: "popover-basic",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/popovers/popover-basic").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_popover_form: {
-    name: "popover-form",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/popovers/popover-form").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_preview_card: {
-    name: "preview-card",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/preview-card").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_product_grid: {
-    name: "product-grid",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/product-grid").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_profile_dropdown: {
-    name: "profile-dropdown",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/profile-dropdown").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_progress: {
-    name: "progress",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/progress").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_promo: {
-    name: "promo",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/promo").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_radio_group: {
+  ui_primitives_auto_form_fields_radio_group: {
     name: "radio-group",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/fields/radio-group").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/fields/radio-group.tsx",
+      metadataKey: "primitives/auto-form/fields/radio-group",
+    },
   },
-  ui_radio_group: {
-    name: "radio-group",
+  ui_primitives_auto_form_fields_switch: {
+    name: "switch",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/radio-group").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/fields/switch.tsx",
+      metadataKey: "primitives/auto-form/fields/switch",
+    },
   },
-  ui_rating: {
-    name: "rating",
+  ui_primitives_auto_form_fields_textarea: {
+    name: "textarea",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/rating").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/fields/textarea.tsx",
+      metadataKey: "primitives/auto-form/fields/textarea",
+    },
   },
-  ui_register: {
-    name: "register",
+  ui_primitives_auto_form_form: {
+    name: "form",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/register").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/form.tsx",
+      metadataKey: "primitives/auto-form/form",
+    },
   },
-  ui_register_form: {
-    name: "register-form",
+  ui_primitives_auto_form_helpers: {
+    name: "helpers",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/register-form").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/auto-form/helpers.tsx",
+      metadataKey: "primitives/auto-form/helpers",
+    },
   },
-  ui_registry_logo: {
-    name: "registry-logo",
+  ui_primitives_buttons_button_default: {
+    name: "button-default",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/registry/registry-logo").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-default.tsx",
+      metadataKey: "primitives/buttons/button-default",
+    },
   },
-  ui_registry_sidebar: {
-    name: "registry-sidebar",
+  ui_primitives_buttons_button_destructive: {
+    name: "button-destructive",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/registry/registry-sidebar").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-destructive.tsx",
+      metadataKey: "primitives/buttons/button-destructive",
+    },
   },
-  ui_resizable: {
-    name: "resizable",
+  ui_primitives_buttons_button_ghost: {
+    name: "button-ghost",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/resizable").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-ghost.tsx",
+      metadataKey: "primitives/buttons/button-ghost",
+    },
   },
-  ui_resizable_handle: {
-    name: "resizable-handle",
+  ui_primitives_buttons_button_group_dropdown: {
+    name: "button-group-dropdown",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/resizable-handle").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-group-dropdown.tsx",
+      metadataKey: "primitives/buttons/button-group-dropdown",
+    },
   },
-  ui_resizable_vertical: {
-    name: "resizable-vertical",
+  ui_primitives_buttons_button_group_input_group: {
+    name: "button-group-input-group",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/resizable-vertical").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-group-input-group.tsx",
+      metadataKey: "primitives/buttons/button-group-input-group",
+    },
   },
-  ui_scroll_area: {
-    name: "scroll-area",
+  ui_primitives_buttons_button_group_input: {
+    name: "button-group-input",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/scroll-area").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-group-input.tsx",
+      metadataKey: "primitives/buttons/button-group-input",
+    },
   },
-  ui_select: {
-    name: "select",
+  ui_primitives_buttons_button_group_nested: {
+    name: "button-group-nested",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/select").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-group-nested.tsx",
+      metadataKey: "primitives/buttons/button-group-nested",
+    },
   },
-  ui_select_dropdown: {
-    name: "select-dropdown",
+  ui_primitives_buttons_button_group_orientation: {
+    name: "button-group-orientation",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/select-dropdown").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-group-orientation.tsx",
+      metadataKey: "primitives/buttons/button-group-orientation",
+    },
   },
-  ui_separator: {
-    name: "separator",
+  ui_primitives_buttons_button_group_popover: {
+    name: "button-group-popover",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/separator").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-group-popover.tsx",
+      metadataKey: "primitives/buttons/button-group-popover",
+    },
   },
-  ui_sheet: {
-    name: "sheet",
+  ui_primitives_buttons_button_group_select: {
+    name: "button-group-select",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/sheet").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-group-select.tsx",
+      metadataKey: "primitives/buttons/button-group-select",
+    },
   },
-  ui_sidebar: {
-    name: "sidebar",
+  ui_primitives_buttons_button_group_separator: {
+    name: "button-group-separator",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/sidebar").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-group-separator.tsx",
+      metadataKey: "primitives/buttons/button-group-separator",
+    },
   },
-  ui_sign_out_dialog: {
-    name: "sign-out-dialog",
+  ui_primitives_buttons_button_group_size: {
+    name: "button-group-size",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/sign-out-dialog").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-group-size.tsx",
+      metadataKey: "primitives/buttons/button-group-size",
+    },
   },
-  ui_skeleton: {
-    name: "skeleton",
+  ui_primitives_buttons_button_group_split: {
+    name: "button-group-split",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/skeleton/skeleton").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-group-split.tsx",
+      metadataKey: "primitives/buttons/button-group-split",
+    },
   },
-  ui_skeleton_avatar: {
-    name: "skeleton-avatar",
+  ui_primitives_buttons_button_group: {
+    name: "button-group",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/skeleton/skeleton-avatar").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-group.tsx",
+      metadataKey: "primitives/buttons/button-group",
+    },
   },
-  ui_skeleton_card: {
-    name: "skeleton-card",
+  ui_primitives_buttons_button_icon: {
+    name: "button-icon",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/skeleton/skeleton-card").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-icon.tsx",
+      metadataKey: "primitives/buttons/button-icon",
+    },
   },
-  ui_skeleton_demo: {
-    name: "skeleton-demo",
+  ui_primitives_buttons_button_link: {
+    name: "button-link",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/skeleton/skeleton-demo").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-link.tsx",
+      metadataKey: "primitives/buttons/button-link",
+    },
   },
-  ui_skeleton_form: {
-    name: "skeleton-form",
+  ui_primitives_buttons_button_outline: {
+    name: "button-outline",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/skeleton/skeleton-form").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-outline.tsx",
+      metadataKey: "primitives/buttons/button-outline",
+    },
   },
-  ui_skeleton_table: {
-    name: "skeleton-table",
+  ui_primitives_buttons_button_render: {
+    name: "button-render",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/skeleton/skeleton-table").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-render.tsx",
+      metadataKey: "primitives/buttons/button-render",
+    },
   },
-  ui_skeleton_text: {
-    name: "skeleton-text",
+  ui_primitives_buttons_button_rounded: {
+    name: "button-rounded",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/skeleton/skeleton-text").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-rounded.tsx",
+      metadataKey: "primitives/buttons/button-rounded",
+    },
   },
-  ui_slider: {
-    name: "slider",
+  ui_primitives_buttons_button_secondary: {
+    name: "button-secondary",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/slider").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-secondary.tsx",
+      metadataKey: "primitives/buttons/button-secondary",
+    },
   },
-  ui_smooth_dropdown: {
-    name: "smooth-dropdown",
+  ui_primitives_buttons_button_size: {
+    name: "button-size",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/dropdowns/smooth-dropdown").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-size.tsx",
+      metadataKey: "primitives/buttons/button-size",
+    },
   },
-  ui_social_proof_01: {
-    name: "social-proof-01",
+  ui_primitives_buttons_button_spinner: {
+    name: "button-spinner",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/social-proof-01").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-spinner.tsx",
+      metadataKey: "primitives/buttons/button-spinner",
+    },
   },
-  ui_social_proof_07: {
-    name: "social-proof-07",
+  ui_primitives_buttons_button_with_icon: {
+    name: "button-with-icon",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/social-proof-07").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button-with-icon.tsx",
+      metadataKey: "primitives/buttons/button-with-icon",
+    },
   },
-  ui_social_url: {
-    name: "social-url",
+  ui_primitives_buttons_button: {
+    name: "button",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/social-url").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/button.tsx",
+      metadataKey: "primitives/buttons/button",
+    },
   },
-  ui_sonner: {
-    name: "sonner",
+  ui_primitives_buttons_discover_button: {
+    name: "discover-button",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/sonner").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/discover-button.tsx",
+      metadataKey: "primitives/buttons/discover-button",
+    },
   },
-  ui_sortable_table_head: {
-    name: "sortable-table-head",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/sortable-table-head").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_spinner: {
-    name: "spinner",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/spinner").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_statistics_card: {
-    name: "statistics-card",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/charts/statistics-card").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_statistics_with_status: {
-    name: "statistics-with-status",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/charts/statistics-with-status").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_status_button: {
+  ui_primitives_buttons_status_button: {
     name: "status-button",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/status-button").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/status-button.tsx",
+      metadataKey: "primitives/buttons/status-button",
+    },
   },
-  ui_sub_nav: {
-    name: "sub-nav",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/sub-nav").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_swap_layout: {
-    name: "swap-layout",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/swap-layout").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_swap_layout_loader: {
-    name: "swap-layout-loader",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/layouts/swap-layout-loader").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_switch: {
-    name: "switch",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/fields/switch").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_switch: {
-    name: "switch",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/switch").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_table: {
-    name: "table",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/tables/table").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_table_actions: {
-    name: "table-actions",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/tables/table-actions").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_table_footer: {
-    name: "table-footer",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/tables/table-footer").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_tabs: {
-    name: "tabs",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/tabs/tabs").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_tabs: {
-    name: "tabs",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/tabs").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_tabs_disabled: {
-    name: "tabs-disabled",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/tabs/tabs-disabled").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_tabs_icons: {
-    name: "tabs-icons",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/tabs/tabs-icons").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_tabs_line: {
-    name: "tabs-line",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/tabs/tabs-line").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_tabs_vertical: {
-    name: "tabs-vertical",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/tabs/tabs-vertical").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_textarea: {
-    name: "textarea",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/fields/textarea").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_textarea: {
-    name: "textarea",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/textarea/textarea").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_textarea: {
-    name: "textarea",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/textarea").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_textarea_button: {
-    name: "textarea-button",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/textarea/textarea-button").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_textarea_disabled: {
-    name: "textarea-disabled",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/textarea/textarea-disabled").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_textarea_field: {
-    name: "textarea-field",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/textarea/textarea-field").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_textarea_invalid: {
-    name: "textarea-invalid",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/textarea/textarea-invalid").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_theme_toggle: {
-    name: "theme-toggle",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/registry/theme-toggle").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_three: {
-    name: "three",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/sections/three").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_timeline_component_05: {
-    name: "timeline-component-05",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/timelines/timeline-component-05").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_toast: {
-    name: "toast",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/toast").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_toggle: {
-    name: "toggle",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/toggle").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_toggle_group: {
-    name: "toggle-group",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/toggle-group").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_toolbar_button: {
+  ui_primitives_buttons_toolbar_button: {
     name: "toolbar-button",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/buttons/toolbar-button").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/buttons/toolbar-button.tsx",
+      metadataKey: "primitives/buttons/toolbar-button",
+    },
   },
-  ui_toolbar_section: {
-    name: "toolbar-section",
+  ui_primitives_charts_chart_demos: {
+    name: "chart-demos",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/sections/toolbar-section").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/charts/chart-demos.tsx",
+      metadataKey: "primitives/charts/chart-demos",
+    },
   },
-  ui_tooltip: {
-    name: "tooltip",
+  ui_primitives_charts_chart_sales_metrics: {
+    name: "chart-sales-metrics",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/auto-form/common/tooltip").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/charts/chart-sales-metrics.tsx",
+      metadataKey: "primitives/charts/chart-sales-metrics",
+    },
   },
-  ui_tooltip: {
-    name: "tooltip",
+  ui_primitives_charts_chart: {
+    name: "chart",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/ui/tooltip").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/charts/chart.tsx",
+      metadataKey: "primitives/charts/chart",
+    },
   },
-  ui_two: {
-    name: "two",
+  ui_primitives_charts_line_chart: {
+    name: "line-chart",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/sections/two").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/charts/line-chart.tsx",
+      metadataKey: "primitives/charts/line-chart",
+    },
   },
-  ui_typography_blockquote: {
-    name: "typography-blockquote",
+  ui_primitives_charts_statistics_card: {
+    name: "statistics-card",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/typography/typography-blockquote").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/charts/statistics-card.tsx",
+      metadataKey: "primitives/charts/statistics-card",
+    },
   },
-  ui_typography_h1: {
-    name: "typography-h1",
+  ui_primitives_charts_statistics_with_status: {
+    name: "statistics-with-status",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/typography/typography-h1").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/charts/statistics-with-status.tsx",
+      metadataKey: "primitives/charts/statistics-with-status",
+    },
   },
-  ui_typography_h2: {
-    name: "typography-h2",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/typography/typography-h2").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_typography_h3: {
-    name: "typography-h3",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/typography/typography-h3").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_typography_h4: {
-    name: "typography-h4",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/typography/typography-h4").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_typography_inline_code: {
-    name: "typography-inline-code",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/typography/typography-inline-code").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_typography_large: {
-    name: "typography-large",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/typography/typography-large").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_typography_lead: {
-    name: "typography-lead",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/typography/typography-lead").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_typography_list: {
-    name: "typography-list",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/typography/typography-list").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_typography_muted: {
-    name: "typography-muted",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/typography/typography-muted").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_typography_p: {
-    name: "typography-p",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/typography/typography-p").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_typography_small: {
-    name: "typography-small",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/typography/typography-small").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_typography_table: {
-    name: "typography-table",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/typography/typography-table").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_v1_1_0: {
-    name: "v1-1-0",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/timelines/content/v1-1-0").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_v1_2_0: {
-    name: "v1-2-0",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/timelines/content/v1-2-0").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_v1_3_0: {
-    name: "v1-3-0",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/timelines/content/v1-3-0").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_verify_email: {
-    name: "verify-email",
-    type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/users/verify-email").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
-  },
-  ui_widget_product_insights: {
+  ui_primitives_charts_widget_product_insights: {
     name: "widget-product-insights",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/charts/widget-product-insights").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/charts/widget-product-insights.tsx",
+      metadataKey: "primitives/charts/widget-product-insights",
+    },
   },
-  ui_widget_total_earning: {
+  ui_primitives_charts_widget_total_earning: {
     name: "widget-total-earning",
     type: "ui-primitive",
-    component: dynamic(() => import("@/primitives/charts/widget-total-earning").then((mod) => {
-      const m = mod as Record<string, unknown>
-      const componentLike = Object.keys(m).find((key) => /^[A-Z]/.test(key) && typeof m[key] === "function")
-      return (m.default as unknown) || (componentLike ? (m[componentLike] as unknown) : (m[Object.keys(m)[0]] as unknown))
-    })),
-    metadata: null,
+    metadata: {
+      sourcePath: "src/primitives/charts/widget-total-earning.tsx",
+      metadataKey: "primitives/charts/widget-total-earning",
+    },
+  },
+  ui_primitives_data_grid_data_grid_column_filter: {
+    name: "data-grid-column-filter",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/data-grid/data-grid-column-filter.tsx",
+      metadataKey: "primitives/data-grid/data-grid-column-filter",
+    },
+  },
+  ui_primitives_data_grid_data_grid_column_header: {
+    name: "data-grid-column-header",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/data-grid/data-grid-column-header.tsx",
+      metadataKey: "primitives/data-grid/data-grid-column-header",
+    },
+  },
+  ui_primitives_data_grid_data_grid_column_visibility: {
+    name: "data-grid-column-visibility",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/data-grid/data-grid-column-visibility.tsx",
+      metadataKey: "primitives/data-grid/data-grid-column-visibility",
+    },
+  },
+  ui_primitives_data_grid_data_grid_pagination: {
+    name: "data-grid-pagination",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/data-grid/data-grid-pagination.tsx",
+      metadataKey: "primitives/data-grid/data-grid-pagination",
+    },
+  },
+  ui_primitives_data_grid_data_grid_table_dnd_rows: {
+    name: "data-grid-table-dnd-rows",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/data-grid/data-grid-table-dnd-rows.tsx",
+      metadataKey: "primitives/data-grid/data-grid-table-dnd-rows",
+    },
+  },
+  ui_primitives_data_grid_data_grid_table_dnd: {
+    name: "data-grid-table-dnd",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/data-grid/data-grid-table-dnd.tsx",
+      metadataKey: "primitives/data-grid/data-grid-table-dnd",
+    },
+  },
+  ui_primitives_data_grid_data_grid_table: {
+    name: "data-grid-table",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/data-grid/data-grid-table.tsx",
+      metadataKey: "primitives/data-grid/data-grid-table",
+    },
+  },
+  ui_primitives_data_grid_data_grid: {
+    name: "data-grid",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/data-grid/data-grid.tsx",
+      metadataKey: "primitives/data-grid/data-grid",
+    },
+  },
+  ui_primitives_dropdowns_dropdown_language: {
+    name: "dropdown-language",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/dropdown-language.tsx",
+      metadataKey: "primitives/dropdowns/dropdown-language",
+    },
+  },
+  ui_primitives_dropdowns_dropdown_menu_avatar: {
+    name: "dropdown-menu-avatar",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/dropdown-menu-avatar.tsx",
+      metadataKey: "primitives/dropdowns/dropdown-menu-avatar",
+    },
+  },
+  ui_primitives_dropdowns_dropdown_menu_basic: {
+    name: "dropdown-menu-basic",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/dropdown-menu-basic.tsx",
+      metadataKey: "primitives/dropdowns/dropdown-menu-basic",
+    },
+  },
+  ui_primitives_dropdowns_dropdown_menu_checkboxes_icons: {
+    name: "dropdown-menu-checkboxes-icons",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/dropdown-menu-checkboxes-icons.tsx",
+      metadataKey: "primitives/dropdowns/dropdown-menu-checkboxes-icons",
+    },
+  },
+  ui_primitives_dropdowns_dropdown_menu_checkboxes: {
+    name: "dropdown-menu-checkboxes",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/dropdown-menu-checkboxes.tsx",
+      metadataKey: "primitives/dropdowns/dropdown-menu-checkboxes",
+    },
+  },
+  ui_primitives_dropdowns_dropdown_menu_destructive: {
+    name: "dropdown-menu-destructive",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/dropdown-menu-destructive.tsx",
+      metadataKey: "primitives/dropdowns/dropdown-menu-destructive",
+    },
+  },
+  ui_primitives_dropdowns_dropdown_menu_icons: {
+    name: "dropdown-menu-icons",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/dropdown-menu-icons.tsx",
+      metadataKey: "primitives/dropdowns/dropdown-menu-icons",
+    },
+  },
+  ui_primitives_dropdowns_dropdown_menu_radio_group: {
+    name: "dropdown-menu-radio-group",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/dropdown-menu-radio-group.tsx",
+      metadataKey: "primitives/dropdowns/dropdown-menu-radio-group",
+    },
+  },
+  ui_primitives_dropdowns_dropdown_menu_radio_icons: {
+    name: "dropdown-menu-radio-icons",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/dropdown-menu-radio-icons.tsx",
+      metadataKey: "primitives/dropdowns/dropdown-menu-radio-icons",
+    },
+  },
+  ui_primitives_dropdowns_dropdown_menu_shortcuts: {
+    name: "dropdown-menu-shortcuts",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/dropdown-menu-shortcuts.tsx",
+      metadataKey: "primitives/dropdowns/dropdown-menu-shortcuts",
+    },
+  },
+  ui_primitives_dropdowns_dropdown_menu_submenu: {
+    name: "dropdown-menu-submenu",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/dropdown-menu-submenu.tsx",
+      metadataKey: "primitives/dropdowns/dropdown-menu-submenu",
+    },
+  },
+  ui_primitives_dropdowns_dropdown_menu: {
+    name: "dropdown-menu",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/dropdown-menu.tsx",
+      metadataKey: "primitives/dropdowns/dropdown-menu",
+    },
+  },
+  ui_primitives_dropdowns_dropdown_profile: {
+    name: "dropdown-profile",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/dropdown-profile.tsx",
+      metadataKey: "primitives/dropdowns/dropdown-profile",
+    },
+  },
+  ui_primitives_dropdowns_select_dropdown: {
+    name: "select-dropdown",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/select-dropdown.tsx",
+      metadataKey: "primitives/dropdowns/select-dropdown",
+    },
+  },
+  ui_primitives_dropdowns_smooth_dropdown: {
+    name: "smooth-dropdown",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/dropdowns/smooth-dropdown.tsx",
+      metadataKey: "primitives/dropdowns/smooth-dropdown",
+    },
+  },
+  ui_primitives_image_blocks_image_edit_block: {
+    name: "image-edit-block",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/image-blocks/image-edit-block.tsx",
+      metadataKey: "primitives/image-blocks/image-edit-block",
+    },
+  },
+  ui_primitives_image_blocks_image_edit_dialog: {
+    name: "image-edit-dialog",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/image-blocks/image-edit-dialog.tsx",
+      metadataKey: "primitives/image-blocks/image-edit-dialog",
+    },
+  },
+  ui_primitives_inputs_combobox_option: {
+    name: "combobox-option",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/combobox-option.tsx",
+      metadataKey: "primitives/inputs/combobox-option",
+    },
+  },
+  ui_primitives_inputs_combobox: {
+    name: "combobox",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/combobox.tsx",
+      metadataKey: "primitives/inputs/combobox",
+    },
+  },
+  ui_primitives_inputs_input_badge: {
+    name: "input-badge",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-badge.tsx",
+      metadataKey: "primitives/inputs/input-badge",
+    },
+  },
+  ui_primitives_inputs_input_basic: {
+    name: "input-basic",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-basic.tsx",
+      metadataKey: "primitives/inputs/input-basic",
+    },
+  },
+  ui_primitives_inputs_input_button_group: {
+    name: "input-button-group",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-button-group.tsx",
+      metadataKey: "primitives/inputs/input-button-group",
+    },
+  },
+  ui_primitives_inputs_input_disabled: {
+    name: "input-disabled",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-disabled.tsx",
+      metadataKey: "primitives/inputs/input-disabled",
+    },
+  },
+  ui_primitives_inputs_input_field: {
+    name: "input-field",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-field.tsx",
+      metadataKey: "primitives/inputs/input-field",
+    },
+  },
+  ui_primitives_inputs_input_fieldgroup: {
+    name: "input-fieldgroup",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-fieldgroup.tsx",
+      metadataKey: "primitives/inputs/input-fieldgroup",
+    },
+  },
+  ui_primitives_inputs_input_file: {
+    name: "input-file",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-file.tsx",
+      metadataKey: "primitives/inputs/input-file",
+    },
+  },
+  ui_primitives_inputs_input_form: {
+    name: "input-form",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-form.tsx",
+      metadataKey: "primitives/inputs/input-form",
+    },
+  },
+  ui_primitives_inputs_input_grid: {
+    name: "input-grid",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-grid.tsx",
+      metadataKey: "primitives/inputs/input-grid",
+    },
+  },
+  ui_primitives_inputs_input_group_basic: {
+    name: "input-group-basic",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-basic.tsx",
+      metadataKey: "primitives/inputs/input-group-basic",
+    },
+  },
+  ui_primitives_inputs_input_group_block_end: {
+    name: "input-group-block-end",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-block-end.tsx",
+      metadataKey: "primitives/inputs/input-group-block-end",
+    },
+  },
+  ui_primitives_inputs_input_group_block_start: {
+    name: "input-group-block-start",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-block-start.tsx",
+      metadataKey: "primitives/inputs/input-group-block-start",
+    },
+  },
+  ui_primitives_inputs_input_group_button_group: {
+    name: "input-group-button-group",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-button-group.tsx",
+      metadataKey: "primitives/inputs/input-group-button-group",
+    },
+  },
+  ui_primitives_inputs_input_group_button: {
+    name: "input-group-button",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-button.tsx",
+      metadataKey: "primitives/inputs/input-group-button",
+    },
+  },
+  ui_primitives_inputs_input_group_custom: {
+    name: "input-group-custom",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-custom.tsx",
+      metadataKey: "primitives/inputs/input-group-custom",
+    },
+  },
+  ui_primitives_inputs_input_group_dropdown: {
+    name: "input-group-dropdown",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-dropdown.tsx",
+      metadataKey: "primitives/inputs/input-group-dropdown",
+    },
+  },
+  ui_primitives_inputs_input_group_icon: {
+    name: "input-group-icon",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-icon.tsx",
+      metadataKey: "primitives/inputs/input-group-icon",
+    },
+  },
+  ui_primitives_inputs_input_group_in_card: {
+    name: "input-group-in-card",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-in-card.tsx",
+      metadataKey: "primitives/inputs/input-group-in-card",
+    },
+  },
+  ui_primitives_inputs_input_group_inline_end: {
+    name: "input-group-inline-end",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-inline-end.tsx",
+      metadataKey: "primitives/inputs/input-group-inline-end",
+    },
+  },
+  ui_primitives_inputs_input_group_inline_start: {
+    name: "input-group-inline-start",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-inline-start.tsx",
+      metadataKey: "primitives/inputs/input-group-inline-start",
+    },
+  },
+  ui_primitives_inputs_input_group_kbd: {
+    name: "input-group-kbd",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-kbd.tsx",
+      metadataKey: "primitives/inputs/input-group-kbd",
+    },
+  },
+  ui_primitives_inputs_input_group_label: {
+    name: "input-group-label",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-label.tsx",
+      metadataKey: "primitives/inputs/input-group-label",
+    },
+  },
+  ui_primitives_inputs_input_group_spinner: {
+    name: "input-group-spinner",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-spinner.tsx",
+      metadataKey: "primitives/inputs/input-group-spinner",
+    },
+  },
+  ui_primitives_inputs_input_group_text: {
+    name: "input-group-text",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-text.tsx",
+      metadataKey: "primitives/inputs/input-group-text",
+    },
+  },
+  ui_primitives_inputs_input_group_textarea_examples: {
+    name: "input-group-textarea-examples",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-textarea-examples.tsx",
+      metadataKey: "primitives/inputs/input-group-textarea-examples",
+    },
+  },
+  ui_primitives_inputs_input_group_textarea: {
+    name: "input-group-textarea",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-textarea.tsx",
+      metadataKey: "primitives/inputs/input-group-textarea",
+    },
+  },
+  ui_primitives_inputs_input_group_tooltip: {
+    name: "input-group-tooltip",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-tooltip.tsx",
+      metadataKey: "primitives/inputs/input-group-tooltip",
+    },
+  },
+  ui_primitives_inputs_input_group_with_addons: {
+    name: "input-group-with-addons",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-with-addons.tsx",
+      metadataKey: "primitives/inputs/input-group-with-addons",
+    },
+  },
+  ui_primitives_inputs_input_group_with_buttons: {
+    name: "input-group-with-buttons",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-with-buttons.tsx",
+      metadataKey: "primitives/inputs/input-group-with-buttons",
+    },
+  },
+  ui_primitives_inputs_input_group_with_kbd: {
+    name: "input-group-with-kbd",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-with-kbd.tsx",
+      metadataKey: "primitives/inputs/input-group-with-kbd",
+    },
+  },
+  ui_primitives_inputs_input_group_with_tooltip: {
+    name: "input-group-with-tooltip",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group-with-tooltip.tsx",
+      metadataKey: "primitives/inputs/input-group-with-tooltip",
+    },
+  },
+  ui_primitives_inputs_input_group: {
+    name: "input-group",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-group.tsx",
+      metadataKey: "primitives/inputs/input-group",
+    },
+  },
+  ui_primitives_inputs_input_inline: {
+    name: "input-inline",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-inline.tsx",
+      metadataKey: "primitives/inputs/input-inline",
+    },
+  },
+  ui_primitives_inputs_input_input_group: {
+    name: "input-input-group",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-input-group.tsx",
+      metadataKey: "primitives/inputs/input-input-group",
+    },
+  },
+  ui_primitives_inputs_input_invalid: {
+    name: "input-invalid",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-invalid.tsx",
+      metadataKey: "primitives/inputs/input-invalid",
+    },
+  },
+  ui_primitives_inputs_input_otp_alphanumeric: {
+    name: "input-otp-alphanumeric",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-otp-alphanumeric.tsx",
+      metadataKey: "primitives/inputs/input-otp-alphanumeric",
+    },
+  },
+  ui_primitives_inputs_input_otp_controlled: {
+    name: "input-otp-controlled",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-otp-controlled.tsx",
+      metadataKey: "primitives/inputs/input-otp-controlled",
+    },
+  },
+  ui_primitives_inputs_input_otp_disabled: {
+    name: "input-otp-disabled",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-otp-disabled.tsx",
+      metadataKey: "primitives/inputs/input-otp-disabled",
+    },
+  },
+  ui_primitives_inputs_input_otp_form: {
+    name: "input-otp-form",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-otp-form.tsx",
+      metadataKey: "primitives/inputs/input-otp-form",
+    },
+  },
+  ui_primitives_inputs_input_otp_four_digits: {
+    name: "input-otp-four-digits",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-otp-four-digits.tsx",
+      metadataKey: "primitives/inputs/input-otp-four-digits",
+    },
+  },
+  ui_primitives_inputs_input_otp_invalid: {
+    name: "input-otp-invalid",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-otp-invalid.tsx",
+      metadataKey: "primitives/inputs/input-otp-invalid",
+    },
+  },
+  ui_primitives_inputs_input_otp_pattern: {
+    name: "input-otp-pattern",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-otp-pattern.tsx",
+      metadataKey: "primitives/inputs/input-otp-pattern",
+    },
+  },
+  ui_primitives_inputs_input_otp_separator: {
+    name: "input-otp-separator",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-otp-separator.tsx",
+      metadataKey: "primitives/inputs/input-otp-separator",
+    },
+  },
+  ui_primitives_inputs_input_otp: {
+    name: "input-otp",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input-otp.tsx",
+      metadataKey: "primitives/inputs/input-otp",
+    },
+  },
+  ui_primitives_inputs_input: {
+    name: "input",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/inputs/input.tsx",
+      metadataKey: "primitives/inputs/input",
+    },
+  },
+  ui_primitives_layouts_brand_header: {
+    name: "brand-header",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/brand-header.tsx",
+      metadataKey: "primitives/layouts/brand-header",
+    },
+  },
+  ui_primitives_layouts_brand_sidebar: {
+    name: "brand-sidebar",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/brand-sidebar.tsx",
+      metadataKey: "primitives/layouts/brand-sidebar",
+    },
+  },
+  ui_primitives_layouts_coming_soon: {
+    name: "coming-soon",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/coming-soon.tsx",
+      metadataKey: "primitives/layouts/coming-soon",
+    },
+  },
+  ui_primitives_layouts_hero: {
+    name: "hero",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/hero.tsx",
+      metadataKey: "primitives/layouts/hero",
+    },
+  },
+  ui_primitives_layouts_measured_container: {
+    name: "measured-container",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/measured-container.tsx",
+      metadataKey: "primitives/layouts/measured-container",
+    },
+  },
+  ui_primitives_layouts_navigation_menu: {
+    name: "navigation-menu",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/navigation-menu.tsx",
+      metadataKey: "primitives/layouts/navigation-menu",
+    },
+  },
+  ui_primitives_layouts_navigation_progress: {
+    name: "navigation-progress",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/navigation-progress.tsx",
+      metadataKey: "primitives/layouts/navigation-progress",
+    },
+  },
+  ui_primitives_layouts_resizable_handle: {
+    name: "resizable-handle",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/resizable-handle.tsx",
+      metadataKey: "primitives/layouts/resizable-handle",
+    },
+  },
+  ui_primitives_layouts_resizable_vertical: {
+    name: "resizable-vertical",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/resizable-vertical.tsx",
+      metadataKey: "primitives/layouts/resizable-vertical",
+    },
+  },
+  ui_primitives_layouts_sidebar: {
+    name: "sidebar",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/sidebar.tsx",
+      metadataKey: "primitives/layouts/sidebar",
+    },
+  },
+  ui_primitives_layouts_social_proof_01: {
+    name: "social-proof-01",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/social-proof-01.tsx",
+      metadataKey: "primitives/layouts/social-proof-01",
+    },
+  },
+  ui_primitives_layouts_social_proof_07: {
+    name: "social-proof-07",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/social-proof-07.tsx",
+      metadataKey: "primitives/layouts/social-proof-07",
+    },
+  },
+  ui_primitives_layouts_sub_nav: {
+    name: "sub-nav",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/sub-nav.tsx",
+      metadataKey: "primitives/layouts/sub-nav",
+    },
+  },
+  ui_primitives_layouts_swap_layout_loader: {
+    name: "swap-layout-loader",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/swap-layout-loader.tsx",
+      metadataKey: "primitives/layouts/swap-layout-loader",
+    },
+  },
+  ui_primitives_layouts_swap_layout: {
+    name: "swap-layout",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/layouts/swap-layout.tsx",
+      metadataKey: "primitives/layouts/swap-layout",
+    },
+  },
+  ui_primitives_links_link_bubble_menu: {
+    name: "link-bubble-menu",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/links/link-bubble-menu.tsx",
+      metadataKey: "primitives/links/link-bubble-menu",
+    },
+  },
+  ui_primitives_links_link_edit_block: {
+    name: "link-edit-block",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/links/link-edit-block.tsx",
+      metadataKey: "primitives/links/link-edit-block",
+    },
+  },
+  ui_primitives_links_link_edit_popover: {
+    name: "link-edit-popover",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/links/link-edit-popover.tsx",
+      metadataKey: "primitives/links/link-edit-popover",
+    },
+  },
+  ui_primitives_links_link_popover_block: {
+    name: "link-popover-block",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/links/link-popover-block.tsx",
+      metadataKey: "primitives/links/link-popover-block",
+    },
+  },
+  ui_primitives_lists_list_item: {
+    name: "list-item",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/lists/list-item.tsx",
+      metadataKey: "primitives/lists/list-item",
+    },
+  },
+  ui_primitives_menus_menu_option: {
+    name: "menu-option",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/menus/menu-option.tsx",
+      metadataKey: "primitives/menus/menu-option",
+    },
+  },
+  ui_primitives_menus_menu_other: {
+    name: "menu-other",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/menus/menu-other.tsx",
+      metadataKey: "primitives/menus/menu-other",
+    },
+  },
+  ui_primitives_menus_menu: {
+    name: "menu",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/menus/menu.tsx",
+      metadataKey: "primitives/menus/menu",
+    },
+  },
+  ui_primitives_menus_menubar_checkbox: {
+    name: "menubar-checkbox",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/menus/menubar-checkbox.tsx",
+      metadataKey: "primitives/menus/menubar-checkbox",
+    },
+  },
+  ui_primitives_menus_menubar_icons: {
+    name: "menubar-icons",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/menus/menubar-icons.tsx",
+      metadataKey: "primitives/menus/menubar-icons",
+    },
+  },
+  ui_primitives_menus_menubar_radio: {
+    name: "menubar-radio",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/menus/menubar-radio.tsx",
+      metadataKey: "primitives/menus/menubar-radio",
+    },
+  },
+  ui_primitives_menus_menubar_submenu: {
+    name: "menubar-submenu",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/menus/menubar-submenu.tsx",
+      metadataKey: "primitives/menus/menubar-submenu",
+    },
+  },
+  ui_primitives_menus_menubar: {
+    name: "menubar",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/menus/menubar.tsx",
+      metadataKey: "primitives/menus/menubar",
+    },
+  },
+  ui_primitives_menus_navigation_menu: {
+    name: "navigation-menu",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/menus/navigation-menu.tsx",
+      metadataKey: "primitives/menus/navigation-menu",
+    },
+  },
+  ui_primitives_popovers_popover_alignments: {
+    name: "popover-alignments",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/popovers/popover-alignments.tsx",
+      metadataKey: "primitives/popovers/popover-alignments",
+    },
+  },
+  ui_primitives_popovers_popover_basic: {
+    name: "popover-basic",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/popovers/popover-basic.tsx",
+      metadataKey: "primitives/popovers/popover-basic",
+    },
+  },
+  ui_primitives_popovers_popover_form: {
+    name: "popover-form",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/popovers/popover-form.tsx",
+      metadataKey: "primitives/popovers/popover-form",
+    },
+  },
+  ui_primitives_popovers_popover: {
+    name: "popover",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/popovers/popover.tsx",
+      metadataKey: "primitives/popovers/popover",
+    },
+  },
+  ui_primitives_registry_add_to_cursor: {
+    name: "add-to-cursor",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/registry/add-to-cursor.tsx",
+      metadataKey: "primitives/registry/add-to-cursor",
+    },
+  },
+  ui_primitives_registry_component_card: {
+    name: "component-card",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/registry/component-card.tsx",
+      metadataKey: "primitives/registry/component-card",
+    },
+  },
+  ui_primitives_registry_mcp_tabs: {
+    name: "mcp-tabs",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/registry/mcp-tabs.tsx",
+      metadataKey: "primitives/registry/mcp-tabs",
+    },
+  },
+  ui_primitives_registry_open_in_v0: {
+    name: "open-in-v0",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/registry/open-in-v0.tsx",
+      metadataKey: "primitives/registry/open-in-v0",
+    },
+  },
+  ui_primitives_registry_registry_logo: {
+    name: "registry-logo",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/registry/registry-logo.tsx",
+      metadataKey: "primitives/registry/registry-logo",
+    },
+  },
+  ui_primitives_registry_registry_sidebar: {
+    name: "registry-sidebar",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/registry/registry-sidebar.tsx",
+      metadataKey: "primitives/registry/registry-sidebar",
+    },
+  },
+  ui_primitives_registry_theme_toggle: {
+    name: "theme-toggle",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/registry/theme-toggle.tsx",
+      metadataKey: "primitives/registry/theme-toggle",
+    },
+  },
+  ui_primitives_sections_five: {
+    name: "five",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/sections/five.tsx",
+      metadataKey: "primitives/sections/five",
+    },
+  },
+  ui_primitives_sections_four: {
+    name: "four",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/sections/four.tsx",
+      metadataKey: "primitives/sections/four",
+    },
+  },
+  ui_primitives_sections_one: {
+    name: "one",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/sections/one.tsx",
+      metadataKey: "primitives/sections/one",
+    },
+  },
+  ui_primitives_sections_three: {
+    name: "three",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/sections/three.tsx",
+      metadataKey: "primitives/sections/three",
+    },
+  },
+  ui_primitives_sections_toolbar_section: {
+    name: "toolbar-section",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/sections/toolbar-section.tsx",
+      metadataKey: "primitives/sections/toolbar-section",
+    },
+  },
+  ui_primitives_sections_two: {
+    name: "two",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/sections/two.tsx",
+      metadataKey: "primitives/sections/two",
+    },
+  },
+  ui_primitives_skeleton_empty_state: {
+    name: "empty-state",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/skeleton/empty-state.tsx",
+      metadataKey: "primitives/skeleton/empty-state",
+    },
+  },
+  ui_primitives_skeleton_skeleton_avatar: {
+    name: "skeleton-avatar",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/skeleton/skeleton-avatar.tsx",
+      metadataKey: "primitives/skeleton/skeleton-avatar",
+    },
+  },
+  ui_primitives_skeleton_skeleton_card: {
+    name: "skeleton-card",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/skeleton/skeleton-card.tsx",
+      metadataKey: "primitives/skeleton/skeleton-card",
+    },
+  },
+  ui_primitives_skeleton_skeleton_demo: {
+    name: "skeleton-demo",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/skeleton/skeleton-demo.tsx",
+      metadataKey: "primitives/skeleton/skeleton-demo",
+    },
+  },
+  ui_primitives_skeleton_skeleton_form: {
+    name: "skeleton-form",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/skeleton/skeleton-form.tsx",
+      metadataKey: "primitives/skeleton/skeleton-form",
+    },
+  },
+  ui_primitives_skeleton_skeleton_table: {
+    name: "skeleton-table",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/skeleton/skeleton-table.tsx",
+      metadataKey: "primitives/skeleton/skeleton-table",
+    },
+  },
+  ui_primitives_skeleton_skeleton_text: {
+    name: "skeleton-text",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/skeleton/skeleton-text.tsx",
+      metadataKey: "primitives/skeleton/skeleton-text",
+    },
+  },
+  ui_primitives_skeleton_skeleton: {
+    name: "skeleton",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/skeleton/skeleton.tsx",
+      metadataKey: "primitives/skeleton/skeleton",
+    },
+  },
+  ui_primitives_tables_datatable_transaction: {
+    name: "datatable-transaction",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/tables/datatable-transaction.tsx",
+      metadataKey: "primitives/tables/datatable-transaction",
+    },
+  },
+  ui_primitives_tables_table_actions: {
+    name: "table-actions",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/tables/table-actions.tsx",
+      metadataKey: "primitives/tables/table-actions",
+    },
+  },
+  ui_primitives_tables_table_footer: {
+    name: "table-footer",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/tables/table-footer.tsx",
+      metadataKey: "primitives/tables/table-footer",
+    },
+  },
+  ui_primitives_tables_table: {
+    name: "table",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/tables/table.tsx",
+      metadataKey: "primitives/tables/table",
+    },
+  },
+  ui_primitives_tabs_discrete_tabs: {
+    name: "discrete-tabs",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/tabs/discrete-tabs.tsx",
+      metadataKey: "primitives/tabs/discrete-tabs",
+    },
+  },
+  ui_primitives_tabs_tabs_disabled: {
+    name: "tabs-disabled",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/tabs/tabs-disabled.tsx",
+      metadataKey: "primitives/tabs/tabs-disabled",
+    },
+  },
+  ui_primitives_tabs_tabs_icons: {
+    name: "tabs-icons",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/tabs/tabs-icons.tsx",
+      metadataKey: "primitives/tabs/tabs-icons",
+    },
+  },
+  ui_primitives_tabs_tabs_line: {
+    name: "tabs-line",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/tabs/tabs-line.tsx",
+      metadataKey: "primitives/tabs/tabs-line",
+    },
+  },
+  ui_primitives_tabs_tabs_vertical: {
+    name: "tabs-vertical",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/tabs/tabs-vertical.tsx",
+      metadataKey: "primitives/tabs/tabs-vertical",
+    },
+  },
+  ui_primitives_tabs_tabs: {
+    name: "tabs",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/tabs/tabs.tsx",
+      metadataKey: "primitives/tabs/tabs",
+    },
+  },
+  ui_primitives_textarea_long_text: {
+    name: "long-text",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/textarea/long-text.tsx",
+      metadataKey: "primitives/textarea/long-text",
+    },
+  },
+  ui_primitives_textarea_textarea_button: {
+    name: "textarea-button",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/textarea/textarea-button.tsx",
+      metadataKey: "primitives/textarea/textarea-button",
+    },
+  },
+  ui_primitives_textarea_textarea_disabled: {
+    name: "textarea-disabled",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/textarea/textarea-disabled.tsx",
+      metadataKey: "primitives/textarea/textarea-disabled",
+    },
+  },
+  ui_primitives_textarea_textarea_field: {
+    name: "textarea-field",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/textarea/textarea-field.tsx",
+      metadataKey: "primitives/textarea/textarea-field",
+    },
+  },
+  ui_primitives_textarea_textarea_invalid: {
+    name: "textarea-invalid",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/textarea/textarea-invalid.tsx",
+      metadataKey: "primitives/textarea/textarea-invalid",
+    },
+  },
+  ui_primitives_textarea_textarea: {
+    name: "textarea",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/textarea/textarea.tsx",
+      metadataKey: "primitives/textarea/textarea",
+    },
+  },
+  ui_primitives_timelines_content_v1_1_0: {
+    name: "v1-1-0",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/timelines/content/v1-1-0.tsx",
+      metadataKey: "primitives/timelines/content/v1-1-0",
+    },
+  },
+  ui_primitives_timelines_content_v1_2_0: {
+    name: "v1-2-0",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/timelines/content/v1-2-0.tsx",
+      metadataKey: "primitives/timelines/content/v1-2-0",
+    },
+  },
+  ui_primitives_timelines_content_v1_3_0: {
+    name: "v1-3-0",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/timelines/content/v1-3-0.tsx",
+      metadataKey: "primitives/timelines/content/v1-3-0",
+    },
+  },
+  ui_primitives_timelines_timeline_component_05: {
+    name: "timeline-component-05",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/timelines/timeline-component-05.tsx",
+      metadataKey: "primitives/timelines/timeline-component-05",
+    },
+  },
+  ui_primitives_typography_typography_blockquote: {
+    name: "typography-blockquote",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/typography/typography-blockquote.tsx",
+      metadataKey: "primitives/typography/typography-blockquote",
+    },
+  },
+  ui_primitives_typography_typography_h1: {
+    name: "typography-h1",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/typography/typography-h1.tsx",
+      metadataKey: "primitives/typography/typography-h1",
+    },
+  },
+  ui_primitives_typography_typography_h2: {
+    name: "typography-h2",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/typography/typography-h2.tsx",
+      metadataKey: "primitives/typography/typography-h2",
+    },
+  },
+  ui_primitives_typography_typography_h3: {
+    name: "typography-h3",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/typography/typography-h3.tsx",
+      metadataKey: "primitives/typography/typography-h3",
+    },
+  },
+  ui_primitives_typography_typography_h4: {
+    name: "typography-h4",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/typography/typography-h4.tsx",
+      metadataKey: "primitives/typography/typography-h4",
+    },
+  },
+  ui_primitives_typography_typography_inline_code: {
+    name: "typography-inline-code",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/typography/typography-inline-code.tsx",
+      metadataKey: "primitives/typography/typography-inline-code",
+    },
+  },
+  ui_primitives_typography_typography_large: {
+    name: "typography-large",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/typography/typography-large.tsx",
+      metadataKey: "primitives/typography/typography-large",
+    },
+  },
+  ui_primitives_typography_typography_lead: {
+    name: "typography-lead",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/typography/typography-lead.tsx",
+      metadataKey: "primitives/typography/typography-lead",
+    },
+  },
+  ui_primitives_typography_typography_list: {
+    name: "typography-list",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/typography/typography-list.tsx",
+      metadataKey: "primitives/typography/typography-list",
+    },
+  },
+  ui_primitives_typography_typography_muted: {
+    name: "typography-muted",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/typography/typography-muted.tsx",
+      metadataKey: "primitives/typography/typography-muted",
+    },
+  },
+  ui_primitives_typography_typography_p: {
+    name: "typography-p",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/typography/typography-p.tsx",
+      metadataKey: "primitives/typography/typography-p",
+    },
+  },
+  ui_primitives_typography_typography_small: {
+    name: "typography-small",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/typography/typography-small.tsx",
+      metadataKey: "primitives/typography/typography-small",
+    },
+  },
+  ui_primitives_typography_typography_table: {
+    name: "typography-table",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/typography/typography-table.tsx",
+      metadataKey: "primitives/typography/typography-table",
+    },
+  },
+  ui_primitives_ui_accordion: {
+    name: "accordion",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/accordion.tsx",
+      metadataKey: "primitives/ui/accordion",
+    },
+  },
+  ui_primitives_ui_alert_dialog: {
+    name: "alert-dialog",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/alert-dialog.tsx",
+      metadataKey: "primitives/ui/alert-dialog",
+    },
+  },
+  ui_primitives_ui_alert: {
+    name: "alert",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/alert.tsx",
+      metadataKey: "primitives/ui/alert",
+    },
+  },
+  ui_primitives_ui_aspect_ratio: {
+    name: "aspect-ratio",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/aspect-ratio.tsx",
+      metadataKey: "primitives/ui/aspect-ratio",
+    },
+  },
+  ui_primitives_ui_avatar: {
+    name: "avatar",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/avatar.tsx",
+      metadataKey: "primitives/ui/avatar",
+    },
+  },
+  ui_primitives_ui_badge: {
+    name: "badge",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/badge.tsx",
+      metadataKey: "primitives/ui/badge",
+    },
+  },
+  ui_primitives_ui_breadcrumb: {
+    name: "breadcrumb",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/breadcrumb.tsx",
+      metadataKey: "primitives/ui/breadcrumb",
+    },
+  },
+  ui_primitives_ui_calendar: {
+    name: "calendar",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/calendar.tsx",
+      metadataKey: "primitives/ui/calendar",
+    },
+  },
+  ui_primitives_ui_card: {
+    name: "card",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/card.tsx",
+      metadataKey: "primitives/ui/card",
+    },
+  },
+  ui_primitives_ui_carousel: {
+    name: "carousel",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/carousel.tsx",
+      metadataKey: "primitives/ui/carousel",
+    },
+  },
+  ui_primitives_ui_checkbox: {
+    name: "checkbox",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/checkbox.tsx",
+      metadataKey: "primitives/ui/checkbox",
+    },
+  },
+  ui_primitives_ui_collapsible: {
+    name: "collapsible",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/collapsible.tsx",
+      metadataKey: "primitives/ui/collapsible",
+    },
+  },
+  ui_primitives_ui_combobox: {
+    name: "combobox",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/combobox.tsx",
+      metadataKey: "primitives/ui/combobox",
+    },
+  },
+  ui_primitives_ui_command_menu: {
+    name: "command-menu",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/command-menu.tsx",
+      metadataKey: "primitives/ui/command-menu",
+    },
+  },
+  ui_primitives_ui_command: {
+    name: "command",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/command.tsx",
+      metadataKey: "primitives/ui/command",
+    },
+  },
+  ui_primitives_ui_config_drawer: {
+    name: "config-drawer",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/config-drawer.tsx",
+      metadataKey: "primitives/ui/config-drawer",
+    },
+  },
+  ui_primitives_ui_context_menu: {
+    name: "context-menu",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/context-menu.tsx",
+      metadataKey: "primitives/ui/context-menu",
+    },
+  },
+  ui_primitives_ui_copy_code: {
+    name: "copy-code",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/copy-code.tsx",
+      metadataKey: "primitives/ui/copy-code",
+    },
+  },
+  ui_primitives_ui_date_picker: {
+    name: "date-picker",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/date-picker.tsx",
+      metadataKey: "primitives/ui/date-picker",
+    },
+  },
+  ui_primitives_ui_day_picker: {
+    name: "day-picker",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/day-picker.tsx",
+      metadataKey: "primitives/ui/day-picker",
+    },
+  },
+  ui_primitives_ui_dialog: {
+    name: "dialog",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/dialog.tsx",
+      metadataKey: "primitives/ui/dialog",
+    },
+  },
+  ui_primitives_ui_direction: {
+    name: "direction",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/direction.tsx",
+      metadataKey: "primitives/ui/direction",
+    },
+  },
+  ui_primitives_ui_drawer: {
+    name: "drawer",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/drawer.tsx",
+      metadataKey: "primitives/ui/drawer",
+    },
+  },
+  ui_primitives_ui_edit_switch: {
+    name: "edit-switch",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/edit-switch.tsx",
+      metadataKey: "primitives/ui/edit-switch",
+    },
+  },
+  ui_primitives_ui_empty: {
+    name: "empty",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/empty.tsx",
+      metadataKey: "primitives/ui/empty",
+    },
+  },
+  ui_primitives_ui_filters: {
+    name: "filters",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/filters.tsx",
+      metadataKey: "primitives/ui/filters",
+    },
+  },
+  ui_primitives_ui_group: {
+    name: "group",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/group.tsx",
+      metadataKey: "primitives/ui/group",
+    },
+  },
+  ui_primitives_ui_hover_card_sides: {
+    name: "hover-card-sides",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/hover-card-sides.tsx",
+      metadataKey: "primitives/ui/hover-card-sides",
+    },
+  },
+  ui_primitives_ui_hover_card: {
+    name: "hover-card",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/hover-card.tsx",
+      metadataKey: "primitives/ui/hover-card",
+    },
+  },
+  ui_primitives_ui_item: {
+    name: "item",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/item.tsx",
+      metadataKey: "primitives/ui/item",
+    },
+  },
+  ui_primitives_ui_kbd: {
+    name: "kbd",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/kbd.tsx",
+      metadataKey: "primitives/ui/kbd",
+    },
+  },
+  ui_primitives_ui_label: {
+    name: "label",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/label.tsx",
+      metadataKey: "primitives/ui/label",
+    },
+  },
+  ui_primitives_ui_logo: {
+    name: "logo",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/logo.tsx",
+      metadataKey: "primitives/ui/logo",
+    },
+  },
+  ui_primitives_ui_native_select: {
+    name: "native-select",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/native-select.tsx",
+      metadataKey: "primitives/ui/native-select",
+    },
+  },
+  ui_primitives_ui_navigation_menu: {
+    name: "navigation-menu",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/navigation-menu.tsx",
+      metadataKey: "primitives/ui/navigation-menu",
+    },
+  },
+  ui_primitives_ui_number_field: {
+    name: "number-field",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/number-field.tsx",
+      metadataKey: "primitives/ui/number-field",
+    },
+  },
+  ui_primitives_ui_pagination: {
+    name: "pagination",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/pagination.tsx",
+      metadataKey: "primitives/ui/pagination",
+    },
+  },
+  ui_primitives_ui_preview_card: {
+    name: "preview-card",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/preview-card.tsx",
+      metadataKey: "primitives/ui/preview-card",
+    },
+  },
+  ui_primitives_ui_product_grid: {
+    name: "product-grid",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/product-grid.tsx",
+      metadataKey: "primitives/ui/product-grid",
+    },
+  },
+  ui_primitives_ui_progress: {
+    name: "progress",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/progress.tsx",
+      metadataKey: "primitives/ui/progress",
+    },
+  },
+  ui_primitives_ui_promo: {
+    name: "promo",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/promo.tsx",
+      metadataKey: "primitives/ui/promo",
+    },
+  },
+  ui_primitives_ui_radio_group: {
+    name: "radio-group",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/radio-group.tsx",
+      metadataKey: "primitives/ui/radio-group",
+    },
+  },
+  ui_primitives_ui_rating: {
+    name: "rating",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/rating.tsx",
+      metadataKey: "primitives/ui/rating",
+    },
+  },
+  ui_primitives_ui_resizable: {
+    name: "resizable",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/resizable.tsx",
+      metadataKey: "primitives/ui/resizable",
+    },
+  },
+  ui_primitives_ui_scroll_area: {
+    name: "scroll-area",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/scroll-area.tsx",
+      metadataKey: "primitives/ui/scroll-area",
+    },
+  },
+  ui_primitives_ui_select: {
+    name: "select",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/select.tsx",
+      metadataKey: "primitives/ui/select",
+    },
+  },
+  ui_primitives_ui_separator: {
+    name: "separator",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/separator.tsx",
+      metadataKey: "primitives/ui/separator",
+    },
+  },
+  ui_primitives_ui_sheet: {
+    name: "sheet",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/sheet.tsx",
+      metadataKey: "primitives/ui/sheet",
+    },
+  },
+  ui_primitives_ui_slider: {
+    name: "slider",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/slider.tsx",
+      metadataKey: "primitives/ui/slider",
+    },
+  },
+  ui_primitives_ui_sonner: {
+    name: "sonner",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/sonner.tsx",
+      metadataKey: "primitives/ui/sonner",
+    },
+  },
+  ui_primitives_ui_sortable_table_head: {
+    name: "sortable-table-head",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/sortable-table-head.tsx",
+      metadataKey: "primitives/ui/sortable-table-head",
+    },
+  },
+  ui_primitives_ui_spinner: {
+    name: "spinner",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/spinner.tsx",
+      metadataKey: "primitives/ui/spinner",
+    },
+  },
+  ui_primitives_ui_switch: {
+    name: "switch",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/switch.tsx",
+      metadataKey: "primitives/ui/switch",
+    },
+  },
+  ui_primitives_ui_tabs: {
+    name: "tabs",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/tabs.tsx",
+      metadataKey: "primitives/ui/tabs",
+    },
+  },
+  ui_primitives_ui_textarea: {
+    name: "textarea",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/textarea.tsx",
+      metadataKey: "primitives/ui/textarea",
+    },
+  },
+  ui_primitives_ui_toast: {
+    name: "toast",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/toast.tsx",
+      metadataKey: "primitives/ui/toast",
+    },
+  },
+  ui_primitives_ui_toggle_group: {
+    name: "toggle-group",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/toggle-group.tsx",
+      metadataKey: "primitives/ui/toggle-group",
+    },
+  },
+  ui_primitives_ui_toggle: {
+    name: "toggle",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/toggle.tsx",
+      metadataKey: "primitives/ui/toggle",
+    },
+  },
+  ui_primitives_ui_tooltip: {
+    name: "tooltip",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/ui/tooltip.tsx",
+      metadataKey: "primitives/ui/tooltip",
+    },
+  },
+  ui_primitives_users_account_settings: {
+    name: "account-settings",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/account-settings.tsx",
+      metadataKey: "primitives/users/account-settings",
+    },
+  },
+  ui_primitives_users_connect_account: {
+    name: "connect-account",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/connect-account.tsx",
+      metadataKey: "primitives/users/connect-account",
+    },
+  },
+  ui_primitives_users_danger_zone: {
+    name: "danger-zone",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/danger-zone.tsx",
+      metadataKey: "primitives/users/danger-zone",
+    },
+  },
+  ui_primitives_users_email_password: {
+    name: "email-password",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/email-password.tsx",
+      metadataKey: "primitives/users/email-password",
+    },
+  },
+  ui_primitives_users_forgot_password_form: {
+    name: "forgot-password-form",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/forgot-password-form.tsx",
+      metadataKey: "primitives/users/forgot-password-form",
+    },
+  },
+  ui_primitives_users_forgot_password: {
+    name: "forgot-password",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/forgot-password.tsx",
+      metadataKey: "primitives/users/forgot-password",
+    },
+  },
+  ui_primitives_users_login_form: {
+    name: "login-form",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/login-form.tsx",
+      metadataKey: "primitives/users/login-form",
+    },
+  },
+  ui_primitives_users_login_page: {
+    name: "login-page",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/login-page.tsx",
+      metadataKey: "primitives/users/login-page",
+    },
+  },
+  ui_primitives_users_login: {
+    name: "login",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/login.tsx",
+      metadataKey: "primitives/users/login",
+    },
+  },
+  ui_primitives_users_password_input: {
+    name: "password-input",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/password-input.tsx",
+      metadataKey: "primitives/users/password-input",
+    },
+  },
+  ui_primitives_users_personal_info: {
+    name: "personal-info",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/personal-info.tsx",
+      metadataKey: "primitives/users/personal-info",
+    },
+  },
+  ui_primitives_users_profile_dropdown: {
+    name: "profile-dropdown",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/profile-dropdown.tsx",
+      metadataKey: "primitives/users/profile-dropdown",
+    },
+  },
+  ui_primitives_users_register_form: {
+    name: "register-form",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/register-form.tsx",
+      metadataKey: "primitives/users/register-form",
+    },
+  },
+  ui_primitives_users_register: {
+    name: "register",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/register.tsx",
+      metadataKey: "primitives/users/register",
+    },
+  },
+  ui_primitives_users_sign_out_dialog: {
+    name: "sign-out-dialog",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/sign-out-dialog.tsx",
+      metadataKey: "primitives/users/sign-out-dialog",
+    },
+  },
+  ui_primitives_users_social_url: {
+    name: "social-url",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/social-url.tsx",
+      metadataKey: "primitives/users/social-url",
+    },
+  },
+  ui_primitives_users_verify_email: {
+    name: "verify-email",
+    type: "ui-primitive",
+    metadata: {
+      sourcePath: "src/primitives/users/verify-email.tsx",
+      metadataKey: "primitives/users/verify-email",
+    },
   }
 }
 

@@ -37,7 +37,15 @@ async function removeIfSymlink(target) {
 async function normalizeRegistryLayoutImport() {
   try {
     const raw = await fs.readFile(registryLayout, "utf8")
-    const next = raw.replace('import "@/app/globals.css";', 'import "./globals.css";')
+    const next = raw
+      .replace(
+        'import "@/app/globals.css";',
+        'import "../../src/fonts/rebel-fonts.css";\nimport "../../src/styles/tailwind-reference.css";'
+      )
+      .replace(
+        'import "./globals.css";',
+        'import "../../src/fonts/rebel-fonts.css";\nimport "../../src/styles/tailwind-reference.css";'
+      )
     if (next !== raw) {
       await fs.writeFile(registryLayout, next, "utf8")
       return true
@@ -54,6 +62,7 @@ async function main() {
   await ensureDir(path.join(appRoot, "(registry)"))
   await ensureDir(path.join(appRoot, "_not-found"))
   await ensureDir(path.join(appRoot, "(registry)", "catalog"))
+  await ensureDir(path.join(appRoot, "(registry)", "catalog", "folder", "[...folder]"))
   await ensureDir(path.join(appRoot, "(registry)", "registry", "[name]"))
   await ensureDir(path.join(appRoot, "(registry)", "tokens"))
 
@@ -80,6 +89,16 @@ async function main() {
   await writeFileIfChanged(
     path.join(appRoot, "(registry)/catalog/page.tsx"),
     'export { default } from "../../../registry/app/(registry)/catalog/page";\n'
+  )
+
+  await writeFileIfChanged(
+    path.join(appRoot, "(registry)/catalog/catalog-view.tsx"),
+    'export { CatalogView } from "../../../registry/app/(registry)/catalog/catalog-view";\n'
+  )
+
+  await writeFileIfChanged(
+    path.join(appRoot, "(registry)/catalog/folder/[...folder]/page.tsx"),
+    'export { default } from "../../../../../registry/app/(registry)/catalog/folder/[...folder]/page";\n'
   )
 
   await writeFileIfChanged(

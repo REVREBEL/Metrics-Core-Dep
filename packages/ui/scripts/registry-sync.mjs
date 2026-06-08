@@ -2,7 +2,10 @@ import { promises as fs } from "node:fs"
 import path from "node:path"
 
 const ROOT = process.cwd()
-const COMPONENT_ROOT = path.join(ROOT, "src/components")
+const SOURCE_ROOTS = [
+  path.join(ROOT, "src/components"),
+  path.join(ROOT, "src/primitives"),
+]
 const OUT_FILE = path.join(ROOT, "src/lib/registry.metadata.json")
 
 async function walk(dir) {
@@ -25,8 +28,159 @@ async function walk(dir) {
 }
 
 function toRelComponentKey(abs) {
-  const rel = path.relative(COMPONENT_ROOT, abs).replace(/\\/g, "/")
+  const rel = path.relative(path.join(ROOT, "src"), abs).replace(/\\/g, "/")
   return rel.replace(/\.tsx$/, "")
+}
+
+function pushProp(props, prop) {
+  if (!prop.name || props.some((existing) => existing.name === prop.name)) return
+  props.push(prop)
+}
+
+function cleanType(type) {
+  return type
+    .replace(/\s+/g, " ")
+    .replace(/,$/, "")
+    .trim()
+}
+
+function parsePropBlock(body) {
+  const props = []
+  const lines = body
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean)
+
+  for (const line of lines) {
+    if (line.startsWith("//") || line.startsWith("*") || line.startsWith("/*")) continue
+    const match = line.match(/^([A-Za-z_$][\w$-]*)\??\s*:\s*([^;]+);?$/)
+    if (!match) continue
+    pushProp(props, {
+      name: match[1],
+      type: cleanType(match[2]),
+      required: !line.includes("?:"),
+    })
+  }
+
+  return props
+}
+
+function extractBalancedBlock(raw, startIndex) {
+  const openIndex = raw.indexOf("{", startIndex)
+  if (openIndex === -1) return null
+  let depth = 0
+  for (let index = openIndex; index < raw.length; index += 1) {
+    const char = raw[index]
+    if (char === "{") depth += 1
+    if (char === "}") depth -= 1
+    if (depth === 0) {
+      return raw.slice(openIndex + 1, index)
+    }
+  }
+  return null
+}
+
+function parseDeclaredProps(raw) {
+  const props = []
+  const declarationRegex = /(?:export\s+)?(?:interface|type)\s+([A-Za-z_$][\w$]*Props)\b/g
+  let match = declarationRegex.exec(raw)
+
+  while (match) {
+    const block = extractBalancedBlock(raw, match.index)
+    if (block) {
+      for (const prop of parsePropBlock(block)) {
+        pushProp(props, prop)
+      }
+    }
+    match = declarationRegex.exec(raw)
+  }
+
+  return props
+}
+
+function parseInlineObjectProps(raw) {
+  const props = []
+  const inlineBlocks = raw.match(/&\s*\{([\s\S]*?)\}/g) ?? []
+  for (const block of inlineBlocks) {
+    const body = block.replace(/^&\s*\{/, "").replace(/\}$/, "")
+    for (const prop of parsePropBlock(body)) {
+      pushProp(props, prop)
+    }
+  }
+  return props
+}
+
+function parseCvaVariantProps(raw) {
+  const props = []
+  const variantsIndex = raw.indexOf("variants:")
+  if (variantsIndex === -1) return props
+  const variantsBlock = extractBalancedBlock(raw, variantsIndex)
+  if (!variantsBlock) return props
+
+  for (const variantName of ["variant", "size"]) {
+    const index = variantsBlock.indexOf(`${variantName}:`)
+    if (index === -1) continue
+    const block = extractBalancedBlock(variantsBlock, index)
+    if (!block) continue
+    const values = block
+      .split("\n")
+      .map((line) => line.trim())
+      .map((line) => line.match(/^["']?([A-Za-z0-9_-]+)["']?\s*:/)?.[1])
+      .filter(Boolean)
+
+    if (values.length > 0) {
+      pushProp(props, {
+        name: variantName,
+        type: values.map((value) => `"${value}"`).join(" | "),
+        required: false,
+        description: `Generated from cva ${variantName} variants.`,
+      })
+    }
+  }
+
+  return props
+}
+
+function inferProps(raw) {
+  const props = []
+
+  for (const prop of [
+    ...parseDeclaredProps(raw),
+    ...parseInlineObjectProps(raw),
+    ...parseCvaVariantProps(raw),
+  ]) {
+    pushProp(props, prop)
+  }
+
+  if (/className/.test(raw)) {
+    pushProp(props, {
+      name: "className",
+      type: "string",
+      required: false,
+      description: "Additional CSS classes merged into the component.",
+    })
+  }
+
+  if (/children/.test(raw)) {
+    pushProp(props, {
+      name: "children",
+      type: "React.ReactNode",
+      required: false,
+      description: "Child content rendered inside the component.",
+    })
+  }
+
+  const htmlPropMatch = raw.match(/React\.ComponentProps<["']([^"']+)["']>/)
+  if (htmlPropMatch?.[1]) {
+    pushProp(props, {
+      name: "HTML attributes",
+      type: `React.ComponentProps<"${htmlPropMatch[1]}">`,
+      required: false,
+      description: `Accepts standard ${htmlPropMatch[1]} element attributes.`,
+    })
+  }
+
+  return props
 }
 
 function parseMetadataTs(raw) {
@@ -80,7 +234,10 @@ async function loadColocatedMetadata(absComponentFile) {
 }
 
 async function main() {
-  const files = await walk(COMPONENT_ROOT)
+  const files = []
+  for (const sourceRoot of SOURCE_ROOTS) {
+    files.push(...(await walk(sourceRoot)))
+  }
   const existingRaw = await fs.readFile(OUT_FILE, "utf8").catch(() => "{}")
   const existing = JSON.parse(existingRaw)
 
@@ -89,11 +246,13 @@ async function main() {
 
   for (const abs of files) {
     const key = toRelComponentKey(abs)
+    const raw = await fs.readFile(abs, "utf8")
+    const inferredProps = inferProps(raw)
 
     const base = existing[key] ?? {
       displayName: key.split("/").pop(),
       description: "",
-      props: [],
+      props: inferredProps,
     }
 
     const colocated = await loadColocatedMetadata(abs)
@@ -102,10 +261,17 @@ async function main() {
       next[key] = {
         ...base,
         ...colocated,
-        props: Array.isArray(colocated.props) ? colocated.props : base.props ?? [],
+        props: Array.isArray(colocated.props) && colocated.props.length > 0
+          ? colocated.props
+          : inferredProps.length > 0
+            ? inferredProps
+            : base.props ?? [],
       }
     } else {
-      next[key] = base
+      next[key] = {
+        ...base,
+        props: inferredProps.length > 0 ? inferredProps : base.props ?? [],
+      }
     }
   }
 

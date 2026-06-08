@@ -1,5 +1,5 @@
 import type * as React from "react";
-import type { MetricTheme } from "@/components/metric-cards/_shared/metric-theme";
+import type { MetricTheme } from "@/components/_shared-ui/metric-theme";
 
 export type StandardMetricWidgetProps = {
   /** Main card headline. Renders through .metric-card__title. */
