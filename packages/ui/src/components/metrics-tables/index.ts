@@ -1,4 +1,6 @@
 export * from "./daily-pickup-table"
 export * from "./data-table"
+export * from "./generic-data-grid"
+export * from "./data-library-workspace"
 export * from "./market-segment-group-rooms-table"
 export * from "./market-segment-transient-rooms-table"

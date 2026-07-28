@@ -1,6 +1,6 @@
 import { BigQuery } from "@google-cloud/bigquery"
 
-import { getDataLocation } from "./config"
+import { getDataLocation } from "./biq-query_config"
 
 let _client: BigQuery | null = null
 

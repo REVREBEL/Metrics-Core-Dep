@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation"
+
 export default function Page() {
-  return <main>Customer App</main>;
+  redirect("/data-library")
 }

@@ -10,7 +10,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./dropdown-menu"
-import { IconBadgeCheck, IconBell, IconCreditCard, IconLogOut } from "@tabler/icons-react"
+import { IconRosetteCheck, IconBell, IconCreditCard, IconLogout } from "@tabler/icons-react"
 
 export function DropdownMenuAvatar() {
   return (
@@ -26,7 +26,7 @@ export function DropdownMenuAvatar() {
       <DropdownMenuContent align="end">
         <DropdownMenuGroup>
           <DropdownMenuItem>
-            <IconBadgeCheck />
+            <IconRosetteCheck />
             Account
           </DropdownMenuItem>
           <DropdownMenuItem>
@@ -40,7 +40,7 @@ export function DropdownMenuAvatar() {
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <IconLogOut />
+          <IconLogout />
           Sign Out
         </DropdownMenuItem>
       </DropdownMenuContent>

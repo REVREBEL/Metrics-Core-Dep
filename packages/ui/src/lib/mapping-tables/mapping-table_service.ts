@@ -3,7 +3,7 @@ import { inArray } from "drizzle-orm"
 import {
   mappingTableRegistry,
   getMappingTableRegistryEntry,
-} from "./mapping-table-registry"
+} from "./mapping-table_registry"
 import { mappingTableMetadata, mappingTableRowsByKey } from "./fixtures"
 import type { MappingTableMetadata, MappingTableRow } from "./types"
 

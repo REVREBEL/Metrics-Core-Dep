@@ -119,9 +119,9 @@ const GenericCard = <T extends ElementType = "div">({
   disabled,
   ...props
 }: CardProps<T>) => {
-  const Component = disabled
+  const Component = (disabled
     ? "div"
-    : as || (props.href !== undefined ? "a" : "div");
+    : as || (props.href !== undefined ? "a" : "div")) as any;
 
   const isExternalLink = isRemoteUrl(props.href ?? "");
   const newTabProps = isExternalLink

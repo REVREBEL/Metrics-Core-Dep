@@ -5,8 +5,10 @@
     "moduleResolution": "Bundler",
     "declaration": true,
     "outDir": "dist",
+    "rootDir": ".",
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["node"]
   },
   "include": ["src", "drizzle.config.ts"]
 }

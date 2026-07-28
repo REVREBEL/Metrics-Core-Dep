@@ -1,6 +1,6 @@
 import { type Remote, wrap } from "comlink";
 
-import type { ShikiHighlightedHtmlArgs } from "@shikijs/types";
+import type { ShikiHighlightedHtmlArgs } from "./index";
 
 type HighlightFn = (
   props: ShikiHighlightedHtmlArgs

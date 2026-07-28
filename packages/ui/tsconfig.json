@@ -15,7 +15,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "@/registry": ["./registry.json"],
-      "@auto-form": ["./src/primitives/auto-form/index.ts"],
+      "@auto-form": ["./src/primitives/forms/index.ts"],
+      "@auto-form/*": ["./src/primitives/forms/*"],
       "@buttons": ["./src/primitives/buttons/index.ts"],
       "@charts": ["./src/primitives/charts/index.ts"],
       "@primitive-charts": ["./src/primitives/charts/index.ts"],
